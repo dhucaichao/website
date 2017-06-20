@@ -9,7 +9,14 @@
 // | Author: liu21st <liu21st@gmail.com>
 // +----------------------------------------------------------------------
 
+use think\Route;
+
+Route::get('writer','writer/index/index');
+
 return [
+    '__domain__'=>[
+        'admin.tp5.com'=>'admin',
+    ],
     '__pattern__' => [
         'name' => '\w+',
     ],
