@@ -1,0 +1,42 @@
+{extend name="user/index"}
+
+{block name="main"}
+<form action="/admin/user/save" enctype="multipart/form-data" method="post">
+<div class="container" id="'ccc">
+    <div class="col-md-6 h2">
+        <ul class="list-group h4">
+            昵称:<input type="text" name="nickname">
+            <hr>
+            电话:<input type="text" name="tel">
+            <hr>
+            性别:<label><input type="radio" name="sex" value=1 checked>男</label>
+            <label><input type="radio" name="sex" value=2>女</label>
+            <hr>
+            状态:<label><input type="radio" name="status" value=1 checked>激活</label>
+                    <label><input type="radio" name="status" value=2>禁用</label>
+            <hr>
+            会员等级:<label><input type="radio" name="level" value=1 checked>普通用户</label>
+            <label><input type="radio" name="level" value=2>普通会员</label>
+            <label><input type="radio" name="level" value=3>高级会员</label>
+        </ul>
+    </div>
+
+    <div class="col-md-6 h2">
+        <ul class="list-group h4">
+            余额:<input type="text" name="balance">
+            <hr>
+            已用金额:<input type="text" name="consumption">
+            <hr>
+            月票:<input type="text" name="ticket">
+            <hr>
+            收藏书籍数量:<input type="text" name="collection">
+            <hr>
+            头像:<input type="file" name="icon">
+        </ul>
+    </div>
+    <button class="btn btn-danger btn-lg del-btn">提交</button>
+</div>
+</form>
+{/block}
+
+{block name="myjs"}{/block}

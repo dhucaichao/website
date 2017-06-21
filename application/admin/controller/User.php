@@ -3,34 +3,114 @@
 namespace app\admin\controller;
 
 use think\Controller;
-use think\Db;
+
 use think\Request;
 
 class User extends Controller
 {
+
+    /**
+     * 显示资源列表
+     *
+     * @return \think\Response
+     */
     public function index()
     {
-        $list = db('admin')->select();
-        dump($list);
+        $list = db('user')->select();
+        return view('user/index', ['title' => '后台用户管理', 'list' => $list]);
     }
 
-    public function insert()
+
+    /**
+     * 显示创建资源表单页.
+     *
+     * @return \think\Response
+     */
+    public function create()
     {
-        $data = ['name'=>'huanghanyi','pwd'=>'123456'];
-        $result = Db::table('admin')->insertGetId($data);
-        dump($result);
+        return view('user/add',['title'=>'添加用户']);
     }
 
-    public function delete()
+    /**
+     * 保存新建的资源
+     *
+     * @param  \think\Request $request
+     * @return \think\Response
+     */
+    public function save(Request $request)
     {
-        $result = Db::table('admin')->where('name','hhy')->delete();
-        dump($result);
+        $data = input('post.');
+        $result = db('user')->insert($data);
+        if($result>0) {
+            $this->success('添加成功','user/index');
+        } else {
+            $this->error('添加失败','user/create');
+        }
     }
 
-    public function update()
+    /**
+     * 显示指定的资源
+     *
+     * @param  int $id
+     * @return \think\Response
+     */
+    public function read($id)
     {
-        $data = ['name'=>'hhy','pwd'=>'123456'];
-        $result = Db::table('admin')->where(['id'=>5])->update($data);
-        dump($result);
+        if (!Request::instance()->isAjax()){
+            $this->error('非法路径', 'user/index');
+        }
+        $list = db('user')->where('id', $id)->find();
+        return json($list);
+    }
+
+    /**
+     * 显示编辑资源表单页.
+     *
+     * @param  int $id
+     * @return \think\Response
+     */
+    public function edit($id)
+    {
+        $result = db('user')->where('id',$id)->find();
+        return view('user/edit',['title'=>'编辑用户','result'=>$result]);
+    }
+
+    /**
+     * 保存更新的资源
+     *
+     * @param  \think\Request $request
+     * @param  int $id
+     * @return \think\Response
+     */
+    public function update(Request $request,$id)
+    {
+        $data = input('post.');
+        $result = db('user')->where('id',$id)->update($data);
+        if($result>0) {
+            $this->success('更新成功','user/index');
+        } else {
+            $this->error('更新失败','user/edit');
+        }
+    }
+
+    /**
+     * 删除指定资源
+     *
+     * @param  int $id
+     * @return \think\Response
+     */
+    public function delete($id)
+    {
+        $result = db('user')->where('id', $id)->delete();
+        if ($result > 0) {
+            $info['status'] = true;
+            $info['info'] = '用户已删除';
+        } else {
+            $info['status'] = false;
+            $info['info'] = '用户删除失败,请重试!';
+        }
+
+        return json($info);
+
     }
 }

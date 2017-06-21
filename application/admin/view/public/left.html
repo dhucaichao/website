@@ -1,0 +1,160 @@
+<div class="leftnav">
+    <div class="leftnav-title">
+        <strong><span class="icon-list"></span>菜单列表</strong>
+    </div>
+    <h2>用户管理</h2>
+    <ul style="display:none">
+        <li><a href="{:url('user/index')}" target="right">用户管理</a></li>
+        <li><a href="{:url('user/create')}" target="right">用户添加</a></li>
+        <li><a href="score.html" target="right">积分资产管理</a>
+            <ul class="manage">
+                <li><a> 积分 </a></li>
+                <li><a> 月票 </a></li>
+                <li><a> 会员 </a></li>
+                <li><a> 阅读币 </a></li>
+            </ul>
+        </li>
+        <li><a href="comment.html" target="right">评论管理</a>
+            <ul class="manage">
+                <li><a> 评论星级 </a></li>
+                <li><a> 评论内容 </a></li>
+                <li><a> 评论书籍 </a></li><a>
+                <li><a> 回复管理 </a></li>
+            </ul>
+        </li>
+        <li><a href="personal.html" target="right">个人资料管理</a></li>
+        <li><a href="bookshelf.html" target="right">书架收藏管理</a>
+            <ul class="manage">
+                <li><a> 收藏管理</a> </li>
+                <li><a> 更新提醒管理</a> </li>
+            </ul>
+        </li>
+    </ul>
+    <!-- 用户管理模块结束 -->
+
+    <!-- 作者管理功能模块 -->
+    <h2> 作者管理 </h2>
+    <ul>
+        <li><a href="login.html" target="right">登录、注册管理</a></li>
+        <li><a href="mysql.html" target="right">增删改查管理</a></li>
+        <li><a href="book.html" target="right">书籍管理</a>
+            <ul>
+                <li> 积分 </li>
+                <li> 完本连载 </li>
+                <li> 评论管理 </li>
+                <li> 阅读管理 </li>
+            </ul>
+        </li>
+        <li><a href="personal.html" target="right">更新频率管理</a></li>
+        <!-- 作者管理功能模块结束 -->
+    </ul>
+
+    <!-- 书籍管理功能模块 -->
+    <h2> 书籍管理 </h2>
+    <ul>
+        <li><a href="login.html" target="right">分类管理</a></li>
+        <li><a href="mysql.html" target="right">完本连载管理</a></li>
+        <li><a href="score.html" target="right">月票管理</a>
+        <li><a href="comment.html" target="right">评论管理</a>
+            <ul>
+                <li> 评论星级 </li>
+                <li> 评论内容 </li>
+                <li> 评论书籍 </li>
+                <li> 回复管理 </li>
+            </ul>
+        </li>
+        <li><a href="bookshelf.html" target="right">收藏管理</a>
+        </li>
+    </ul>
+    <!-- 书籍管理功能模块结束 -->
+
+
+
+    <!-- 分类管理开始 -->
+    <h2> 分类管理 </h2>
+    <ul>
+        <li><a href="{:url('category/index')}" target="right">分类列表</a></li>
+        <li><a href="{:url('category/add')}" target="right">新增分类</a></li>
+    </ul>
+
+    <h2> 分类类型管理 </h2>
+    <ul>
+        <li><a href="{:url('category/index')}" target="right">分类类型列表</a></li>
+        <li><a href="{:url('category/add')}" target="right">新增分类分类</a></li>
+    </ul>
+
+    <h2> 导航管理 </h2>
+    <ul>
+        <li><a href="login.html" target="right">首页导航</a></li>
+    </ul>
+    <!-- 分类管理结束 -->
+
+
+    <h2> 菜单管理 </h2>
+    <ul>
+        <li><a href="{:url('menu/index')}" target="right">菜单列表</a></li>
+        <li><a href="{:url('menu/add')}" target="right">添加导菜单</a></li>
+    </ul>
+
+
+    <!--  <script>
+     // 展开效果
+     $(function(){
+         // 进入页面 第一个默认是展开的
+         $('#leftnav ul:eq(0)').show();
+
+         //绑定H3点击事件
+         $('#leftnav h3').click(function(){
+             // 展开对应的下一个ul元素
+             $(this).next('ul').slideDown().siblings('ul').slideUp();
+         });
+
+     })
+     </script> -->
+
+    <script type="text/javascript">
+        $(function(){
+            $(".leftnav h3").click(function(){
+                $(this).next().slideToggle(200);
+                $(this).toggleClass("on");
+            })
+            $(".leftnav ul li a").click(function(){
+                $("#a_leader_txt").text($(this).text());
+                $(".leftnav ul li a").removeClass("on");
+                $(this).addClass("on");
+            })
+            // $(".leftnav .manage").click(function(){
+            //     $(this).next().slideToggle(200);
+            //     $(this).toggleClass("on");
+            // })
+            // $(".leftnav .manage li a").click(function(){
+            //       $("#a_leader_txt").text($(this).text());
+            //       $(".leftnav .manage li a").removeClass("on");
+            //       $(this).addClass("on");
+            // })
+        });
+    </script>
+
+    <!-- 其他功能模块 -->
+    <h2><span class="icon-pencil-square-o"></span>其  他</h2>
+    <ul>
+        <li><a href="list.html" target="right">内容管理</a></li>
+        <li><a href="add.html" target="right">添加内容</a></li>
+        <li><a href="cate.html" target="right">分类管理</a></li>
+    </ul>
+    <!-- 其他功能模块结束 -->
+</div>
+
+<script type="text/javascript">
+    $(function(){
+        $(".leftnav h2").click(function(){
+            $(this).next().slideToggle(200);
+            $(this).toggleClass("on");
+        })
+        $(".leftnav ul li a").click(function(){
+            $("#a_leader_txt").text($(this).text());
+            $(".leftnav ul li a").removeClass("on");
+            $(this).addClass("on");
+        })
+    });
+</script>

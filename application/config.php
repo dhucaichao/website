@@ -99,7 +99,9 @@ return [
     // 域名部署
     'url_domain_deploy'      => false,
     // 域名根，如thinkphp.cn
+
     'url_domain_root'        => 'tp5.com',
+
     // 是否自动转换URL中的控制器和操作名
     'url_convert'            => true,
     // 默认的访问控制器层
@@ -238,4 +240,24 @@ return [
         'var_page'  => 'page',
         'list_rows' => 15,
     ],
+
+
+    //验证码
+    'captcha' => [
+// 验证码字符集合
+        'codeSet' => '2345678abcdefhijkmnpqrstuvwxyzABCDEFGHJKLMNPQRTUVWXY',
+// 验证码字体大小(px)
+        'fontSize' => 16,
+// 是否画混淆曲线
+        'useCurve' => false,
+// 验证码图片高度
+        'imageH' => 40,
+// 验证码图片宽度
+        'imageW' => 107,
+// 验证码位数
+        'length' => 1,
+// 验证成功后是否重置
+        'reset' => true
+    ],
+
 ];

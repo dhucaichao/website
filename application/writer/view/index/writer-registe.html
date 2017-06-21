@@ -1,18 +1,11 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
+<!DOCTYPE html>
+<!-- saved from url=(0041)http://yc.aliwx.com.cn/#/signup?_k=g5e399 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" type="text/css" href="css/index-2017051107_2.css"/>
-    <title>原创创作平台</title>
-    <link rel="icon" href="./favicon.ico" mce_href="./favicon.ico" type="image/x-icon" />  
-    <link rel="shortcut icon" href="./favicon.ico" mce_href="./favicon.ico" type="image/x-icon" />
-    <!--[if lt IE 10]>
-    <script src="js/2c7bdccb3d094d5e837a38fc5afdafff.js"></script>
-    <![endif]-->
-    <script src="js/index_1.js"></script>
-        <link rel="stylesheet" type="text/css" href="css/ubxcmkznvlazyns_2.css">
-        <script src="js/index_1.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/writer/css/index-2017051107-z.css">
+    <title>霜之哀伤创作平台</title>
+    <link rel="stylesheet" type="text/css" href="/static/writer/css/UBXCMkzNVlaZYNs-z.css">
     <style>
         @font-face {
             font-family: 'icomoon';
@@ -29,15 +22,85 @@
             font-weight: normal;
             font-style: normal;
         }
+        .tjzc{
+            margin: 25px 0;
+            width: 357px;
+            height: 50px;
+            background: rgb(36,41,46);
+            color: white;
+        }
+        .loginbox{
+            overflow: hidden;
+            height: 540px;
+        }
+        .signUpPage .loginbox{
+            height: 540px;
+        }
     </style>
 </head>
 
 <body>
 
-<div id="root"></div>
+<div id="root">
+    <div data-reactroot="" class="signUpPage">
+        <div class="wrapper">
+            <div class="loginwrap">
+                <div class="loginbox">
+                    <div>
+                        <div class="entrance" style="opacity: 1; visibility: visible; transform: translateX(0px);">
+                            <!--<a class="" href="">返回&gt;&gt;</a>-->
+                        </div>
+                        <div class="logininput" style="opacity: 1; visibility: visible; transform: translateX(0px);">
+                            <h1 class="logo"><img src="/static/writer/images/1497946000_994076.png" ></h1>
+                            <div class="uniqueVerify">
+                                <form class="" action="{:url('index/submitregiste')}" method='post'>
+                                    <div class="ant-row ant-form-item">
+                                        <div class="ant-col-5 ant-form-item-label">
+                                            <label class="">账&nbsp;&nbsp;&nbsp;&nbsp;号</label>
+                                        </div>
+                                        <div class="ant-col-12">
+                                            <div class="ant-form-item-control ">
+                                                <input class="phoneVerifyStyle" placeholder="请输入用户名" id="validating" name="penname">
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="yzcode">
+                                <label>验证码：</label>
+                                <!-- <input type="text" placeholder="请输入验证码" style="display: none;"> -->
+                                <input type="text" placeholder="请输入验证码" name="yzm">
+                                <div class="couterDiv">
+                                    <div>{:captcha_img()}</div>
+                                </div>
+                            </div>
+                            <div class="zcpwd mrgT">
+                                <label>密&nbsp;&nbsp;&nbsp;&nbsp;码：</label>
+                                <input type="password" class="showCodeInput" placeholder="请输入密码" name="pwd">
+                                <!-- <i class="anticon anticon-eye-o"></i> -->
+                            </div>
+                            <div class="remember mrgT">
+                                <label class="ant-checkbox-wrapper">
+                                        <span class="ant-checkbox">
+                                            <!-- <span class="ant-checkbox-inner"></span> -->
+                                            <input type="checkbox" class="" checked name="checkbox">
+                                        </span>
+                                    <span>
+                                            <span>我已阅读<a>霜之哀伤账号服务协议</a></span>
+                                        </span>
+                                </label>
+                            </div>
+                            <!-- <button  type="submit" class="tjzc"><span>提交注册</span></button> -->
+                            <input type="submit" value='提交注册' class='tjzc'>
+                            </form>
+                            <div style="color:red">{$error}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 </body>
-
-<script src="js/common-2017051107_1.js"></script>
-<script src="js/index-2017051107_2.js"></script>
 </html>
