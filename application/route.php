@@ -11,8 +11,7 @@
 
 use think\Route;
 Route::get('home','home/index/index');
-
-
+//
 return [
     '__pattern__' => [
         'name' => '\w+',

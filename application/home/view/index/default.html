@@ -54,6 +54,8 @@
                         <span>登录</span>
                     </div>
                 </script>
+            <!---------------------登录---------------->
+            <form action="">
                     <div id="login" style="display: none" class="ui-widget">
                         <div class="logininput">
                             <h1 class="logo">
@@ -64,7 +66,6 @@
                                     </div>
                                     <div class="loginpwd">
                                         <input type="password" class="userPassword" placeholder="请输入密码" value="pingan125">
-                                        <!-- <i class="glyphicon glyphicon-eye-open"></i> -->
                                     </div>
 
                                    <!--  <div class="logincheck">
@@ -90,11 +91,13 @@
                                                 <span>登 录</span>
                                             </button>
                                             <div class="register">
-                                                <a href="{:url('sign')}">注册账号</a><i>|</i>
+                                                <a href="{:url('index/sign')}">注册账号</a><i>|</i>
                                                 <a href="http://t.shuqi.com/?shuqi_h5=108#!/ct/forgetpassword">忘记密码?</a>
                                             </div>
                                     </div>
                     </div>
+            </form>
+            <!-----------------------登录-------------->
                 <script type="text/template" id="loginedTemp">
                     <div class="u-nickname" id="nickname-link">
                         <a class="ellipse" title="<%-nickname%>"><%-nickname%></a>
