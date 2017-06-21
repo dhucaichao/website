@@ -11,7 +11,7 @@
 
 use think\Route;
 
-Route::get('writer','writer/index/index');
+Route::get('writers','writer/index/index');
 
 return [
     '__domain__'=>[

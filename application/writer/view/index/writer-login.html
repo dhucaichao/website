@@ -6,7 +6,7 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" type="text/css" href="/static/writer/css/index-2017051107.css">
-    <title>创作平台</title>
+    <title>霜之哀伤</title>
     <link rel="icon" href="" mce_href="./favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="" mce_href="./favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="/static/writer/css/UBXCMkzNVlaZYNs.css">
@@ -25,6 +25,9 @@
             src: url('./iconfont/iconfont.eot?w4vf6g#iefix') format('embedded-opentype'), url('./iconfont/iconfont.ttf?w4vf6g') format('truetype'), url('./iconfont/iconfont.woff?w4vf6g') format('woff'), url('./iconfont/iconfont.svg?w4vf6g#icomoon') format('svg');
             font-weight: normal;
             font-style: normal;
+        }
+        .error{
+            color:red;
         }
     </style>
 </head>
@@ -49,11 +52,11 @@
                                         src="">
                                 </h1>
 
-                                    <form action="{:url('login/writerlogin')}" method="post">
-                                        <div class="loginname"><input type="text" class="userInput"
+                                    <form action="{:url('index/writerlogin')}" method="post">
+                                        <div class="loginname"><input type="text" required class="userInput"
                                                                       placeholder="请输入用户名" name="penname">
                                         </div>
-                                        <div class="loginpwd"><input type="password" class="userPassword" name="pwd"
+                                        <div class="loginpwd"><input type="password" required class="userPassword" name="pwd"
                                                                      placeholder="请输入密码"><i
                                                 class="anticon anticon-eye-o"></i></div>
                                         <div id="vCodeContent">
@@ -61,8 +64,8 @@
 
                                             <!--验证码-->
                                             <div class="loginverify">
-                                                <input placeholder="请输入验证码" type="text" name="yzm">
-                                                <img src="">
+                                                <input placeholder="请输入验证码" type="text" name="yzm" required>
+                                                <div>{:captcha_img()}</div>
                                             </div>
 
 
@@ -77,9 +80,9 @@
 
                                     </form>
 
-
+                                    <div><spqn class="error">{$error}</spqn></div>
                                     <div class="register">
-                                        <a href="">注册账号</a>
+                                        <a href="{:url('Index/writerregiste')}">注册账号</a>
                                     </div>
                                 </div>
                             </div>
@@ -89,7 +92,7 @@
             </div>
 
             <div class="bottomTextOuter___Vf6Bt">
-                <div class="bottomText___1GSrB"><span>©广州阿里巴巴文学信息技术有限公司2015</span><!-- react-text: 9 -->&nbsp;&nbsp;&nbsp;
+                <div class="bottomText___1GSrB"><span></span><!-- react-text: 9 -->&nbsp;&nbsp;&nbsp;
                     <!-- /react-text --><span><a href="">关于我们</a></span>
                     <!-- react-text: 12 -->&nbsp;&nbsp;&nbsp;<!-- /react-text --><span>|</span><!-- react-text: 14 -->
                     &nbsp;&nbsp;&nbsp;
