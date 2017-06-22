@@ -3,9 +3,9 @@
 namespace app\admin\controller;
 
 use think\Controller;
-use think\session;
+use think\Request;
 
-class Index extends Controller
+class Base extends Controller
 {
     public function _initialize()
     {
@@ -13,16 +13,5 @@ class Index extends Controller
             $this->error('请先登录', 'login/index', ['error' => '']);
         }
         return view('index/index');
-    }
-
-    public function index()
-    {
-        return view();
-    }
-
-    public function clear()
-    {
-        Session::clear();
-        return view('index');
     }
 }

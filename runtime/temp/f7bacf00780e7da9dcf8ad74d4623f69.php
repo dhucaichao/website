@@ -1,46 +1,48 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:66:"D:\wamp\www\tp5\public/../application/admin\view\author\index.html";i:1498138222;}*/ ?>
 <!DOCTYPE html>
 <html lang="cn">
 <head>
     <meta charset="UTF-8">
-    <title>{$title}</title>
+    <title><?php echo $title; ?></title>
     <!--加载CSS-->
-    {load href="/static/admin/css/bootstrap.min.css"}
-    {css href="/static/admin/reset.css"}
-    {css href="/static/admin/css/toastr.min.css"}
+    <link rel="stylesheet" type="text/css" href="/static/admin/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/static/admin/reset.css" />
+    <link rel="stylesheet" type="text/css" href="/static/admin/css/toastr.min.css" />
 </head>
 <body>
 <div>
     <div class="col-md-12 bg-primary p20">
-        <h1>{$title}</h1>
+        <h1><?php echo $title; ?></h1>
         <hr>
     </div>
     <div class="clearfix"></div>
 
-    {block name="main"}
+    
     <div class="row mt50">
         <div class="col-md-12">
             <table class="table table-hover bg-info">
                 <tr>
                     <th>ID</th>
-                    <th>昵称</th>
+                    <th>笔名</th>
                     <th>头像</th>
                     <th>电话</th>
                     <th>操作</th>
                 </tr>
-                {volist name="list" id="v"}
+                <?php if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?>
                 <tr>
-                    <td>{$v['id']}</td>
-                    <td>{$v['nickname']}</td>
-                    <td><img src="{$v['icon']} "  alt=""></td>
-                    <td>{$v['tel']}</td>
+                    <td><?php echo $v['id']; ?></td>
+                    <td><?php echo $v['penname']; ?></td>
+                    <td><img src="<?php echo $v['icon']; ?>" alt=""></td>
+                    <td><?php echo $v['tel']; ?></td>
                     <td class="col-md-4">
-                        <button data-id="{$v['id']}" class="btn btn-default btn-xs show-btn" data-toggle="modal" data-target="#myModal">查看信息</button>
-                        <a href="{:url('user/edit',['id'=>$v['id']])}" class="btn btn-primary btn-xs">编辑</a>
-                        <button data-id="{$v['id']}" class="btn btn-danger btn-xs del-btn">删除</button>
+                        <button data-id="<?php echo $v['id']; ?>" class="btn btn-default btn-xs show-btn" data-toggle="modal" data-target="#myModal">查看信息</button>
+                        <a href="<?php echo url('author/edit',['id'=>$v['id']]); ?>" class="btn btn-primary btn-xs">编辑</a>
+                        <button data-id="<?php echo $v['id']; ?>" class="btn btn-danger btn-xs del-btn">删除</button>
                     </td>
                 </tr>
-                {/volist}
+                <?php endforeach; endif; else: echo "" ;endif; ?>
             </table>
+            <?php echo $list->render(); ?>
         </div>
     </div>
 </div>
@@ -53,7 +55,7 @@
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title" id="myModalLabel">
-                    用户 <img src="" alt="" id="myimg">[<u></u>]的详细信息
+                    作者<img src="" alt="" id="myimg">[<u></u>]的详细信息
                 </h4>
             </div>
             <table class="table table-hover bg-info">
@@ -86,13 +88,13 @@
 
                 <div class="row">
                     <div class="col-md-4">
-                        <span class="cons"></span>
+                        <span class="endnover"></span>
                     </div>
                     <div class="col-md-4">
-                        <span class="ticket"></span>
+                        <span class="fence"></span>
                     </div>
                     <div class="col-md-4">
-                        <span class="collection"></span>
+                        <span class="serialnover"></span>
                     </div>
 
                 </div>
@@ -105,14 +107,14 @@
     </div>
 </div>
 
-{/block}
+
 
 <!--加载JS-->
-{js href="/static/admin/js/jquery.min.js"}
-{js href="/static/admin/js/bootstrap.min.js"}
-{js href="/static/admin/js/toastr.min.js"}
+<script type="text/javascript" src="/static/admin/js/jquery.min.js"></script>
+<script type="text/javascript" src="/static/admin/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/static/admin/js/toastr.min.js"></script>
 
-{block name="myjs"}
+
 <script>
     $(function () {
         // 触发用户删除
@@ -146,24 +148,24 @@
     function showAjax(id){
         $.ajax({
             type: 'get',
-            url: '/admin/user/read/id/' + id,
+            url: '/admin/author/read/id/' + id,
             dateType: 'json',
             success:function (data){
                 var myimg = document.getElementById('myimg');
                 myimg.getAttributeNode('src').nodeValue=data.icon;
-                $('.modal-title u').html(data.nickname);
-                $('.modal-body .status').html('用户状态:' + (data.status == 1 ? '激活' : '禁用'));
+                $('.modal-title u').html(data.penname);
+                $('.modal-body .status').html('作者状态:' + (data.status == 1 ? '激活' : '禁用'));
                 $('.modal-body .tel').html('电话号码:' + (data.tel));
-                $('.modal-body .level').html('用户等级:' + (data.level == 1 ? '普通用户' : (data.level == 2?'普通会员':'高级会员')));
+                $('.modal-body .level').html('作者用户等级:' + (data.level == 1 ? '普通写手' : (data.level == 2?'黄金写手':'白金写手')));
 
 
                 $('.modal-body .sex').html('性别:' + (data.sex == 1 ? '男' : '女'));
                 $('.modal-body .regtime').html('注册时间:' + (data.regtime));
-                $('.modal-body .balance').html('用户余额:' + (data.balance));
+                $('.modal-body .balance').html('稿费:' + (data.balance));
 
-                $('.modal-body .cons').html('已消费:' + (data.consumption));
-                $('.modal-body .ticket').html('月票:' + (data.ticket));
-                $('.modal-body .collection').html('收藏:' + (data.collection));
+                $('.modal-body .endnover').html('已完结小说:' + (data['endnover']));
+                $('.modal-body .fence').html('粉丝数:' + (data.fence));
+                $('.modal-body .serialnover').html('连载中小说:' + (data['serialnover']));
             },
             error: function () {
                 // AJAX执行失败
@@ -177,7 +179,7 @@
         // console.log(id);
         $.ajax({
             type: 'delete',
-            url: '/admin/user/delete/id/' + id,
+            url: '/admin/author/delete/id/' + id,
             dateType: 'json',
             success: function (data) {
                 if (data.status) {
@@ -194,6 +196,6 @@
         });
     }
 </script>
-{/block}
+
 </body>
 </html>

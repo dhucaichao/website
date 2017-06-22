@@ -1,22 +1,23 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:64:"D:\wamp\www\tp5\public/../application/admin\view\user\index.html";i:1498137739;}*/ ?>
 <!DOCTYPE html>
 <html lang="cn">
 <head>
     <meta charset="UTF-8">
-    <title>{$title}</title>
+    <title><?php echo $title; ?></title>
     <!--加载CSS-->
-    {load href="/static/admin/css/bootstrap.min.css"}
-    {css href="/static/admin/reset.css"}
-    {css href="/static/admin/css/toastr.min.css"}
+    <link rel="stylesheet" type="text/css" href="/static/admin/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/static/admin/reset.css" />
+    <link rel="stylesheet" type="text/css" href="/static/admin/css/toastr.min.css" />
 </head>
 <body>
 <div>
     <div class="col-md-12 bg-primary p20">
-        <h1>{$title}</h1>
+        <h1><?php echo $title; ?></h1>
         <hr>
     </div>
     <div class="clearfix"></div>
 
-    {block name="main"}
+    
     <div class="row mt50">
         <div class="col-md-12">
             <table class="table table-hover bg-info">
@@ -27,19 +28,19 @@
                     <th>电话</th>
                     <th>操作</th>
                 </tr>
-                {volist name="list" id="v"}
+                <?php if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?>
                 <tr>
-                    <td>{$v['id']}</td>
-                    <td>{$v['nickname']}</td>
-                    <td><img src="{$v['icon']} "  alt=""></td>
-                    <td>{$v['tel']}</td>
+                    <td><?php echo $v['id']; ?></td>
+                    <td><?php echo $v['nickname']; ?></td>
+                    <td><img src="<?php echo $v['icon']; ?> "  alt=""></td>
+                    <td><?php echo $v['tel']; ?></td>
                     <td class="col-md-4">
-                        <button data-id="{$v['id']}" class="btn btn-default btn-xs show-btn" data-toggle="modal" data-target="#myModal">查看信息</button>
-                        <a href="{:url('user/edit',['id'=>$v['id']])}" class="btn btn-primary btn-xs">编辑</a>
-                        <button data-id="{$v['id']}" class="btn btn-danger btn-xs del-btn">删除</button>
+                        <button data-id="<?php echo $v['id']; ?>" class="btn btn-default btn-xs show-btn" data-toggle="modal" data-target="#myModal">查看信息</button>
+                        <a href="<?php echo url('user/edit',['id'=>$v['id']]); ?>" class="btn btn-primary btn-xs">编辑</a>
+                        <button data-id="<?php echo $v['id']; ?>" class="btn btn-danger btn-xs del-btn">删除</button>
                     </td>
                 </tr>
-                {/volist}
+                <?php endforeach; endif; else: echo "" ;endif; ?>
             </table>
         </div>
     </div>
@@ -105,14 +106,14 @@
     </div>
 </div>
 
-{/block}
+
 
 <!--加载JS-->
-{js href="/static/admin/js/jquery.min.js"}
-{js href="/static/admin/js/bootstrap.min.js"}
-{js href="/static/admin/js/toastr.min.js"}
+<script type="text/javascript" src="/static/admin/js/jquery.min.js"></script>
+<script type="text/javascript" src="/static/admin/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/static/admin/js/toastr.min.js"></script>
 
-{block name="myjs"}
+
 <script>
     $(function () {
         // 触发用户删除
@@ -194,6 +195,6 @@
         });
     }
 </script>
-{/block}
+
 </body>
 </html>

@@ -4,10 +4,11 @@ namespace app\admin\controller;
 
 use think\Controller;
 use think\Request;
+use think\Db;
 use think\Image;
-class User extends Controller
-{
 
+class Author extends Controller
+{
     public function upload()
     {
         $file = request()->file('icon');
@@ -25,8 +26,8 @@ class User extends Controller
      */
     public function index()
     {
-        $list = db('user')->select();
-        return view('user/index', ['title' => '后台用户管理', 'list' => $list]);
+        $list = Db::table('author')->paginate(8);
+        return view('author/index', ['title' => '后台作者管理', 'list' => $list]);
     }
 
 
@@ -37,7 +38,7 @@ class User extends Controller
      */
     public function create()
     {
-        return view('user/add',['title'=>'添加用户']);
+        return view('author/add',['title'=>'添加作者']);
     }
 
     /**
@@ -53,11 +54,11 @@ class User extends Controller
         $data['icon'] =  DS . 'uploads' . DS . $aa;
         $image = Image::open('uploads' . DS . $aa);
         $image->thumb(30, 30)->save('uploads' . DS . $aa);
-        $result = db('user')->insert($data);
+        $result = db('author')->insert($data);
         if($result>0) {
-            $this->success('添加成功','user/index');
+            $this->success('添加作者成功','author/index');
         } else {
-            $this->error('添加失败','user/create');
+            $this->error('添加作者失败','author/create');
         }
     }
 
@@ -70,9 +71,9 @@ class User extends Controller
     public function read($id)
     {
         if (!Request::instance()->isAjax()){
-            $this->error('非法路径', 'user/index');
+            $this->error('非法路径', 'author/index');
         }
-        $list = db('user')->where('id', $id)->find();
+        $list = db('author')->where('id', $id)->find();
         return json($list);
     }
 
@@ -84,8 +85,8 @@ class User extends Controller
      */
     public function edit($id)
     {
-        $result = db('user')->where('id',$id)->find();
-        return view('user/edit',['title'=>'编辑用户','result'=>$result]);
+        $result = db('author')->where('id',$id)->find();
+        return view('author/edit',['title'=>'编辑作者','result'=>$result]);
     }
 
     /**
@@ -98,11 +99,11 @@ class User extends Controller
     public function update(Request $request,$id)
     {
         $data = input('post.');
-        $result = db('user')->where('id',$id)->update($data);
+        $result = db('author')->where('id',$id)->update($data);
         if($result>0) {
-            $this->success('更新成功','user/index');
+            $this->success('更新成功','author/index');
         } else {
-            $this->error('更新失败','user/edit');
+            $this->error('更新失败','author/edit');
         }
     }
 
@@ -114,13 +115,13 @@ class User extends Controller
      */
     public function delete($id)
     {
-        $result = db('user')->where('id', $id)->delete();
+        $result = db('author')->where('id', $id)->delete();
         if ($result > 0) {
             $info['status'] = true;
-            $info['info'] = '用户已删除';
+            $info['info'] = '该作者已删除';
         } else {
             $info['status'] = false;
-            $info['info'] = '用户删除失败,请重试!';
+            $info['info'] = '作者删除失败,请重试!';
         }
 
         return json($info);
