@@ -13,10 +13,17 @@ class Index extends Controller
         $error = '';
         return view('index/writer-login',['error'=>$error]);
     }
+    
+    //跳转作者主页
+    public function writerpersonal()
+    {
+        return view('index/writer-index',['penname'=>Session::get('author.penname')]);
+    }
 
     //作者登录验证
     public function writerlogin()
     {
+
         $error = '';
         $list = input('post.');
         $captcha = $list['yzm'];
@@ -24,7 +31,7 @@ class Index extends Controller
 //        判断是否是POST方式访问的
         if(!request()->isPost()){
             $error = '请正常登录';
-            return view('index/writer-login');
+            return view('index/writer-login',['error'=>$error]);
         }
         if(empty($request)){
             $error = '账号不存在';
@@ -38,7 +45,8 @@ class Index extends Controller
         } else{
             Session::set('author.pwd',$list['pwd']);
             Session::set('author.penname',$list['penname'],'think') ;
-            return view('index/writer-index',['penname'=>Session::get('author.penname')]);
+//            return view('index/writer-index',['penname'=>Session::get('author.penname')]);
+            return $this->success('登录成功', 'index/writerpersonal');
         }
 
     }
@@ -93,20 +101,19 @@ class Index extends Controller
     //创建的小说审核验证
     public function foundverify()
     {
-//          return dump(Session::get('author.penname'));
-//        return dump(input('post.'));
+
         $error = '';
         if(empty(Session::get('author.penname'))){
             $error = '请先登录';
             return view('index/writer-found',['error'=>$error]);
         }
-        //作者登录用户名
-        $penname = Session::get('author.penname');
         //判断是否是POST形式访问!request()->isPost()
         if (!request()->isPost()){
             $error = '请使用正确的访问方式';
             return view('index/writer-found',['error'=>$error]);
         }
+        //作者登录用户名
+        $penname = Session::get('author.penname');
         //获取post数据
         $list = input('post.');
         //判断表单是否填写完整
@@ -118,7 +125,7 @@ class Index extends Controller
         $id = Db::table('author')->where('penname',$penname)->value('id');
         if(empty($id)){
             $error = '请先登录';
-            return view('index/writer-found',['error'=>$error,'penname'=>$penname]);
+            return view('index/writer-login',['error'=>$error,'penname'=>$penname]);
         }else{
             $data = [
                 'aid'=>$id,
@@ -126,13 +133,19 @@ class Index extends Controller
                 'isover'=>$list['status'],
                 'desc'=>$list['suggest']
             ];
-            Db::name('nover')->insert($data);
-            $noverid = Db::name('nover')->getLastInsID();
-            if($noverid >= 1){
-            return $this->success('作品添加成功,审核中...','index/writerfound');
+            Db::name('novel')->insert($data);
+            $novelid = Db::name('novel')->getLastInsID();
+            if($novelid >= 1){
+            return $this->success('作品添加成功,审核中...','index/writerpersonal');
             }
         }
 
+    }
+
+    //跳转作者信息
+    public function writerinfo()
+    {
+        return view('index/writer-info',['penname'=>Session::get('author.penname')]);
     }
 
 

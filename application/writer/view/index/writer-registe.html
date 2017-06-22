@@ -36,6 +36,9 @@
         .signUpPage .loginbox{
             height: 540px;
         }
+        .imgyzm{
+            margin:0px -87px;
+        }
     </style>
 </head>
 
@@ -70,7 +73,8 @@
                                 <!-- <input type="text" placeholder="请输入验证码" style="display: none;"> -->
                                 <input type="text" placeholder="请输入验证码" name="yzm">
                                 <div class="couterDiv">
-                                    <div>{:captcha_img()}</div>
+                                    <div class="imgyzm"><img id="verify_img" src="{:captcha_src()}" alt="验证码" onclick="refreshVerify()">
+                                        <a href="javascript:refreshVerify()">点击刷新</a></div>
                                 </div>
                             </div>
                             <div class="zcpwd mrgT">
@@ -100,6 +104,15 @@
         </div>
     </div>
 </div>
+
+<script src="/static/writer/js/jquery-1.8.3.min.js"></script>
+<script>
+    function refreshVerify() {
+        var ts = Date.parse(new Date())/1000;
+        $('#verify_img').attr("src", "/captcha?id="+ts);
+    }
+
+</script>
 
 
 </body>

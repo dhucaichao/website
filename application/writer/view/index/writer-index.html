@@ -38,11 +38,11 @@
         <div class="content-wrap">
             <header class="topbar"><h1 class=""><img
                     src="">
-            </h1><!-- react-empty: 118 -->
+            </h1>
                 <div class="topbar-right">
                     <ul class="top-nav clearfix">
                         <li class="topbar-sp-width">
-                            <div class="fontsize14">{$penname}</div>
+                            <div class="fontsize14"><a href="{:url('index/writerpersonal')}">{$penname}</a></div>
                         </li>
                         <li class="user">
                             <div><img class="frame-message-img"
@@ -57,35 +57,35 @@
             </header>
             <div class="sidebar">
                 <ul class="nav">
-                    <li class="nav-tab" data-url="#/listlong"><h3><i class="anticon anticon-long"></i>
-                        <!-- react-text: 133 -->长篇作品管理<!-- /react-text --></h3>
-                        <ul class="two-nav">
-                            <li><a class="sidebarItems" href="">
-                                <div class="sidebarItems-text">长篇作品列表</div>
-                            </a></li>
-                            <li><a class="sidebarItems" href="">
-                                <div class="sidebarItems-text">创建长篇新书</div>
-                            </a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-tab" data-url="#/listquadratic"><h3><i class="anticon anticon-quadratic"></i>
-                        <!-- react-text: 144 -->二次元小说管理<!-- /react-text --></h3>
-                        <ul class="two-nav">
-                            <li><a class="sidebarItems" href="">
-                                <div class="sidebarItems-text">二次元作品列表</div>
-                            </a></li>
-                            <li><a class="sidebarItems" href="">
-                                <div class="sidebarItems-text">创建二次元新书</div>
-                            </a></li>
-                        </ul>
-                    </li>
+                    <!--<li class="nav-tab" data-url="#/listlong"><h3><i class="anticon anticon-long"></i>-->
+                        <!--&lt;!&ndash; react-text: 133 &ndash;&gt;长篇作品管理&lt;!&ndash; /react-text &ndash;&gt;</h3>-->
+                        <!--<ul class="two-nav">-->
+                            <!--<li><a class="sidebarItems" href="">-->
+                                <!--<div class="sidebarItems-text">长篇作品列表</div>-->
+                            <!--</a></li>-->
+                            <!--<li><a class="sidebarItems" href="">-->
+                                <!--<div class="sidebarItems-text">创建长篇新书</div>-->
+                            <!--</a></li>-->
+                        <!--</ul>-->
+                    <!--</li>-->
+                    <!--<li class="nav-tab" data-url="#/listquadratic"><h3><i class="anticon anticon-quadratic"></i>-->
+                        <!--&lt;!&ndash; react-text: 144 &ndash;&gt;二次元小说管理&lt;!&ndash; /react-text &ndash;&gt;</h3>-->
+                        <!--<ul class="two-nav">-->
+                            <!--<li><a class="sidebarItems" href="">-->
+                                <!--<div class="sidebarItems-text">二次元作品列表</div>-->
+                            <!--</a></li>-->
+                            <!--<li><a class="sidebarItems" href="">-->
+                                <!--<div class="sidebarItems-text">创建二次元新书</div>-->
+                            <!--</a></li>-->
+                        <!--</ul>-->
+                    <!--</li>-->
                     <li class="nav-tab" data-url="#/"><h3 class="active"><i class="anticon anticon-shortlong"></i>
-                        中短篇作品管理</h3>
+                        作品管理</h3>
                         <ul class="two-nav" style="display: block;">
-                            <li><a class="sidebarItems colorWhite" href="">
+                            <li><a class="sidebarItems colorWhite" href="{:url('index/writerpersonal')}">
                                 <div class="sidebarItems-text">作品列表</div>
                             </a></li>
-                            <li><a class="sidebarItems" href="">
+                            <li><a class="sidebarItems" href="{:url('writerfound')}">
                                 <div class="sidebarItems-text">创建新书</div>
                             </a></li>
                             <li><a class="sidebarItems" href="">
@@ -93,27 +93,18 @@
                             </a></li>
                         </ul>
                     </li>
-                    <li class="nav-tab"><a class="" href=""><h3><i
-                            class="anticon anticon-user"></i><!-- react-text: 170 -->作者信息<!-- /react-text --></h3></a>
+                    <li class="nav-tab"><a class="" href="{:url('index/writerinfo')}"><h3><i
+                            class="anticon anticon-user"></i>作者信息</h3></a>
                     </li>
                     <li class="nav-tab"><a class="" href=""><h3><i
-                            class="anticon anticon-tablet"></i><!-- react-text: 175 -->作品数据<!-- /react-text --></h3></a>
+                            class="anticon anticon-tablet"></i>作品数据</h3></a>
                     </li>
-                    <li class="nav-tab"><h3><i class="anticon anticon-short"></i><!-- react-text: 179 -->公告管理
-                        <!-- /react-text --></h3>
-                        <ul class="two-nav">
-                            <li><a class="sidebarItems" href="">
-                                <div class="sidebarItems-text">消息列表</div>
-                            </a></li>
-                            <li>
-                                <div><a class="sidebarItems noticelink" href="">
-                                    <div class="sidebarItems-text">公告列表</div>
-                                </a></div>
-                            </li>
-                        </ul>
+                    <li class="nav-tab"><h3><i class="anticon anticon-short"></i>消息管理
+                        </h3>
+
                     </li>
                     <li class="nav-tab"><a class="" href=""><h3><i
-                            class="anticon anticon-money"></i><!-- react-text: 192 -->结算中心<!-- /react-text --></h3></a>
+                            class="anticon anticon-money"></i>结算中心</h3></a>
                     </li>
                 </ul>
             </div>
@@ -124,7 +115,7 @@
                             <div class="page-title"><h2 class="title-ll"><!-- react-text: 199 -->中短篇作品管理
                                 <!-- /react-text --><span>温馨提示：审核状态为“已通过”的书籍，新增章节才会被审核</span></h2>
                                 <div class="writingRule">写作规则</div>
-                                <div class="add-book-ll">+ 添加书籍</div>
+                                <div class="add-book-ll"><a href="{:url('index/writerfound')}">+ 添加书籍</a></div>
                             </div>
                             <div class="count-list">
                                 <ul class="booklist clearfix">

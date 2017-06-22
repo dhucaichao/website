@@ -10,6 +10,7 @@
     <link rel="icon" href="" mce_href="./favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="" mce_href="./favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="/static/writer/css/UBXCMkzNVlaZYNs.css">
+
     <style>
         @font-face {
             font-family: 'icomoon';
@@ -28,6 +29,12 @@
         }
         .error{
             color:red;
+        }
+        #imgyzm{
+            width: 107px;
+            height: 41px;
+            /*border: 1px solid red;*/
+            margin:0px 270px;
         }
     </style>
 </head>
@@ -65,7 +72,8 @@
                                             <!--验证码-->
                                             <div class="loginverify">
                                                 <input placeholder="请输入验证码" type="text" name="yzm" required>
-                                                <div>{:captcha_img()}</div>
+                                                <div><img id="verify_img" src="{:captcha_src()}" alt="验证码" onclick="refreshVerify()">
+                                                    <a href="javascript:refreshVerify()">点击刷新</a></div>
                                             </div>
 
 
@@ -106,9 +114,15 @@
             </div>
         </div>
     </div>
+    <script src="/static/writer/js/jquery-1.8.3.min.js"></script>
+    <script>
+        function refreshVerify() {
+            var ts = Date.parse(new Date())/1000;
+            $('#verify_img').attr("src", "/captcha?id="+ts);
+        }
 
-
-    <!--<script src="./原创创作平台_files/common-2017051107.js"></script>-->
+    </script>
+    <!--<script src="/static/writer/js/imgyzm.js"></script>-->
     <!--<script src="./原创创作平台_files/index-2017051107.js"></script>-->
 
 </body>
