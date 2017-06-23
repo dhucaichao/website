@@ -10,17 +10,7 @@
 // +----------------------------------------------------------------------
 
 use think\Route;
-
-
-Route::get('writers','writer/index/index');
-Route::get('home','home/index/index');
-
 return [
-    '__domain__'=>[
-        'admin.tp5.com'=>'admin',
-    ],
-
-
     '__pattern__' => [
         'name' => '\w+',
     ],

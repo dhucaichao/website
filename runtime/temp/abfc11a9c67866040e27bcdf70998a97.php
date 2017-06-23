@@ -1,0 +1,208 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:65:"D:\wamp\www\tp5\public/../application/admin\view\novel\index.html";i:1498207720;}*/ ?>
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title><?php echo $title; ?></title>
+    <!--加载CSS-->
+    <link rel="stylesheet" type="text/css" href="/static/admin/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/static/admin/css/toastr.min.css" />
+    <link rel="stylesheet" type="text/css" href="/static/admin/css/pintuer.css" />
+    <link rel="stylesheet" type="text/css" href="/static/admin/css/admin.css" />
+</head>
+<body>
+
+<div class="panel admin-panel">
+    <div class="panel-head"><strong class="icon-reorder"> 书籍列表 </strong></div>
+    <div class="padding border-bottom">
+        <ul class="search" style="padding-left: 10px;">
+            <li>
+                <a class="button border-main icon-plus-square-o" href="<?php echo url('novel/create'); ?>"> 添加书籍</a>
+            </li>
+            <li>
+                <a class="button border-green" href=" "> 完结 </a>
+            </li>
+            <li>
+                <a class="button border-red" href=" "> 连载 </a>
+            </li>
+            <li>
+                <form action="<?php echo url('novel/index'); ?>">
+                    <input type="text" placeholder="请输入搜索关键字" class="input" style="width:250px; line-height:17px;display:inline-block" name="search" />
+                    <input type='submit' class="button border-main" value="搜索">
+                </form>
+            </li>
+        </ul>
+    </div>
+
+    <table class="table table-hover text-center">
+        <tr>
+            <th width="100" style="text-align:left; padding-left:20px;"> ID号 </th>
+            <th> 作者 </th>
+            <th> 书籍名 </th>
+            <th> 是否完结 </th>
+            <th> 更新时间 </th>
+            <th> 操作 </th>
+        </tr>
+        <?php if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?>
+        <tr>
+            <td width="100" style="text-align: left; padding-left: 20px;"><?php echo $v['id']; ?></td>
+            <td><?php echo $v['aid']; ?></td>
+            <td><?php echo $v['name']; ?></td>
+            <td><?php echo $v['isover']; ?></td>
+            <td><?php echo $v['uptime']; ?></td>
+            <td class="col-md-4">
+                <button data-id="<?php echo $v['id']; ?>" class="btn btn-info btn-default show-btn" data-toggle="modal" data-target="#myModal">查看信息</button>
+                <a href="<?php echo url('novel/edit',['id'=>$v['id']]); ?>" class="btn btn-success btn-default">编辑</a>
+                <button data-id="<?php echo $v['id']; ?>" class="btn btn-danger btn-default del-btn">删除</button>
+            </td>
+        </tr>
+        <?php endforeach; endif; else: echo "" ;endif; ?>
+    </table>
+</div>
+<?php echo $list->render(); ?>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+                <h4 class="modal-title" id="myModalLabel">
+                    书籍:[<u> </u>]的详细信息
+                </h4>
+            </div>
+            <table class="table table-hover bg-info">
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <span class="num"></span>
+                        </div>
+                        <div class="col-md-4">
+                            <span class="isover"></span>
+                        </div>
+                        <div class="col-md-4">
+                            <span class="cid"></span>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <span class="up"></span>
+                        </div>
+                        <div class="col-md-4">
+                            <span class="towords"></span>
+                        </div>
+                        <div class="col-md-4">
+                            <span class="Tcollect"></span>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <span class="grade"></span>
+                        </div>
+                        <div class="col-md-4">
+                            <span class="Tticket"></span>
+                        </div>
+                        <div class="col-md-4">
+                            <span class="desc"> </span>
+                        </div>
+                    </div>
+                </div>
+            </table>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-info" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--加载JS-->
+<script type="text/javascript" src="/static/admin/js/jquery.min.js"></script>
+<script type="text/javascript" src="/static/admin/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/static/admin/js/toastr.min.js"></script>
+<script type="text/javascript" src="/static/admin/js/pintuer.js"></script>
+<script>
+    $(function () {
+        // 触发书籍删除
+        $('.del-btn').click(function () {
+            var ac_id = $(this).attr('data-id');
+            if (confirm('您确定要 [ 删 除 ] 该书籍么?')) {
+                var obj = $(this).parents('tr');
+                delAjax(ac_id,obj);// 执行删除操作
+            }
+        });
+        // 触发查询单条用户
+        $('.show-btn').click(function () {
+            var ac_id = $(this).attr('data-id');
+            showAjax(ac_id); //AJAX查询
+        })
+
+    });
+
+
+    // 设置弹框参数
+    toastr.options = {
+        closeButton: true,//是否显示关闭按钮
+        progressBar: false,//实现显示计时条
+        timeOut: "1000",//自动关闭时间
+        positionClass: "toast-bottom-right",//提示位置
+        // toast-top-full-width 顶端，宽度铺满整个屏幕
+        // toast-top-right  顶端右边
+    };
+
+    // 执行AJAX 查询单条数据
+    function showAjax(id){
+        $.ajax({
+            type: 'get',
+            url: '/admin/novel/read/id/' + id,
+            dateType: 'json',
+            success:function (data){
+                $('.modal-title u').html(data.name);
+                $('.modal-body .num').html('评论人数:' + (data.num));
+                $('.modal-body .isover').html('是否完结:' + (data.isover == 1 ? '连载' : '完结'));
+                $('.modal-body .cid').html('分类:' + (data.cid));
+
+                $('.modal-body .up').html('是否上架:' + (data.up == 1 ? '上架' : '下架'));
+                $('.modal-body .towords').html('总字数:' + (data.towords));
+                $('.modal-body .Tcollect').html('收藏量:' + (data.Tcollect));
+
+                $('.modal-body .grade').html('评分:' + (data.grade));
+                $('.modal-body .Tticket').html('月票数量:' + (data.Tticket));
+                $('.modal-body .desc').html('作品简介:' + (data.desc));
+            },
+            error: function () {
+                // AJAX执行失败
+                alert('ajax操作失败喽!');
+            }
+        });
+    }
+
+    // 执行AJAX删除的操作
+    function delAjax(id, obj) {
+        // console.log(id);
+        $.ajax({
+            type: 'delete',
+            url: '/admin/novel/delete/id/' + id,
+            dateType: 'json',
+            success: function (data) {
+                if (data.name) {
+                    toastr.success(data.info);
+                    obj.remove();
+                } else {
+                    toastr.error(data.info,"删除书籍失败,再试一下!");
+                }
+            },
+            error: function () {
+                // AJAX执行失败
+                alert('ajax操作失败喽!');
+            }
+        });
+    }
+</script>
+
+
+</body>
+</html>

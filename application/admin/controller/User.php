@@ -3,12 +3,21 @@
 namespace app\admin\controller;
 
 use think\Controller;
-
 use think\Request;
-
+use think\Image;
 class User extends Controller
 {
 
+    public function upload()
+    {
+        $file = request()->file('icon');
+        $info = $file->move(ROOT_PATH . 'public' . DS . 'uploads');
+        if($info){
+            return $info->getSaveName();
+        }else{
+            return $file->getError();
+        }
+    }
     /**
      * 显示资源列表
      *
@@ -39,7 +48,11 @@ class User extends Controller
      */
     public function save(Request $request)
     {
+        $aa = $this->upload();
         $data = input('post.');
+        $data['icon'] =  DS . 'uploads' . DS . $aa;
+        $image = Image::open('uploads' . DS . $aa);
+        $image->thumb(30, 30)->save('uploads' . DS . $aa);
         $result = db('user')->insert($data);
         if($result>0) {
             $this->success('添加成功','user/index');
@@ -111,6 +124,5 @@ class User extends Controller
         }
 
         return json($info);
-
     }
 }

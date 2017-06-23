@@ -1,6 +1,5 @@
 <?php
 
-
 namespace app\admin\controller;
 
 use think\Controller;
@@ -13,7 +12,7 @@ class Index extends Controller
         if (empty(Session('admin'))) {
             $this->error('请先登录', 'login/index', ['error' => '']);
         }
-        return view();
+        return view('index/index');
     }
 
     public function index()
@@ -25,6 +24,5 @@ class Index extends Controller
     {
         Session::clear();
         return view('index');
-
     }
 }
