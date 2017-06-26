@@ -17,7 +17,13 @@ class Index extends Controller
     //跳转作者主页
     public function writerpersonal()
     {
-        return view('index/writer-index',['penname'=>Session::get('author.penname')]);
+        $penname = Session::get('author.penname');
+        $list = Db::table('author')->where('penname',$penname)->find();
+        return view('index/writer-index',[
+            'penname'=>Session::get('author.penname'),
+            'endnover'=>$list['endnover'],
+            'serialnover'=>$list['serialnover']
+        ]);
     }
 
     //作者登录验证
@@ -101,7 +107,7 @@ class Index extends Controller
     //创建的小说审核验证
     public function foundverify()
     {
-
+//        return dump(input('post.'));
         $error = '';
         if(empty(Session::get('author.penname'))){
             $error = '请先登录';
@@ -145,7 +151,74 @@ class Index extends Controller
     //跳转作者信息
     public function writerinfo()
     {
-        return view('index/writer-info',['penname'=>Session::get('author.penname')]);
+        $penname = Session::get('author.penname');
+        $aid = Db::table('author')->where('penname',$penname)->value('id');
+        $list = Db::table('authorinfo')->where('aid',$aid)->find();
+        return view('index/writer-info',[
+            'penname'=>Session::get('author.penname'),
+            'wname'=>$list['wname'],
+            'idnumber'=>$list['idnumber'],
+            'name'=>$list['name'],
+            'tel'=>$list['tel'],
+            'inclination'=>$list['inclination'],
+            'qq'=>$list['qq'],
+            'sex'=>$list['sex'],
+            'email'=>$list['email'],
+            'icon'=>$list['icon'],
+            'status'=>$list['status'],
+            'level'=>$list['level'],
+            'icon'=>$list['icon']
+        ]);
+    }
+
+    //文件上传获取数据
+    public function upload(){
+        // 获取表单上传文件 例如上传了001.jpg
+        $file = request()->file('image');
+        // 移动到框架应用根目录/public/static/writer/images 目录下
+        $info = $file->validate(['size'=>155678,'ext'=>'jpg,png,gif'])->move(ROOT_PATH . 'public' . DS . '/static/writer/images');
+        if($info){
+        // 成功上传后 获取上传信息
+
+            // 输出 20170625/42a79759f284b767dfcb2a0197904287.jpg
+            return  $info->getSaveName();
+        }else{
+            // 上传失败获取错误信息
+            return $file->getError();
+        }
+    }
+
+    //修改信息判断
+    public function infomod()
+    {
+        //查询用户的ID
+        $penname = Session::get('author.penname');
+        $aid = Db::table('author')->where('penname',$penname)->value('id');
+        //调用上传文件方法
+        $image = $this->upload();
+        //获取想要的文件路径
+        $date = strstr($image,'\\',true);
+        $image = substr(strstr($image,'\\'),1);
+        $icon = '/static/writer/images/'.$date.'/'.$image;
+
+        //接收POST数据
+        $list = input('post.');
+        $result = Db::table('authorinfo')->where('aid',$aid)->update([
+            'wname'=>$list['wname'],
+            'idnumber'=>$list['idnumber'],
+            'name'=>$list['name'],
+            'tel'=>$list['tel'],
+            'inclination'=>$list['inclination'],
+            'qq'=>$list['qq'],
+            'sex'=>$list['sex'],
+            'email'=>$list['email'],
+            'icon'=>$icon
+        ]);
+        if(!$result>0){
+            return $this->success('信息更新失败','index/writerinfo');
+        }else{
+            return $this->success('信息更新成功','index/writerinfo');
+        }
     }
 
 

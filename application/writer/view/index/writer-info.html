@@ -11,22 +11,6 @@
 
 
     <style>
-        @font-face {
-            font-family: 'icomoon';
-            src: url('fonts/icomoon.eot?w4vf6g');
-            src: url('fonts/icomoon.eot?w4vf6g#iefix') format('embedded-opentype'), url('fonts/icomoon.ttf?w4vf6g') format('truetype'), url('fonts/icomoon.woff?w4vf6g') format('woff'), url('fonts/icomoon.svg?w4vf6g#icomoon') format('svg');
-            font-weight: normal;
-            font-style: normal;
-        }
-
-        @font-face {
-            font-family: 'icomoon';
-            src: url('./iconfont/iconfont.eot?w4vf6g');
-            src: url('./iconfont/iconfont.eot?w4vf6g#iefix') format('embedded-opentype'), url('./iconfont/iconfont.ttf?w4vf6g') format('truetype'), url('./iconfont/iconfont.woff?w4vf6g') format('woff'), url('./iconfont/iconfont.svg?w4vf6g#icomoon') format('svg');
-            font-weight: normal;
-            font-style: normal;
-        }
-
         .content {
             font-size: 20px;
         }
@@ -100,7 +84,7 @@
             width: 120px;
             height:50px;
             background-color: rgb(241,90,36);
-            margin: 0px 0px;
+            margin: -8px 550px;
         }
         .file{
             width: 200px;
@@ -177,7 +161,7 @@
                 <div class="createbookPage">
 
 
-                    <div class="content">
+                    <div class="content" id="c-input">
                         <div class="content-list position-fix">
                             <div class="page-title"><h2><span class="clor2">作者</span></h2></div>
                             <div class="hp-content-zuopinrongyu-base">
@@ -187,58 +171,54 @@
                                              style="opacity: 1; visibility: visible; transform: translateX(0px);">作者基础信息
                                         </div>
                                         <!--表单提交-->
-                                        <form action="" method="post" enctype="multipart/form-data">
+                                        <form action="{:url('index/infomod')}" method="post" enctype="multipart/form-data">
                                         <div class="hp-base-info"
                                              style="opacity: 1; visibility: visible; transform: translateX(0px);">
                                             <div class="hp-base-info-left">
                                                 <div class="hp-content-left-info-base"><p
-                                                        class="hp-content-left-info-class">当前笔名：<input type="text" class="inputcss"  placeholder=""></p>
+                                                        class="hp-content-left-info-class">当前笔名：<input type="text" class="inputcss"   name="wname" value="{$wname}" ></p>
                                                 </div>
+                                                <!--<div class="hp-content-left-info-base"><p-->
+                                                        <!--class="hp-content-left-info-class">待审核笔名：<input type="text" class="inputcss" placeholder="" name="dshname"></p>-->
+                                                <!--</div>-->
                                                 <div class="hp-content-left-info-base"><p
-                                                        class="hp-content-left-info-class">待审核笔名：<input type="text" class="inputcss" placeholder=""></p>
-                                                </div>
-                                                <div class="hp-content-left-info-base"><p
-                                                        class="hp-content-left-info-class">身份证号：<input type="text" class="inputcss" placeholder=""></p>
+                                                        class="hp-content-left-info-class">身份证号：<input type="text" class="inputcss" value="{$idnumber}" name="idnumber"></p>
                                                     <p class="hp-content-left-info-context-base"></p></div>
                                                 <div class="hp-content-left-info-base"><p
-                                                        class="hp-content-left-info-class">真实姓名：<input type="text" class="inputcss" placeholder=""></p>
+                                                        class="hp-content-left-info-class">真实姓名：<input type="text" class="inputcss" value="{$name}" name="name"></p>
                                                 </div>
                                                 <div class="hp-content-left-info-base"><p
-                                                        class="hp-content-left-info-class">手机号：<input type="text" class="inputcss" placeholder=""></p>
+                                                        class="hp-content-left-info-class">手机号：<input type="text" class="inputcss" value="{$tel}" name="tel"></p>
                                                 </div>
                                                 <div class="hp-content-left-info-base"><p
-                                                        class="hp-content-left-info-class">写作倾向：<input type="text" class="inputcss" placeholder=""></p>
+                                                        class="hp-content-left-info-class">写作倾向：<input type="text" class="inputcss" value="{$inclination}" name="inclination"></p>
                                                 </div>
                                                 <div class="hp-content-left-info-base"><p
-                                                        class="hp-content-left-info-class">QQ号：<input type="text" class="inputcss" placeholder=""></p>
+                                                        class="hp-content-left-info-class">QQ号：<input type="text" class="inputcss" value="{$qq}" name="qq"></p>
                                                 </div>
                                             </div>
                                             <div class="hp-base-info-middle">
                                                 <div class="hp-content-left-info-base"><p
-                                                        class="hp-content-left-info-class">性别：<input type="text" class="inputcss" placeholder=""></p>
+                                                        class="hp-content-left-info-class">性别：<label ><input type="radio" class="inputcss"  name="sex" value="1" {$sex==1?'checked':''}>男</label>
+    <label ><input type="radio" class="inputcss"  name="sex" value="2" {$sex==2?'checked':''}>女</label>
+    <label ><input type="radio" class="inputcss"  name="sex" value="3" {$sex==3?'checked':''}>保密</label>
+                                                </p>
                                                 </div>
                                                 <div class="hp-content-left-info-base"><p
-                                                        class="hp-content-left-info-class">邮箱：<input type="text" class="inputcss" placeholder=""></p>
+                                                        class="hp-content-left-info-class">邮箱：<input type="text" class="inputcss" value="{$email}" name="email"></p>
+                                                    <div class="hp-content-left-info-base"><p class="hp-content-left-info-class">状态：<span class="blue">{$status==1?'激活':禁用}</span></p>
                                             </div>
-                                            <!--<div class="hp-base-info-right">-->
-                                                <!--<div class="hp-div-img">封面: <img-->
-                                                        <!--id="realImgHp"-->
-                                                        <!--src=""-->
-                                                        <!--class="hp-realImg"-->
-                                                        <!--width="140"-->
-                                                        <!--height="200">-->
-                                                <!--</div>-->
-                                            <!--</div>-->
+                                                    <div class="hp-content-left-info-base"><p class="hp-content-left-info-class">等级：<span class="blue">{$level==1?'普通写手':$level==2?'黄金写手':'白金写手'}</span></p>
                                         </div>
-                                         <button type="submit" class="xg inputcss">确认修改</button>
                                    <div class="file">
                                        <span class="blue">个性头像:</span>
-                                       <img src="" class="fileimg">
-                                       <input type="file" >
+                                       <img src="{$icon}" class="fileimg">
+                                       <input type="file" name="image">
                                    </div>
+                                            <button type="submit" class="xg inputcss">确认修改</button>
+                                    </div>
                                         </form>
                                     </div>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -249,6 +229,9 @@
         </div>
     </div>
 </div>
+    <script>
+
+    </script>
 
 </body>
 </html>

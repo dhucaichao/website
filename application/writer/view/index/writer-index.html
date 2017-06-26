@@ -13,20 +13,9 @@
     <![endif]-->
     <link rel="stylesheet" type="text/css" href="/static/writer/css/UBXCMkzNVlaZYNs-w.css">
     <style>
-        @font-face {
-            font-family: 'icomoon';
-            src: url('fonts/icomoon.eot?w4vf6g');
-            src: url('fonts/icomoon.eot?w4vf6g#iefix') format('embedded-opentype'), url('fonts/icomoon.ttf?w4vf6g') format('truetype'), url('fonts/icomoon.woff?w4vf6g') format('woff'), url('fonts/icomoon.svg?w4vf6g#icomoon') format('svg');
-            font-weight: normal;
-            font-style: normal;
-        }
 
-        @font-face {
-            font-family: 'icomoon';
-            src: url('./iconfont/iconfont.eot?w4vf6g');
-            src: url('./iconfont/iconfont.eot?w4vf6g#iefix') format('embedded-opentype'), url('./iconfont/iconfont.ttf?w4vf6g') format('truetype'), url('./iconfont/iconfont.woff?w4vf6g') format('woff'), url('./iconfont/iconfont.svg?w4vf6g#icomoon') format('svg');
-            font-weight: normal;
-            font-style: normal;
+        .zzxs{
+            color: red;
         }
     </style>
 </head>
@@ -57,28 +46,7 @@
             </header>
             <div class="sidebar">
                 <ul class="nav">
-                    <!--<li class="nav-tab" data-url="#/listlong"><h3><i class="anticon anticon-long"></i>-->
-                        <!--&lt;!&ndash; react-text: 133 &ndash;&gt;长篇作品管理&lt;!&ndash; /react-text &ndash;&gt;</h3>-->
-                        <!--<ul class="two-nav">-->
-                            <!--<li><a class="sidebarItems" href="">-->
-                                <!--<div class="sidebarItems-text">长篇作品列表</div>-->
-                            <!--</a></li>-->
-                            <!--<li><a class="sidebarItems" href="">-->
-                                <!--<div class="sidebarItems-text">创建长篇新书</div>-->
-                            <!--</a></li>-->
-                        <!--</ul>-->
-                    <!--</li>-->
-                    <!--<li class="nav-tab" data-url="#/listquadratic"><h3><i class="anticon anticon-quadratic"></i>-->
-                        <!--&lt;!&ndash; react-text: 144 &ndash;&gt;二次元小说管理&lt;!&ndash; /react-text &ndash;&gt;</h3>-->
-                        <!--<ul class="two-nav">-->
-                            <!--<li><a class="sidebarItems" href="">-->
-                                <!--<div class="sidebarItems-text">二次元作品列表</div>-->
-                            <!--</a></li>-->
-                            <!--<li><a class="sidebarItems" href="">-->
-                                <!--<div class="sidebarItems-text">创建二次元新书</div>-->
-                            <!--</a></li>-->
-                        <!--</ul>-->
-                    <!--</li>-->
+
                     <li class="nav-tab" data-url="#/"><h3 class="active"><i class="anticon anticon-shortlong"></i>
                         作品管理</h3>
                         <ul class="two-nav" style="display: block;">
@@ -120,6 +88,8 @@
                             <div class="count-list">
                                 <ul class="booklist clearfix">
                                     <ul>
+                                        <li><p>已完结小说:</p><p style="color: #0C82D9">{$endnover}</p></li>
+                                        <li><p>正连载小说:</p><p  style="color: #0C82D9">{$serialnover}</p></li>
                                         <li><a class="addbook" href="{:url('index/writerfound')}"><i>+</i>
                                             <p>添加</p></a></li>
                                     </ul>
