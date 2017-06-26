@@ -96,6 +96,7 @@
         ]
     },
     {
+
         "name": "topthink/think-image",
         "version": "v1.0.7",
         "version_normalized": "1.0.7.0",
@@ -138,6 +139,7 @@
         "description": "The ThinkPHP5 Image Package"
     },
     {
+
         "name": "topthink/think-captcha",
         "version": "v1.0.7",
         "version_normalized": "1.0.7.0",

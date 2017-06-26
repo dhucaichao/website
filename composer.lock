@@ -4,7 +4,11 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
+<<<<<<< HEAD
     "content-hash": "9745ba4c2e34618d188734b788d05eed",
+=======
+    "content-hash": "786db149f3fc0327c3d1eb9670d10cae",
+>>>>>>> newicfire
     "packages": [
         {
             "name": "topthink/framework",
@@ -94,6 +98,7 @@
             "time": "2016-07-06T01:47:11+00:00"
         },
         {
+
             "name": "topthink/think-image",
             "version": "v1.0.7",
             "source": {
@@ -134,6 +139,7 @@
             "time": "2016-09-29T06:05:43+00:00"
         },
         {
+
             "name": "topthink/think-installer",
             "version": "v1.0.12",
             "source": {
