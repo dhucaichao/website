@@ -251,7 +251,7 @@ return [
         'length' => 1,
 // 验证成功后是否重置
         'reset' => true
-    ],
+    ]
 
 
 ];
