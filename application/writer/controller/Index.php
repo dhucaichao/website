@@ -175,8 +175,8 @@ class Index extends Controller
     public function upload(){
         // 获取表单上传文件 例如上传了001.jpg
         $file = request()->file('image');
-        // 移动到框架应用根目录/public/static/writer/images 目录下
-        $info = $file->validate(['size'=>155678,'ext'=>'jpg,png,gif'])->move(ROOT_PATH . 'public' . DS . '/static/writer/images');
+        // 移动到框架应用根目录/public/uploads 目录下
+        $info = $file->validate(['size'=>155678,'ext'=>'jpg,png,gif'])->move(ROOT_PATH . 'public' . DS . 'uploads');
         if($info){
         // 成功上传后 获取上传信息
 
@@ -199,7 +199,7 @@ class Index extends Controller
         //获取想要的文件路径
         $date = strstr($image,'\\',true);
         $image = substr(strstr($image,'\\'),1);
-        $icon = '/static/writer/images/'.$date.'/'.$image;
+        $icon = '/uploads/'.$date.'/'.$image;
 
         //接收POST数据
         $list = input('post.');
