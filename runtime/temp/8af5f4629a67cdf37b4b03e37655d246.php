@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:86:"E:\wamp\www\newicefire\tp5\public/../application/writer\view\index\writer-registe.html";i:1498621101;}*/ ?>
 <!DOCTYPE html>
 <!-- saved from url=(0041)http://yc.aliwx.com.cn/#/signup?_k=g5e399 -->
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -37,12 +38,12 @@
                 <div class="loginbox">
                     <div>
                         <div class="entrance" style="opacity: 1; visibility: visible; transform: translateX(0px);">
-                            <a class="" href="{:url('index/index')}">返回&gt;&gt;</a>
+                            <a class="" href="<?php echo url('index/index'); ?>">返回&gt;&gt;</a>
                         </div>
                         <div class="logininput" style="opacity: 1; visibility: visible; transform: translateX(0px);">
                             <h1 class="logo"><img src="/static/writer/images/1497946000_994076.png" ></h1>
                             <div class="uniqueVerify">
-                                <form class="" action="{:url('index/submitregiste')}" method='post' >
+                                <form class="" action="<?php echo url('index/submitregiste'); ?>" method='post' >
                                     <div class="ant-row ant-form-item">
                                         <div class="ant-col-5 ant-form-item-label">
                                             <label class="">账&nbsp;&nbsp;&nbsp;&nbsp;号</label>
@@ -59,7 +60,7 @@
                                 <!-- <input type="text" placeholder="请输入验证码" style="display: none;"> -->
                                 <input type="text" placeholder="请输入验证码" name="yzm">
                                 <div class="couterDiv">
-                                    <div class="imgyzm"><img id="verify_img" src="{:captcha_src()}" alt="验证码" onclick="refreshVerify()">
+                                    <div class="imgyzm"><img id="verify_img" src="<?php echo captcha_src(); ?>" alt="验证码" onclick="refreshVerify()">
                                         <a href="javascript:refreshVerify()">点击刷新</a></div>
                                 </div>
                             </div>
@@ -82,7 +83,7 @@
 
                             <input type="submit" value='提交注册' class='tjzc'>
                             </form>
-                            <div style="color:red">{$error}</div>
+                            <div style="color:red"><?php echo $error; ?></div>
                         </div>
                     </div>
                 </div>

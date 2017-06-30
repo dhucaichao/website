@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:84:"E:\wamp\www\newicefire\tp5\public/../application/writer\view\index\writer-found.html";i:1498837251;}*/ ?>
 <!DOCTYPE html>
 
 <html>
@@ -14,20 +15,20 @@
     <style>
         .content {
             font-size: 20px;
-            margin-left: -48px;
         }
 
         .content-zuopin {
-            width: 950px;
+            width: 1600px;
             height: 1600px;
             /* border: 1px solid red; */
+
         }
 
         .content-all {
             width: 1020px;
             height: 1200px;
             /* border: 1px solid red; */
-            margin: 10px 1px;
+            margin: 100px 325px;
         }
 
         .inputys {
@@ -87,14 +88,14 @@
                 <div class="topbar-right">
                     <ul class="top-nav clearfix">
                         <li class="topbar-sp-width">
-                            <div class="fontsize14"><a href="{:url('index/writerpersonal')}">{$penname}</a></div>
+                            <div class="fontsize14"><a href="<?php echo url('index/writerpersonal'); ?>"><?php echo $penname; ?></a></div>
                         </li>
                         <li class="user">
                             <div><a href=""><img class="frame-message-img"
                                                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OEFGOERDNUE1N0NDMTFFNkFGRjlCQjg5Mzg5MUYyQ0IiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OEFGOERDNUI1N0NDMTFFNkFGRjlCQjg5Mzg5MUYyQ0IiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4QUY4REM1ODU3Q0MxMUU2QUZGOUJCODkzODkxRjJDQiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4QUY4REM1OTU3Q0MxMUU2QUZGOUJCODkzODkxRjJDQiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PtijQ/MAAAGISURBVHjaZFM7TgNBDLWdlIiWIofYWxAhQQmhQkLQJQWHIUdA0KdBhEMsHCI5BIV5nrFnvZvZjMafZ4/tN+HrhxeKpfgYH36dqm5gujEd9h2Mr/D8FAxzBJBQWgDPcHzA0UN7hnxhGwGQtTcf5JkFxhLLaJfahvwGaYVzD3UBsMAucCyQfA95Bf/7UDESlJJNUe0QsIL6BdsS56H0VPs6YC+B+YR2C3gXKaSlItr4+ejjoFadDwgXPGkFBZYkyofz3oHHCOLaV91cqjy64y78AmNUcOZOjYCIL3IphrUwoHQerOUZNGA7oz8daG7VOJ0SOM+cOR3LTAP/qT1hnt6YZJ3MYeIvNIZTE0JH6MnioTq7vL1EKy8Cc6k5sA08zckSbMvkI5ANpwGDoOrMqLGQZmPyVkbD8rBSjerIftJWxcocxxrCOmixQLa7PHM7eaDb/7H+EpXyc22zKKXXMtXlgZXEhJxQ6Lfi69OT/rWbWxuJ+nmzTR8S0SX0bwD/IF9xHlZ66v8CDADJ5bnGYjmjZAAAAABJRU5ErkJggg=="></a>
                             </div>
                         </li>
-                        <li class="logout"><a href="{:url('index/writerout')}"><img class="frame-logout-img"
+                        <li class="logout"><a href="<?php echo url('index/writerout'); ?>"><img class="frame-logout-img"
                                                                                     src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAASCAYAAAC5DOVpAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RTA5RjUwRjk1N0NDMTFFNjkyMEVGMTRFRDE5RDMyQkQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RTA5RjUwRkE1N0NDMTFFNjkyMEVGMTRFRDE5RDMyQkQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpFMDlGNTBGNzU3Q0MxMUU2OTIwRUYxNEVEMTlEMzJCRCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpFMDlGNTBGODU3Q0MxMUU2OTIwRUYxNEVEMTlEMzJCRCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pqx0vlAAAAGqSURBVHjabFS7TQRBDLVHG9DBlYBo5UTICQgACVEAIRUg0QMkJIA4InrhWkBUQALG//HscnOz631je/15Xjy8uP4kohX4D3nJnzFAFEFBvRMohqGbZyKyPDGwwkDciSgJprLAhP1Fbqgu05G9eCpOMJ2YYMY0MyIL0xz6uUfZQhBDOfRUTKkohg7/Gt8PMlvsETfTpazLWBJKGSwtZOyNpQ8+OpJIdftqGgl0B2lfoBKdvHzPjV/Z7iQykt00EiyR4CKt3hygH9Zf875z7ImvZ71mtTawDDBfAFlwWTcSlTfnkVO9FJ2pppnK4K0vxQ/H82i9zg/ChhYkrSQkY+iYKo7NyXIEZfi0LdKj6Jsv4Swo+VymwI9dUx6v+HLfqBSJOgNgzoocMVAy3jLy4jrnvCVNmLCkh0OE4h2tdt2xZPLOe+3YKd+f1ZZknAoVhmbkHEZhlEui8u02G75ua62nmksMdO2cjpgXkszzhvX2Gdj18tjMtuwgleHBMbLouPfkl+Ed/KM71Y8Cjp+oId0KDXwr48fjBF/5IQxHSTMaRiyeh09P4dyfAAMAANHfWVOPlmQAAAAASUVORK5CYII="></a>
                         </li>
                     </ul>
@@ -109,25 +110,25 @@
                     <li class="nav-tab" data-url="#/"><h3 class="active"><i class="anticon anticon-shortlong"></i>
                         作品管理</h3>
                         <ul class="two-nav" style="display: block;">
-                            <li><a class="sidebarItems colorWhite" href="{:url('index/writerpersonal')}">
+                            <li><a class="sidebarItems colorWhite" href="<?php echo url('index/writerpersonal'); ?>">
                                 <div class="sidebarItems-text">作品列表</div>
                             </a></li>
-                            <li><a class="sidebarItems colorWhite" href="{:url('writerfound')}">
+                            <li><a class="sidebarItems colorWhite" href="<?php echo url('writerfound'); ?>">
                                 <div class="sidebarItems-text">创建新书</div>
                             </a></li>
-                            <li><a class="sidebarItems" href="{:url('index/authormoney')}">
+                            <li><a class="sidebarItems" href="<?php echo url('index/authormoney'); ?>">
                                 <div class="sidebarItems-text">作者资产</div>
                             </a></li>
                         </ul>
                     </li>
-                    <li class="nav-tab"><a class="" href="{:url('index/writerinfo')}"><h3><i class="anticon anticon-user"></i>
+                    <li class="nav-tab"><a class="" href="<?php echo url('index/writerinfo'); ?>"><h3><i class="anticon anticon-user"></i>
                         作者信息</h3></a></li>
-                    <li class="nav-tab"><a class="" href="{:url('index/writerdata')}"><h3><i class="anticon anticon-tablet"></i>
+                    <li class="nav-tab"><a class="" href="<?php echo url('index/writerdata'); ?>"><h3><i class="anticon anticon-tablet"></i>
                         作品数据</h3></a></li>
-                    <li class="nav-tab"><a href="{:url('index/writernwes')}"><h3><i class="anticon anticon-short"></i>消息管理
+                    <li class="nav-tab"><a href="<?php echo url('index/writernwes'); ?>"><h3><i class="anticon anticon-short"></i>消息管理
                     </h3></a>
 
-                    <li class="nav-tab"><a class="" href="{:url('index/writercheckout')}"><h3><i class="anticon anticon-money"></i>
+                    <li class="nav-tab"><a class="" href="<?php echo url('index/writercheckout'); ?>"><h3><i class="anticon anticon-money"></i>
                         结算中心</h3></a></li>
                 </ul>
             </div>
@@ -135,19 +136,19 @@
                 <div class="createbookPage">
 
 
-                    <!--{block name="kth"}-->
+                    <!---->
                     <!-- 可替换主题部分 -->
                     <div class="content">
                         <div class="content-list position-fix">
                             <div class="page-title"><h2><span><a class="clor" href="">作品列表</a><span class="separator">&gt;</span></span><span><a
-                                    class="clor1" href="{:url('index/writerfound')}">创建书籍</a></span></h2></div>
+                                    class="clor1" href="<?php echo url('index/writerfound'); ?>">创建书籍</a></span></h2></div>
 
 
                                 <div class='content-zuopin'>
-                                    <p class="error">{$error}</p>
+                                    <p class="error"><?php echo $error; ?></p>
                                     <div class='content-all'>
-                      <form action="{:url('index/foundverify')}" method='post' enctype="multipart/form-data">
-                          <!--<form action="{:url('index/foundverify')}" method="post" enctype="multipart/form-data"></form>-->
+                      <form action="<?php echo url('index/foundverify'); ?>" method='post' enctype="multipart/form-data">
+                          <!--<form action="<?php echo url('index/foundverify'); ?>" method="post" enctype="multipart/form-data"></form>-->
                                         <div class='zuopin'>作品名称:<input type="text" class='inputys' name='name'></div>
                                         <div class='zuopin'>作品分类:
                                             <p>
@@ -221,13 +222,13 @@
                                             <label><input type="radio" class='zpfl' name='status' checked value="1">连载</label>
                                             <label><input type="radio" class='zpfl' name='status' value="2">完本</label>
                                         </div>
-                                        <div class='zuopin'>作品介绍:<textarea class='inputys zhengwen' rows='6' cols='65'
+                                        <div class='zuopin'>作品介绍:<textarea class='inputys zhengwen' rows='6' cols='80'
                                                                            name='suggest'></textarea>
                                             <div class='zuopin zuopzj'>作品章节:<input type="text" class='inputys zpzj'
                                                                                    name='section'></div>
                                             <span class='zpzw'>作品正文:</span><textarea name="text"
                                                                                      class='inputys zhengwen' rows='10'
-                                                                                     cols='65'></textarea>
+                                                                                     cols='80'></textarea>
                                         </div>
                                         <div class='fm-all'>
                                             <div class='fm'>封面</div>
@@ -243,7 +244,7 @@
                             </form>
 
                             <!--可替换结束-->
-                    <!--{/block}-->
+                    <!---->
 
 
                 </div>

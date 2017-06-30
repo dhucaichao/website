@@ -1,0 +1,2896 @@
+---------------------------------------------------------------
+[ 2017-07-01T00:05:16+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/writernwes.html
+[ info ] tp5.com/writer/index/writernwes.html [运行时间：0.509283s][吞吐率：1.96req/s] [内存消耗：2,689.64kb] [文件加载：51]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'writernwes',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=vmamvpcc236jthsftelq3hvgf7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\writer\controller\Index->writernwes[ E:\wamp\www\newicefire\tp5\application\writer\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.110190s ] mysql:dbname=icefire;host=47.94.158.22;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `comment` [ RunTime:0.073225s ]
+[ sql ] [ SQL ] SELECT * FROM `comment` [ RunTime:0.071852s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `comment` LIMIT 1 [ RunTime:0.072004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.072697s ]
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'name' in 'field list'[E:\wamp\www\newicefire\tp5\thinkphp\library\think\db\Connection.php:388]
+---------------------------------------------------------------
+[ 2017-07-01T00:05:54+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/writercheckout.html
+[ info ] tp5.com/writer/index/writercheckout.html [运行时间：0.564137s][吞吐率：1.77req/s] [内存消耗：2,762.88kb] [文件加载：49]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'writercheckout',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'referer' => 'http://tp5.com/writer/index/writernwes.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=vmamvpcc236jthsftelq3hvgf7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\writer\controller\Index->writercheckout[ E:\wamp\www\newicefire\tp5\application\writer\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\wamp\www\newicefire\tp5\public/../application/writer\view\index\writer-checkout.html [ array (
+  0 => 'penname',
+  1 => 'list',
+  2 => 'all',
+  3 => 'aid',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.096147s ] mysql:dbname=icefire;host=47.94.158.22;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `author` [ RunTime:0.064060s ]
+[ sql ] [ SQL ] SELECT `id` FROM `author` WHERE  `penname` = 'hhy' LIMIT 1 [ RunTime:0.079242s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `novel` [ RunTime:0.064415s ]
+[ sql ] [ SQL ] SELECT * FROM `novel` WHERE  `aid` = 19 [ RunTime:0.064995s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `assets` [ RunTime:0.064020s ]
+[ sql ] [ SQL ] SELECT * FROM `assets` WHERE  `aid` = 19 LIMIT 1 [ RunTime:0.063116s ]
+---------------------------------------------------------------
+[ 2017-07-01T00:06:05+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/writernwes.html
+[ info ] tp5.com/writer/index/writernwes.html [运行时间：0.718656s][吞吐率：1.39req/s] [内存消耗：2,912.13kb] [文件加载：51]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'writernwes',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'referer' => 'http://tp5.com/writer/index/writercheckout.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=vmamvpcc236jthsftelq3hvgf7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\writer\controller\Index->writernwes[ E:\wamp\www\newicefire\tp5\application\writer\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\wamp\www\newicefire\tp5\public/../application/writer\view\index\writer-news.html [ array (
+  0 => 'penname',
+  1 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.098461s ] mysql:dbname=icefire;host=47.94.158.22;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `comment` [ RunTime:0.064412s ]
+[ sql ] [ SQL ] SELECT * FROM `comment` [ RunTime:0.064426s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `comment` LIMIT 1 [ RunTime:0.064852s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.065316s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.068729s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `novel` [ RunTime:0.065017s ]
+[ sql ] [ SQL ] SELECT `name` FROM `novel` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.063863s ]
+---------------------------------------------------------------
+[ 2017-07-01T00:07:45+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/writernwes.html
+[ info ] tp5.com/writer/index/writernwes.html [运行时间：0.682424s][吞吐率：1.47req/s] [内存消耗：2,734.60kb] [文件加载：49]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'writernwes',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=vmamvpcc236jthsftelq3hvgf7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\writer\controller\Index->writernwes[ E:\wamp\www\newicefire\tp5\application\writer\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\wamp\www\newicefire\tp5\public/../application/writer\view\index\writer-news.html [ array (
+  0 => 'penname',
+  1 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.107506s ] mysql:dbname=icefire;host=47.94.158.22;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `comment` [ RunTime:0.072128s ]
+[ sql ] [ SQL ] SELECT * FROM `comment` [ RunTime:0.073261s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `comment` LIMIT 1 [ RunTime:0.072162s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.072414s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `user` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.072594s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `novel` [ RunTime:0.075694s ]
+[ sql ] [ SQL ] SELECT `name` FROM `novel` WHERE  `id` = 20 LIMIT 1 [ RunTime:0.071574s ]
+---------------------------------------------------------------
+[ 2017-07-01T00:08:13+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/writerinfo.html
+[ info ] tp5.com/writer/index/writerinfo.html [运行时间：0.476359s][吞吐率：2.10req/s] [内存消耗：2,731.14kb] [文件加载：49]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'writerinfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'referer' => 'http://tp5.com/writer/index/writernwes.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=vmamvpcc236jthsftelq3hvgf7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\writer\controller\Index->writerinfo[ E:\wamp\www\newicefire\tp5\application\writer\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\wamp\www\newicefire\tp5\public/../application/writer\view\index\writer-info.html [ array (
+  0 => 'penname',
+  1 => 'wname',
+  2 => 'idnumber',
+  3 => 'name',
+  4 => 'tel',
+  5 => 'inclination',
+  6 => 'qq',
+  7 => 'sex',
+  8 => 'email',
+  9 => 'icon',
+  10 => 'status',
+  11 => 'level',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.111020s ] mysql:dbname=icefire;host=47.94.158.22;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `author` [ RunTime:0.073752s ]
+[ sql ] [ SQL ] SELECT `id` FROM `author` WHERE  `penname` = 'hhy' LIMIT 1 [ RunTime:0.074544s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `authorinfo` [ RunTime:0.073798s ]
+[ sql ] [ SQL ] SELECT * FROM `authorinfo` WHERE  `aid` = 19 LIMIT 1 [ RunTime:0.073620s ]
+---------------------------------------------------------------
+[ 2017-07-01T00:08:18+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/writercheckout.html
+[ info ] tp5.com/writer/index/writercheckout.html [运行时间：0.546212s][吞吐率：1.83req/s] [内存消耗：2,762.88kb] [文件加载：49]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'writercheckout',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'referer' => 'http://tp5.com/writer/index/writerinfo.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=vmamvpcc236jthsftelq3hvgf7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\writer\controller\Index->writercheckout[ E:\wamp\www\newicefire\tp5\application\writer\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\wamp\www\newicefire\tp5\public/../application/writer\view\index\writer-checkout.html [ array (
+  0 => 'penname',
+  1 => 'list',
+  2 => 'all',
+  3 => 'aid',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.098425s ] mysql:dbname=icefire;host=47.94.158.22;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `author` [ RunTime:0.064055s ]
+[ sql ] [ SQL ] SELECT `id` FROM `author` WHERE  `penname` = 'hhy' LIMIT 1 [ RunTime:0.065028s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `novel` [ RunTime:0.063821s ]
+[ sql ] [ SQL ] SELECT * FROM `novel` WHERE  `aid` = 19 [ RunTime:0.064371s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `assets` [ RunTime:0.063755s ]
+[ sql ] [ SQL ] SELECT * FROM `assets` WHERE  `aid` = 19 LIMIT 1 [ RunTime:0.064650s ]
+---------------------------------------------------------------
+[ 2017-07-01T00:08:47+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/writernwes.html
+[ info ] tp5.com/writer/index/writernwes.html [运行时间：0.765369s][吞吐率：1.31req/s] [内存消耗：2,912.41kb] [文件加载：51]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'writernwes',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'referer' => 'http://tp5.com/writer/index/writercheckout.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=vmamvpcc236jthsftelq3hvgf7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\writer\controller\Index->writernwes[ E:\wamp\www\newicefire\tp5\application\writer\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\wamp\www\newicefire\tp5\public/../application/writer\view\index\writer-news.html [ array (
+  0 => 'penname',
+  1 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.116672s ] mysql:dbname=icefire;host=47.94.158.22;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `comment` [ RunTime:0.078074s ]
+[ sql ] [ SQL ] SELECT * FROM `comment` [ RunTime:0.079310s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `comment` LIMIT 1 [ RunTime:0.077464s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.078404s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `user` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.077829s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `novel` [ RunTime:0.078596s ]
+[ sql ] [ SQL ] SELECT `name` FROM `novel` WHERE  `id` = 20 LIMIT 1 [ RunTime:0.077562s ]
+---------------------------------------------------------------
+[ 2017-07-01T00:09:41+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/writernwes.html
+[ info ] tp5.com/writer/index/writernwes.html [运行时间：0.775980s][吞吐率：1.29req/s] [内存消耗：2,912.53kb] [文件加载：51]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'writernwes',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'referer' => 'http://tp5.com/writer/index/writercheckout.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=vmamvpcc236jthsftelq3hvgf7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\writer\controller\Index->writernwes[ E:\wamp\www\newicefire\tp5\application\writer\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\wamp\www\newicefire\tp5\public/../application/writer\view\index\writer-news.html [ array (
+  0 => 'penname',
+  1 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.112838s ] mysql:dbname=icefire;host=47.94.158.22;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `comment` [ RunTime:0.075260s ]
+[ sql ] [ SQL ] SELECT * FROM `comment` [ RunTime:0.074663s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `comment` LIMIT 1 [ RunTime:0.075091s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.075199s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `user` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.075588s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `novel` [ RunTime:0.075166s ]
+[ sql ] [ SQL ] SELECT `name` FROM `novel` WHERE  `id` = 20 LIMIT 1 [ RunTime:0.074933s ]
+---------------------------------------------------------------
+[ 2017-07-01T00:10:05+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/writernwes.html
+[ info ] tp5.com/writer/index/writernwes.html [运行时间：0.686692s][吞吐率：1.46req/s] [内存消耗：2,912.53kb] [文件加载：51]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'writernwes',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'referer' => 'http://tp5.com/writer/index/writercheckout.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=vmamvpcc236jthsftelq3hvgf7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\writer\controller\Index->writernwes[ E:\wamp\www\newicefire\tp5\application\writer\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\wamp\www\newicefire\tp5\public/../application/writer\view\index\writer-news.html [ array (
+  0 => 'penname',
+  1 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.106525s ] mysql:dbname=icefire;host=47.94.158.22;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `comment` [ RunTime:0.070849s ]
+[ sql ] [ SQL ] SELECT * FROM `comment` [ RunTime:0.070835s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `comment` LIMIT 1 [ RunTime:0.071261s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.071253s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `user` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.070579s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `novel` [ RunTime:0.070986s ]
+[ sql ] [ SQL ] SELECT `name` FROM `novel` WHERE  `id` = 20 LIMIT 1 [ RunTime:0.070852s ]
+---------------------------------------------------------------
+[ 2017-07-01T00:20:24+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/writernwes.html
+[ info ] tp5.com/writer/index/writernwes.html [运行时间：0.739645s][吞吐率：1.35req/s] [内存消耗：2,912.56kb] [文件加载：51]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'writernwes',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'referer' => 'http://tp5.com/writer/index/writercheckout.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=vmamvpcc236jthsftelq3hvgf7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\writer\controller\Index->writernwes[ E:\wamp\www\newicefire\tp5\application\writer\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\wamp\www\newicefire\tp5\public/../application/writer\view\index\writer-news.html [ array (
+  0 => 'penname',
+  1 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.109156s ] mysql:dbname=icefire;host=47.94.158.22;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `comment` [ RunTime:0.071414s ]
+[ sql ] [ SQL ] SELECT * FROM `comment` [ RunTime:0.070708s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `comment` LIMIT 1 [ RunTime:0.072360s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.071477s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `user` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.070857s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `novel` [ RunTime:0.071885s ]
+[ sql ] [ SQL ] SELECT `name` FROM `novel` WHERE  `id` = 20 LIMIT 1 [ RunTime:0.071107s ]
+---------------------------------------------------------------
+[ 2017-07-01T00:21:11+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/writernwes.html
+[ info ] tp5.com/writer/index/writernwes.html [运行时间：0.787782s][吞吐率：1.27req/s] [内存消耗：2,912.66kb] [文件加载：51]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'writernwes',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'referer' => 'http://tp5.com/writer/index/writercheckout.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=vmamvpcc236jthsftelq3hvgf7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\writer\controller\Index->writernwes[ E:\wamp\www\newicefire\tp5\application\writer\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\wamp\www\newicefire\tp5\public/../application/writer\view\index\writer-news.html [ array (
+  0 => 'penname',
+  1 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.113631s ] mysql:dbname=icefire;host=47.94.158.22;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `comment` [ RunTime:0.075625s ]
+[ sql ] [ SQL ] SELECT * FROM `comment` [ RunTime:0.075479s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `comment` LIMIT 1 [ RunTime:0.075758s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.076192s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `user` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.075099s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `novel` [ RunTime:0.075898s ]
+[ sql ] [ SQL ] SELECT `name` FROM `novel` WHERE  `id` = 20 LIMIT 1 [ RunTime:0.075212s ]
+---------------------------------------------------------------
+[ 2017-07-01T00:21:19+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/writernwes.html
+[ info ] tp5.com/writer/index/writernwes.html [运行时间：0.737967s][吞吐率：1.36req/s] [内存消耗：2,912.66kb] [文件加载：51]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'writernwes',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'referer' => 'http://tp5.com/writer/index/writercheckout.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=vmamvpcc236jthsftelq3hvgf7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\writer\controller\Index->writernwes[ E:\wamp\www\newicefire\tp5\application\writer\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\wamp\www\newicefire\tp5\public/../application/writer\view\index\writer-news.html [ array (
+  0 => 'penname',
+  1 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.110562s ] mysql:dbname=icefire;host=47.94.158.22;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `comment` [ RunTime:0.073665s ]
+[ sql ] [ SQL ] SELECT * FROM `comment` [ RunTime:0.073561s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `comment` LIMIT 1 [ RunTime:0.073167s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.073304s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `user` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.089814s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `novel` [ RunTime:0.073463s ]
+[ sql ] [ SQL ] SELECT `name` FROM `novel` WHERE  `id` = 20 LIMIT 1 [ RunTime:0.072628s ]
+---------------------------------------------------------------
+[ 2017-07-01T00:21:24+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/writernwes.html
+[ info ] tp5.com/writer/index/writernwes.html [运行时间：0.749288s][吞吐率：1.33req/s] [内存消耗：2,912.66kb] [文件加载：51]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'writernwes',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'referer' => 'http://tp5.com/writer/index/writercheckout.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=vmamvpcc236jthsftelq3hvgf7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\writer\controller\Index->writernwes[ E:\wamp\www\newicefire\tp5\application\writer\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\wamp\www\newicefire\tp5\public/../application/writer\view\index\writer-news.html [ array (
+  0 => 'penname',
+  1 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.111750s ] mysql:dbname=icefire;host=47.94.158.22;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `comment` [ RunTime:0.075081s ]
+[ sql ] [ SQL ] SELECT * FROM `comment` [ RunTime:0.074532s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `comment` LIMIT 1 [ RunTime:0.074496s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.075468s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `user` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.074694s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `novel` [ RunTime:0.075337s ]
+[ sql ] [ SQL ] SELECT `name` FROM `novel` WHERE  `id` = 20 LIMIT 1 [ RunTime:0.074181s ]
+---------------------------------------------------------------
+[ 2017-07-01T00:21:49+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/writernwes.html
+[ info ] tp5.com/writer/index/writernwes.html [运行时间：0.751613s][吞吐率：1.33req/s] [内存消耗：2,912.75kb] [文件加载：51]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'writernwes',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'referer' => 'http://tp5.com/writer/index/writercheckout.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=vmamvpcc236jthsftelq3hvgf7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\writer\controller\Index->writernwes[ E:\wamp\www\newicefire\tp5\application\writer\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\wamp\www\newicefire\tp5\public/../application/writer\view\index\writer-news.html [ array (
+  0 => 'penname',
+  1 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.108770s ] mysql:dbname=icefire;host=47.94.158.22;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `comment` [ RunTime:0.073073s ]
+[ sql ] [ SQL ] SELECT * FROM `comment` [ RunTime:0.073601s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `comment` LIMIT 1 [ RunTime:0.071959s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.073159s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `user` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.073706s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `novel` [ RunTime:0.072806s ]
+[ sql ] [ SQL ] SELECT `name` FROM `novel` WHERE  `id` = 20 LIMIT 1 [ RunTime:0.072186s ]
+---------------------------------------------------------------
+[ 2017-07-01T00:22:00+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/writernwes.html
+[ info ] tp5.com/writer/index/writernwes.html [运行时间：0.724365s][吞吐率：1.38req/s] [内存消耗：2,912.80kb] [文件加载：51]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'writernwes',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'referer' => 'http://tp5.com/writer/index/writercheckout.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=vmamvpcc236jthsftelq3hvgf7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\writer\controller\Index->writernwes[ E:\wamp\www\newicefire\tp5\application\writer\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\wamp\www\newicefire\tp5\public/../application/writer\view\index\writer-news.html [ array (
+  0 => 'penname',
+  1 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.113276s ] mysql:dbname=icefire;host=47.94.158.22;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `comment` [ RunTime:0.074208s ]
+[ sql ] [ SQL ] SELECT * FROM `comment` [ RunTime:0.074133s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `comment` LIMIT 1 [ RunTime:0.074155s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.074235s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `user` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.073787s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `novel` [ RunTime:0.073804s ]
+[ sql ] [ SQL ] SELECT `name` FROM `novel` WHERE  `id` = 20 LIMIT 1 [ RunTime:0.075287s ]
+---------------------------------------------------------------
+[ 2017-07-01T00:22:16+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/writernwes.html
+[ info ] tp5.com/writer/index/writernwes.html [运行时间：0.761566s][吞吐率：1.31req/s] [内存消耗：2,913.05kb] [文件加载：51]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'writernwes',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'referer' => 'http://tp5.com/writer/index/writercheckout.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=vmamvpcc236jthsftelq3hvgf7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\writer\controller\Index->writernwes[ E:\wamp\www\newicefire\tp5\application\writer\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\wamp\www\newicefire\tp5\public/../application/writer\view\index\writer-news.html [ array (
+  0 => 'penname',
+  1 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.107774s ] mysql:dbname=icefire;host=47.94.158.22;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `comment` [ RunTime:0.071070s ]
+[ sql ] [ SQL ] SELECT * FROM `comment` [ RunTime:0.071423s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `comment` LIMIT 1 [ RunTime:0.072098s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.071181s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `user` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.071207s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `novel` [ RunTime:0.071094s ]
+[ sql ] [ SQL ] SELECT `name` FROM `novel` WHERE  `id` = 20 LIMIT 1 [ RunTime:0.071317s ]
+---------------------------------------------------------------
+[ 2017-07-01T00:48:49+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/writernwes.html
+[ info ] tp5.com/writer/index/writernwes.html [运行时间：0.680769s][吞吐率：1.47req/s] [内存消耗：2,917.66kb] [文件加载：51]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'writernwes',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'referer' => 'http://tp5.com/writer/index/writercheckout.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=vmamvpcc236jthsftelq3hvgf7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\writer\controller\Index->writernwes[ E:\wamp\www\newicefire\tp5\application\writer\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\wamp\www\newicefire\tp5\public/../application/writer\view\index\writer-news.html [ array (
+  0 => 'penname',
+  1 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.096108s ] mysql:dbname=icefire;host=47.94.158.22;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `comment` [ RunTime:0.064246s ]
+[ sql ] [ SQL ] SELECT * FROM `comment` [ RunTime:0.063930s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `comment` LIMIT 1 [ RunTime:0.063893s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.064964s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `user` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.063892s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `novel` [ RunTime:0.064349s ]
+[ sql ] [ SQL ] SELECT `name` FROM `novel` WHERE  `id` = 20 LIMIT 1 [ RunTime:0.064087s ]
+---------------------------------------------------------------
+[ 2017-07-01T00:48:54+08:00 ] 127.0.0.1 127.0.0.1 GET /static/writer/js/toastr.js.map
+[ info ] tp5.com/static/writer/js/toastr.js.map [运行时间：0.033571s][吞吐率：29.79req/s] [内存消耗：1,357.79kb] [文件加载：33]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'writer',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=vmamvpcc236jthsftelq3hvgf7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-01T00:49:32+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/writernwes.html
+[ info ] tp5.com/writer/index/writernwes.html [运行时间：0.764419s][吞吐率：1.31req/s] [内存消耗：2,917.67kb] [文件加载：51]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'writernwes',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'referer' => 'http://tp5.com/writer/index/writercheckout.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=vmamvpcc236jthsftelq3hvgf7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\writer\controller\Index->writernwes[ E:\wamp\www\newicefire\tp5\application\writer\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\wamp\www\newicefire\tp5\public/../application/writer\view\index\writer-news.html [ array (
+  0 => 'penname',
+  1 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.106255s ] mysql:dbname=icefire;host=47.94.158.22;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `comment` [ RunTime:0.070929s ]
+[ sql ] [ SQL ] SELECT * FROM `comment` [ RunTime:0.071681s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `comment` LIMIT 1 [ RunTime:0.071823s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.070732s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `user` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.069655s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `novel` [ RunTime:0.072045s ]
+[ sql ] [ SQL ] SELECT `name` FROM `novel` WHERE  `id` = 20 LIMIT 1 [ RunTime:0.070228s ]
+---------------------------------------------------------------
+[ 2017-07-01T00:49:33+08:00 ] 127.0.0.1 127.0.0.1 GET /static/writer/js/toastr.js.map
+[ info ] tp5.com/static/writer/js/toastr.js.map [运行时间：0.027559s][吞吐率：36.29req/s] [内存消耗：1,357.79kb] [文件加载：33]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'writer',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=vmamvpcc236jthsftelq3hvgf7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-01T00:49:36+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/writerdel?id=1
+[ info ] tp5.com/writer/index/writerdel?id=1 [运行时间：0.454163s][吞吐率：2.20req/s] [内存消耗：2,726.81kb] [文件加载：50]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'writerdel',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'referer' => 'http://tp5.com/writer/index/writernwes.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=vmamvpcc236jthsftelq3hvgf7',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ RUN ] app\writer\controller\Index->writerdel[ E:\wamp\www\newicefire\tp5\application\writer\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.112963s ] mysql:dbname=icefire;host=47.94.158.22;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `comment` [ RunTime:0.072780s ]
+[ sql ] [ SQL ] DELETE FROM `comment`    WHERE  `id` = 1 [ RunTime:0.073296s ]
+---------------------------------------------------------------
+[ 2017-07-01T00:51:03+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/writerpersonal.html
+[ info ] tp5.com/writer/index/writerpersonal.html [运行时间：0.552772s][吞吐率：1.81req/s] [内存消耗：2,749.60kb] [文件加载：49]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'writerpersonal',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'referer' => 'http://tp5.com/writer/index/writernwes.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=vmamvpcc236jthsftelq3hvgf7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\writer\controller\Index->writerpersonal[ E:\wamp\www\newicefire\tp5\application\writer\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\wamp\www\newicefire\tp5\public/../application/writer\view\index\writer-index.html [ array (
+  0 => 'penname',
+  1 => 'list1',
+  2 => 'list2',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.109957s ] mysql:dbname=icefire;host=47.94.158.22;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `author` [ RunTime:0.074259s ]
+[ sql ] [ SQL ] SELECT `id` FROM `author` WHERE  `penname` = 'hhy' LIMIT 1 [ RunTime:0.073601s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `novel` [ RunTime:0.074426s ]
+[ sql ] [ SQL ] SELECT * FROM `novel` WHERE  `aid` = 19  AND `isover` = 1 [ RunTime:0.074368s ]
+[ sql ] [ SQL ] SELECT * FROM `novel` WHERE  `aid` = 19  AND `isover` = 2 [ RunTime:0.074183s ]
+---------------------------------------------------------------
+[ 2017-07-01T00:51:04+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/writerfound.html
+[ info ] tp5.com/writer/index/writerfound.html [运行时间：0.031912s][吞吐率：31.34req/s] [内存消耗：1,889.28kb] [文件加载：42]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'writerfound',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'referer' => 'http://tp5.com/writer/index/writerpersonal.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=vmamvpcc236jthsftelq3hvgf7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\writer\controller\Index->writerfound[ E:\wamp\www\newicefire\tp5\application\writer\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] E:\wamp\www\newicefire\tp5\public/../application/writer\view\index\writer-found.html [ array (
+  0 => 'penname',
+  1 => 'error',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-01T00:51:06+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/authormoney.html
+[ info ] tp5.com/writer/index/authormoney.html [运行时间：0.682598s][吞吐率：1.46req/s] [内存消耗：2,739.38kb] [文件加载：49]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'authormoney',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'referer' => 'http://tp5.com/writer/index/writerfound.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=vmamvpcc236jthsftelq3hvgf7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\writer\controller\Index->authormoney[ E:\wamp\www\newicefire\tp5\application\writer\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\wamp\www\newicefire\tp5\public/../application/writer\view\index\author-money.html [ array (
+  0 => 'penname',
+  1 => 'level',
+  2 => 'Tcollect',
+  3 => 'rank',
+  4 => 'integral',
+  5 => 'balance',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.109897s ] mysql:dbname=icefire;host=47.94.158.22;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `author` [ RunTime:0.073518s ]
+[ sql ] [ SQL ] SELECT `level` FROM `author` WHERE  `penname` = 'hhy' LIMIT 1 [ RunTime:0.073071s ]
+[ sql ] [ SQL ] SELECT `id` FROM `author` WHERE  `penname` = 'hhy' LIMIT 1 [ RunTime:0.072978s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `novel` [ RunTime:0.073617s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `novel` WHERE  `aid` = 19 LIMIT 1 [ RunTime:0.073078s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `assets` [ RunTime:0.074045s ]
+[ sql ] [ SQL ] SELECT * FROM `assets` WHERE  `aid` = 19 LIMIT 1 [ RunTime:0.072377s ]
+---------------------------------------------------------------
+[ 2017-07-01T00:51:07+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/writerinfo.html
+[ info ] tp5.com/writer/index/writerinfo.html [运行时间：0.466205s][吞吐率：2.14req/s] [内存消耗：2,733.79kb] [文件加载：49]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'writerinfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'referer' => 'http://tp5.com/writer/index/authormoney.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=vmamvpcc236jthsftelq3hvgf7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\writer\controller\Index->writerinfo[ E:\wamp\www\newicefire\tp5\application\writer\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\wamp\www\newicefire\tp5\public/../application/writer\view\index\writer-info.html [ array (
+  0 => 'penname',
+  1 => 'wname',
+  2 => 'idnumber',
+  3 => 'name',
+  4 => 'tel',
+  5 => 'inclination',
+  6 => 'qq',
+  7 => 'sex',
+  8 => 'email',
+  9 => 'icon',
+  10 => 'status',
+  11 => 'level',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.114183s ] mysql:dbname=icefire;host=47.94.158.22;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `author` [ RunTime:0.076159s ]
+[ sql ] [ SQL ] SELECT `id` FROM `author` WHERE  `penname` = 'hhy' LIMIT 1 [ RunTime:0.075440s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `authorinfo` [ RunTime:0.076437s ]
+[ sql ] [ SQL ] SELECT * FROM `authorinfo` WHERE  `aid` = 19 LIMIT 1 [ RunTime:0.075946s ]
+---------------------------------------------------------------
+[ 2017-07-01T00:51:09+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/writerdata.html
+[ info ] tp5.com/writer/index/writerdata.html [运行时间：1.259736s][吞吐率：0.79req/s] [内存消耗：2,787.07kb] [文件加载：49]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'writerdata',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'referer' => 'http://tp5.com/writer/index/writerinfo.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=vmamvpcc236jthsftelq3hvgf7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\writer\controller\Index->writerdata[ E:\wamp\www\newicefire\tp5\application\writer\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\wamp\www\newicefire\tp5\public/../application/writer\view\index\writer-data.html [ array (
+  0 => 'penname',
+  1 => 'list',
+  2 => 'num',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.112723s ] mysql:dbname=icefire;host=47.94.158.22;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `author` [ RunTime:0.075896s ]
+[ sql ] [ SQL ] SELECT `id` FROM `author` WHERE  `penname` = 'hhy' LIMIT 1 [ RunTime:0.078368s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `novel` [ RunTime:0.075163s ]
+[ sql ] [ SQL ] SELECT * FROM `novel` WHERE  `aid` = 19 [ RunTime:0.077051s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `novel` WHERE  `aid` = 19 LIMIT 1 [ RunTime:0.075072s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `category` [ RunTime:0.075291s ]
+[ sql ] [ SQL ] SELECT `name` FROM `category` WHERE  `id` = 26 LIMIT 1 [ RunTime:0.074747s ]
+[ sql ] [ SQL ] SELECT `name` FROM `category` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.075258s ]
+[ sql ] [ SQL ] SELECT `name` FROM `category` WHERE  `id` = 4 LIMIT 1 [ RunTime:0.075276s ]
+[ sql ] [ SQL ] SELECT `name` FROM `category` WHERE  `id` = 7 LIMIT 1 [ RunTime:0.075320s ]
+[ sql ] [ SQL ] SELECT `name` FROM `category` WHERE  `id` = 7 LIMIT 1 [ RunTime:0.075485s ]
+[ sql ] [ SQL ] SELECT `name` FROM `category` WHERE  `id` = 19 LIMIT 1 [ RunTime:0.074837s ]
+[ sql ] [ SQL ] SELECT `name` FROM `category` WHERE  `id` = 19 LIMIT 1 [ RunTime:0.075210s ]
+[ sql ] [ SQL ] SELECT `name` FROM `category` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.075419s ]
+---------------------------------------------------------------
+[ 2017-07-01T00:51:10+08:00 ] 127.0.0.1 127.0.0.1 GET /uploads/20170630/12def8fe882cc8809153d24be9ad07f7.jpg
+[ info ] tp5.com/uploads/20170630/12def8fe882cc8809153d24be9ad07f7.jpg [运行时间：0.031679s][吞吐率：31.57req/s] [内存消耗：1,358.60kb] [文件加载：33]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'uploads',
+    1 => '20170630',
+    2 => '12def8fe882cc8809153d24be9ad07f7.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'accept' => 'image/webp,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'referer' => 'http://tp5.com/writer/index/writerdata.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=vmamvpcc236jthsftelq3hvgf7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-01T00:51:10+08:00 ] 127.0.0.1 127.0.0.1 GET /uploads/20170630/edd6901199827b1a27b021770f3ea2c6.jpg
+[ info ] tp5.com/uploads/20170630/edd6901199827b1a27b021770f3ea2c6.jpg [运行时间：0.032475s][吞吐率：30.79req/s] [内存消耗：1,358.60kb] [文件加载：33]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'uploads',
+    1 => '20170630',
+    2 => 'edd6901199827b1a27b021770f3ea2c6.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'accept' => 'image/webp,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'referer' => 'http://tp5.com/writer/index/writerdata.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=vmamvpcc236jthsftelq3hvgf7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-01T00:51:10+08:00 ] 127.0.0.1 127.0.0.1 GET /uploads/20170630/ea0ac4766ca9e370ea40a7e9122e57e3.jpg
+[ info ] tp5.com/uploads/20170630/ea0ac4766ca9e370ea40a7e9122e57e3.jpg [运行时间：0.031688s][吞吐率：31.56req/s] [内存消耗：1,358.60kb] [文件加载：33]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'uploads',
+    1 => '20170630',
+    2 => 'ea0ac4766ca9e370ea40a7e9122e57e3.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'accept' => 'image/webp,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'referer' => 'http://tp5.com/writer/index/writerdata.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=vmamvpcc236jthsftelq3hvgf7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-01T00:51:11+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/writernwes.html
+[ info ] tp5.com/writer/index/writernwes.html [运行时间：0.337505s][吞吐率：2.96req/s] [内存消耗：2,717.45kb] [文件加载：49]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'writernwes',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'referer' => 'http://tp5.com/writer/index/writerdata.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=vmamvpcc236jthsftelq3hvgf7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\writer\controller\Index->writernwes[ E:\wamp\www\newicefire\tp5\application\writer\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\wamp\www\newicefire\tp5\public/../application/writer\view\index\writer-news.html [ array (
+  0 => 'penname',
+  1 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.095073s ] mysql:dbname=icefire;host=47.94.158.22;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `comment` [ RunTime:0.062698s ]
+[ sql ] [ SQL ] SELECT * FROM `comment` [ RunTime:0.062621s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `comment` LIMIT 1 [ RunTime:0.062004s ]
+---------------------------------------------------------------
+[ 2017-07-01T00:51:14+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/writercheckout.html
+[ info ] tp5.com/writer/index/writercheckout.html [运行时间：0.548487s][吞吐率：1.82req/s] [内存消耗：2,765.51kb] [文件加载：49]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'writercheckout',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'referer' => 'http://tp5.com/writer/index/writernwes.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=vmamvpcc236jthsftelq3hvgf7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\writer\controller\Index->writercheckout[ E:\wamp\www\newicefire\tp5\application\writer\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\wamp\www\newicefire\tp5\public/../application/writer\view\index\writer-checkout.html [ array (
+  0 => 'penname',
+  1 => 'list',
+  2 => 'all',
+  3 => 'aid',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.095386s ] mysql:dbname=icefire;host=47.94.158.22;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `author` [ RunTime:0.063819s ]
+[ sql ] [ SQL ] SELECT `id` FROM `author` WHERE  `penname` = 'hhy' LIMIT 1 [ RunTime:0.063962s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `novel` [ RunTime:0.063939s ]
+[ sql ] [ SQL ] SELECT * FROM `novel` WHERE  `aid` = 19 [ RunTime:0.064432s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `assets` [ RunTime:0.064712s ]
+[ sql ] [ SQL ] SELECT * FROM `assets` WHERE  `aid` = 19 LIMIT 1 [ RunTime:0.063764s ]
+---------------------------------------------------------------
+[ 2017-07-01T01:15:28+08:00 ] 127.0.0.1 127.0.0.1 GET /writer
+[ info ] tp5.com/writer [运行时间：1.014058s][吞吐率：0.99req/s] [内存消耗：1,969.38kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\writer\controller\Index->index[ D:\wamp\www\tp5\application\writer\controller\Index.php ]
+[ info ] [ VIEW ] D:\wamp\www\tp5\public/../application/writer\view\index\writer-login.html [ array (
+  0 => 'error',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-01T01:15:30+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] tp5.com/captcha.html [运行时间：0.347020s][吞吐率：2.88req/s] [内存消耗：1,355.70kb] [文件加载：32]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'image/webp,image/*,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ D:\wamp\www\tp5\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-01T01:15:45+08:00 ] 127.0.0.1 127.0.0.1 POST /writer/index/writerlogin.html
+[ info ] tp5.com/writer/index/writerlogin.html [运行时间：0.900052s][吞吐率：1.11req/s] [内存消耗：2,839.05kb] [文件加载：52]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'writerlogin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'content-length' => '25',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://tp5.com',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=24sqk0nu6n5cuumala6dgiov44',
+)
+[ info ] [ PARAM ] array (
+  'penname' => 'hhy',
+  'pwd' => '123',
+  'yzm' => 'V',
+)
+[ info ] [ RUN ] app\writer\controller\Index->writerlogin[ D:\wamp\www\tp5\application\writer\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\wamp\www\tp5\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.455026s ] mysql:dbname=icefire;host=47.94.158.22;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `author` [ RunTime:0.127007s ]
+[ sql ] [ SQL ] SELECT * FROM `author` WHERE  `penname` = 'hhy' LIMIT 1 [ RunTime:0.090005s ]
+---------------------------------------------------------------
+[ 2017-07-01T01:15:49+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/writerpersonal.html
+[ info ] tp5.com/writer/index/writerpersonal.html [运行时间：0.548032s][吞吐率：1.82req/s] [内存消耗：2,818.20kb] [文件加载：51]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'writerpersonal',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer/index/writerlogin.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=24sqk0nu6n5cuumala6dgiov44',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\writer\controller\Index->writerpersonal[ D:\wamp\www\tp5\application\writer\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\tp5\public/../application/writer\view\index\writer-index.html [ array (
+  0 => 'penname',
+  1 => 'list1',
+  2 => 'list2',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.110006s ] mysql:dbname=icefire;host=47.94.158.22;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `author` [ RunTime:0.077005s ]
+[ sql ] [ SQL ] SELECT `id` FROM `author` WHERE  `penname` = 'hhy' LIMIT 1 [ RunTime:0.073004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `novel` [ RunTime:0.075004s ]
+[ sql ] [ SQL ] SELECT * FROM `novel` WHERE  `aid` = 19  AND `isover` = 1 [ RunTime:0.074005s ]
+[ sql ] [ SQL ] SELECT * FROM `novel` WHERE  `aid` = 19  AND `isover` = 2 [ RunTime:0.074004s ]
+---------------------------------------------------------------
+[ 2017-07-01T01:15:54+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/writerdet/name/%E5%86%B0%E4%B8%8E%E7%81%AB%E4%B9%8B%E6%AD%8C5.html
+[ info ] tp5.com/writer/index/writerdet/name/%E5%86%B0%E4%B8%8E%E7%81%AB%E4%B9%8B%E6%AD%8C5.html [运行时间：0.857049s][吞吐率：1.17req/s] [内存消耗：2,816.34kb] [文件加载：51]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'writerdet',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer/index/writerpersonal.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=24sqk0nu6n5cuumala6dgiov44',
+)
+[ info ] [ PARAM ] array (
+  'name' => '冰与火之歌5',
+)
+[ info ] [ RUN ] app\writer\controller\Index->writerdet[ D:\wamp\www\tp5\application\writer\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\tp5\public/../application/writer\view\index\writer-details.html [ array (
+  0 => 'penname',
+  1 => 'name',
+  2 => 'tnum',
+  3 => 'categorty',
+  4 => 'isover',
+  5 => 'desc',
+  6 => 'face',
+  7 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.111006s ] mysql:dbname=icefire;host=47.94.158.22;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `author` [ RunTime:0.067003s ]
+[ sql ] [ SQL ] SELECT `id` FROM `author` WHERE  `penname` = 'hhy' LIMIT 1 [ RunTime:0.065004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `novel` [ RunTime:0.066004s ]
+[ sql ] [ SQL ] SELECT * FROM `novel` WHERE  `aid` = 19  AND `name` = '冰与火之歌5' LIMIT 1 [ RunTime:0.066004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `chapter` [ RunTime:0.066004s ]
+[ sql ] [ SQL ] SELECT MAX(tnum) AS tp_max FROM `chapter` WHERE  `nid` = '20' LIMIT 1 [ RunTime:0.065004s ]
+[ sql ] [ SQL ] SELECT `title` FROM `chapter` WHERE  `tnum` = 3 LIMIT 1 [ RunTime:0.066003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `category` [ RunTime:0.066003s ]
+[ sql ] [ SQL ] SELECT `name` FROM `category` WHERE  `id` = 26 LIMIT 1 [ RunTime:0.065004s ]
+---------------------------------------------------------------
+[ 2017-07-01T01:15:55+08:00 ] 127.0.0.1 127.0.0.1 GET /uploads/20170630/12def8fe882cc8809153d24be9ad07f7.jpg
+[ info ] tp5.com/uploads/20170630/12def8fe882cc8809153d24be9ad07f7.jpg [运行时间：0.362020s][吞吐率：2.76req/s] [内存消耗：1,329.36kb] [文件加载：33]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'uploads',
+    1 => '20170630',
+    2 => '12def8fe882cc8809153d24be9ad07f7.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'image/webp,image/*,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer/index/writerdet/name/%E5%86%B0%E4%B8%8E%E7%81%AB%E4%B9%8B%E6%AD%8C5.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=24sqk0nu6n5cuumala6dgiov44',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-01T01:27:55+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/writerdet/name/%E5%86%B0%E4%B8%8E%E7%81%AB%E4%B9%8B%E6%AD%8C5.html
+[ info ] tp5.com/writer/index/writerdet/name/%E5%86%B0%E4%B8%8E%E7%81%AB%E4%B9%8B%E6%AD%8C5.html [运行时间：0.856049s][吞吐率：1.17req/s] [内存消耗：2,816.41kb] [文件加载：51]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'writerdet',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer/index/writerpersonal.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=24sqk0nu6n5cuumala6dgiov44',
+)
+[ info ] [ PARAM ] array (
+  'name' => '冰与火之歌5',
+)
+[ info ] [ RUN ] app\writer\controller\Index->writerdet[ D:\wamp\www\tp5\application\writer\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\tp5\public/../application/writer\view\index\writer-details.html [ array (
+  0 => 'penname',
+  1 => 'name',
+  2 => 'tnum',
+  3 => 'categorty',
+  4 => 'isover',
+  5 => 'desc',
+  6 => 'face',
+  7 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.109006s ] mysql:dbname=icefire;host=47.94.158.22;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `author` [ RunTime:0.074004s ]
+[ sql ] [ SQL ] SELECT `id` FROM `author` WHERE  `penname` = 'hhy' LIMIT 1 [ RunTime:0.072004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `novel` [ RunTime:0.074004s ]
+[ sql ] [ SQL ] SELECT * FROM `novel` WHERE  `aid` = 19  AND `name` = '冰与火之歌5' LIMIT 1 [ RunTime:0.073005s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `chapter` [ RunTime:0.073004s ]
+[ sql ] [ SQL ] SELECT MAX(tnum) AS tp_max FROM `chapter` WHERE  `nid` = '20' LIMIT 1 [ RunTime:0.073004s ]
+[ sql ] [ SQL ] SELECT `title` FROM `chapter` WHERE  `tnum` = 3 LIMIT 1 [ RunTime:0.074005s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `category` [ RunTime:0.073004s ]
+[ sql ] [ SQL ] SELECT `name` FROM `category` WHERE  `id` = 26 LIMIT 1 [ RunTime:0.073004s ]
+---------------------------------------------------------------
+[ 2017-07-01T01:27:55+08:00 ] 127.0.0.1 127.0.0.1 GET /uploads/20170630/12def8fe882cc8809153d24be9ad07f7.jpg
+[ info ] tp5.com/uploads/20170630/12def8fe882cc8809153d24be9ad07f7.jpg [运行时间：0.053003s][吞吐率：18.87req/s] [内存消耗：1,329.36kb] [文件加载：33]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'uploads',
+    1 => '20170630',
+    2 => '12def8fe882cc8809153d24be9ad07f7.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'image/webp,image/*,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer/index/writerdet/name/%E5%86%B0%E4%B8%8E%E7%81%AB%E4%B9%8B%E6%AD%8C5.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=24sqk0nu6n5cuumala6dgiov44',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-01T01:28:18+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/writerpersonal.html
+[ info ] tp5.com/writer/index/writerpersonal.html [运行时间：0.531030s][吞吐率：1.88req/s] [内存消耗：2,643.91kb] [文件加载：49]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'writerpersonal',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer/index/writerdet/name/%E5%86%B0%E4%B8%8E%E7%81%AB%E4%B9%8B%E6%AD%8C5.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=24sqk0nu6n5cuumala6dgiov44',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\writer\controller\Index->writerpersonal[ D:\wamp\www\tp5\application\writer\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\tp5\public/../application/writer\view\index\writer-index.html [ array (
+  0 => 'penname',
+  1 => 'list1',
+  2 => 'list2',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.109006s ] mysql:dbname=icefire;host=47.94.158.22;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `author` [ RunTime:0.073004s ]
+[ sql ] [ SQL ] SELECT `id` FROM `author` WHERE  `penname` = 'hhy' LIMIT 1 [ RunTime:0.071004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `novel` [ RunTime:0.072004s ]
+[ sql ] [ SQL ] SELECT * FROM `novel` WHERE  `aid` = 19  AND `isover` = 1 [ RunTime:0.073004s ]
+[ sql ] [ SQL ] SELECT * FROM `novel` WHERE  `aid` = 19  AND `isover` = 2 [ RunTime:0.072004s ]
+---------------------------------------------------------------
+[ 2017-07-01T01:28:20+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/writerdet/name/%E5%86%B0%E4%B8%8E%E7%81%AB%E4%B9%8B%E6%AD%8C5.html
+[ info ] tp5.com/writer/index/writerdet/name/%E5%86%B0%E4%B8%8E%E7%81%AB%E4%B9%8B%E6%AD%8C5.html [运行时间：0.831048s][吞吐率：1.20req/s] [内存消耗：2,640.77kb] [文件加载：49]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'writerdet',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer/index/writerpersonal.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=24sqk0nu6n5cuumala6dgiov44',
+)
+[ info ] [ PARAM ] array (
+  'name' => '冰与火之歌5',
+)
+[ info ] [ RUN ] app\writer\controller\Index->writerdet[ D:\wamp\www\tp5\application\writer\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\tp5\public/../application/writer\view\index\writer-details.html [ array (
+  0 => 'penname',
+  1 => 'name',
+  2 => 'tnum',
+  3 => 'categorty',
+  4 => 'isover',
+  5 => 'desc',
+  6 => 'face',
+  7 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.106006s ] mysql:dbname=icefire;host=47.94.158.22;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `author` [ RunTime:0.071004s ]
+[ sql ] [ SQL ] SELECT `id` FROM `author` WHERE  `penname` = 'hhy' LIMIT 1 [ RunTime:0.070004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `novel` [ RunTime:0.071004s ]
+[ sql ] [ SQL ] SELECT * FROM `novel` WHERE  `aid` = 19  AND `name` = '冰与火之歌5' LIMIT 1 [ RunTime:0.076004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `chapter` [ RunTime:0.071004s ]
+[ sql ] [ SQL ] SELECT MAX(tnum) AS tp_max FROM `chapter` WHERE  `nid` = '20' LIMIT 1 [ RunTime:0.070004s ]
+[ sql ] [ SQL ] SELECT `title` FROM `chapter` WHERE  `tnum` = 3 LIMIT 1 [ RunTime:0.070004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `category` [ RunTime:0.071004s ]
+[ sql ] [ SQL ] SELECT `name` FROM `category` WHERE  `id` = 26 LIMIT 1 [ RunTime:0.073004s ]
+---------------------------------------------------------------
+[ 2017-07-01T01:28:21+08:00 ] 127.0.0.1 127.0.0.1 GET /uploads/20170630/12def8fe882cc8809153d24be9ad07f7.jpg
+[ info ] tp5.com/uploads/20170630/12def8fe882cc8809153d24be9ad07f7.jpg [运行时间：0.030001s][吞吐率：33.33req/s] [内存消耗：1,329.36kb] [文件加载：33]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'uploads',
+    1 => '20170630',
+    2 => '12def8fe882cc8809153d24be9ad07f7.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'image/webp,image/*,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer/index/writerdet/name/%E5%86%B0%E4%B8%8E%E7%81%AB%E4%B9%8B%E6%AD%8C5.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=24sqk0nu6n5cuumala6dgiov44',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-01T01:28:24+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/writerpersonal.html
+[ info ] tp5.com/writer/index/writerpersonal.html [运行时间：0.555031s][吞吐率：1.80req/s] [内存消耗：2,643.91kb] [文件加载：49]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'writerpersonal',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer/index/writerdet/name/%E5%86%B0%E4%B8%8E%E7%81%AB%E4%B9%8B%E6%AD%8C5.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=24sqk0nu6n5cuumala6dgiov44',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\writer\controller\Index->writerpersonal[ D:\wamp\www\tp5\application\writer\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\tp5\public/../application/writer\view\index\writer-index.html [ array (
+  0 => 'penname',
+  1 => 'list1',
+  2 => 'list2',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.115006s ] mysql:dbname=icefire;host=47.94.158.22;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `author` [ RunTime:0.078004s ]
+[ sql ] [ SQL ] SELECT `id` FROM `author` WHERE  `penname` = 'hhy' LIMIT 1 [ RunTime:0.075004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `novel` [ RunTime:0.075004s ]
+[ sql ] [ SQL ] SELECT * FROM `novel` WHERE  `aid` = 19  AND `isover` = 1 [ RunTime:0.077004s ]
+[ sql ] [ SQL ] SELECT * FROM `novel` WHERE  `aid` = 19  AND `isover` = 2 [ RunTime:0.075004s ]
+---------------------------------------------------------------
+[ 2017-07-01T01:28:25+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/writerfound.html
+[ info ] tp5.com/writer/index/writerfound.html [运行时间：0.043002s][吞吐率：23.25req/s] [内存消耗：2,024.89kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'writerfound',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer/index/writerpersonal.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=24sqk0nu6n5cuumala6dgiov44',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\writer\controller\Index->writerfound[ D:\wamp\www\tp5\application\writer\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\wamp\www\tp5\public/../application/writer\view\index\writer-found.html [ array (
+  0 => 'penname',
+  1 => 'error',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-01T01:29:45+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/writerfound.html
+[ info ] tp5.com/writer/index/writerfound.html [运行时间：0.039002s][吞吐率：25.64req/s] [内存消耗：2,024.95kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'writerfound',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer/index/writerpersonal.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=24sqk0nu6n5cuumala6dgiov44',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\writer\controller\Index->writerfound[ D:\wamp\www\tp5\application\writer\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\wamp\www\tp5\public/../application/writer\view\index\writer-found.html [ array (
+  0 => 'penname',
+  1 => 'error',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-01T01:30:36+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/writerfound.html
+[ info ] tp5.com/writer/index/writerfound.html [运行时间：0.044003s][吞吐率：22.73req/s] [内存消耗：2,024.95kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'writerfound',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer/index/writerpersonal.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=24sqk0nu6n5cuumala6dgiov44',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\writer\controller\Index->writerfound[ D:\wamp\www\tp5\application\writer\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\wamp\www\tp5\public/../application/writer\view\index\writer-found.html [ array (
+  0 => 'penname',
+  1 => 'error',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-01T01:30:37+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/writerfound.html
+[ info ] tp5.com/writer/index/writerfound.html [运行时间：0.046003s][吞吐率：21.74req/s] [内存消耗：1,822.88kb] [文件加载：42]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'writerfound',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer/index/writerpersonal.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=24sqk0nu6n5cuumala6dgiov44',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\writer\controller\Index->writerfound[ D:\wamp\www\tp5\application\writer\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\wamp\www\tp5\public/../application/writer\view\index\writer-found.html [ array (
+  0 => 'penname',
+  1 => 'error',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-01T01:30:38+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/writerfound.html
+[ info ] tp5.com/writer/index/writerfound.html [运行时间：0.044003s][吞吐率：22.73req/s] [内存消耗：1,822.88kb] [文件加载：42]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'writerfound',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer/index/writerpersonal.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=24sqk0nu6n5cuumala6dgiov44',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\writer\controller\Index->writerfound[ D:\wamp\www\tp5\application\writer\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\wamp\www\tp5\public/../application/writer\view\index\writer-found.html [ array (
+  0 => 'penname',
+  1 => 'error',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-01T01:32:37+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/writerfound.html
+[ info ] tp5.com/writer/index/writerfound.html [运行时间：0.044002s][吞吐率：22.73req/s] [内存消耗：2,024.95kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'writerfound',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer/index/writerpersonal.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=24sqk0nu6n5cuumala6dgiov44',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\writer\controller\Index->writerfound[ D:\wamp\www\tp5\application\writer\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\wamp\www\tp5\public/../application/writer\view\index\writer-found.html [ array (
+  0 => 'penname',
+  1 => 'error',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-01T01:32:40+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/writerfound.html
+[ info ] tp5.com/writer/index/writerfound.html [运行时间：0.052003s][吞吐率：19.23req/s] [内存消耗：1,822.88kb] [文件加载：42]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'writerfound',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer/index/writerpersonal.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=24sqk0nu6n5cuumala6dgiov44',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\writer\controller\Index->writerfound[ D:\wamp\www\tp5\application\writer\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\wamp\www\tp5\public/../application/writer\view\index\writer-found.html [ array (
+  0 => 'penname',
+  1 => 'error',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-01T01:33:12+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/writerfound.html
+[ info ] tp5.com/writer/index/writerfound.html [运行时间：0.038002s][吞吐率：26.31req/s] [内存消耗：2,024.95kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'writerfound',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer/index/writerpersonal.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=24sqk0nu6n5cuumala6dgiov44',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\writer\controller\Index->writerfound[ D:\wamp\www\tp5\application\writer\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\wamp\www\tp5\public/../application/writer\view\index\writer-found.html [ array (
+  0 => 'penname',
+  1 => 'error',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-01T01:33:13+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/writerfound.html
+[ info ] tp5.com/writer/index/writerfound.html [运行时间：0.046003s][吞吐率：21.74req/s] [内存消耗：1,822.88kb] [文件加载：42]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'writerfound',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer/index/writerpersonal.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=24sqk0nu6n5cuumala6dgiov44',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\writer\controller\Index->writerfound[ D:\wamp\www\tp5\application\writer\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\wamp\www\tp5\public/../application/writer\view\index\writer-found.html [ array (
+  0 => 'penname',
+  1 => 'error',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-01T01:33:18+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/authormoney.html
+[ info ] tp5.com/writer/index/authormoney.html [运行时间：0.831047s][吞吐率：1.20req/s] [内存消耗：2,812.99kb] [文件加载：51]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'authormoney',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer/index/writerfound.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=24sqk0nu6n5cuumala6dgiov44',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\writer\controller\Index->authormoney[ D:\wamp\www\tp5\application\writer\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\tp5\public/../application/writer\view\index\author-money.html [ array (
+  0 => 'penname',
+  1 => 'level',
+  2 => 'Tcollect',
+  3 => 'rank',
+  4 => 'integral',
+  5 => 'balance',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.107006s ] mysql:dbname=icefire;host=47.94.158.22;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `author` [ RunTime:0.072004s ]
+[ sql ] [ SQL ] SELECT `level` FROM `author` WHERE  `penname` = 'hhy' LIMIT 1 [ RunTime:0.071004s ]
+[ sql ] [ SQL ] SELECT `id` FROM `author` WHERE  `penname` = 'hhy' LIMIT 1 [ RunTime:0.071004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `novel` [ RunTime:0.072004s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `novel` WHERE  `aid` = 19 LIMIT 1 [ RunTime:0.070004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `assets` [ RunTime:0.072005s ]
+[ sql ] [ SQL ] SELECT * FROM `assets` WHERE  `aid` = 19 LIMIT 1 [ RunTime:0.072004s ]
+---------------------------------------------------------------
+[ 2017-07-01T01:33:21+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/writerinfo.html
+[ info ] tp5.com/writer/index/writerinfo.html [运行时间：0.500028s][吞吐率：2.00req/s] [内存消耗：2,816.99kb] [文件加载：51]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'writerinfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer/index/authormoney.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=24sqk0nu6n5cuumala6dgiov44',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\writer\controller\Index->writerinfo[ D:\wamp\www\tp5\application\writer\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\tp5\public/../application/writer\view\index\writer-info.html [ array (
+  0 => 'penname',
+  1 => 'wname',
+  2 => 'idnumber',
+  3 => 'name',
+  4 => 'tel',
+  5 => 'inclination',
+  6 => 'qq',
+  7 => 'sex',
+  8 => 'email',
+  9 => 'icon',
+  10 => 'status',
+  11 => 'level',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.109006s ] mysql:dbname=icefire;host=47.94.158.22;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `author` [ RunTime:0.077004s ]
+[ sql ] [ SQL ] SELECT `id` FROM `author` WHERE  `penname` = 'hhy' LIMIT 1 [ RunTime:0.075005s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `authorinfo` [ RunTime:0.073004s ]
+[ sql ] [ SQL ] SELECT * FROM `authorinfo` WHERE  `aid` = 19 LIMIT 1 [ RunTime:0.073004s ]
+---------------------------------------------------------------
+[ 2017-07-01T01:33:26+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/writerdata.html
+[ info ] tp5.com/writer/index/writerdata.html [运行时间：1.139065s][吞吐率：0.88req/s] [内存消耗：2,863.37kb] [文件加载：51]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'writerdata',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer/index/writerinfo.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=24sqk0nu6n5cuumala6dgiov44',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\writer\controller\Index->writerdata[ D:\wamp\www\tp5\application\writer\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\tp5\public/../application/writer\view\index\writer-data.html [ array (
+  0 => 'penname',
+  1 => 'list',
+  2 => 'num',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.099005s ] mysql:dbname=icefire;host=47.94.158.22;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `author` [ RunTime:0.067004s ]
+[ sql ] [ SQL ] SELECT `id` FROM `author` WHERE  `penname` = 'hhy' LIMIT 1 [ RunTime:0.066004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `novel` [ RunTime:0.068004s ]
+[ sql ] [ SQL ] SELECT * FROM `novel` WHERE  `aid` = 19 [ RunTime:0.071004s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `novel` WHERE  `aid` = 19 LIMIT 1 [ RunTime:0.067004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `category` [ RunTime:0.067004s ]
+[ sql ] [ SQL ] SELECT `name` FROM `category` WHERE  `id` = 26 LIMIT 1 [ RunTime:0.067004s ]
+[ sql ] [ SQL ] SELECT `name` FROM `category` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.066004s ]
+[ sql ] [ SQL ] SELECT `name` FROM `category` WHERE  `id` = 4 LIMIT 1 [ RunTime:0.066004s ]
+[ sql ] [ SQL ] SELECT `name` FROM `category` WHERE  `id` = 7 LIMIT 1 [ RunTime:0.066004s ]
+[ sql ] [ SQL ] SELECT `name` FROM `category` WHERE  `id` = 7 LIMIT 1 [ RunTime:0.065003s ]
+[ sql ] [ SQL ] SELECT `name` FROM `category` WHERE  `id` = 19 LIMIT 1 [ RunTime:0.066004s ]
+[ sql ] [ SQL ] SELECT `name` FROM `category` WHERE  `id` = 19 LIMIT 1 [ RunTime:0.066004s ]
+[ sql ] [ SQL ] SELECT `name` FROM `category` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.065004s ]
+---------------------------------------------------------------
+[ 2017-07-01T01:33:26+08:00 ] 127.0.0.1 127.0.0.1 GET /uploads/20170630/edd6901199827b1a27b021770f3ea2c6.jpg
+[ info ] tp5.com/uploads/20170630/edd6901199827b1a27b021770f3ea2c6.jpg [运行时间：0.167010s][吞吐率：5.99req/s] [内存消耗：1,328.94kb] [文件加载：33]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'uploads',
+    1 => '20170630',
+    2 => 'edd6901199827b1a27b021770f3ea2c6.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'image/webp,image/*,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer/index/writerdata.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=24sqk0nu6n5cuumala6dgiov44',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-01T01:33:26+08:00 ] 127.0.0.1 127.0.0.1 GET /uploads/20170630/12def8fe882cc8809153d24be9ad07f7.jpg
+[ info ] tp5.com/uploads/20170630/12def8fe882cc8809153d24be9ad07f7.jpg [运行时间：0.430025s][吞吐率：2.33req/s] [内存消耗：1,328.94kb] [文件加载：33]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'uploads',
+    1 => '20170630',
+    2 => '12def8fe882cc8809153d24be9ad07f7.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'image/webp,image/*,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer/index/writerdata.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=24sqk0nu6n5cuumala6dgiov44',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-01T01:33:27+08:00 ] 127.0.0.1 127.0.0.1 GET /uploads/20170630/ea0ac4766ca9e370ea40a7e9122e57e3.jpg
+[ info ] tp5.com/uploads/20170630/ea0ac4766ca9e370ea40a7e9122e57e3.jpg [运行时间：0.047002s][吞吐率：21.28req/s] [内存消耗：1,328.94kb] [文件加载：33]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'uploads',
+    1 => '20170630',
+    2 => 'ea0ac4766ca9e370ea40a7e9122e57e3.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'image/webp,image/*,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer/index/writerdata.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=24sqk0nu6n5cuumala6dgiov44',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-01T01:33:27+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/writernwes.html
+[ info ] tp5.com/writer/index/writernwes.html [运行时间：0.515029s][吞吐率：1.94req/s] [内存消耗：2,799.81kb] [文件加载：51]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'writernwes',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer/index/writerdata.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=24sqk0nu6n5cuumala6dgiov44',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\writer\controller\Index->writernwes[ D:\wamp\www\tp5\application\writer\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\tp5\public/../application/writer\view\index\writer-news.html [ array (
+  0 => 'penname',
+  1 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.105006s ] mysql:dbname=icefire;host=47.94.158.22;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `comment` [ RunTime:0.070004s ]
+[ sql ] [ SQL ] SELECT * FROM `comment` [ RunTime:0.069003s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `comment` LIMIT 1 [ RunTime:0.070004s ]
+---------------------------------------------------------------
+[ 2017-07-01T01:33:28+08:00 ] 127.0.0.1 127.0.0.1 GET /static/writer/js/toastr.js.map
+[ info ] tp5.com/static/writer/js/toastr.js.map [运行时间：0.041003s][吞吐率：24.39req/s] [内存消耗：1,328.28kb] [文件加载：33]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'writer',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=24sqk0nu6n5cuumala6dgiov44',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-01T01:33:32+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/writernwes.html
+[ info ] tp5.com/writer/index/writernwes.html [运行时间：0.392023s][吞吐率：2.55req/s] [内存消耗：2,623.41kb] [文件加载：49]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'writernwes',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer/index/writernwes.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=24sqk0nu6n5cuumala6dgiov44',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\writer\controller\Index->writernwes[ D:\wamp\www\tp5\application\writer\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\tp5\public/../application/writer\view\index\writer-news.html [ array (
+  0 => 'penname',
+  1 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.110006s ] mysql:dbname=icefire;host=47.94.158.22;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `comment` [ RunTime:0.074004s ]
+[ sql ] [ SQL ] SELECT * FROM `comment` [ RunTime:0.072004s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `comment` LIMIT 1 [ RunTime:0.071004s ]
+---------------------------------------------------------------
+[ 2017-07-01T01:33:32+08:00 ] 127.0.0.1 127.0.0.1 GET /static/writer/js/toastr.js.map
+[ info ] tp5.com/static/writer/js/toastr.js.map [运行时间：0.032002s][吞吐率：31.25req/s] [内存消耗：1,328.28kb] [文件加载：33]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'writer',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=24sqk0nu6n5cuumala6dgiov44',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-01T01:33:34+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/writernwes.html
+[ info ] tp5.com/writer/index/writernwes.html [运行时间：0.400023s][吞吐率：2.50req/s] [内存消耗：2,623.41kb] [文件加载：49]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'writernwes',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer/index/writernwes.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=24sqk0nu6n5cuumala6dgiov44',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\writer\controller\Index->writernwes[ D:\wamp\www\tp5\application\writer\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\tp5\public/../application/writer\view\index\writer-news.html [ array (
+  0 => 'penname',
+  1 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.110007s ] mysql:dbname=icefire;host=47.94.158.22;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `comment` [ RunTime:0.075004s ]
+[ sql ] [ SQL ] SELECT * FROM `comment` [ RunTime:0.073004s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `comment` LIMIT 1 [ RunTime:0.073005s ]
+---------------------------------------------------------------
+[ 2017-07-01T01:33:34+08:00 ] 127.0.0.1 127.0.0.1 GET /static/writer/js/toastr.js.map
+[ info ] tp5.com/static/writer/js/toastr.js.map [运行时间：0.030002s][吞吐率：33.33req/s] [内存消耗：1,328.28kb] [文件加载：33]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'writer',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=24sqk0nu6n5cuumala6dgiov44',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-01T01:33:35+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/writercheckout.html
+[ info ] tp5.com/writer/index/writercheckout.html [运行时间：0.656037s][吞吐率：1.52req/s] [内存消耗：2,855.27kb] [文件加载：51]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'writercheckout',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer/index/writernwes.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=24sqk0nu6n5cuumala6dgiov44',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\writer\controller\Index->writercheckout[ D:\wamp\www\tp5\application\writer\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\tp5\public/../application/writer\view\index\writer-checkout.html [ array (
+  0 => 'penname',
+  1 => 'list',
+  2 => 'all',
+  3 => 'aid',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.110006s ] mysql:dbname=icefire;host=47.94.158.22;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `author` [ RunTime:0.075005s ]
+[ sql ] [ SQL ] SELECT `id` FROM `author` WHERE  `penname` = 'hhy' LIMIT 1 [ RunTime:0.074004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `novel` [ RunTime:0.075004s ]
+[ sql ] [ SQL ] SELECT * FROM `novel` WHERE  `aid` = 19 [ RunTime:0.075004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `assets` [ RunTime:0.075005s ]
+[ sql ] [ SQL ] SELECT * FROM `assets` WHERE  `aid` = 19 LIMIT 1 [ RunTime:0.074004s ]
+---------------------------------------------------------------
+[ 2017-07-01T01:33:35+08:00 ] 127.0.0.1 127.0.0.1 GET /static/writer/js/toastr.js.map
+[ info ] tp5.com/static/writer/js/toastr.js.map [运行时间：0.034002s][吞吐率：29.41req/s] [内存消耗：1,328.28kb] [文件加载：33]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'writer',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=24sqk0nu6n5cuumala6dgiov44',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-01T01:33:45+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/writerpersonal.html
+[ info ] tp5.com/writer/index/writerpersonal.html [运行时间：0.571033s][吞吐率：1.75req/s] [内存消耗：2,643.86kb] [文件加载：49]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'writerpersonal',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer/index/writercheckout.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=24sqk0nu6n5cuumala6dgiov44',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\writer\controller\Index->writerpersonal[ D:\wamp\www\tp5\application\writer\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\tp5\public/../application/writer\view\index\writer-index.html [ array (
+  0 => 'penname',
+  1 => 'list1',
+  2 => 'list2',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.112006s ] mysql:dbname=icefire;host=47.94.158.22;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `author` [ RunTime:0.075004s ]
+[ sql ] [ SQL ] SELECT `id` FROM `author` WHERE  `penname` = 'hhy' LIMIT 1 [ RunTime:0.081005s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `novel` [ RunTime:0.074004s ]
+[ sql ] [ SQL ] SELECT * FROM `novel` WHERE  `aid` = 19  AND `isover` = 1 [ RunTime:0.075004s ]
+[ sql ] [ SQL ] SELECT * FROM `novel` WHERE  `aid` = 19  AND `isover` = 2 [ RunTime:0.074004s ]
+---------------------------------------------------------------
+[ 2017-07-01T01:33:48+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/writerdet/name/%E9%98%BF%E6%96%AF%E8%BE%BE%E6%89%80%E5%A4%9A.html
+[ info ] tp5.com/writer/index/writerdet/name/%E9%98%BF%E6%96%AF%E8%BE%BE%E6%89%80%E5%A4%9A.html [运行时间：0.854049s][吞吐率：1.17req/s] [内存消耗：2,640.58kb] [文件加载：49]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'writerdet',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer/index/writerpersonal.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=24sqk0nu6n5cuumala6dgiov44',
+)
+[ info ] [ PARAM ] array (
+  'name' => '阿斯达所多',
+)
+[ info ] [ RUN ] app\writer\controller\Index->writerdet[ D:\wamp\www\tp5\application\writer\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\tp5\public/../application/writer\view\index\writer-details.html [ array (
+  0 => 'penname',
+  1 => 'name',
+  2 => 'tnum',
+  3 => 'categorty',
+  4 => 'isover',
+  5 => 'desc',
+  6 => 'face',
+  7 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.109006s ] mysql:dbname=icefire;host=47.94.158.22;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `author` [ RunTime:0.073005s ]
+[ sql ] [ SQL ] SELECT `id` FROM `author` WHERE  `penname` = 'hhy' LIMIT 1 [ RunTime:0.072004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `novel` [ RunTime:0.074004s ]
+[ sql ] [ SQL ] SELECT * FROM `novel` WHERE  `aid` = 19  AND `name` = '阿斯达所多' LIMIT 1 [ RunTime:0.074004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `chapter` [ RunTime:0.074005s ]
+[ sql ] [ SQL ] SELECT MAX(tnum) AS tp_max FROM `chapter` WHERE  `nid` = '21' LIMIT 1 [ RunTime:0.074004s ]
+[ sql ] [ SQL ] SELECT `title` FROM `chapter` WHERE  `tnum` = 1 LIMIT 1 [ RunTime:0.073004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `category` [ RunTime:0.074005s ]
+[ sql ] [ SQL ] SELECT `name` FROM `category` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.072004s ]
+---------------------------------------------------------------
+[ 2017-07-01T01:33:48+08:00 ] 127.0.0.1 127.0.0.1 GET /uploads/20170630/edd6901199827b1a27b021770f3ea2c6.jpg
+[ info ] tp5.com/uploads/20170630/edd6901199827b1a27b021770f3ea2c6.jpg [运行时间：0.032002s][吞吐率：31.25req/s] [内存消耗：1,329.36kb] [文件加载：33]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'uploads',
+    1 => '20170630',
+    2 => 'edd6901199827b1a27b021770f3ea2c6.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'image/webp,image/*,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer/index/writerdet/name/%E9%98%BF%E6%96%AF%E8%BE%BE%E6%89%80%E5%A4%9A.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=24sqk0nu6n5cuumala6dgiov44',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
