@@ -26916,6 +26916,7 @@
   'auto_start' => true,
 )
 [ info ] [ LOG ] INIT File
+<<<<<<< HEAD
 ---------------------------------------------------------------
 [ 2017-06-23T19:28:15+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/login/index.html
 [ info ] tp5.com/admin/login/index.html [运行时间：0.041002s][吞吐率：24.39req/s] [内存消耗：1,672.19kb] [文件加载：42]
@@ -36794,3 +36795,5 @@
 [ sql ] [ SQL ] SHOW COLUMNS FROM `novel` [ RunTime:0.075005s ]
 [ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `novel` LIMIT 1 [ RunTime:0.072004s ]
 [ sql ] [ SQL ] SELECT * FROM `novel` LIMIT 0,6 [ RunTime:0.073004s ]
+=======
+>>>>>>> cc

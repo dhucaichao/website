@@ -37,6 +37,9 @@
         <tr>
             <th width="100" style="text-align:left; padding-left:20px;"> ID号 </th>
             <th> 作者 </th>
+
+            <th> 封面 </th>
+
             <th> 书籍名 </th>
             <th> 是否完结 </th>
             <th> 更新时间 </th>
@@ -46,6 +49,8 @@
         <tr>
             <td width="100" style="text-align: left; padding-left: 20px;">{$v['id']}</td>
             <td>{$v['aid']}</td>
+     <th><img src="{$v['face']}" alt=""></th>
+
             <td>{$v['name']}</td>
             <td>{$v['isover']}</td>
             <td>{$v['uptime']}</td>
@@ -165,7 +170,9 @@
                 $('.modal-body .cid').html('分类:' + (data.cid));
 
                 $('.modal-body .up').html('是否上架:' + (data.up == 1 ? '上架' : '下架'));
-                $('.modal-body .towords').html('总字数:' + (data.towords));
+
+                $('.modal-body .towords').html('总字数:' + (data.twords));
+
                 $('.modal-body .Tcollect').html('收藏量:' + (data.Tcollect));
 
                 $('.modal-body .grade').html('评分:' + (data.grade));

@@ -30,8 +30,9 @@ class login extends Controller
         } else {
             return view('index/index',['name'=>$data['name']]);
         }
-        $_SESSION['admin']['name'] = $data['name'];
-        $_SESSION['admin']['pwd'] = $data['pwd'];
+        Session::set('admin.name',$data['name'],'think');
+        Session::set('admin.pwd',$data['pwd'],'think');
+
     }
 
     public function logout()

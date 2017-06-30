@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="panel admin-panel margin-top" style="margin-left: 190px;margin-top: 4px;">
     <div class="panel-head" id="add">
         <strong><span class="icon-pencil-square-o"></span>修改分类</strong>
@@ -59,3 +60,28 @@
         </form>
     </div>
 </div>
+=======
+{extend name='author/index'}
+{block name="main"}
+<form action="/admin/category/save" method="post">
+    <div class="container">
+        <div class="col-md-6 h2">
+            <ul class="list-group h4">
+                分类名:<input type="text" name="name">
+                <hr>
+                所属类:
+                <input type="text" name="pid">
+                <p>{volist name="arr" id="v"}
+                {$v['id']}-{$v['name']}
+                {/volist}
+                <hr></p>
+                隐藏/显示:<label><input type="radio" name="display" value=1 checked>显示</label>
+                <label><input type="radio" name="display" value=2 >隐藏</label>
+            </ul>
+            <button class="btn btn-danger btn-lg del-btn">保存</button>
+        </div>
+    </div>
+</form>
+{/block}
+{block name="myjs"}{/block}
+>>>>>>> cc

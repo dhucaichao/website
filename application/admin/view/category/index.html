@@ -1,126 +1,114 @@
-<div class="panel admin-panel" style="margin-left: 190px;margin-top: 4px;">
-    <div class="panel-head">
-        <strong class="icon-reorder"> 内容列表</strong>
+
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title>{$title}</title>
+    <!--加载CSS-->
+    {load href="/static/admin/css/bootstrap.min.css"}
+    {css href="/static/admin/reset.css"}
+    {css href="/static/admin/css/toastr.min.css"}
+</head>
+<body>
+<div>
+    <div class="col-md-12 bg-primary p20">
+        <h1>{$title}</h1>
+        <hr>
     </div>
-    <div class="padding border-bottom">
-        <button type="button" class="button border-yellow" onclick="window.location.href='#add'"><span class="icon-plus-square-o"></span> 添加分类</button>
+    <div class="clearfix"></div>
+
+    <div class="row mt50">
+        <div class="col-md-12">
+            <table class="table table-hover bg-info">
+                <tr>
+                    <th>ID</th>
+                    <th>分类名</th>
+                    <th>所属类</th>
+                    <th>显示/隐藏</th>
+                    <th>操作</th>
+                </tr>
+                {volist name="list" id="v"}
+                <tr>
+                    <td>{$v['id']}</td>
+                    <td>{$v['name']}</td>
+                    <td>
+                        {$arr}
+                    </td>
+                    <td>
+                        {switch name="v.display"}
+                        {case value="1"}显示{/case}
+                        {case value="2"}隐藏{/case}
+                        {/switch}
+                    </td>
+                    <td class="col-md-4">
+                        <a href="{:url('category/edit',['id'=>$v['id']])}" class="btn btn-primary btn-xs">编辑</a>
+                        <a href="{:url('category/index2',['id'=>$v['id']])}" class="btn btn-primary btn-xs">子分类</a>
+                        <button data-id="{$v['id']}" class="btn btn-danger btn-xs del-btn">删除</button>
+                    </td>
+                </tr>
+                {/volist}
+            </table>
+            {$list->render()}
+        </div>
     </div>
-    <table class="table table-hover text-center">
-        <tr>
-            <th width="5%">
-                ID
-            </th>
-            <th width="15%">
-                一级分类
-            </th>
-            <th width="10%">
-                排序
-            </th>
-            <th width="10%">
-                操作
-            </th>
-        </tr>
-        <tr>
-            <td>
-                1
-            </td>
-            <td>
-                产品分类
-            </td>
-            <td>
-                1
-            </td>
-            <td>
-                <div class="button-group">
-                    <a class="button border-main" href="cateedit.html"><span class="icon-edit"></span> 修改</a><a class="button border-red" href="javascript:void(0)" onclick="return del(1,2)"><span class="icon-trash-o"></span> 删除</a>
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                1
-            </td>
-            <td>
-                产品分类
-            </td>
-            <td>
-                1
-            </td>
-            <td>
-                <div class="button-group">
-                    <a class="button border-main" href="cateedit.html"><span class="icon-edit"></span> 修改</a><a class="button border-red" href="javascript:void(0)" onclick="return del(1,2)"><span class="icon-trash-o"></span> 删除</a>
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                1
-            </td>
-            <td>
-                产品分类
-            </td>
-            <td>
-                1
-            </td>
-            <td>
-                <div class="button-group">
-                    <a class="button border-main" href="cateedit.html"><span class="icon-edit"></span> 修改</a><a class="button border-red" href="javascript:void(0)" onclick="return del(1,2)"><span class="icon-trash-o"></span> 删除</a>
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                1
-            </td>
-            <td>
-                产品分类
-            </td>
-            <td>
-                1
-            </td>
-            <td>
-                <div class="button-group">
-                    <a class="button border-main" href="cateedit.html"><span class="icon-edit"></span> 修改</a><a class="button border-red" href="javascript:void(0)" onclick="return del(1,2)"><span class="icon-trash-o"></span> 删除</a>
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                1
-            </td>
-            <td>
-                产品分类
-            </td>
-            <td>
-                1
-            </td>
-            <td>
-                <div class="button-group">
-                    <a class="button border-main" href="cateedit.html"><span class="icon-edit"></span> 修改</a><a class="button border-red" href="javascript:void(0)" onclick="return del(1,2)"><span class="icon-trash-o"></span> 删除</a>
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                1
-            </td>
-            <td>
-                产品分类
-            </td>
-            <td>
-                1
-            </td>
-            <td>
-                <div class="button-group">
-                    <a class="button border-main" href="cateedit.html"><span class="icon-edit"></span> 修改</a><a class="button border-red" href="javascript:void(0)" onclick="return del(1,2)"><span class="icon-trash-o"></span> 删除</a>
-                </div>
-            </td>
-        </tr>
-    </table>
 </div>
-<script type="text/javascript">
-    function del(id,mid){
-        if(confirm("您确定要删除吗?")){
-        }
+
+
+
+
+<!--加载JS-->
+{js href="/static/admin/js/jquery.min.js"}
+{js href="/static/admin/js/bootstrap.min.js"}
+{js href="/static/admin/js/toastr.min.js"}
+
+{block name="myjs"}
+<script>
+    $(function () {
+        // 触发用户删除
+        $('.del-btn').click(function () {
+            var ac_id = $(this).attr('data-id');
+            if (confirm('您确定要 [ 删 除 ] 该分类么?')) {
+                var obj = $(this).parents('tr');
+                delAjax(ac_id,obj);// 执行删除操作
+            }
+        });
+    });
+
+
+    // 设置弹框参数
+    toastr.options = {
+        closeButton: true,//是否显示关闭按钮
+        progressBar: false,//实现显示计时条
+        timeOut: "1000",//自动关闭时间
+        positionClass: "toast-bottom-right",//提示位置
+        // toast-top-full-width 顶端，宽度铺满整个屏幕
+        // toast-top-right  顶端右边
+    };
+
+
+    // 执行AJAX删除的操作
+    function delAjax(id, obj) {
+        // console.log(id);
+        $.ajax({
+            type: 'get',
+            url: '/admin/category/delete/id/' + id,
+            dateType: 'json',
+            success: function (data) {
+                if (data.status) {
+                    toastr.success(data.info);
+                    obj.remove();
+                } else {
+                    toastr.error(data.info,'分类删除失败');
+                }
+            },
+            error: function () {
+                // AJAX执行失败
+                alert('ajax操作失败');
+            }
+        });
     }
 </script>
+{/block}
+</body>
+</html>
+

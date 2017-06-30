@@ -41,6 +41,9 @@
                 </tr>
                 {/volist}
             </table>
+
+            {$list->render()}
+
         </div>
     </div>
 </div>
@@ -176,7 +179,9 @@
     function delAjax(id, obj) {
         // console.log(id);
         $.ajax({
-            type: 'delete',
+
+            type: 'get',
+
             url: '/admin/user/delete/id/' + id,
             dateType: 'json',
             success: function (data) {

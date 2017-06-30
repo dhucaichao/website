@@ -1,61 +1,79 @@
-<div class="leftnav" style="overflow-y: auto">
+
+<div class="leftnav">
     <div class="leftnav-title">
         <strong><span class="icon-list"></span>菜单列表</strong>
     </div>
-
-    <!--用户模块开始-->
-    <h2><span class="icon-user"></span> 用户管理</h2>
+    <h2>用户管理</h2>
     <ul style="display:none">
-        <li><a href="{:url('user/index')}" target="right">用户列表</a></li>
-        <li><a href="{:url('user/create')}" target="right">添加用户</a></li>
+        <li><a href="{:url('user/index')}" target="right">用户管理</a></li>
+        <li><a href="{:url('user/create')}" target="right">用户添加</a></li>
+
     </ul>
     <!-- 用户管理模块结束 -->
 
     <!-- 作者管理功能模块 -->
-    <h2><span class="icon-user"></span> 作者管理</h2>
-    <ul style="display:none">
-        <li><a href="{:url('author/index')}" target="right">作者列表</a></li>
-        <li><a href="{:url('author/create')}" target="right">添加作者</a></li>
+
+    <h2> 作者管理 </h2>
+    <ul>
+        <li><a href="{:url('author/index')}" target="right">已注册作者列表</a></li>
+        <li><a href="{:url('author/create')}" target="right">新添作者</a></li>
+        <!-- 作者管理功能模块结束 -->
     </ul>
-    <!-- 作者管理功能模块结束 -->
 
     <!-- 书籍管理功能模块 -->
-    <h2><span class="icon-book"></span> 书籍管理 </h2>
-    <ul style="display:none">
+    <h2> 书籍管理 </h2>
+    <ul>
+
         <li><a href="{:url('novel/index')}" target="right">书籍列表</a></li>
         <li><a href="{:url('novel/create')}" target="right">添加书籍</a></li>
     </ul>
     <!-- 书籍管理功能模块结束 -->
 
+
+
+
     <!-- 分类管理开始 -->
-    <h2><span class="icon-pencil-square-o"> 分类管理 </h2>
+    <h2> 分类管理 </h2>
     <ul>
         <li><a href="{:url('category/index')}" target="right">分类列表</a></li>
-        <li><a href="{:url('category/add')}" target="right">新增分类</a></li>
+        <li><a href="{:url('category/create1')}" target="right">新增一级分类</a></li>
+        <li><a href="{:url('category/create')}" target="right">新增多级分类</a></li>
     </ul>
 
-    <!--评论管理模块-->
-    <h2><span class=" icon-comment"> 评论管理 </h2>
+    <h2> 轮播图管理 </h2>
     <ul>
-        <li><a href="{:url('comment/index')}" target="right">评论列表</a></li>
-        <li><a href="{:url('comment/undo')}" target="right">未处理评论</a></li>
-        <li><a href="{:url('comment/do')}" target="right">已处理评论</a></li>
+        <li><a href="{:url('banner/index')}" target="right">轮播图列表</a></li>
+        <li><a href="{:url('banner/create')}" target="right">添加轮播图</a></li>
     </ul>
 
-    <!--积分管理模块-->
-    <h2><span class="icon-star"></span> 积分管理 </h2>
+    <h2> 小说章节管理 </h2>
     <ul>
-        <li><a href="{:url('vip/index')}" target="right"></span>商品列表</a></li>
+        <li><a href="{:url('chapter/index')}" target="right">章节列表</a></li>
     </ul>
-    <!-- 积分管理结束 -->
+    <!-- 分类管理结束 -->
 
-    <!--新增菜单管理模块-->
-    <h2><span class=" icon-comment"></span> 菜单管理 </h2>
+
+    <h2> 菜单管理 </h2>
     <ul>
         <li><a href="{:url('menu/index')}" target="right">菜单列表</a></li>
-        <li><a href="{:url('menu/add')}" target="right">添加子菜单</a></li>
+        <li><a href="{:url('menu/add')}" target="right">添加导菜单</a></li>
     </ul>
-    <!--新增菜单管理模块结束-->
+
+
+    <!--  <script>
+     // 展开效果
+     $(function(){
+         // 进入页面 第一个默认是展开的
+         $('#leftnav ul:eq(0)').show();
+
+         //绑定H3点击事件
+         $('#leftnav h3').click(function(){
+             // 展开对应的下一个ul元素
+             $(this).next('ul').slideDown().siblings('ul').slideUp();
+         });
+
+     })
+     </script> -->
 
 
     <script type="text/javascript">
@@ -69,6 +87,17 @@
                 $(".leftnav ul li a").removeClass("on");
                 $(this).addClass("on");
             })
+
+            // $(".leftnav .manage").click(function(){
+            //     $(this).next().slideToggle(200);
+            //     $(this).toggleClass("on");
+            // })
+            // $(".leftnav .manage li a").click(function(){
+            //       $("#a_leader_txt").text($(this).text());
+            //       $(".leftnav .manage li a").removeClass("on");
+            //       $(this).addClass("on");
+            // })
+
         });
     </script>
 

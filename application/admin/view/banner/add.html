@@ -1,0 +1,18 @@
+{extend name="user/index"}
+
+{block name="main"}
+<form action="/admin/banner/save" enctype="multipart/form-data" method="post">
+<div class="container" id="'ccc">
+
+
+    <div class="col-md-6 h2">
+        <ul class="list-group h4">
+            图片:<input type="file" name="image">
+        </ul>
+        <button class="btn btn-danger btn-lg del-btn">添加</button>
+    </div>
+</div>
+</form>
+{/block}
+
+{block name="myjs"}{/block}

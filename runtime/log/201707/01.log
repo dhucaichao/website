@@ -1,11 +1,19 @@
+<<<<<<< HEAD
 ---------------------------------------------------------------
 [ 2017-07-01T00:05:16+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/writernwes.html
 [ info ] tp5.com/writer/index/writernwes.html [运行时间：0.509283s][吞吐率：1.96req/s] [内存消耗：2,689.64kb] [文件加载：51]
 [ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+=======
+---------------------------------------------------------------
+[ 2017-07-01T01:12:02+08:00 ] 127.0.0.1 127.0.0.1 GET /home/index/index
+[ info ] tp5.com/home/index/index [运行时间：1.449083s][吞吐率：0.69req/s] [内存消耗：2,528.20kb] [文件加载：49]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+>>>>>>> cc
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'writer',
     1 => 'index',
     2 => 'writernwes',
@@ -1954,12 +1962,34 @@
 [ info ] [ PARAM ] array (
 )
 [ info ] [ RUN ] app\writer\controller\Index->writerfound[ D:\wamp\www\tp5\application\writer\controller\Index.php ]
+=======
+    0 => 'home',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15cf826e78835-0f7a7a97e18dff-5c6a3a7a-fa000-15cf826e78921d; CNZZDATA1259530409=1050232241-1498809282-%7C1498832987',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Index->index[ D:\wamp\www\tp5\application\home\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+>>>>>>> cc
 [ info ] [ SESSION ] INIT array (
   'id' => '',
   'var_session_id' => '',
   'prefix' => 'think',
   'type' => '',
   'auto_start' => true,
+<<<<<<< HEAD
 )
 [ info ] [ VIEW ] D:\wamp\www\tp5\public/../application/writer\view\index\writer-found.html [ array (
   0 => 'penname',
@@ -1970,10 +2000,28 @@
 [ 2017-07-01T01:30:36+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/writerfound.html
 [ info ] tp5.com/writer/index/writerfound.html [运行时间：0.044003s][吞吐率：22.73req/s] [内存消耗：2,024.95kb] [文件加载：44]
 [ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+=======
+)
+[ info ] [ VIEW ] D:\wamp\www\tp5\public/../application/home\view\index\default.html [ array (
+  0 => 'logined',
+  1 => 'list',
+  2 => 'list1',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.195011s ] mysql:dbname=icefire;host=47.94.158.22;charset=utf8
+[ sql ] [ SQL ] select *,n.name k,penname from novel n,category c,author a where c.pid=1 and n.cid=c.id and n.aid=a.id order by Tticket limit 0,5 [ RunTime:0.086005s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner` [ RunTime:0.074004s ]
+[ sql ] [ SQL ] SELECT * FROM `banner` [ RunTime:0.074005s ]
+---------------------------------------------------------------
+[ 2017-07-01T01:12:03+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/fzfont.ttf
+[ info ] tp5.com/static/index/fonts/fzfont.ttf [运行时间：0.724042s][吞吐率：1.38req/s] [内存消耗：1,329.59kb] [文件加载：33]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+>>>>>>> cc
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'writer',
     1 => 'index',
     2 => 'writerfound',
@@ -2010,10 +2058,36 @@
 [ 2017-07-01T01:30:37+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/writerfound.html
 [ info ] tp5.com/writer/index/writerfound.html [运行时间：0.046003s][吞吐率：21.74req/s] [内存消耗：1,822.88kb] [文件加载：42]
 [ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+=======
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'origin' => 'http://tp5.com',
+  'accept' => '*/*',
+  'referer' => 'http://tp5.com/static/index/css/style-c4460f1fb4.css',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15cf826e78835-0f7a7a97e18dff-5c6a3a7a-fa000-15cf826e78921d; CNZZDATA1259530409=1050232241-1498809282-%7C1498832987; PHPSESSID=q7vbat0u9cbv48nhlnt2239jc0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-01T01:12:04+08:00 ] 127.0.0.1 127.0.0.1 GET /uploads/20170630/277e4d7157231e309aca575a563006c1.jpg
+[ info ] tp5.com/uploads/20170630/277e4d7157231e309aca575a563006c1.jpg [运行时间：0.053003s][吞吐率：18.87req/s] [内存消耗：1,329.43kb] [文件加载：33]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+>>>>>>> cc
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'writer',
     1 => 'index',
     2 => 'writerfound',
@@ -2050,10 +2124,35 @@
 [ 2017-07-01T01:30:38+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/writerfound.html
 [ info ] tp5.com/writer/index/writerfound.html [运行时间：0.044003s][吞吐率：22.73req/s] [内存消耗：1,822.88kb] [文件加载：42]
 [ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+=======
+    0 => 'uploads',
+    1 => '20170630',
+    2 => '277e4d7157231e309aca575a563006c1.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'image/webp,image/*,*/*;q=0.8',
+  'referer' => 'http://tp5.com/home/index/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15cf826e78835-0f7a7a97e18dff-5c6a3a7a-fa000-15cf826e78921d; CNZZDATA1259530409=1050232241-1498809282-%7C1498832987; PHPSESSID=q7vbat0u9cbv48nhlnt2239jc0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-01T01:12:04+08:00 ] 127.0.0.1 127.0.0.1 GET /uploads/20170630/ef7af109898bd5916542f9fabd2bf4f3.jpg
+[ info ] tp5.com/uploads/20170630/ef7af109898bd5916542f9fabd2bf4f3.jpg [运行时间：0.210012s][吞吐率：4.76req/s] [内存消耗：1,329.43kb] [文件加载：33]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+>>>>>>> cc
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'writer',
     1 => 'index',
     2 => 'writerfound',
@@ -2154,12 +2253,62 @@
 [ info ] [ PARAM ] array (
 )
 [ info ] [ RUN ] app\writer\controller\Index->writerfound[ D:\wamp\www\tp5\application\writer\controller\Index.php ]
+=======
+    0 => 'uploads',
+    1 => '20170630',
+    2 => 'ef7af109898bd5916542f9fabd2bf4f3.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'image/webp,image/*,*/*;q=0.8',
+  'referer' => 'http://tp5.com/home/index/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15cf826e78835-0f7a7a97e18dff-5c6a3a7a-fa000-15cf826e78921d; CNZZDATA1259530409=1050232241-1498809282-%7C1498832987; PHPSESSID=q7vbat0u9cbv48nhlnt2239jc0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-01T01:12:04+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] tp5.com/captcha.html [运行时间：1.136065s][吞吐率：0.88req/s] [内存消耗：1,356.52kb] [文件加载：32]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'image/webp,image/*,*/*;q=0.8',
+  'referer' => 'http://tp5.com/home/index/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15cf826e78835-0f7a7a97e18dff-5c6a3a7a-fa000-15cf826e78921d; CNZZDATA1259530409=1050232241-1498809282-%7C1498832987; PHPSESSID=q7vbat0u9cbv48nhlnt2239jc0',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ D:\wamp\www\tp5\vendor\topthink\think-captcha\src\CaptchaController.php ]
+>>>>>>> cc
 [ info ] [ SESSION ] INIT array (
   'id' => '',
   'var_session_id' => '',
   'prefix' => 'think',
   'type' => '',
   'auto_start' => true,
+<<<<<<< HEAD
 )
 [ info ] [ VIEW ] D:\wamp\www\tp5\public/../application/writer\view\index\writer-found.html [ array (
   0 => 'penname',
@@ -2170,10 +2319,19 @@
 [ 2017-07-01T01:33:12+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/writerfound.html
 [ info ] tp5.com/writer/index/writerfound.html [运行时间：0.038002s][吞吐率：26.31req/s] [内存消耗：2,024.95kb] [文件加载：44]
 [ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+=======
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-01T01:12:57+08:00 ] 127.0.0.1 127.0.0.1 POST /home/index/login
+[ info ] tp5.com/home/index/login [运行时间：0.347020s][吞吐率：2.88req/s] [内存消耗：2,434.13kb] [文件加载：47]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+>>>>>>> cc
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'writer',
     1 => 'index',
     2 => 'writerfound',
@@ -2194,12 +2352,41 @@
 [ info ] [ PARAM ] array (
 )
 [ info ] [ RUN ] app\writer\controller\Index->writerfound[ D:\wamp\www\tp5\application\writer\controller\Index.php ]
+=======
+    0 => 'home',
+    1 => 'index',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'content-length' => '30',
+  'accept' => '*/*',
+  'origin' => 'http://tp5.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://tp5.com/home/index/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15cf826e78835-0f7a7a97e18dff-5c6a3a7a-fa000-15cf826e78921d; PHPSESSID=q7vbat0u9cbv48nhlnt2239jc0; CNZZDATA1259530409=1050232241-1498809282-%7C1498838388',
+)
+[ info ] [ PARAM ] array (
+  'tel' => '18817831383',
+  'pwd' => '123',
+  'yzm' => 'db',
+)
+[ info ] [ RUN ] app\home\controller\Index->login[ D:\wamp\www\tp5\application\home\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+>>>>>>> cc
 [ info ] [ SESSION ] INIT array (
   'id' => '',
   'var_session_id' => '',
   'prefix' => 'think',
   'type' => '',
   'auto_start' => true,
+<<<<<<< HEAD
 )
 [ info ] [ VIEW ] D:\wamp\www\tp5\public/../application/writer\view\index\writer-found.html [ array (
   0 => 'penname',
@@ -2210,10 +2397,22 @@
 [ 2017-07-01T01:33:13+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/writerfound.html
 [ info ] tp5.com/writer/index/writerfound.html [运行时间：0.046003s][吞吐率：21.74req/s] [内存消耗：1,822.88kb] [文件加载：42]
 [ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+=======
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.112007s ] mysql:dbname=icefire;host=47.94.158.22;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.074004s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `tel` = '18817831383' LIMIT 1 [ RunTime:0.074004s ]
+---------------------------------------------------------------
+[ 2017-07-01T01:12:59+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/glyphicons-halflings-regular.woff
+[ info ] tp5.com/static/index/fonts/glyphicons-halflings-regular.woff [运行时间：0.042002s][吞吐率：23.81req/s] [内存消耗：1,329.64kb] [文件加载：33]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+>>>>>>> cc
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'writer',
     1 => 'index',
     2 => 'writerfound',
@@ -2250,10 +2449,36 @@
 [ 2017-07-01T01:33:18+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/authormoney.html
 [ info ] tp5.com/writer/index/authormoney.html [运行时间：0.831047s][吞吐率：1.20req/s] [内存消耗：2,812.99kb] [文件加载：51]
 [ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+=======
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'origin' => 'http://tp5.com',
+  'accept' => '*/*',
+  'referer' => 'http://tp5.com/static/index/css/style-c4460f1fb4.css',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15cf826e78835-0f7a7a97e18dff-5c6a3a7a-fa000-15cf826e78921d; PHPSESSID=q7vbat0u9cbv48nhlnt2239jc0; CNZZDATA1259530409=1050232241-1498809282-%7C1498838388',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-01T01:12:59+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/glyphicons-halflings-regular.ttf
+[ info ] tp5.com/static/index/fonts/glyphicons-halflings-regular.ttf [运行时间：0.055003s][吞吐率：18.18req/s] [内存消耗：1,329.64kb] [文件加载：33]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+>>>>>>> cc
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'writer',
     1 => 'index',
     2 => 'authormoney',
@@ -2302,21 +2527,55 @@
 [ 2017-07-01T01:33:21+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/writerinfo.html
 [ info ] tp5.com/writer/index/writerinfo.html [运行时间：0.500028s][吞吐率：2.00req/s] [内存消耗：2,816.99kb] [文件加载：51]
 [ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+=======
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'origin' => 'http://tp5.com',
+  'accept' => '*/*',
+  'referer' => 'http://tp5.com/static/index/css/style-c4460f1fb4.css',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15cf826e78835-0f7a7a97e18dff-5c6a3a7a-fa000-15cf826e78921d; PHPSESSID=q7vbat0u9cbv48nhlnt2239jc0; CNZZDATA1259530409=1050232241-1498809282-%7C1498838388',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-01T01:13:01+08:00 ] 127.0.0.1 127.0.0.1 GET /home/index/loginout.html
+[ info ] tp5.com/home/index/loginout.html [运行时间：0.058003s][吞吐率：17.24req/s] [内存消耗：1,687.65kb] [文件加载：42]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+>>>>>>> cc
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'writer',
     1 => 'index',
     2 => 'writerinfo',
   ),
 )
+=======
+    0 => 'home',
+    1 => 'index',
+    2 => 'loginout',
+  ),
+)
+>>>>>>> cc
 [ info ] [ HEADER ] array (
   'host' => 'tp5.com',
   'connection' => 'keep-alive',
   'upgrade-insecure-requests' => '1',
   'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
   'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+<<<<<<< HEAD
   'referer' => 'http://tp5.com/writer/index/authormoney.html',
   'accept-encoding' => 'gzip, deflate, sdch',
   'accept-language' => 'zh-CN,zh;q=0.8',
@@ -2325,12 +2584,23 @@
 [ info ] [ PARAM ] array (
 )
 [ info ] [ RUN ] app\writer\controller\Index->writerinfo[ D:\wamp\www\tp5\application\writer\controller\Index.php ]
+=======
+  'referer' => 'http://tp5.com/home/index/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15cf826e78835-0f7a7a97e18dff-5c6a3a7a-fa000-15cf826e78921d; PHPSESSID=q7vbat0u9cbv48nhlnt2239jc0; CNZZDATA1259530409=1050232241-1498809282-%7C1498838388',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Index->loginout[ D:\wamp\www\tp5\application\home\controller\Index.php ]
+>>>>>>> cc
 [ info ] [ SESSION ] INIT array (
   'id' => '',
   'var_session_id' => '',
   'prefix' => 'think',
   'type' => '',
   'auto_start' => true,
+<<<<<<< HEAD
 )
 [ info ] [ DB ] INIT mysql
 [ info ] [ VIEW ] D:\wamp\www\tp5\public/../application/writer\view\index\writer-info.html [ array (
@@ -2357,21 +2627,38 @@
 [ 2017-07-01T01:33:26+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/writerdata.html
 [ info ] tp5.com/writer/index/writerdata.html [运行时间：1.139065s][吞吐率：0.88req/s] [内存消耗：2,863.37kb] [文件加载：51]
 [ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+=======
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-01T01:13:01+08:00 ] 127.0.0.1 127.0.0.1 GET /home/index/index.html
+[ info ] tp5.com/home/index/index.html [运行时间：0.359020s][吞吐率：2.79req/s] [内存消耗：2,529.48kb] [文件加载：49]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+>>>>>>> cc
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'writer',
     1 => 'index',
     2 => 'writerdata',
   ),
 )
+=======
+    0 => 'home',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+>>>>>>> cc
 [ info ] [ HEADER ] array (
   'host' => 'tp5.com',
   'connection' => 'keep-alive',
   'upgrade-insecure-requests' => '1',
   'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
   'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+<<<<<<< HEAD
   'referer' => 'http://tp5.com/writer/index/writerinfo.html',
   'accept-encoding' => 'gzip, deflate, sdch',
   'accept-language' => 'zh-CN,zh;q=0.8',
@@ -2380,12 +2667,24 @@
 [ info ] [ PARAM ] array (
 )
 [ info ] [ RUN ] app\writer\controller\Index->writerdata[ D:\wamp\www\tp5\application\writer\controller\Index.php ]
+=======
+  'referer' => 'http://tp5.com/home/index/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15cf826e78835-0f7a7a97e18dff-5c6a3a7a-fa000-15cf826e78921d; PHPSESSID=q7vbat0u9cbv48nhlnt2239jc0; CNZZDATA1259530409=1050232241-1498809282-%7C1498838388',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Index->index[ D:\wamp\www\tp5\application\home\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+>>>>>>> cc
 [ info ] [ SESSION ] INIT array (
   'id' => '',
   'var_session_id' => '',
   'prefix' => 'think',
   'type' => '',
   'auto_start' => true,
+<<<<<<< HEAD
 )
 [ info ] [ DB ] INIT mysql
 [ info ] [ VIEW ] D:\wamp\www\tp5\public/../application/writer\view\index\writer-data.html [ array (
@@ -2413,20 +2712,44 @@
 [ 2017-07-01T01:33:26+08:00 ] 127.0.0.1 127.0.0.1 GET /uploads/20170630/edd6901199827b1a27b021770f3ea2c6.jpg
 [ info ] tp5.com/uploads/20170630/edd6901199827b1a27b021770f3ea2c6.jpg [运行时间：0.167010s][吞吐率：5.99req/s] [内存消耗：1,328.94kb] [文件加载：33]
 [ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+=======
+)
+[ info ] [ VIEW ] D:\wamp\www\tp5\public/../application/home\view\index\default.html [ array (
+  0 => 'logined',
+  1 => 'list',
+  2 => 'list1',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.098006s ] mysql:dbname=icefire;host=47.94.158.22;charset=utf8
+[ sql ] [ SQL ] select *,n.name k,penname from novel n,category c,author a where c.pid=1 and n.cid=c.id and n.aid=a.id order by Tticket limit 0,5 [ RunTime:0.068004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner` [ RunTime:0.065004s ]
+[ sql ] [ SQL ] SELECT * FROM `banner` [ RunTime:0.064003s ]
+---------------------------------------------------------------
+[ 2017-07-01T01:13:01+08:00 ] 127.0.0.1 127.0.0.1 GET /uploads/20170630/277e4d7157231e309aca575a563006c1.jpg
+[ info ] tp5.com/uploads/20170630/277e4d7157231e309aca575a563006c1.jpg [运行时间：0.026002s][吞吐率：38.46req/s] [内存消耗：1,329.44kb] [文件加载：33]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+>>>>>>> cc
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'uploads',
     1 => '20170630',
+<<<<<<< HEAD
     2 => 'edd6901199827b1a27b021770f3ea2c6.jpg',
   ),
 )
+=======
+    2 => '277e4d7157231e309aca575a563006c1.jpg',
+  ),
+)
+>>>>>>> cc
 [ info ] [ HEADER ] array (
   'host' => 'tp5.com',
   'connection' => 'keep-alive',
   'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
   'accept' => 'image/webp,image/*,*/*;q=0.8',
+<<<<<<< HEAD
   'referer' => 'http://tp5.com/writer/index/writerdata.html',
   'accept-encoding' => 'gzip, deflate, sdch',
   'accept-language' => 'zh-CN,zh;q=0.8',
@@ -2439,20 +2762,41 @@
 [ 2017-07-01T01:33:26+08:00 ] 127.0.0.1 127.0.0.1 GET /uploads/20170630/12def8fe882cc8809153d24be9ad07f7.jpg
 [ info ] tp5.com/uploads/20170630/12def8fe882cc8809153d24be9ad07f7.jpg [运行时间：0.430025s][吞吐率：2.33req/s] [内存消耗：1,328.94kb] [文件加载：33]
 [ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+=======
+  'referer' => 'http://tp5.com/home/index/index.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15cf826e78835-0f7a7a97e18dff-5c6a3a7a-fa000-15cf826e78921d; PHPSESSID=q7vbat0u9cbv48nhlnt2239jc0; CNZZDATA1259530409=1050232241-1498809282-%7C1498838388',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-01T01:13:01+08:00 ] 127.0.0.1 127.0.0.1 GET /uploads/20170630/a33928ed7a62ffc884ef87e926bae643.jpg
+[ info ] tp5.com/uploads/20170630/a33928ed7a62ffc884ef87e926bae643.jpg [运行时间：0.031002s][吞吐率：32.26req/s] [内存消耗：1,329.44kb] [文件加载：33]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+>>>>>>> cc
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'uploads',
     1 => '20170630',
+<<<<<<< HEAD
     2 => '12def8fe882cc8809153d24be9ad07f7.jpg',
   ),
 )
+=======
+    2 => 'a33928ed7a62ffc884ef87e926bae643.jpg',
+  ),
+)
+>>>>>>> cc
 [ info ] [ HEADER ] array (
   'host' => 'tp5.com',
   'connection' => 'keep-alive',
   'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
   'accept' => 'image/webp,image/*,*/*;q=0.8',
+<<<<<<< HEAD
   'referer' => 'http://tp5.com/writer/index/writerdata.html',
   'accept-encoding' => 'gzip, deflate, sdch',
   'accept-language' => 'zh-CN,zh;q=0.8',
@@ -2465,20 +2809,41 @@
 [ 2017-07-01T01:33:27+08:00 ] 127.0.0.1 127.0.0.1 GET /uploads/20170630/ea0ac4766ca9e370ea40a7e9122e57e3.jpg
 [ info ] tp5.com/uploads/20170630/ea0ac4766ca9e370ea40a7e9122e57e3.jpg [运行时间：0.047002s][吞吐率：21.28req/s] [内存消耗：1,328.94kb] [文件加载：33]
 [ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+=======
+  'referer' => 'http://tp5.com/home/index/index.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15cf826e78835-0f7a7a97e18dff-5c6a3a7a-fa000-15cf826e78921d; PHPSESSID=q7vbat0u9cbv48nhlnt2239jc0; CNZZDATA1259530409=1050232241-1498809282-%7C1498838388',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-01T01:13:01+08:00 ] 127.0.0.1 127.0.0.1 GET /uploads/20170630/ef7af109898bd5916542f9fabd2bf4f3.jpg
+[ info ] tp5.com/uploads/20170630/ef7af109898bd5916542f9fabd2bf4f3.jpg [运行时间：0.039002s][吞吐率：25.64req/s] [内存消耗：1,329.44kb] [文件加载：33]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+>>>>>>> cc
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'uploads',
     1 => '20170630',
+<<<<<<< HEAD
     2 => 'ea0ac4766ca9e370ea40a7e9122e57e3.jpg',
   ),
 )
+=======
+    2 => 'ef7af109898bd5916542f9fabd2bf4f3.jpg',
+  ),
+)
+>>>>>>> cc
 [ info ] [ HEADER ] array (
   'host' => 'tp5.com',
   'connection' => 'keep-alive',
   'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
   'accept' => 'image/webp,image/*,*/*;q=0.8',
+<<<<<<< HEAD
   'referer' => 'http://tp5.com/writer/index/writerdata.html',
   'accept-encoding' => 'gzip, deflate, sdch',
   'accept-language' => 'zh-CN,zh;q=0.8',
@@ -2582,12 +2947,52 @@
 [ info ] [ PARAM ] array (
 )
 [ info ] [ RUN ] app\writer\controller\Index->writernwes[ D:\wamp\www\tp5\application\writer\controller\Index.php ]
+=======
+  'referer' => 'http://tp5.com/home/index/index.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15cf826e78835-0f7a7a97e18dff-5c6a3a7a-fa000-15cf826e78921d; PHPSESSID=q7vbat0u9cbv48nhlnt2239jc0; CNZZDATA1259530409=1050232241-1498809282-%7C1498838388',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-01T01:13:01+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] tp5.com/captcha.html [运行时间：0.116007s][吞吐率：8.62req/s] [内存消耗：1,356.75kb] [文件加载：32]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'image/webp,image/*,*/*;q=0.8',
+  'referer' => 'http://tp5.com/home/index/index.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15cf826e78835-0f7a7a97e18dff-5c6a3a7a-fa000-15cf826e78921d; PHPSESSID=q7vbat0u9cbv48nhlnt2239jc0; CNZZDATA1259530409=1050232241-1498809282-%7C1498838388',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ D:\wamp\www\tp5\vendor\topthink\think-captcha\src\CaptchaController.php ]
+>>>>>>> cc
 [ info ] [ SESSION ] INIT array (
   'id' => '',
   'var_session_id' => '',
   'prefix' => 'think',
   'type' => '',
   'auto_start' => true,
+<<<<<<< HEAD
 )
 [ info ] [ DB ] INIT mysql
 [ info ] [ VIEW ] D:\wamp\www\tp5\public/../application/writer\view\index\writer-news.html [ array (
@@ -2603,11 +3008,20 @@
 [ 2017-07-01T01:33:32+08:00 ] 127.0.0.1 127.0.0.1 GET /static/writer/js/toastr.js.map
 [ info ] tp5.com/static/writer/js/toastr.js.map [运行时间：0.032002s][吞吐率：31.25req/s] [内存消耗：1,328.28kb] [文件加载：33]
 [ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+=======
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-01T01:13:01+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/fzfont.ttf
+[ info ] tp5.com/static/index/fonts/fzfont.ttf [运行时间：0.036002s][吞吐率：27.78req/s] [内存消耗：1,329.59kb] [文件加载：33]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+>>>>>>> cc
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'static',
+<<<<<<< HEAD
     1 => 'writer',
     2 => 'js',
   ),
@@ -2671,11 +3085,36 @@
 [ 2017-07-01T01:33:34+08:00 ] 127.0.0.1 127.0.0.1 GET /static/writer/js/toastr.js.map
 [ info ] tp5.com/static/writer/js/toastr.js.map [运行时间：0.030002s][吞吐率：33.33req/s] [内存消耗：1,328.28kb] [文件加载：33]
 [ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+=======
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'origin' => 'http://tp5.com',
+  'accept' => '*/*',
+  'referer' => 'http://tp5.com/static/index/css/style-c4460f1fb4.css',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15cf826e78835-0f7a7a97e18dff-5c6a3a7a-fa000-15cf826e78921d; PHPSESSID=q7vbat0u9cbv48nhlnt2239jc0; CNZZDATA1259530409=1050232241-1498809282-%7C1498838388',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-01T01:13:04+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/glyphicons-halflings-regular.woff
+[ info ] tp5.com/static/index/fonts/glyphicons-halflings-regular.woff [运行时间：0.033002s][吞吐率：30.30req/s] [内存消耗：1,329.64kb] [文件加载：33]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+>>>>>>> cc
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'static',
+<<<<<<< HEAD
     1 => 'writer',
     2 => 'js',
   ),
@@ -2744,11 +3183,36 @@
 [ 2017-07-01T01:33:35+08:00 ] 127.0.0.1 127.0.0.1 GET /static/writer/js/toastr.js.map
 [ info ] tp5.com/static/writer/js/toastr.js.map [运行时间：0.034002s][吞吐率：29.41req/s] [内存消耗：1,328.28kb] [文件加载：33]
 [ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+=======
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'origin' => 'http://tp5.com',
+  'accept' => '*/*',
+  'referer' => 'http://tp5.com/static/index/css/style-c4460f1fb4.css',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15cf826e78835-0f7a7a97e18dff-5c6a3a7a-fa000-15cf826e78921d; PHPSESSID=q7vbat0u9cbv48nhlnt2239jc0; CNZZDATA1259530409=1050232241-1498809282-%7C1498838388',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-01T01:13:04+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/glyphicons-halflings-regular.ttf
+[ info ] tp5.com/static/index/fonts/glyphicons-halflings-regular.ttf [运行时间：0.040003s][吞吐率：25.00req/s] [内存消耗：1,329.64kb] [文件加载：33]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+>>>>>>> cc
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'static',
+<<<<<<< HEAD
     1 => 'writer',
     2 => 'js',
   ),
@@ -2881,10 +3345,17 @@
     2 => 'edd6901199827b1a27b021770f3ea2c6.jpg',
   ),
 )
+=======
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+>>>>>>> cc
 [ info ] [ HEADER ] array (
   'host' => 'tp5.com',
   'connection' => 'keep-alive',
   'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+<<<<<<< HEAD
   'accept' => 'image/webp,image/*,*/*;q=0.8',
   'referer' => 'http://tp5.com/writer/index/writerdet/name/%E9%98%BF%E6%96%AF%E8%BE%BE%E6%89%80%E5%A4%9A.html',
   'accept-encoding' => 'gzip, deflate, sdch',
@@ -2894,3 +3365,15 @@
 [ info ] [ PARAM ] array (
 )
 [ info ] [ LOG ] INIT File
+=======
+  'origin' => 'http://tp5.com',
+  'accept' => '*/*',
+  'referer' => 'http://tp5.com/static/index/css/style-c4460f1fb4.css',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15cf826e78835-0f7a7a97e18dff-5c6a3a7a-fa000-15cf826e78921d; PHPSESSID=q7vbat0u9cbv48nhlnt2239jc0; CNZZDATA1259530409=1050232241-1498809282-%7C1498838388',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+>>>>>>> cc

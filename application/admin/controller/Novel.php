@@ -5,8 +5,20 @@ namespace app\admin\controller;
 use think\Controller;
 use think\Request;
 
+use think\Image;
 class Novel extends Controller
 {
+    public function upload()
+    {
+        $file = request()->file('face');
+        $info = $file->move(ROOT_PATH . 'public' . DS . 'uploads');
+        if($info){
+            return $info->getSaveName();
+        }else{
+            return $file->getError();
+        }
+    }
+
     /**
      * 显示资源列表
      *
@@ -37,7 +49,12 @@ class Novel extends Controller
      */
     public function save(Request $request)
     {
+        $aa = $this->upload();
         $data = input('post.');
+        $data['face'] =  DS . 'uploads' . DS . $aa;
+        $image = Image::open('uploads' . DS . $aa);
+        $image->thumb(30, 30)->save('uploads' . DS . $aa);
+
         $result = db('novel')->insert($data);
         if($result>0) {
             $this->success('添加成功','novel/index');
@@ -82,7 +99,13 @@ class Novel extends Controller
      */
     public function update(Request $request, $id)
     {
+
+        $bb = $this->upload();
         $data = input('post.');
+        $data['face'] =  DS . 'uploads' . DS . $bb;
+        $image = Image::open('uploads' . DS . $bb);
+        $image->thumb(30, 30)->save('uploads' . DS . $bb);
+
         $result = db('novel')->where('id',$id)->update($data);
         if($result>0) {
             $this->success('更新成功','novel/index');
