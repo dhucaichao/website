@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:64:"D:\wamp\www\tp5\public/../application/admin\view\user\index.html";i:1498137739;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:64:"D:\wamp\www\tp5\public/../application/admin\view\user\index.html";i:1498814742;}*/ ?>
 <!DOCTYPE html>
 <html lang="cn">
 <head>
@@ -42,6 +42,7 @@
                 </tr>
                 <?php endforeach; endif; else: echo "" ;endif; ?>
             </table>
+            <?php echo $list->render(); ?>
         </div>
     </div>
 </div>
@@ -177,7 +178,7 @@
     function delAjax(id, obj) {
         // console.log(id);
         $.ajax({
-            type: 'delete',
+            type: 'get',
             url: '/admin/user/delete/id/' + id,
             dateType: 'json',
             success: function (data) {

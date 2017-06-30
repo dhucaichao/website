@@ -1,0 +1,28 @@
+{extend name='author/index'}
+{block name="main"}
+<form action="/admin/category/update/id/{$result.id}" enctype="multipart/form-data" method="post">
+<div class="container">
+    <div class="col-md-6 h2">
+        <ul class="list-group h4">
+            分类名:<input type="text" name="name" value={$result.name}>
+            <hr>
+            所属类:
+            {eq name="$result.pid" value="0"}
+            <input type="text"  value='该类已经是一级分类' disabled="disabled" >
+            {else/}
+            <input type="text" name="pid" value={$result.pid}>
+            {volist name="arr" id="v"}
+            {$v['id']}-{$v['name']}
+            {/volist}
+            {/eq}
+            <hr>
+            隐藏/显示:<label><input type="radio" name="display" value=1 {$result.display==1?'checked':''}>显示</label>
+            <label><input type="radio" name="display" value=2 {$result.display==2?'checked':''}>隐藏</label>
+        </ul>
+        <button class="btn btn-danger btn-lg del-btn" style="">保存</button>
+    </div>
+
+</div>
+</form>
+{/block}
+{block name="myjs"}{/block}

@@ -6,29 +6,6 @@
     <ul style="display:none">
         <li><a href="{:url('user/index')}" target="right">用户管理</a></li>
         <li><a href="{:url('user/create')}" target="right">用户添加</a></li>
-        <li><a href="score.html" target="right">积分资产管理</a>
-            <ul class="manage">
-                <li><a> 积分 </a></li>
-                <li><a> 月票 </a></li>
-                <li><a> 会员 </a></li>
-                <li><a> 阅读币 </a></li>
-            </ul>
-        </li>
-        <li><a href="comment.html" target="right">评论管理</a>
-            <ul class="manage">
-                <li><a> 评论星级 </a></li>
-                <li><a> 评论内容 </a></li>
-                <li><a> 评论书籍 </a></li><a>
-                <li><a> 回复管理 </a></li>
-            </ul>
-        </li>
-        <li><a href="personal.html" target="right">个人资料管理</a></li>
-        <li><a href="bookshelf.html" target="right">书架收藏管理</a>
-            <ul class="manage">
-                <li><a> 收藏管理</a> </li>
-                <li><a> 更新提醒管理</a> </li>
-            </ul>
-        </li>
     </ul>
     <!-- 用户管理模块结束 -->
 
@@ -37,34 +14,14 @@
     <ul>
         <li><a href="{:url('author/index')}" target="right">已注册作者列表</a></li>
         <li><a href="{:url('author/create')}" target="right">新添作者</a></li>
-        <li><a href="book.html" target="right">书籍管理</a>
-            <ul>
-                <li> 积分 </li>
-                <li> 完本连载 </li>
-                <li> 评论管理 </li>
-                <li> 阅读管理 </li>
-            </ul>
-        </li>
-        <li><a href="personal.html" target="right">更新频率管理</a></li>
         <!-- 作者管理功能模块结束 -->
     </ul>
 
     <!-- 书籍管理功能模块 -->
     <h2> 书籍管理 </h2>
     <ul>
-        <li><a href="login.html" target="right">分类管理</a></li>
-        <li><a href="mysql.html" target="right">完本连载管理</a></li>
-        <li><a href="score.html" target="right">月票管理</a>
-        <li><a href="comment.html" target="right">评论管理</a>
-            <ul>
-                <li> 评论星级 </li>
-                <li> 评论内容 </li>
-                <li> 评论书籍 </li>
-                <li> 回复管理 </li>
-            </ul>
-        </li>
-        <li><a href="bookshelf.html" target="right">收藏管理</a>
-        </li>
+        <li><a href="{:url('novel/index')}" target="right">书籍列表</a></li>
+        <li><a href="{:url('novel/create')}" target="right">添加书籍</a></li>
     </ul>
     <!-- 书籍管理功能模块结束 -->
 
@@ -74,18 +31,19 @@
     <h2> 分类管理 </h2>
     <ul>
         <li><a href="{:url('category/index')}" target="right">分类列表</a></li>
-        <li><a href="{:url('category/add')}" target="right">新增分类</a></li>
+        <li><a href="{:url('category/create1')}" target="right">新增一级分类</a></li>
+        <li><a href="{:url('category/create')}" target="right">新增多级分类</a></li>
     </ul>
 
-    <h2> 分类类型管理 </h2>
+    <h2> 轮播图管理 </h2>
     <ul>
-        <li><a href="{:url('category/index')}" target="right">分类类型列表</a></li>
-        <li><a href="{:url('category/add')}" target="right">新增分类分类</a></li>
+        <li><a href="{:url('banner/index')}" target="right">轮播图列表</a></li>
+        <li><a href="{:url('banner/create')}" target="right">添加轮播图</a></li>
     </ul>
 
-    <h2> 导航管理 </h2>
+    <h2> 小说章节管理 </h2>
     <ul>
-        <li><a href="login.html" target="right">首页导航</a></li>
+        <li><a href="{:url('chapter/index')}" target="right">章节列表</a></li>
     </ul>
     <!-- 分类管理结束 -->
 

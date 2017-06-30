@@ -1,0 +1,17 @@
+{extend name='author/index'}
+{block name="main"}
+<form action="/admin/banner/update/id/{$result.id}" enctype="multipart/form-data" method="post">
+    <div class="container">
+        <div class="col-md-6 h2">
+            <ul class="list-group h4">
+                <img src="{$result.image}" alt="">
+                图片:<input type="file" name="image" value={$result.image}>
+                <hr>
+            </ul>
+            <button class="btn btn-danger btn-lg del-btn">保存</button>
+        </div>
+
+    </div>
+</form>
+{/block}
+{block name="myjs"}{/block}

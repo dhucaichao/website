@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:66:"D:\wamp\www\tp5\public/../application/home\view\index\default.html";i:1497956973;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:66:"D:\wamp\www\tp5\public/../application/home\view\index\default.html";i:1498834087;}*/ ?>
 ﻿
 <!DOCTYPE html>
 <html>
@@ -10,9 +10,12 @@
     <meta name="keywords" content="霜之哀伤文学，小说，小说网,言情小说,青春小说,玄幻小说,武侠小说,都市小说,历史小说,网络小说,小说下载，原创网络文学,畅销图书,精品图书,传统出版,电子书，原创文学" />
      <meta name="description" content="霜之哀伤文学提供免费小说,热门小说,精品小说,好看小说,小说连载,小说排行榜,小说在线阅读,小说下载,尽请浏览霜之哀伤文学各种玄幻小说,都市小说,言情小说,穿越小说,青春小说,武侠小说,历史小说,军事小说,科幻小说,灵异小说,游戏小说,竞技小说,同人小说,2016全新登场,手机下载阅读,电子书,效果更佳" />
     <link rel="shortcut icon" href="/static/index/images/9dfedc665fe4d4a759d61106128d1cec.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!--<link rel="stylesheet" type="text/css" href="css/style-c4460f1fb4.css">-->
     <!--<link rel="stylesheet" type="text/css" href="iconfont/iconfont.css">-->
-
+    <!--<link rel="stylesheet" type="text/css" href="/static/admin/css/bootstrap.min.css" />-->
     
     <link rel="stylesheet" type="text/css" href="/static/index/css/style-c4460f1fb4.css" />
     <link rel="stylesheet" type="text/css" href="/static/index/iconfont/iconfont.css" />
@@ -44,73 +47,113 @@
 
         </div>
 
+            <div class="user-login-info" lmk="login" lmv="登录">
+                <div id="loginCon">
 
-        <div class="user-login-info" lmk="login" lmv="登录">
-            <div id="loginCon">
+                </div>
 
-            </div>
-                <script type="text/template" id="loginTemp">
-                    <div class="u-lgn" id="login-link" lmk="login-btn" lmv="登录按钮" urltrue="true" lmurl="#">
-                        <span class="glyphicon glyphicon-user iconfont">&#xe65a;</span>
-                        <span>登录</span>
+                <?php if($logined == '1'): ?>
+                <div class="u-lgn" id="login-link" lmk="login-btn" lmv="登录按钮" urltrue="true" lmurl="#" onclick="aa()" style="display:block;width:100px">
+                    <span class="glyphicon glyphicon-user iconfont">&#xe65a;</span>
+                    <span>登录</span>
+                </div>
+
+                <!---------------------登录---------------->
+                <div id="login" class="ui-widget" style="position: fixed;height: 420px;width: 800px;top: 51px;left: 219.5px;z-index: 101;display: none; background-color: #fff;">
+                    <div class="logininput">
+                        <h1 class="logo">
+                            <img src="/static/index/picture/logo.png" width='360px' height='60px'>
+                            <div style="position:relative; top:-37px; right:-300px"><a href="<?php echo url('index/index'); ?>" >返回>></a></div>
+                        </h1>
+                        <form>
+                            <div class="loginname">
+                                <input type="text" name="tel" placeholder="请输入用户名" value="" id="tel">
+                            </div>
+                            <div class="loginpwd">
+                                <input type="password" name="pwd" class="userPassword" placeholder="请输入密码" id="pwd">
+                            </div>
+
+                            <div class="logincheckPic">
+                                <input type="text" class="userCheckPic" id="yzm" placeholder="请输入验证码" style="float: left;width:280px" name="yzm">
+                                <div style="float: right;"><img src="<?php echo captcha_src(); ?>" alt="captcha" width="70" height="35"  onclick="refreshVerify()" id="verify_img" /><a href="javascript:refreshVerify()"></a></div>
+                            </div>
+                        </form>
+                        <button class="ant-btn ant-btn-primary ant-btn-lg ant-button-sq">
+                            <span>登 录</span>
+                        </button>
+                        <div class="register">
+                            <a href="<?php echo url('index/sign'); ?>">注册账号</a><i>|</i>
+                            <a href="http://t.shuqi.com/?shuqi_h5=108#!/ct/forgetpassword">忘记密码?</a>
+                        </div>
                     </div>
-                </script>
-            <!---------------------登录---------------->
-            <form action="">
-                    <div id="login" style="display: none" class="ui-widget">
-                        <div class="logininput">
-                            <h1 class="logo">
-                                <img src="/static/index/picture/logo.png" width='360px' height='60px'>
-                                </h1>
-                                    <div class="loginname">
-                                        <input type="text" class="userInput" placeholder="请输入用户名" value="">
-                                    </div>
-                                    <div class="loginpwd">
-                                        <input type="password" class="userPassword" placeholder="请输入密码" value="pingan125">
-                                    </div>
+                </div>
 
-                                   <!--  <div class="logincheck">
-                                        <input type="password" class="userCheck" placeholder="请输入验证码">
-                                        <div id="checkCode-btn" class="checkCode">获取验证码</div>
-                                    </div> -->
 
-                                     <div class="logincheckPic">
-                                        <input type="text" class="userCheckPic" placeholder="请输入右侧图片答案">
-                                        <img src=""  id="checkCodePic-btn" class="checkCodePic" width="70" height="35" />
-                                    </div>
-
-                                    <div class="remember">
-                                        <label class="checkbox-re ant-checkbox-wrapper">
-                                            <span class="ant-checkbox">
-                                                <span class="ant-checkbox-inner"></span>
-                                                <input type="checkbox" class="ant-checkbox-input" value="on">
-                                            </span>
-                                            <span>记住密码</span>
-                                        </label>
-                                        </div>
-                                            <button type="button" class="ant-btn ant-btn-primary ant-btn-lg ant-button-sq loginbtn" lmk="login" lmv="登录" urltrue="true" lmurl="#">
-                                                <span>登 录</span>
-                                            </button>
-                                            <div class="register">
-                                                <a href="<?php echo url('index/sign'); ?>">注册账号</a><i>|</i>
-                                                <a href="http://t.shuqi.com/?shuqi_h5=108#!/ct/forgetpassword">忘记密码?</a>
-                                            </div>
-                                    </div>
-                    </div>
-            </form>
-            <!-----------------------登录-------------->
-                <script type="text/template" id="loginedTemp">
+                <!-----------------------登录-------------->
+                <div id="loginedTemp" style="display:none">
                     <div class="u-nickname" id="nickname-link">
-                        <a class="ellipse" title="<%-nickname%>"><%-nickname%></a>
-                        <ul class="nickname-list">
+                        <a class="ellipse"></a>
+                        <ul class="nickname-list" id="ccc" display="none">
                             <li><a href="./userCenter.php"><span class="glyphicon glyphicon-user"></span>个人中心</a></li>
-                            <li id="loginOut"><span class="glyphicon glyphicon-log-out"></span>&nbsp;&nbsp;登&nbsp;&nbsp;&nbsp;出</li>
+                            <li id="loginOut"><a href="<?php echo url('index/loginout'); ?>"><span class="glyphicon"></span>&nbsp;&nbsp;退&nbsp;&nbsp;&nbsp;出</a>
+                            </li>
                         </ul>
                     </div>
-                </script>
+                </div>
+                <?php else: ?>
+                <div class="u-lgn" id="login-link" lmk="login-btn" lmv="登录按钮" urltrue="true" lmurl="#" onclick="aa()" style="display:none;width:100px">
+                    <span class="glyphicon glyphicon-user iconfont">&#xe65a;</span>
+                    <span>登录</span>
+                </div>
+
+                <!---------------------登录---------------->
+                <div id="login" class="ui-widget" style="position: fixed;height: 420px;width: 800px;top: 51px;left: 219.5px;z-index: 101;display: none; background-color: #fff;">
+                    <div class="logininput">
+                        <h1 class="logo">
+                            <img src="/static/index/picture/logo.png" width='360px' height='60px'>
+                            <div style="position:relative; top:-37px; right:-300px"><a href="<?php echo url('index/index'); ?>" >返回>></a></div>
+                        </h1>
+                        <form>
+                            <div class="loginname">
+                                <input type="text" name="tel" placeholder="请输入用户名" value="" id="tel">
+                            </div>
+                            <div class="loginpwd">
+                                <input type="password" name="pwd" class="userPassword" placeholder="请输入密码" id="pwd">
+                            </div>
+
+                            <div class="logincheckPic">
+                                <input type="text" class="userCheckPic" id="yzm" placeholder="请输入验证码" style="float: left;width:280px" name="yzm">
+                                <div style="float: right;"><img src="<?php echo captcha_src(); ?>" alt="captcha" width="70" height="35"  onclick="refreshVerify()" id="verify_img" /><a href="javascript:refreshVerify()"></a></div>
+                            </div>
+                        </form>
+                        <button class="ant-btn ant-btn-primary ant-btn-lg ant-button-sq">
+                            <span>登 录</span>
+                        </button>
+                        <div class="register">
+                            <a href="<?php echo url('index/sign'); ?>">注册账号</a><i>|</i>
+                            <a href="http://t.shuqi.com/?shuqi_h5=108#!/ct/forgetpassword">忘记密码?</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-----------------------登录-------------->
+                <div id="loginedTemp" style="display:block">
+                    <div class="u-nickname" id="nickname-link">
+                        <a class="ellipse"><?php echo $name; ?></a>
+                        <ul class="nickname-list" id="ccc" display="none">
+                            <li><a href="./userCenter.php"><span class="glyphicon glyphicon-user"></span>个人中心</a></li>
+                            <li id="loginOut"><a href="<?php echo url('index/loginout'); ?>"><span class="glyphicon"></span>&nbsp;&nbsp;退&nbsp;&nbsp;&nbsp;出</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <?php endif; ?>
+
                 <span class="secah-box glyphicon glyphicon-search iconfont" id="search_box_btn">&#xe620;
                 </span>
-        </div>
+            </div>
+
         </div>
         </div>
         <div class="secah-con">
@@ -122,268 +165,294 @@
 
     </div>
 
-    
+    <!--轮播图-->
+    <div class="carrousel" id="banner">
+        <div id="myCarousel" class="carousel slide" style="padding-top:100px">
+            <!-- 轮播（Carousel）指标 -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <?php if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $k = 0;$__LIST__ = is_array($list) ? array_slice($list,1,null, true) : $list->slice(1,null, true); if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($k % 2 );++$k;?>
+                <li data-target="#myCarousel" data-slide-to="<?php echo $k; ?>"></li>
+                <?php endforeach; endif; else: echo "" ;endif; ?>
+            </ol>
+            <!-- 轮播（Carousel）项目 -->
+            <div class="carousel-inner" style="width:600px;margin:auto">
+                <div class="item active" style="width:600px;margin:auto">
+                    <img src="<?php echo $list[0]['image']; ?>">
+                </div>
+                <?php if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $i = 0;$__LIST__ = is_array($list) ? array_slice($list,1,null, true) : $list->slice(1,null, true); if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?>
+                <div class="item" style="width:600px;margin:auto">
+                    <img src="<?php echo $v['image']; ?>">
+                </div>
+                <?php endforeach; endif; else: echo "" ;endif; ?>
+            </div>
+            <!-- 轮播（Carousel）导航 -->
+            <a class="carousel-control left" href="#myCarousel"
+               data-slide="prev">&lsaquo;
+            </a>
+            <a class="carousel-control right" href="#myCarousel"
+               data-slide="next">&rsaquo;
+            </a>
+        </div>
+    </div>
+    <!--轮播图-->
 
-    
-    <div class="carrousel" id="banner"></div>
+
+    <!--排行榜-->
+
     <div class="pcbox">
         <div class="channel clearfix">
-            <div class="channelbox" id="manbd"></div>
-            <div class="channelbox" id="wombd"></div>
-            <div class="channelbox" id="typebd"></div>
-            <div class="channelbox wbox" id="zuibd"></div>
-        </div>
-    </div>
-    <div class="batchtotal" id="typetab"></div>
-    <div class="manbox" id="manwrap" lmk="indexnpjx" lmv="男频精选">
-        <div class="mantit" >
-            <h2>男频精选</h2>
-        </div>
-        <div class="rollbox" id="manlb"></div>
-            <div class="mantable clearfix">
-                <div class="manlist" id="mt1">
-                    
+            <div class="channelbox" id="manbd">
+                <div class="chatitle">
+                    <h2>男频榜单</h2>
                 </div>
-                <div class="manlist" id="mt2">
-                    
-                </div>
-                <div class="manlist" id="mt3">
-                   
-                </div>
-                <div class="manlist" id="mt4">
-                   
+                <ul class="chalistbox" lmk="indexnpbd" lmv="男频榜单">
+                    <?php if(is_array($list1) || $list1 instanceof \think\Collection || $list1 instanceof \think\Paginator): $k = 0; $__LIST__ = $list1;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($k % 2 );++$k;?>
+                    <li class="clearfix" lmk="indexnpbd-sj" lmv="书籍" urltrue="true" lmurl="#">
+                        <a href="./cover.php?bid=12503">
+                            <em class="chan"><?php echo $k; ?>.</em>
+                            <img src="<?php echo $v['face']; ?>" alt="">
+                            <h3><?php echo $v['k']; ?></h3>
+                            <p>
+                                <?php echo $v['penname']; ?>/
+                                <?php echo $v['name']; ?>
+                            </p>
+                        </a>
+                    </li>
+                    <?php endforeach; endif; else: echo "" ;endif; ?>
+
+                </ul>
+                <div class="chamove hide">
+                    <a href="#">更多&gt;</a>
                 </div>
             </div>
-    </div>
-    <div class="hotbook batchtotal" lmk="indexemxs" lmv="热门新书">
-        <div class="hotbkbox" id="newbkwrap">
-            <h2>热门新书</h2>
-            <div class="rollbox" id="hotbklb"></div>
-        </div>
-    </div>
-    <div class="manbox" id="womanwrap"  lmk="indexgpjx" lmv="女频精选">
-        <div class="mantit">
-            <h2>女频精选</h2>
-        </div>
-        <div class="rollbox" id="womlb"></div>
-            <div class="mantable clearfix">
-                <div class="manlist" id="vt1">
-                    
+            <div class="channelbox" id="wombd">
+                <div class="chatitle">
+                    <h2>女频榜单</h2>
                 </div>
-                <div class="manlist" id="vt2">
-                   
-                </div>
-                <div class="manlist" id="vt3">
-                   
-                </div>
-                <div class="manlist" id="vt4">
-                   
-                </div>
-            </div>
-    </div>
-    <script type="text/template" id="bk_banner_tpl">
-        <div class="banberbox">
-        <div class="corrouselbox">
-            <ul class="txtinof" lmk="indexdbft" lmv="顶部封推">
-                <%for(var i = 0,len = data.length; i < len; ++ i){%>
-                    <li class="hero" lmk="indexdbft-smjjj" lmv="书名加简介" urltrue="true" lmurl="#">
-                        <a href="./cover.php?bid=<%= data[i].bid%>"><h2 class="bktitle"><%= data[i].book_name%></h2>
-                    <p class="classify f16"><%= data[i].author_name%>/<%= data[i].class_name%></p>
-                    <p class="intro f16"><%= data[i].intro.length>120?data[i].intro.substring(0,120)+'...':data[i].intro%>
-                    </p></a>
+                <ul class="chalistbox" lmk="indexgpbd" lmv="女频榜单">
+
+                    <li class="clearfix" lmk="indexgpbd-sj" lmv="书籍" urltrue="true" lmurl="#">
+                        <a href="./cover.php?bid=12243">
+                            <em class="chan">1.</em>
+                            <img src="http://img-tailor.11222.cn/ognv/cover/raw/2016041517135485.jpg" alt="">
+                            <h3>婚战</h3>
+                            <p>
+                                紫衣/
+                                现代言情
+                            </p>
+                        </a>
                     </li>
 
-                    <%}%>
-            </ul>
-        </div>
-            <div class="thumbnail">
-                <ul class="smallul">
-                    <%for(var i = 0,len = data.length; i < len; ++ i){%>
-                        <li>
-                            <img id="<%= i%>" src="<%= data[i].cover%>" width="48">
-                        </li>
-                        <%}%>
+                    <li class="clearfix" lmk="indexgpbd-sj" lmv="书籍" urltrue="true" lmurl="#">
+                        <a href="./cover.php?bid=13575">
+                            <em class="chan">2.</em>
+                            <img src="http://img-tailor.11222.cn/ognv/cover/raw/1479908172519990.jpg" alt="">
+                            <h3>花娘游戏</h3>
+                            <p>
+                                苏三/
+                                古代言情
+                            </p>
+                        </a>
+                    </li>
 
+                    <li class="clearfix" lmk="indexgpbd-sj" lmv="书籍" urltrue="true" lmurl="#">
+                        <a href="./cover.php?bid=12442">
+                            <em class="chan">3.</em>
+                            <img src="http://img-tailor.11222.cn/ognv/cover/raw/2016062215061524.jpg" alt="">
+                            <h3>御极</h3>
+                            <p>
+                                阿幂/
+                                古代言情
+                            </p>
+                        </a>
+                    </li>
+
+                    <li class="clearfix" lmk="indexgpbd-sj" lmv="书籍" urltrue="true" lmurl="#">
+                        <a href="./cover.php?bid=13854">
+                            <em class="chan">4.</em>
+                            <img src="http://img-tailor.11222.cn/ognv/cover/raw/1483012253168764.jpg" alt="">
+                            <h3>遇见你的旧时光</h3>
+                            <p>
+                                落清/
+                                现代言情
+                            </p>
+                        </a>
+                    </li>
+
+                    <li class="clearfix" lmk="indexgpbd-sj" lmv="书籍" urltrue="true" lmurl="#">
+                        <a href="./cover.php?bid=13939">
+                            <em class="chan">5.</em>
+                            <img src="http://img-tailor.11222.cn/ognv/cover/raw/1483509558322466.jpg" alt="">
+                            <h3>十家锅灶九不同</h3>
+                            <p>
+                                宁余心/
+                                现代言情
+                            </p>
+                        </a>
+                    </li>
 
                 </ul>
-
+                <div class="chamove hide">
+                    <a href="#">更多&gt;</a>
+                </div>
             </div>
-            <a id="lbl_btn" class="caleft" href="javascript:;"></a>
-            <a id="lbr_btn" class="caright" href="javascript:;"></a>
-        </div>
-    </script>
-    <script type="text/template" id="bk_mpd_tpl">
-        <div class="chatitle">
-            <h2><%= data.modu_name%></h2>
-        </div>
-        <ul class="chalistbox" lmk="<%= data.lmk%>" lmv="<%= data.lmv%>">
-            <%for(var i = 0,len = data.length; i < len; ++ i){%>
-                <li class="clearfix" lmk="<%= data.lmkIn%>" lmv="<%= data.lmvIn%>" urltrue="true" lmurl="#">
-                    <a href="./cover.php?bid=<%= data[i].bid%>">
-                        <em class="chan"><%= i+1%>.</em>
-                        <img src="<%= data[i].cover%>" alt="">
-                        <h3><%= data[i].book_name.length>7?data[i].book_name.substring(0,7)+'...':data[i].book_name%></h3>
-                        <p>
-                            <%= data[i].author_name%>/
-                                <%= data[i].class_name%>
-                        </p>
-                    </a>
-                </li>
-            <%}%>
-        </ul>
-        <div class="chamove hide">
-            <a href="#">更多&gt;</a>
-        </div>
-    </script>
-    <script type="text/template" id="bk_zapd_tpl">
-        <div class="chatitle">
-            <h2><%= data.modu_name%></h2>
-        </div>
-        <ul class="chalastbox" lmk="<%= data.lmk%>" lmv="<%= data.lmv%>">
-             <%for(var i = 0,len = data.length; i < len; ++ i){%>
-            <li class="clearfix" lmk="<%= data.lmkIn%>" lmv="<%= data.lmvIn%>" urltrue="true" lmurl="#">
-                 <a href="./cover.php?bid=<%= data[i].bid%>">
-                <em class="chan"><%= i+1%>.</em>
-                <h3 class="lasth3"><%= data[i].book_name.length>8?data[i].book_name.substring(0,8)+'...':data[i].book_name%></h3>
-                 </a>
-            </li>
-            <%}%>
-        </ul>
-        <div class="chamove hide">
-            <a href="#">更多&gt;</a>
-        </div>
-    </script>
-    <script type="text/template" id="bk_tab_tpl">
-     <table class="classtable" width="100%" border="0" cellspacing="0" lmk="indexfl" lmv="分类">
-                <%
-                    var i = 0;              
-                %>
-            <tr>
-                <% for(var item in data){ %>
+            <div class="channelbox" id="typebd">
+                <div class="chatitle">
+                    <h2>分类推荐榜</h2>
+                </div>
+                <ul class="chalistbox" lmk="indexflbd" lmv="分类推荐榜">
 
-                 <td lmk="<%='indexfl-'+item%>" lmv="<%=data[item]['name']%>" urltrue="true" lmurl="#">
-                    <a href="./bibliotheca.php?t=<%= item%>" class="divhei" style="background:url(/static/index/img/class_<%=i+1 %>.jpg);background-size: cover;">
-                        <h3><%=data[item]['name']%></h3>
-                        <p>(<%=data[item]['num']%>)</p>
-                    </a>
-                </td>
-                <% i++;
-                if(i==4){
-                    break;
-                }
-                %>
-                <%}%>
-            </tr>
-            <tr>
-               <% i = 0; for(var key in data) {%>
-                    <%
-                    i++;
-                        if (i < 5) {
-                            continue;
-                        }
-                        if (i == 9) {
-                            break;
-                        }
-                    %>
-                    <td lmk="<%='indexfl-'+key%>" lmv="<%=data[key]['name']%>" urltrue="true" lmurl="#" <%if(i==7){%> rowspan="2"<%}%>><a href="./bibliotheca.php?t=<%= key%>" class=<%if(i!=7){%> "divhei"<%}else{%>"rspan"<%}%> style="background:url(/static/index/img/class_<%= i%>.jpg);background-size: cover;"> <h3><%=data[key]['name']%></h3>
-                        <p>(<%=data[key]['num']%>)</p>
-                       </a></td>
-               <%}%>
-            </tr>
-            <tr>
-                  <% i = 0; for(var ktr in data) {%>
-                    <%
-                        i++;
-                    
-                        if (i <= 8) {
-                            continue;
-                        }
-                    %>
-                    <td lmk="<%='indexfl-'+ktr%>" lmv="<%=data[ktr]['name']%>" urltrue="true" lmurl="#"  <%if(i==9){%>
-                        colspan="2"
-                     <%}%>>
-                    <a href="./bibliotheca.php?t=<%= ktr%>" class="divhei" style="background:url(/static/index/img/class_<%=i%>.jpg);background-size: cover;">
-                         <h3><%=data[ktr]['name']%></h3>
-                        <p>(<%=data[ktr]['num']%>)</p>
-                    </a>
-                </td>
-               <%}%>
-            </tr>
-        </table>
-    </script>
-    <script type="text/template" id="bk_nlb_tpl">
-        <div class="hotseam">
-            <ul class="count clearfix">
-                   <%for(var i = 0,len = data.length; i < len; ++ i){%>
-                <li lmk="<%= data.lmkIn%>" lmv="<%= data.lmvIn%>" urltrue="true" lmurl="#"
->
-                    <a href="./cover.php?bid=<%= data[i].bid%>"><img src="<%= data[i].cover%>" width="120" height="160">
-                        <h3><%= data[i].book_name.length>7?data[i].book_name.substring(0,7)+'...':data[i].book_name%></h3>
-                        <p><%= data[i].author_name%>/<%= data[i].class_name%></p>
-                    </a>
-                </li>
-                <%}%>
+                    <li class="clearfix" lmk="indexflbd-sj" lmv="书籍" urltrue="true" lmurl="#">
+                        <a href="./cover.php?bid=12343">
+                            <em class="chan">1.</em>
+                            <img src="http://img-tailor.11222.cn/ognv/cover/raw/2016060314532995.jpg" alt="">
+                            <h3>鬼墓之门</h3>
+                            <p>
+                                九福/
+                                悬疑
+                            </p>
+                        </a>
+                    </li>
+
+                    <li class="clearfix" lmk="indexflbd-sj" lmv="书籍" urltrue="true" lmurl="#">
+                        <a href="./cover.php?bid=12183">
+                            <em class="chan">2.</em>
+                            <img src="http://img-tailor.11222.cn/ognv/cover/raw/2016051210271064.jpg" alt="">
+                            <h3>民国御邪记</h3>
+                            <p>
+                                萧鸣易/
+                                悬疑
+                            </p>
+                        </a>
+                    </li>
+
+                    <li class="clearfix" lmk="indexflbd-sj" lmv="书籍" urltrue="true" lmurl="#">
+                        <a href="./cover.php?bid=12213">
+                            <em class="chan">3.</em>
+                            <img src="http://img-tailor.11222.cn/ognv/cover/raw/2016061610595041.jpg" alt="">
+                            <h3>黄泉手札</h3>
+                            <p>
+                                轩辕唐唐/
+                                悬疑
+                            </p>
+                        </a>
+                    </li>
+
+                    <li class="clearfix" lmk="indexflbd-sj" lmv="书籍" urltrue="true" lmurl="#">
+                        <a href="./cover.php?bid=12279">
+                            <em class="chan">4.</em>
+                            <img src="http://img-tailor.11222.cn/ognv/cover/raw/2016050811360766.jpg" alt="">
+                            <h3>特囧狂龙</h3>
+                            <p>
+                                墨雨/
+                                都市
+                            </p>
+                        </a>
+                    </li>
+
+                    <li class="clearfix" lmk="indexflbd-sj" lmv="书籍" urltrue="true" lmurl="#">
+                        <a href="./cover.php?bid=12215">
+                            <em class="chan">5.</em>
+                            <img src="http://img-tailor.11222.cn/ognv/cover/raw/2016030817543153.jpg" alt="">
+                            <h3>焚天记</h3>
+                            <p>
+                                悠然独醉/
+                                玄幻
+                            </p>
+                        </a>
+                    </li>
+
                 </ul>
-         </div>
-          <%if(!(data.length < 6)){ %>
-        <a class="manlbtn" href="javascript:;"></a>
-        <a class="manrbtn" href="javascript:;"></a>
-        <%}%>
-    </script>
-     <script type="text/template" id="bk_hotlb_tpl">
-      <div class="hotseam">
-        <ul class="count clearfix">
-                       <%for(var i = 0,len = data.length; i < len; ++ i){%>
-                <li lmk="<%= data.lmkIn%>" lmv="<%= data.lmvIn%>" urltrue="true" lmurl="#">
-                    <a href="./cover.php?bid=<%= data[i].bid%>"><img src="<%= data[i].cover%>" width="120" height="160">
-                        <h3><%= data[i].book_name.length>7?data[i].book_name.substring(0,7)+'...':data[i].book_name%></h3>
-                        <p><%= data[i].author_name%>/<%= data[i].class_name%></p>
-                    </a>
-                </li>
-                <%}%>
+                <div class="chamove hide">
+                    <a href="#">更多&gt;</a>
+                </div>
+            </div>
+            <div class="channelbox wbox" id="zuibd">
+                <div class="chatitle">
+                    <h2>强力推荐榜</h2>
+                </div>
+                <ul class="chalastbox" lmk="indexqlbd" lmv="强力推荐榜">
+
+                    <li class="clearfix" lmk="indexqlbd-sj" lmv="书籍" urltrue="true" lmurl="#">
+                        <a href="./cover.php?bid=15592">
+                            <em class="chan">1.</em>
+                            <h3 class="lasth3">可曾情深不寿</h3>
+                        </a>
+                    </li>
+
+                    <li class="clearfix" lmk="indexqlbd-sj" lmv="书籍" urltrue="true" lmurl="#">
+                        <a href="./cover.php?bid=14607">
+                            <em class="chan">2.</em>
+                            <h3 class="lasth3">深情缓爱，向暖花...</h3>
+                        </a>
+                    </li>
+
+                    <li class="clearfix" lmk="indexqlbd-sj" lmv="书籍" urltrue="true" lmurl="#">
+                        <a href="./cover.php?bid=15368">
+                            <em class="chan">3.</em>
+                            <h3 class="lasth3">却道海棠依旧</h3>
+                        </a>
+                    </li>
+
+                    <li class="clearfix" lmk="indexqlbd-sj" lmv="书籍" urltrue="true" lmurl="#">
+                        <a href="./cover.php?bid=12375">
+                            <em class="chan">4.</em>
+                            <h3 class="lasth3">我的君子</h3>
+                        </a>
+                    </li>
+
+                    <li class="clearfix" lmk="indexqlbd-sj" lmv="书籍" urltrue="true" lmurl="#">
+                        <a href="./cover.php?bid=14935">
+                            <em class="chan">5.</em>
+                            <h3 class="lasth3">幸为奉旸侯</h3>
+                        </a>
+                    </li>
+
+                    <li class="clearfix" lmk="indexqlbd-sj" lmv="书籍" urltrue="true" lmurl="#">
+                        <a href="./cover.php?bid=14670">
+                            <em class="chan">6.</em>
+                            <h3 class="lasth3">锦玉满棠</h3>
+                        </a>
+                    </li>
+
+                    <li class="clearfix" lmk="indexqlbd-sj" lmv="书籍" urltrue="true" lmurl="#">
+                        <a href="./cover.php?bid=15616">
+                            <em class="chan">7.</em>
+                            <h3 class="lasth3">一朵小姐压海棠</h3>
+                        </a>
+                    </li>
+
+                    <li class="clearfix" lmk="indexqlbd-sj" lmv="书籍" urltrue="true" lmurl="#">
+                        <a href="./cover.php?bid=12800">
+                            <em class="chan">8.</em>
+                            <h3 class="lasth3">飞枝记</h3>
+                        </a>
+                    </li>
+
+                    <li class="clearfix" lmk="indexqlbd-sj" lmv="书籍" urltrue="true" lmurl="#">
+                        <a href="./cover.php?bid=15063">
+                            <em class="chan">9.</em>
+                            <h3 class="lasth3">暖色仙人掌</h3>
+                        </a>
+                    </li>
+
+                    <li class="clearfix" lmk="indexqlbd-sj" lmv="书籍" urltrue="true" lmurl="#">
+                        <a href="./cover.php?bid=13851">
+                            <em class="chan">10.</em>
+                            <h3 class="lasth3">琉璃似锦</h3>
+                        </a>
+                    </li>
+
                 </ul>
+                <div class="chamove hide">
+                    <a href="#">更多&gt;</a>
+                </div>
             </div>
-             <%if(!(data.length < 6)){ %>
-            <a class="manlbtn" href="javascript:;"></a>
-            <a class="manrbtn" href="javascript:;"></a>
-            <%}%>
-    </script>
-    <script type="text/template" id="bk_womlb_tpl">
-    <div class="hotseam">
-         <ul class="count clearfix">
-                  <%for(var i = 0,len = data.length; i < len; ++ i){%>
-                <li lmk="<%= data.lmkIn%>" lmv="<%= data.lmvIn%>" urltrue="true" lmurl="#">
-                    <a href="./cover.php?bid=<%= data[i].bid%>"><img src="<%= data[i].cover%>" width="120" height="160">
-                        <h3><%= data[i].book_name.length>7?data[i].book_name.substring(0,7)+'...':data[i].book_name%></h3>
-                        <p><%= data[i].author_name%>/<%= data[i].class_name%></p>
-                    </a>
-                </li>
-                <%}%>
-            </ul>
-            </div>
-       <%if(!(data.length < 6)){ %>
-            <a class="manlbtn" href="javascript:;"></a>
-            <a class="manrbtn" href="javascript:;"></a>
-            <%}%>
-    </script>
-    <script type="text/template" id="bk_ty_tpl">
-        <dl>
-                        <dt><h2><%= data.title %></h2></dt>
-                        <dd>
-                            <ul>
-                                <%for(var i = 0,len = data.data.length; i < len;i++){%>
-                                <li lmk="<%= data.lmkIn%>" lmv="<%= data.lmvIn%>" urltrue="true" lmurl="#"><a href="./cover.php?bid=<%= data.data[i].bid%>"><%= data.data[i].book_name%></a></li>
-                                <%}%>
-                            </ul>
+        </div>
+    </div>
+    <!--排行榜-->
 
-                        </dd>
-
-                    </dl>
-                    <div class="chamove" lmk="<%= data.lmkInGd%>" lmv="<%= data.lmvInGd%>" urltrue="true" lmurl="#">
-                        <a href="./bibliotheca.php?t=<%=data.lid%>">更多&gt;</a>
-                    </div>
-    </script>
-         
 
 
     <div class="footer">
@@ -393,9 +462,9 @@
                     <a href="./about.php">关于我们</a><i>|</i><a href="./contact.php">联系我们</a><i>|</i><a href="./contribute.php">投稿声明</a><i>|</i><a href="./copyinfo.php">版权声明</a>
                 </div>
                 <div class="right">广州霜之哀伤文学信息技术有限公司&nbsp;&nbsp;&nbsp;&nbsp;版权所有</div>
-                
+
             </div>
-            
+
             <!-- <p class="footer-p">广州阿里巴巴文学信息技术有限公司&nbsp;&nbsp;&nbsp;&nbsp;版权所有</p> -->
             <div class="footbox-info footbox-p clearfix">
                 <div class="left">为保证更好的浏览效果，请使用IE9以上或其他主流浏览器访问</div>
@@ -405,11 +474,23 @@
                     <span>网络文化经营许可证&nbsp;&nbsp;&nbsp;&nbsp;粤网文[2014]0424-124号</span>
                 </div>
             </div>
-            
+
         </div>
     </div>
 
-    <input type="hidden" id="js_path" value="img/default.jpg" />
+    <script>
+        function aa() {
+            var login = document.getElementById('login');
+            login.style.display = 'block';
+        }
+        function refreshVerify() {
+            var ts = Date.parse(new Date())/1000;
+            $('#verify_img').attr("src", "/captcha?id="+ts);
+        }
+    </script>
+
+
+    <script type="text/javascript" src="/static/admin/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/static/index/js/jq-c0eb42550f.1.11.min.js"></script>
     <script type="text/javascript" src="/static/index/js/jquery-546c1da987.lazyload.min.js"></script>
     <script type="text/javascript" src="/static/index/js/jquery-ui-019252536e.js"></script>
@@ -418,9 +499,72 @@
     <script type="text/javascript" src="/static/index/js/fingerprint2-81a8ae0bd8.min.js"></script>
     <script type="text/javascript" src="/static/index/js/wa-900d0de307.js"></script>
     <script type="text/javascript" src="/static/index/js/common-0a23c8c6c8.js"></script>
-    <script type="text/javascript" src="/static/index/js/login-0a1f55f637.js"></script>
+    <!--<script type="text/javascript" src="/static/index/js/login-0a1f55f637.js"></script>-->
     <script type="text/javascript" src="/static/index/js/jquery-f2528ce963.page.js"></script>
     <script type="text/javascript" src="/static/index/js/index-ae8c6f6dd0.js"></script>    <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1259530409'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1259530409' type='text/javascript'%3E%3C/script%3E"));</script>
+    <script>
+        //            messageAlert("warning", "请输入手机号！");
+        $(function () {
+            $('button').click(function () {
+                var tel = $('input[name=tel]').val();
+                var pwd = $('input[name=pwd]').val();
+                var yzm = $('input[name=yzm]').val();
+                if (tel == ''){
+                    $('input[name=tel]').focus();
+                    return messageAlert("warning", "用户名不能为空");
+                }
+                if (pwd == '') {
+                    $('input[name=pwd]').focus();
+
+                    return messageAlert("warning", "密码不能为空");
+                }
+                if (yzm == '') {
+                    $('input[name=yzm]').focus();
+                    return messageAlert("warning", "请输入验证码");
+                }
+                $.ajax({
+                    type: 'post',
+                    url: '/home/index/login',
+                    data: {'tel': tel,'pwd': pwd,'yzm': yzm},
+                    dateType:'json',
+                    success: function (data) {
+                        if (data['status'] == 1){
+                            $('input[name=tel]').focus();
+                            return messageAlert("warning", data['error']);
+                        }
+                        if (data['status'] == 2){
+                            $('input[name=pwd]').focus();
+                            return messageAlert("warning", data['error']);
+                        }
+                        if (data['status'] == 3){
+                            $('input[name=yzm]').focus();
+                            return messageAlert("warning", data['error']);
+                        }
+                        if (data['status'] == 4){
+                            console.log($('#login-link'));
+                            document.getElementById('login-link').style.display='none';
+                            document.getElementById('loginedTemp').style.display='block';
+                            document.getElementById('login').style.display='none';
+                            $('#nickname-link .ellipse').html(data['name']);
+                        }
+                    },
+                    error: function(){
+                        console.log(1);
+                    }
+                })
+            })
+
+            $('.ellipse').mouseover(function(){
+                var a = document.getElementById('ccc').style;
+                if (a.display == 'block'){
+                    a.display = 'none';
+                } else {
+                    a.display = 'block';
+                }
+            })
+        })
+
+    </script>
 </body>
 
 </html>

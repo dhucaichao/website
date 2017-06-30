@@ -1,61 +1,23 @@
-<div class="panel admin-panel margin-top" style="margin-left: 190px;margin-top: 4px;">
-    <div class="panel-head" id="add">
-        <strong><span class="icon-pencil-square-o"></span>修改分类</strong>
+{extend name='author/index'}
+{block name="main"}
+<form action="/admin/category/save" method="post">
+    <div class="container">
+        <div class="col-md-6 h2">
+            <ul class="list-group h4">
+                分类名:<input type="text" name="name">
+                <hr>
+                所属类:
+                <input type="text" name="pid">
+                <p>{volist name="arr" id="v"}
+                {$v['id']}-{$v['name']}
+                {/volist}
+                <hr></p>
+                隐藏/显示:<label><input type="radio" name="display" value=1 checked>显示</label>
+                <label><input type="radio" name="display" value=2 >隐藏</label>
+            </ul>
+            <button class="btn btn-danger btn-lg del-btn">保存</button>
+        </div>
     </div>
-    <div class="body-content">
-        <form method="post" class="form-x" action="">
-            <div class="form-group">
-                <div class="label">
-                    <label>分类标题：</label>
-                </div>
-                <div class="field">
-                    <input type="text" class="input w50" name="title" value=""/>
-                    <div class="tips">
-                    </div>
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="label">
-                    <label>关键字标题：</label>
-                </div>
-                <div class="field">
-                    <input type="text" class="input" name="s_title" value=""/>
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="label">
-                    <label>分类关键字：</label>
-                </div>
-                <div class="field">
-                    <input type="text" class="input" name="s_keywords" value=""/>
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="label">
-                    <label>关键字描述：</label>
-                </div>
-                <div class="field">
-                    <input type="text" class="input" name="s_desc" value=""/>
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="label">
-                    <label>排序：</label>
-                </div>
-                <div class="field">
-                    <input type="text" class="input w50" name="sort" value="1" data-validate="number:排序必须为数字"/>
-                    <div class="tips">
-                    </div>
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="label">
-                    <label></label>
-                </div>
-                <div class="field">
-                    <button class="button bg-main icon-check-square-o" type="submit"> 提交</button>
-                </div>
-            </div>
-        </form>
-    </div>
-</div>
+</form>
+{/block}
+{block name="myjs"}{/block}
