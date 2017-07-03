@@ -63,9 +63,9 @@ $(function () {
         var e = $(".secah-con");
         "none" == e.css("display") ? (e.fadeIn(), e.find("input[type=text]").focus()) : e.fadeOut()
     }), $(".user-login-info").hover(function (e) {
-        e.preventDefault(), $(this).addClass("active"), $(".nickname-list").fadeIn()
+        e.preventDefault(), $(this).addClass("active"), $(".nickname-listnovel").fadeIn()
     }, function (e) {
-        e.preventDefault(), $(this).removeClass("active"), $(".nickname-list").fadeOut()
+        e.preventDefault(), $(this).removeClass("active"), $(".nickname-listnovel").fadeOut()
     }), $(document).on("click", ".loginbtn", function () {
         var e = $(".userInput").val().trim(), a = $(".userPassword").val().trim(), n = $(".userCheckPic").val().trim();
         o(e, a, n)

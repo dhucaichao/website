@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:66:"D:\wamp\www\tp5\public/../application/home\view\index\default.html";i:1498208276;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:66:"D:\wamp\www\tp5\public/../application/home\view\index\default.html";i:1499091565;}*/ ?>
 ﻿
 <!DOCTYPE html>
 <html>
@@ -10,14 +10,21 @@
     <meta name="keywords" content="霜之哀伤文学，小说，小说网,言情小说,青春小说,玄幻小说,武侠小说,都市小说,历史小说,网络小说,小说下载，原创网络文学,畅销图书,精品图书,传统出版,电子书，原创文学" />
      <meta name="description" content="霜之哀伤文学提供免费小说,热门小说,精品小说,好看小说,小说连载,小说排行榜,小说在线阅读,小说下载,尽请浏览霜之哀伤文学各种玄幻小说,都市小说,言情小说,穿越小说,青春小说,武侠小说,历史小说,军事小说,科幻小说,灵异小说,游戏小说,竞技小说,同人小说,2016全新登场,手机下载阅读,电子书,效果更佳" />
     <link rel="shortcut icon" href="/static/index/images/9dfedc665fe4d4a759d61106128d1cec.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
     <!--<link rel="stylesheet" type="text/css" href="css/style-c4460f1fb4.css">-->
     <!--<link rel="stylesheet" type="text/css" href="iconfont/iconfont.css">-->
-
+    <!--<link rel="stylesheet" type="text/css" href="/static/admin/css/bootstrap.min.css" />-->
     
     <link rel="stylesheet" type="text/css" href="/static/index/css/style-c4460f1fb4.css" />
     <link rel="stylesheet" type="text/css" href="/static/index/iconfont/iconfont.css" />
+    
 </head>
 <body class="topline">
+
+
     <div class="header-con-fixed"></div>
     <div class="header-con">
         <div class="logo">
@@ -27,8 +34,8 @@
         <div class="widthfix center">
         <div class="header ">
             <ul class="pc-nav clearfix">
-                <li class="zt"><a class="active" href="/">首页</a></li>
-                <li class="tl"><a href="./bibliotheca.php?page=1">书库</a></li>
+                <li class="zt"><a class="active" href="<?php echo url('index/index'); ?>">首页</a></li>
+                <li class="tl"><a href="<?php echo url('novellist/index'); ?>">书库</a></li>
                 <li class="gx"><a href="./rankinglist.php">排行榜</a></li>
                 <li class="gx"><a href="./apotheosize.php">个人中心</a></li>
 
@@ -48,62 +55,104 @@
                 <div id="loginCon">
 
                 </div>
-                <div class="u-lgn" id="login-link" lmk="login-btn" lmv="登录按钮" urltrue="true" lmurl="#" onclick="aa()">
+
+                <?php if($logined == '1'): ?>
+                <div class="u-lgn" id="login-link" lmk="login-btn" lmv="登录按钮" urltrue="true" lmurl="#" onclick="aa()" style="display:block;width:100px">
                     <span class="glyphicon glyphicon-user iconfont">&#xe65a;</span>
                     <span>登录</span>
                 </div>
 
                 <!---------------------登录---------------->
-                <div id="login" class="ui-widget" style="position: fixed;height: auto;width: 800px;top: 51px;left: 219.5px;display: block;z-index: 101;display: none; background-color: #fff;">
+                <div id="login" class="ui-widget" style="position: fixed;height: 420px;width: 800px;top: 51px;left: 219.5px;z-index: 101;display: none; background-color: #fff;">
                     <div class="logininput">
                         <h1 class="logo">
                             <img src="/static/index/picture/logo.png" width='360px' height='60px'>
-                            <div style="position:relative; top:-37px; right:-300px"><a href="{index/index}" >返回>></a></div>
+                            <div style="position:relative; top:-37px; right:-300px"><a href="<?php echo url('index/index'); ?>" >返回>></a></div>
                         </h1>
-                        <form action="/home/index/login" method="post">
+                        <form>
                             <div class="loginname">
-                                <input type="text" name="nickname" placeholder="请输入用户名" value="">
+                                <input type="text" name="tel" placeholder="请输入用户名" value="" id="tel">
                             </div>
                             <div class="loginpwd">
-                                <input type="password" name="'pwd" class="userPassword" placeholder="请输入密码">
+                                <input type="password" name="pwd" class="userPassword" placeholder="请输入密码" id="pwd">
                             </div>
 
                             <div class="logincheckPic">
-                                <input type="text" class="userCheckPic" placeholder="请输入验证码" style="float: left;width:280px" name="yzm">
+                                <input type="text" class="userCheckPic" id="yzm" placeholder="请输入验证码" style="float: left;width:280px" name="yzm">
                                 <div style="float: right;"><img src="<?php echo captcha_src(); ?>" alt="captcha" width="70" height="35"  onclick="refreshVerify()" id="verify_img" /><a href="javascript:refreshVerify()"></a></div>
                             </div>
-                            <div class="remember">
-                                <label class="checkbox-re ant-checkbox-wrapper" style="float: left;">
-                                            <span class="ant-checkbox">
-                                                <span class="ant-checkbox-inner"></span>
-                                                <input type="checkbox" class="ant-checkbox-input" value="on">
-                                            </span>
-                                    <span>记住密码</span>
-                                </label>
-                            </div>
-                            <button class="ant-btn ant-btn-primary ant-btn-lg ant-button-sq ">
-                                <span>登 录</span>
-                            </button>
-                            <div class="register">
-                                <a href="<?php echo url('index/sign'); ?>">注册账号</a><i>|</i>
-                                <a href="http://t.shuqi.com/?shuqi_h5=108#!/ct/forgetpassword">忘记密码?</a>
-                            </div>
                         </form>
+                        <button class="ant-btn ant-btn-primary ant-btn-lg ant-button-sq">
+                            <span>登 录</span>
+                        </button>
+                        <div class="register">
+                            <a href="<?php echo url('index/sign'); ?>">注册账号</a><i>|</i>
+                            <a href="http://t.shuqi.com/?shuqi_h5=108#!/ct/forgetpassword">忘记密码?</a>
+                        </div>
                     </div>
                 </div>
 
 
                 <!-----------------------登录-------------->
-                <script type="text/template" id="loginedTemp">
+                <div id="loginedTemp" style="display:none">
                     <div class="u-nickname" id="nickname-link">
-                        <a class="ellipse" title="<%-nickname%>"><%-nickname%></a>
-                        <ul class="nickname-list">
+                        <a class="ellipse"></a>
+                        <ul class="nickname-list" id="ccc" display="none">
                             <li><a href="./userCenter.php"><span class="glyphicon glyphicon-user"></span>个人中心</a></li>
-                            <li id="loginOut"><span class="glyphicon glyphicon-log-out"></span>&nbsp;&nbsp;登&nbsp;&nbsp;&nbsp;出
+                            <li id="loginOut"><a href="<?php echo url('index/loginout'); ?>"><span class="glyphicon"></span>&nbsp;&nbsp;退&nbsp;&nbsp;&nbsp;出</a>
                             </li>
                         </ul>
                     </div>
-                </script>
+                </div>
+                <?php else: ?>
+                <div class="u-lgn" id="login-link" lmk="login-btn" lmv="登录按钮" urltrue="true" lmurl="#" onclick="aa()" style="display:none;width:100px">
+                    <span class="glyphicon glyphicon-user iconfont">&#xe65a;</span>
+                    <span>登录</span>
+                </div>
+
+                <!---------------------登录---------------->
+                <div id="login" class="ui-widget" style="position: fixed;height: 420px;width: 800px;top: 51px;left: 219.5px;z-index: 101;display: none; background-color: #fff;">
+                    <div class="logininput">
+                        <h1 class="logo">
+                            <img src="/static/index/picture/logo.png" width='360px' height='60px'>
+                            <div style="position:relative; top:-37px; right:-300px"><a href="<?php echo url('index/index'); ?>" >返回>></a></div>
+                        </h1>
+                        <form>
+                            <div class="loginname">
+                                <input type="text" name="tel" placeholder="请输入用户名" value="" id="tel">
+                            </div>
+                            <div class="loginpwd">
+                                <input type="password" name="pwd" class="userPassword" placeholder="请输入密码" id="pwd">
+                            </div>
+
+                            <div class="logincheckPic">
+                                <input type="text" class="userCheckPic" id="yzm" placeholder="请输入验证码" style="float: left;width:280px" name="yzm">
+                                <div style="float: right;"><img src="<?php echo captcha_src(); ?>" alt="captcha" width="70" height="35"  onclick="refreshVerify()" id="verify_img" /><a href="javascript:refreshVerify()"></a></div>
+                            </div>
+                        </form>
+                        <button class="ant-btn ant-btn-primary ant-btn-lg ant-button-sq">
+                            <span>登 录</span>
+                        </button>
+                        <div class="register">
+                            <a href="<?php echo url('index/sign'); ?>">注册账号</a><i>|</i>
+                            <a href="http://t.shuqi.com/?shuqi_h5=108#!/ct/forgetpassword">忘记密码?</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-----------------------登录-------------->
+                <div id="loginedTemp" style="display:block">
+                    <div class="u-nickname" id="nickname-link">
+                        <a class="ellipse"><?php echo $name; ?></a>
+                        <ul class="nickname-list" id="ccc" display="none">
+                            <li><a href="./userCenter.php"><span class="glyphicon glyphicon-user"></span>个人中心</a></li>
+                            <li id="loginOut"><a href="<?php echo url('index/loginout'); ?>"><span class="glyphicon"></span>&nbsp;&nbsp;退&nbsp;&nbsp;&nbsp;出</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <?php endif; ?>
 
                 <span class="secah-box glyphicon glyphicon-search iconfont" id="search_box_btn">&#xe620;
                 </span>
@@ -120,270 +169,165 @@
 
     </div>
 
-    
 
-    
-    <div class="carrousel" id="banner"></div>
+    <!--轮播图-->
+    <div class="carrousel" id="banner">
+        <div id="myCarousel" class="carousel slide" style="padding-top:100px">
+            <!-- 轮播（Carousel）指标 -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <?php if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $k = 0;$__LIST__ = is_array($list) ? array_slice($list,1,null, true) : $list->slice(1,null, true); if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($k % 2 );++$k;?>
+                <li data-target="#myCarousel" data-slide-to="<?php echo $k; ?>"></li>
+                <?php endforeach; endif; else: echo "" ;endif; ?>
+            </ol>
+            <!-- 轮播（Carousel）项目 -->
+            <div class="carousel-inner" style="width:600px;margin:auto">
+                <div class="item active" style="width:600px;margin:auto">
+                    <img src="<?php echo $list[0]['image']; ?>">
+                </div>
+                <?php if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $i = 0;$__LIST__ = is_array($list) ? array_slice($list,1,null, true) : $list->slice(1,null, true); if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?>
+                <div class="item" style="width:600px;margin:auto">
+                    <img src="<?php echo $v['image']; ?>">
+                </div>
+                <?php endforeach; endif; else: echo "" ;endif; ?>
+            </div>
+            <!-- 轮播（Carousel）导航 -->
+            <a class="carousel-control left" href="#myCarousel"
+               data-slide="prev">&lsaquo;
+            </a>
+            <a class="carousel-control right" href="#myCarousel"
+               data-slide="next">&rsaquo;
+            </a>
+        </div>
+    </div>
+    <!--轮播图-->
+
+
+    <!--排行榜-->
+
     <div class="pcbox">
         <div class="channel clearfix">
-            <div class="channelbox" id="manbd"></div>
-            <div class="channelbox" id="wombd"></div>
-            <div class="channelbox" id="typebd"></div>
-            <div class="channelbox wbox" id="zuibd"></div>
-        </div>
-    </div>
-    <div class="batchtotal" id="typetab"></div>
-    <div class="manbox" id="manwrap" lmk="indexnpjx" lmv="男频精选">
-        <div class="mantit" >
-            <h2>男频精选</h2>
-        </div>
-        <div class="rollbox" id="manlb"></div>
-            <div class="mantable clearfix">
-                <div class="manlist" id="mt1">
-                    
+
+            <!--男频排行榜-->
+            <div class="channelbox" id="manbd">
+                <div class="chatitle">
+                    <h2>男频榜单</h2>
                 </div>
-                <div class="manlist" id="mt2">
-                    
-                </div>
-                <div class="manlist" id="mt3">
-                   
-                </div>
-                <div class="manlist" id="mt4">
-                   
-                </div>
-            </div>
-    </div>
-    <div class="hotbook batchtotal" lmk="indexemxs" lmv="热门新书">
-        <div class="hotbkbox" id="newbkwrap">
-            <h2>热门新书</h2>
-            <div class="rollbox" id="hotbklb"></div>
-        </div>
-    </div>
-    <div class="manbox" id="womanwrap"  lmk="indexgpjx" lmv="女频精选">
-        <div class="mantit">
-            <h2>女频精选</h2>
-        </div>
-        <div class="rollbox" id="womlb"></div>
-            <div class="mantable clearfix">
-                <div class="manlist" id="vt1">
-                    
-                </div>
-                <div class="manlist" id="vt2">
-                   
-                </div>
-                <div class="manlist" id="vt3">
-                   
-                </div>
-                <div class="manlist" id="vt4">
-                   
-                </div>
-            </div>
-    </div>
-    <script type="text/template" id="bk_banner_tpl">
-        <div class="banberbox">
-        <div class="corrouselbox">
-            <ul class="txtinof" lmk="indexdbft" lmv="顶部封推">
-                <%for(var i = 0,len = data.length; i < len; ++ i){%>
-                    <li class="hero" lmk="indexdbft-smjjj" lmv="书名加简介" urltrue="true" lmurl="#">
-                        <a href="./cover.php?bid=<%= data[i].bid%>"><h2 class="bktitle"><%= data[i].book_name%></h2>
-                    <p class="classify f16"><%= data[i].author_name%>/<%= data[i].class_name%></p>
-                    <p class="intro f16"><%= data[i].intro.length>120?data[i].intro.substring(0,120)+'...':data[i].intro%>
-                    </p></a>
+                <ul class="chalistbox" lmk="indexnpbd" lmv="男频榜单">
+                    <?php if(is_array($list1) || $list1 instanceof \think\Collection || $list1 instanceof \think\Paginator): $k = 0; $__LIST__ = $list1;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($k % 2 );++$k;?>
+                    <li class="clearfix" lmk="indexnpbd-sj" lmv="书籍" urltrue="true" lmurl="#">
+                        <a href="<?php echo url('noveldetails/ndindex',['id'=>$v['n']]); ?>">
+                            <em class="chan"><?php echo $k; ?>.</em>
+                            <img src="<?php echo $v['face']; ?>" alt="">
+                            <h3><?php echo $v['k']; ?></h3>
+                            <p>
+                                <?php echo $v['penname']; ?>/
+                                <?php echo $v['name']; ?>
+                            </p>
+                        </a>
                     </li>
-
-                    <%}%>
-            </ul>
-        </div>
-            <div class="thumbnail">
-                <ul class="smallul">
-                    <%for(var i = 0,len = data.length; i < len; ++ i){%>
-                        <li>
-                            <img id="<%= i%>" src="<%= data[i].cover%>" width="48">
-                        </li>
-                        <%}%>
-
+                    <?php endforeach; endif; else: echo "" ;endif; ?>
 
                 </ul>
-
+                <div class="chamove hide">
+                    <a href="#">更多&gt;</a>
+                </div>
             </div>
-            <a id="lbl_btn" class="caleft" href="javascript:;"></a>
-            <a id="lbr_btn" class="caright" href="javascript:;"></a>
-        </div>
-    </script>
-    <script type="text/template" id="bk_mpd_tpl">
-        <div class="chatitle">
-            <h2><%= data.modu_name%></h2>
-        </div>
-        <ul class="chalistbox" lmk="<%= data.lmk%>" lmv="<%= data.lmv%>">
-            <%for(var i = 0,len = data.length; i < len; ++ i){%>
-                <li class="clearfix" lmk="<%= data.lmkIn%>" lmv="<%= data.lmvIn%>" urltrue="true" lmurl="#">
-                    <a href="./cover.php?bid=<%= data[i].bid%>">
-                        <em class="chan"><%= i+1%>.</em>
-                        <img src="<%= data[i].cover%>" alt="">
-                        <h3><%= data[i].book_name.length>7?data[i].book_name.substring(0,7)+'...':data[i].book_name%></h3>
-                        <p>
-                            <%= data[i].author_name%>/
-                                <%= data[i].class_name%>
-                        </p>
-                    </a>
-                </li>
-            <%}%>
-        </ul>
-        <div class="chamove hide">
-            <a href="#">更多&gt;</a>
-        </div>
-    </script>
-    <script type="text/template" id="bk_zapd_tpl">
-        <div class="chatitle">
-            <h2><%= data.modu_name%></h2>
-        </div>
-        <ul class="chalastbox" lmk="<%= data.lmk%>" lmv="<%= data.lmv%>">
-             <%for(var i = 0,len = data.length; i < len; ++ i){%>
-            <li class="clearfix" lmk="<%= data.lmkIn%>" lmv="<%= data.lmvIn%>" urltrue="true" lmurl="#">
-                 <a href="./cover.php?bid=<%= data[i].bid%>">
-                <em class="chan"><%= i+1%>.</em>
-                <h3 class="lasth3"><%= data[i].book_name.length>8?data[i].book_name.substring(0,8)+'...':data[i].book_name%></h3>
-                 </a>
-            </li>
-            <%}%>
-        </ul>
-        <div class="chamove hide">
-            <a href="#">更多&gt;</a>
-        </div>
-    </script>
-    <script type="text/template" id="bk_tab_tpl">
-     <table class="classtable" width="100%" border="0" cellspacing="0" lmk="indexfl" lmv="分类">
-                <%
-                    var i = 0;              
-                %>
-            <tr>
-                <% for(var item in data){ %>
+            <!--男频排行榜-->
 
-                 <td lmk="<%='indexfl-'+item%>" lmv="<%=data[item]['name']%>" urltrue="true" lmurl="#">
-                    <a href="./bibliotheca.php?t=<%= item%>" class="divhei" style="background:url(/static/index/img/class_<%=i+1 %>.jpg);background-size: cover;">
-                        <h3><%=data[item]['name']%></h3>
-                        <p>(<%=data[item]['num']%>)</p>
-                    </a>
-                </td>
-                <% i++;
-                if(i==4){
-                    break;
-                }
-                %>
-                <%}%>
-            </tr>
-            <tr>
-               <% i = 0; for(var key in data) {%>
-                    <%
-                    i++;
-                        if (i < 5) {
-                            continue;
-                        }
-                        if (i == 9) {
-                            break;
-                        }
-                    %>
-                    <td lmk="<%='indexfl-'+key%>" lmv="<%=data[key]['name']%>" urltrue="true" lmurl="#" <%if(i==7){%> rowspan="2"<%}%>><a href="./bibliotheca.php?t=<%= key%>" class=<%if(i!=7){%> "divhei"<%}else{%>"rspan"<%}%> style="background:url(/static/index/img/class_<%= i%>.jpg);background-size: cover;"> <h3><%=data[key]['name']%></h3>
-                        <p>(<%=data[key]['num']%>)</p>
-                       </a></td>
-               <%}%>
-            </tr>
-            <tr>
-                  <% i = 0; for(var ktr in data) {%>
-                    <%
-                        i++;
-                    
-                        if (i <= 8) {
-                            continue;
-                        }
-                    %>
-                    <td lmk="<%='indexfl-'+ktr%>" lmv="<%=data[ktr]['name']%>" urltrue="true" lmurl="#"  <%if(i==9){%>
-                        colspan="2"
-                     <%}%>>
-                    <a href="./bibliotheca.php?t=<%= ktr%>" class="divhei" style="background:url(/static/index/img/class_<%=i%>.jpg);background-size: cover;">
-                         <h3><%=data[ktr]['name']%></h3>
-                        <p>(<%=data[ktr]['num']%>)</p>
-                    </a>
-                </td>
-               <%}%>
-            </tr>
-        </table>
-    </script>
-    <script type="text/template" id="bk_nlb_tpl">
-        <div class="hotseam">
-            <ul class="count clearfix">
-                   <%for(var i = 0,len = data.length; i < len; ++ i){%>
-                <li lmk="<%= data.lmkIn%>" lmv="<%= data.lmvIn%>" urltrue="true" lmurl="#"
->
-                    <a href="./cover.php?bid=<%= data[i].bid%>"><img src="<%= data[i].cover%>" width="120" height="160">
-                        <h3><%= data[i].book_name.length>7?data[i].book_name.substring(0,7)+'...':data[i].book_name%></h3>
-                        <p><%= data[i].author_name%>/<%= data[i].class_name%></p>
-                    </a>
-                </li>
-                <%}%>
+            <!--女频排行榜-->
+            <div class="channelbox" id="wombd">
+                <div class="chatitle">
+                    <h2>女频榜单</h2>
+                </div>
+                <ul class="chalistbox" lmk="indexgpbd" lmv="女频榜单">
+                    <?php if(is_array($list2) || $list2 instanceof \think\Collection || $list2 instanceof \think\Paginator): $k = 0; $__LIST__ = $list2;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($k % 2 );++$k;?>
+                    <li class="clearfix" lmk="indexnpbd-sj" lmv="书籍" urltrue="true" lmurl="#">
+                        <a href="<?php echo url('noveldetails/ndindex',['id'=>$v['n']]); ?>">
+                            <em class="chan"><?php echo $k; ?>.</em>
+                            <img src="<?php echo $v['face']; ?>" alt="">
+                            <h3><?php echo $v['k']; ?></h3>
+                            <p>
+                                <?php echo $v['penname']; ?>/
+                                <?php echo $v['name']; ?>
+                            </p>
+                        </a>
+                    </li>
+                    <?php endforeach; endif; else: echo "" ;endif; ?>
                 </ul>
-         </div>
-          <%if(!(data.length < 6)){ %>
-        <a class="manlbtn" href="javascript:;"></a>
-        <a class="manrbtn" href="javascript:;"></a>
-        <%}%>
-    </script>
-     <script type="text/template" id="bk_hotlb_tpl">
-      <div class="hotseam">
-        <ul class="count clearfix">
-                       <%for(var i = 0,len = data.length; i < len; ++ i){%>
-                <li lmk="<%= data.lmkIn%>" lmv="<%= data.lmvIn%>" urltrue="true" lmurl="#">
-                    <a href="./cover.php?bid=<%= data[i].bid%>"><img src="<%= data[i].cover%>" width="120" height="160">
-                        <h3><%= data[i].book_name.length>7?data[i].book_name.substring(0,7)+'...':data[i].book_name%></h3>
-                        <p><%= data[i].author_name%>/<%= data[i].class_name%></p>
-                    </a>
-                </li>
-                <%}%>
+                <div class="chamove hide">
+                    <a href="#">更多&gt;</a>
+                </div>
+            </div>
+            <!--女频排行榜-->
+
+            <!--分类排行榜-->
+            <div class="channelbox" id="typebd">
+                <div class="chatitle">
+                    <h2>分类推荐榜</h2>
+                </div>
+                <ul class="chalistbox" lmk="indexflbd" lmv="分类推荐榜">
+
+                    <?php if(is_array($list3) || $list3 instanceof \think\Collection || $list3 instanceof \think\Paginator): $k = 0; $__LIST__ = $list3;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($k % 2 );++$k;?>
+                    <li class="clearfix" lmk="indexnpbd-sj" lmv="书籍" urltrue="true" lmurl="#">
+                        <a href="<?php echo url('noveldetails/ndindex',['id'=>$v['n']]); ?>">
+                            <em class="chan"><?php echo $k; ?>.</em>
+                            <img src="<?php echo $v['face']; ?>" alt="">
+                            <h3><?php echo $v['k']; ?></h3>
+                            <p>
+                                <?php echo $v['penname']; ?>/
+                                <?php echo $v['name']; ?>
+                            </p>
+                        </a>
+                    </li>
+                    <?php endforeach; endif; else: echo "" ;endif; ?>
+
                 </ul>
+                <div class="chamove hide">
+                    <a href="#">更多&gt;</a>
+                </div>
             </div>
-             <%if(!(data.length < 6)){ %>
-            <a class="manlbtn" href="javascript:;"></a>
-            <a class="manrbtn" href="javascript:;"></a>
-            <%}%>
-    </script>
-    <script type="text/template" id="bk_womlb_tpl">
-    <div class="hotseam">
-         <ul class="count clearfix">
-                  <%for(var i = 0,len = data.length; i < len; ++ i){%>
-                <li lmk="<%= data.lmkIn%>" lmv="<%= data.lmvIn%>" urltrue="true" lmurl="#">
-                    <a href="./cover.php?bid=<%= data[i].bid%>"><img src="<%= data[i].cover%>" width="120" height="160">
-                        <h3><%= data[i].book_name.length>7?data[i].book_name.substring(0,7)+'...':data[i].book_name%></h3>
-                        <p><%= data[i].author_name%>/<%= data[i].class_name%></p>
-                    </a>
-                </li>
-                <%}%>
-            </ul>
+            <!--分类排行榜-->
+
+            <!--推荐排行榜-->
+            <div class="channelbox wbox" id="zuibd">
+                <div class="chatitle">
+                    <h2>强力推荐榜</h2>
+                </div>
+                <ul class="chalastbox" lmk="indexqlbd" lmv="强力推荐榜">
+                    <?php if(is_array($list4) || $list4 instanceof \think\Collection || $list4 instanceof \think\Paginator): $k = 0; $__LIST__ = $list4;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($k % 2 );++$k;?>
+                    <li class="clearfix" lmurl="#" style="padding: 8px 0;height: 32px;line-height: 32px;width:184px;height:48px">
+                        <a href="<?php echo url('noveldetails/ndindex',['id'=>$v['n']]); ?>">
+                            <em style="font-size: 14px;margin-top: 2px;float: left;" class="chan"><?php echo $k; ?>.</em>
+                            <h3 style="float: left;height: 32px;line-height: 32px;" class="lasth3"><?php echo $v['k']; ?></h3>
+                        </a>
+                    </li>
+                    <?php endforeach; endif; else: echo "" ;endif; ?>
+                </ul>
+                <div class="chamove hide">
+                    <a href="#">更多&gt;</a>
+                </div>
             </div>
-       <%if(!(data.length < 6)){ %>
-            <a class="manlbtn" href="javascript:;"></a>
-            <a class="manrbtn" href="javascript:;"></a>
-            <%}%>
-    </script>
-    <script type="text/template" id="bk_ty_tpl">
-        <dl>
-                        <dt><h2><%= data.title %></h2></dt>
-                        <dd>
-                            <ul>
-                                <%for(var i = 0,len = data.data.length; i < len;i++){%>
-                                <li lmk="<%= data.lmkIn%>" lmv="<%= data.lmvIn%>" urltrue="true" lmurl="#"><a href="./cover.php?bid=<%= data.data[i].bid%>"><%= data.data[i].book_name%></a></li>
-                                <%}%>
-                            </ul>
-
-                        </dd>
-
-                    </dl>
-                    <div class="chamove" lmk="<%= data.lmkInGd%>" lmv="<%= data.lmvInGd%>" urltrue="true" lmurl="#">
-                        <a href="./bibliotheca.php?t=<%=data.lid%>">更多&gt;</a>
-                    </div>
-    </script>
-         
-
-
+            <!--推荐排行榜-->
+        </div>
+    </div>
+    <!--排行榜-->
+    <h2 style="font-size:25px;color:#ff6700"><i>神回复:</i></h2>
+    <div style="width:80%;font-size:15px;margin:10px auto">
+        <?php if(is_array($txapi) || $txapi instanceof \think\Collection || $txapi instanceof \think\Paginator): $i = 0; $__LIST__ = $txapi;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?>
+        <p>
+            <?php echo $v['content']; ?>
+        </p>
+        <hr>
+        <?php endforeach; endif; else: echo "" ;endif; ?>
+    </div>
+<h2 style="font-size:25px;color:#ff6700"><i>友情链接:</i></h2>
+<div style="width:80%;font-size:25px;margin:10px auto">
+    <?php if(is_array($link) || $link instanceof \think\Collection || $link instanceof \think\Paginator): $i = 0; $__LIST__ = $link;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?>
+    <a href="<?php echo $v['url']; ?>" target="_blank"><?php echo $v['name']; ?></a>
+    <?php endforeach; endif; else: echo "" ;endif; ?>
+</div>
+    
     <div class="footer">
         <div class="footbox">
             <div class="footbox-info clearfix">
@@ -391,9 +335,9 @@
                     <a href="./about.php">关于我们</a><i>|</i><a href="./contact.php">联系我们</a><i>|</i><a href="./contribute.php">投稿声明</a><i>|</i><a href="./copyinfo.php">版权声明</a>
                 </div>
                 <div class="right">广州霜之哀伤文学信息技术有限公司&nbsp;&nbsp;&nbsp;&nbsp;版权所有</div>
-                
+
             </div>
-            
+
             <!-- <p class="footer-p">广州阿里巴巴文学信息技术有限公司&nbsp;&nbsp;&nbsp;&nbsp;版权所有</p> -->
             <div class="footbox-info footbox-p clearfix">
                 <div class="left">为保证更好的浏览效果，请使用IE9以上或其他主流浏览器访问</div>
@@ -403,23 +347,23 @@
                     <span>网络文化经营许可证&nbsp;&nbsp;&nbsp;&nbsp;粤网文[2014]0424-124号</span>
                 </div>
             </div>
-            
+
         </div>
     </div>
-
-    <input type="hidden" id="js_path" value="img/default.jpg" />
 
     <script>
         function aa() {
             var login = document.getElementById('login');
             login.style.display = 'block';
         }
-            function refreshVerify() {
-                var ts = Date.parse(new Date())/1000;
-                $('#verify_img').attr("src", "/captcha?id="+ts);
-            }
-
+        function refreshVerify() {
+            var ts = Date.parse(new Date())/1000;
+            $('#verify_img').attr("src", "/captcha?id="+ts);
+        }
     </script>
+
+
+    <script type="text/javascript" src="/static/admin/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/static/index/js/jq-c0eb42550f.1.11.min.js"></script>
     <script type="text/javascript" src="/static/index/js/jquery-546c1da987.lazyload.min.js"></script>
     <script type="text/javascript" src="/static/index/js/jquery-ui-019252536e.js"></script>
@@ -431,6 +375,70 @@
     <!--<script type="text/javascript" src="/static/index/js/login-0a1f55f637.js"></script>-->
     <script type="text/javascript" src="/static/index/js/jquery-f2528ce963.page.js"></script>
     <script type="text/javascript" src="/static/index/js/index-ae8c6f6dd0.js"></script>    <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1259530409'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1259530409' type='text/javascript'%3E%3C/script%3E"));</script>
+    <script>
+        //            messageAlert("warning", "请输入手机号！");
+        $(function () {
+            $('button').click(function () {
+                var tel = $('input[name=tel]').val();
+                var pwd = $('input[name=pwd]').val();
+                var yzm = $('input[name=yzm]').val();
+                if (tel == ''){
+                    $('input[name=tel]').focus();
+                    return messageAlert("warning", "用户名不能为空");
+                }
+                if (pwd == '') {
+                    $('input[name=pwd]').focus();
+
+                    return messageAlert("warning", "密码不能为空");
+                }
+                if (yzm == '') {
+                    $('input[name=yzm]').focus();
+                    return messageAlert("warning", "请输入验证码");
+                }
+                $.ajax({
+                    type: 'post',
+                    url: '/home/index/login',
+                    data: {'tel': tel,'pwd': pwd,'yzm': yzm},
+                    dateType:'json',
+                    success: function (data) {
+                        if (data['status'] == 1){
+                            $('input[name=tel]').focus();
+                            return messageAlert("warning", data['error']);
+                        }
+                        if (data['status'] == 2){
+                            $('input[name=pwd]').focus();
+                            return messageAlert("warning", data['error']);
+                        }
+                        if (data['status'] == 3){
+                            $('input[name=yzm]').focus();
+                            return messageAlert("warning", data['error']);
+                        }
+                        if (data['status'] == 4){
+                            console.log($('#login-link'));
+                            document.getElementById('login-link').style.display='none';
+                            document.getElementById('loginedTemp').style.display='block';
+                            document.getElementById('login').style.display='none';
+                            $('#nickname-link .ellipse').html(data['name']);
+                        }
+                    },
+                    error: function(){
+                        console.log(1);
+                    }
+                })
+            })
+
+            $('.ellipse').mouseover(function(){
+                var a = document.getElementById('ccc').style;
+                if (a.display == 'block'){
+                    a.display = 'none';
+                } else {
+                    a.display = 'block';
+                }
+            })
+        })
+
+    </script>
+    
 </body>
 
 </html>

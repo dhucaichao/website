@@ -25,9 +25,7 @@ class User extends Controller
      */
     public function index()
     {
-
         $list = db('user')->paginate(8);
-
         return view('user/index', ['title' => '后台用户管理', 'list' => $list]);
     }
 
@@ -54,7 +52,8 @@ class User extends Controller
         $data = input('post.');
         $data['icon'] =  DS . 'uploads' . DS . $aa;
         $image = Image::open('uploads' . DS . $aa);
-        $image->thumb(30, 30)->save('uploads' . DS . $aa);
+        $image->thumb(600, 600)->save('uploads' . DS . $aa);
+        $data['regtime'] = time();
         $result = db('user')->insert($data);
         if($result>0) {
             $this->success('添加成功','user/index');
@@ -75,6 +74,7 @@ class User extends Controller
             $this->error('非法路径', 'user/index');
         }
         $list = db('user')->where('id', $id)->find();
+        $list['regtime'] = date('Y-m-d',$list['regtime']);
         return json($list);
     }
 
@@ -90,9 +90,7 @@ class User extends Controller
         return view('user/edit',['title'=>'编辑用户','result'=>$result]);
     }
 
-
     /**php
-
      * 保存更新的资源
      *
      * @param  \think\Request $request
@@ -101,13 +99,11 @@ class User extends Controller
      */
     public function update(Request $request,$id)
     {
-
         $bb = $this->upload();
         $data = input('post.');
         $data['icon'] =  DS . 'uploads' . DS . $bb;
         $image = Image::open('uploads' . DS . $bb);
-        $image->thumb(30, 30)->save('uploads' . DS . $bb);
-
+        $image->thumb(600, 600)->save('uploads' . DS . $bb);
         $result = db('user')->where('id',$id)->update($data);
         if($result>0) {
             $this->success('更新成功','user/index');

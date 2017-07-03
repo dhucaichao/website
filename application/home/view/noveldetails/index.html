@@ -1,0 +1,208 @@
+{extend name='index/default'}
+{block name='plcss'}
+{css href="/static/index/css/core.css"}
+{css href="/static/index/css/forum.css"}
+
+{css href="/static/admin/css/toastr.min.css"}
+{/block}
+{block name='content'}
+<div class="logo" >
+    <h1><img src="/static/index/picture/logo.png" width='360px' height='60px'></h1>
+</div>
+
+<!--导航栏-->
+<div class="header" style="margin-left:10%">
+    <ul class="pc-nav clearfix">
+        <li class="zt"><a class="active" href="{:url('index/index')}">首页</a></li>
+        <li class="tl"><a href="{:url('novellist/index')}">书库</a></li>
+        <li class="gx"><a href="./rankinglist.php">排行榜</a></li>
+        <li class="gx"><a href="./apotheosize.php">个人中心</a></li>
+
+        <li class="gx"><a href="./copyright.php">评论专区</a></li>
+
+        <li class="gx"><a href="./dimensions.php">充值中心</a></li>
+
+        <li class="gx"><a href="./authorwelfare.php">免费小说</a></li>
+        <li class="zs"><a href="./bookshelf.php">书架</a></li>
+        <li class="zs"><a onClick="PV('作者专区');" href="http://yc.aliwx.com.cn/#/login" target="_blank">作者专区</a></li>
+    </ul>
+</div>
+<!--导航栏-->
+
+<!--小说详情-->
+<div class="cover-top">
+    <div class="covertbox">
+        <div class="cover-nav">
+            <p>&gt;
+                <a href="./bibliotheca.php?t=10003">{$list.name}</a> &gt; <span>{$list.k}</span></p>
+        </div>
+        <div class="coverfm clearfix">
+            <div class="coverimg fl">
+                <img src="{$list.face}" width="240" height="320">
+            </div>
+            <div class="coverinfo" lmk="bookmeta" lmv="书籍meta信息">
+                <h3>{$list.k}</h3>
+                <p class="author">作者：<span>{$list.penname}</span></p>
+                <p class="part">作品简介:
+                    {$list.desc}<a class="zk" href="#"></a></p>
+                <p class="all" style="display: none">
+                    {$list.desc}<a class="sq" href="javascript:;"></a>
+                </p>
+                <div class="cobtnbox">
+                    <!-- <a class="goread" target="_blank" href="./read.php?bid=15102&chapid=251485">开始阅读</a>
+                    <a class="js_chapter_btn_cover" href="javascript:;"><span class="glyphicon glyphicon-th-list"></span>&nbsp;目录</a> -->
+                    <a class="goread" target="_blank" data-sqbid="7063762" href="{:url('novelcontent/index',['tnum'=>1,'nn'=>$list.k,'au'=>$list.penname,'nid'=>$list.n])}" lmk="bookmeta-start" lmv="开始阅读" urltrue="true" lmurl="#">开始阅读</a>
+                    <a class="js_chapter_btn_cover" href="{:url('noveldir/index',['id'=>$list.n,'nn'=>$list.k,'au'=>$list.penname,'nid'=>$list.n])}" lmk="bookmeta-catalog" lmv="目录" urltrue="true" lmurl="#"><span class="glyphicon glyphicon-th-list"></span>&nbsp;目录</a>
+                    <a class="addbksj" href="javascript:;" lmk="bookmeta-add" lmv="加入书架" urltrue="true" lmurl="#">+加入书架</a>
+                    <a href="{:url('noveldetails/getticket',['nid'=>$list.n])}" style="background-color: #ff6700;color: #fff;border-radius:10px">打赏一张月票</a>
+                    <!-- <div class="js_chapter_btn_cover"></div> -->
+                </div>
+                <div class="infospan">
+                    <span>分类：{$list.name}</span>
+                    <span>字数：{$list.twords}</span>
+                    <span>状态：
+                        {eq name="$list.isover" value="1"}
+                        连载
+                        {else/}
+                        完结
+                        {/eq}
+                    </span>
+                    <span style="margin-right:0;">更新时间：{$list.uptime | date='Y-m-d H:i:s',###}&nbsp;&nbsp;</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--小说详情-->
+
+<div class="J_reply_wrap"  style="margin:20px auto;width:80%;padding:0;position:fixed;bottom:5px;left:10%;Z-index:999">
+    <div class="reply_list" style="width:80%;padding:0;margin:0px auto">
+        <div class="core_arrow_top"><em></em><span></span></div>
+        <div class="c"></div>
+        <div class="reply_quick cc">
+            <form action="{:url('noveldetails/add',['nid'=>$list.n])}" method="post">
+            <dl class="ct cc">
+                <dt><img class="J_avatar" data-type="small" src="http://www.phpwind.net/res/images/face/face_small.jpg" width="50" height="50" alt="默认头像"></dt>
+                <dd style="float: left;margin-left:20px">
+                    <div class="arrow"><em></em><span></span></div>
+                    <textarea name="content" style="height:40px;width:400px"  placeholder="我也说两句"></textarea>
+                </dd>
+            </dl>
+            <div class="ft cc J_reply_ft" style="width:470px">
+                <button type="submit" data-tid="3712367" data-pid="20553688" class="btn btn_submit J_reply_sub" data-action="http://www.phpwind.net/index.php?c=post&amp;a=doreply&amp;_getHtml=2">发布</button>
+            </div>
+            </form>
+        </div>
+        <div class="J_reply_page_list">	<ul id="J_reply_ul_20553688">
+        </ul>
+            <div class="J_pages_wrap"></div></div>
+    </div>
+</div>
+{$list1->render()}
+{volist name='list1' id='v'}
+<div class="floor cc J_read_floor" id="read_20552684" style="width:800px;margin:20px auto">
+    <table width="100%" style="table-layout:fixed;" class="floor_table">
+        <tbody>
+        <tr>
+            <td rowspan="2" class="floor_left">
+                <div class="floor_info">
+                    <!--头像-->
+                    <div class="face">
+                        <img src="{$v.icon}" width="120px" height="120px">
+                    </div>
+                    <!--用户名-->
+                    <div class="name" style="overflow:hidden">
+                        <span  title="离线">{$v.nickname}</span>
+                    </div>
+                    <!--等级-->
+                    <div class="level">
+                        <div>
+                            {switch name="v.level"}
+                            {case value="1"}普通用户{/case}
+                            {case value="2"}普通会员{/case}
+                            {case value="3"}星级会员{/case}
+                            {/switch}
+                        </div>
+                    </div>
+
+                </div>
+            </td>
+            <td class="box_wrap floor_right">
+                <div class="fl"><div class="floor_arrow"><em></em><span></span></div></div>
+                <div class="c"></div>
+                <div class="floor_top_tips cc">
+                    <div style="position:relative;"><span class="lou J_floor_copy" title="复制此楼地址" data-hash="read_20552684"><sup></sup></span></div>
+                    <span class="fl">发布于：{$v.time | date='Y-m-d H:i:s', ###}</span>
+                </div>
+                <div id="J_read_main">
+                    <div class="editor_content">
+                        {$v.content}
+                    </div>
+
+                    {volist name='list2' id='s'}
+                    {eq name="$s.did" value="$v.id"}
+                       <div style="font-size:15px;margin-top:10px;float: left;"><img src="{$s.icon}" width="30px" height="30px">{$s.nickname}&nbsp;&nbsp; 回复:&nbsp;&nbsp;{$s.content}  发表于{$s.time | date='Y-m-d H:i:s', ###}</div>
+                    {/eq}
+                    {/volist}
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="box_wrap floor_bottom" valign="bottom">
+                <div id="app_read_floor_2"></div>
+                <div class="floor_bottom_tips cc" style="line-height: 20px;height:37px">
+								<span class="fr">
+									</span>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span rel="nofollow"
+                       data-pid="{$v.id}" class="a_reply J_read_reply" data-topped="false">回复</span>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<a role="button" rel="nofollow" href="#" data-pid="20552684"
+                                               data-uri="http://www.phpwind.net/index.php?m=app&amp;a=mark&amp;tid=3712367&amp;pid=20552684&amp;app=mark"
+                                               class="J_plugin_read_mark" id=""><span>评分</span></a>
+                </div>
+                <div style="display:none;" class="J_reply_wrap" id="{$v.id}"   style="margin-top:20px">
+                    <div class="reply_list" style="width:500px">
+                        <div class="core_arrow_top"><em></em><span></span></div>
+                        <div class="c"></div>
+                        <div class="reply_quick cc">
+                            <form action="{:url('noveldetails/reply',['nid'=>$list.n,'did'=>$v.id])}" method="post">
+                            <dl class="ct cc">
+                                <dt><img class="J_avatar" data-type="small" src="http://www.phpwind.net/res/images/face/face_small.jpg" width="50" height="50" alt="默认头像"></dt>
+                                <dd style="float: left;margin-left:20px">
+                                    <div class="arrow"><em></em><span></span></div>
+                                    <textarea name="content" id="J_reply_ta_20553688" style="height:40px;width:400px" class="J_at_user_textarea" placeholder="我也说两句"></textarea>
+                                </dd>
+                            </dl>
+                            <div class="ft cc J_reply_ft" style="width:470px">
+                                <button type="submit"  class="btn btn_submit J_reply_sub">回复</button>
+                            </div>
+                            </form>
+                        </div>
+                        <div class="J_reply_page_list">	<ul id="J_reply_ul_20553688">
+                        </ul>
+                            <div class="J_pages_wrap"></div></div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        </tbody></table>
+</div>
+{/volist}
+
+{/block}
+{block name='replyjs'}
+<script>
+    $(function(){
+        $('.J_read_reply').click(function(){
+            var r = $(this).attr('data-pid');
+            var dd = $('#'+r).css('display');
+//            console.log(dd);
+            if (dd=='none'){
+                $('#'+r).css('display','block');
+            } else {
+                $('#'+r).css('display','none');
+            }
+//            $('#'+r).css('display','block');
+        })
+    })
+</script>
+{/block}

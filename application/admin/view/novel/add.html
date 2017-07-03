@@ -39,9 +39,7 @@
 
 <div class="panel admin-panel" style="height: 100%;">
     <div class="panel-head" id="add">
-
         <strong><span class="icon-pencil-square-o"></span> 添加书籍 </strong>
-
     </div>
     <div class="body-content" style="height: 600px; padding-left:10%">
         <form action="save" enctype="multipart/form-data" method="post">
@@ -69,6 +67,27 @@
                 </div>
                 <div class="field">
                     <input type="text" class="input w50" name="aid" >
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="label">
+                    <label>类型：</label>
+                </div>
+                <div class="field">
+                    <!--<select id="con">-->
+                        <!--{volist name='list1' id='v' key='k'}-->
+                        <!--<option value ="{$k}">{$v.name}</option>-->
+                        <!--{/volist}-->
+                    <!--</select>-->
+                    <select id="city" name="cid">
+                        {volist name='list5.1' id='v' key='k'}
+                        <option value ="{$v.id}">{$v.name}</option>
+                        {/volist}
+                        {volist name='list5.0' id='v' key='k'}
+                        <option value ="{$v.id}">{$v.name}</option>
+                        {/volist}
+                    </select>
                 </div>
             </div>
 
@@ -146,6 +165,9 @@
     </div>
 </div>
 
+<script>
+//    var conList =
+</script>
 </body>
 </html>
 

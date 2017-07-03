@@ -4,7 +4,6 @@ namespace app\admin\controller;
 
 use think\Controller;
 use think\Request;
-
 use think\Image;
 class Novel extends Controller
 {
@@ -18,7 +17,6 @@ class Novel extends Controller
             return $file->getError();
         }
     }
-
     /**
      * 显示资源列表
      *
@@ -38,7 +36,16 @@ class Novel extends Controller
      */
     public function create()
     {
-        return view('novel/add',['title'=>'添加书籍']);
+        $list1 = db('category')->where('pid',0)->field('name,id')->select();
+        foreach ($list1 as $v){
+            $list2[] = $v['name'];  // 1
+            $list3[] = $v['id'];
+        }
+        for ($i=0; $i<sizeof($list2); $i++){
+            $arr = db('category')->where('pid',$list3[$i])->field('name,id')->select();
+            $list5[$i] = $arr;
+        }
+        return view('novel/add',['title'=>'添加书籍','list1'=>$list1,'list5'=>$list5]);
     }
 
     /**
@@ -53,8 +60,8 @@ class Novel extends Controller
         $data = input('post.');
         $data['face'] =  DS . 'uploads' . DS . $aa;
         $image = Image::open('uploads' . DS . $aa);
-        $image->thumb(30, 30)->save('uploads' . DS . $aa);
-
+        $image->thumb(600, 600)->save('uploads' . DS . $aa);
+        $data['uptime'] = time();
         $result = db('novel')->insert($data);
         if($result>0) {
             $this->success('添加成功','novel/index');
@@ -75,6 +82,7 @@ class Novel extends Controller
             $this->error('非法路径', 'novel/index');
         }
         $list = db('novel')->where('id', $id)->find();
+        $list['uptime'] = date('Y-m-d',$list['uptime']);
         return json($list);
     }
 
@@ -99,13 +107,12 @@ class Novel extends Controller
      */
     public function update(Request $request, $id)
     {
-
         $bb = $this->upload();
         $data = input('post.');
         $data['face'] =  DS . 'uploads' . DS . $bb;
         $image = Image::open('uploads' . DS . $bb);
-        $image->thumb(30, 30)->save('uploads' . DS . $bb);
-
+        $image->thumb(600, 600)->save('uploads' . DS . $bb);
+        $data['uptime'] = time();
         $result = db('novel')->where('id',$id)->update($data);
         if($result>0) {
             $this->success('更新成功','novel/index');

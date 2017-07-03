@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:65:"D:\wamp\www\tp5\public/../application/admin\view\author\edit.html";i:1498115857;s:66:"D:\wamp\www\tp5\public/../application/admin\view\author\index.html";i:1498115920;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:65:"D:\wamp\www\tp5\public/../application/admin\view\author\edit.html";i:1498910915;s:66:"D:\wamp\www\tp5\public/../application/admin\view\author\index.html";i:1498910058;}*/ ?>
 <!DOCTYPE html>
 <html lang="cn">
 <head>
@@ -42,11 +42,11 @@
         <ul class="list-group h4">
             稿费:<input type="text" name="balance" value=<?php echo $result['balance']; ?>>
             <hr>
-            已完结小说:<input type="text" name="end-nover" value=<?php echo $result['endnover']; ?>>
+            已完结小说:<input type="text" name="endnover" value=<?php echo $result['endnover']; ?>>
             <hr>
             粉丝数:<input type="text" name="fence" value=<?php echo $result['fence']; ?>>
             <hr>
-            连载中小说:<input type="text" name="serial-nover" value=<?php echo $result['serialnover']; ?>>
+            连载中小说:<input type="text" name="serialnover" value=<?php echo $result['serialnover']; ?>>
             <hr>
             头像:<input type="file" name="icon">
         </ul>

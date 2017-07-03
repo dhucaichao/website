@@ -28,11 +28,10 @@ class login extends Controller
             $error = '密码错误';
             return view('login', ['error' => $error]);
         } else {
-            return view('index/index',['name'=>$data['name']]);
+            Session::set('admin.name',$data['name'],'think');
+            Session::set('admin.pwd',$data['pwd'],'think');
+            $this->redirect('index/index');
         }
-        Session::set('admin.name',$data['name'],'think');
-        Session::set('admin.pwd',$data['pwd'],'think');
-
     }
 
     public function logout()

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:63:"D:\wamp\www\tp5\public/../application/admin\view\novel\add.html";i:1498222086;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:63:"D:\wamp\www\tp5\public/../application/admin\view\novel\add.html";i:1499050293;}*/ ?>
 <!DOCTYPE html>
 <html lang="cn">
 <head>
@@ -40,7 +40,7 @@
 
 <div class="panel admin-panel" style="height: 100%;">
     <div class="panel-head" id="add">
-        <strong><span class="icon-pencil-square-o"></span> 编辑书籍 </strong>
+        <strong><span class="icon-pencil-square-o"></span> 添加书籍 </strong>
     </div>
     <div class="body-content" style="height: 600px; padding-left:10%">
         <form action="save" enctype="multipart/form-data" method="post">
@@ -68,6 +68,26 @@
                 </div>
                 <div class="field">
                     <input type="text" class="input w50" name="aid" >
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="label">
+                    <label>类型：</label>
+                </div>
+                <div class="field">
+                    <!--<select id="con">-->
+                        <!--<?php if(is_array($list1) || $list1 instanceof \think\Collection || $list1 instanceof \think\Paginator): $k = 0; $__LIST__ = $list1;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($k % 2 );++$k;?>-->
+                        <!--<option value ="<?php echo $k; ?>"><?php echo $v['name']; ?></option>-->
+                        <!--<?php endforeach; endif; else: echo "" ;endif; ?>-->
+                    <!--</select>-->
+                    <select id="city" name="cid">
+                        <?php if(is_array($list5['1']) || $list5['1'] instanceof \think\Collection || $list5['1'] instanceof \think\Paginator): $k = 0; $__LIST__ = $list5['1'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($k % 2 );++$k;?>
+                        <option value ="<?php echo $v['id']; ?>"><?php echo $v['name']; ?></option>
+                        <?php endforeach; endif; else: echo "" ;endif; if(is_array($list5['0']) || $list5['0'] instanceof \think\Collection || $list5['0'] instanceof \think\Paginator): $k = 0; $__LIST__ = $list5['0'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($k % 2 );++$k;?>
+                        <option value ="<?php echo $v['id']; ?>"><?php echo $v['name']; ?></option>
+                        <?php endforeach; endif; else: echo "" ;endif; ?>
+                    </select>
                 </div>
             </div>
 
@@ -145,6 +165,9 @@
     </div>
 </div>
 
+<script>
+//    var conList =
+</script>
 </body>
 </html>
 

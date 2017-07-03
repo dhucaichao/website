@@ -3,26 +3,22 @@
 namespace app\admin\controller;
 
 use think\Controller;
-use think\session;
+use think\Session;
 
 class Index extends Controller
 {
-    public function _initialize()
-    {
-        if (empty(Session('admin'))) {
-            $this->error('请先登录', 'login/index', ['error' => '']);
-        }
-        return view('index/index');
-    }
-
     public function index()
     {
-        return view();
+        if (empty(Session::get('admin.name'))){
+            return redirect('login/index');
+        } else {
+            return view('index/index',['name'=>Session::get('admin.name')]);
+        }
     }
 
     public function clear()
     {
         Session::clear();
-        return view('index');
+        return view('login/login', ['error' => '']);
     }
 }

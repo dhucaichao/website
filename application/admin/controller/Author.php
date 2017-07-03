@@ -52,8 +52,10 @@ class Author extends Controller
         $aa = $this->upload();
         $data = input('post.');
         $data['icon'] =  DS . 'uploads' . DS . $aa;
+        $data['regtime'] = time();
         $image = Image::open('uploads' . DS . $aa);
-        $image->thumb(30, 30)->save('uploads' . DS . $aa);
+        $image->thumb(600, 600)->save('uploads' . DS . $aa);
+        $data['regtime'] = time();
         $result = db('author')->insert($data);
         if($result>0) {
             $this->success('添加作者成功','author/index');
@@ -74,6 +76,7 @@ class Author extends Controller
             $this->error('非法路径', 'author/index');
         }
         $list = db('author')->where('id', $id)->find();
+        $list['regtime'] = date('Y-m-d',$list['regtime']);
         return json($list);
     }
 
@@ -98,7 +101,11 @@ class Author extends Controller
      */
     public function update(Request $request,$id)
     {
+        $aa = $this->upload();
         $data = input('post.');
+        $data['icon'] =  DS . 'uploads' . DS . $aa;
+        $image = Image::open('uploads' . DS . $aa);
+        $image->thumb(600, 600)->save('uploads' . DS . $aa);
         $result = db('author')->where('id',$id)->update($data);
         if($result>0) {
             $this->success('更新成功','author/index');

@@ -1,0 +1,20 @@
+{extend name='index/default'}
+
+{block name='content'}
+<div class="logo">
+    <h1><img src="/static/index/picture/logo.png" width='360px' height='60px'></h1>
+</div>
+
+<div class="readcontent">
+    <div class="page-style">
+        <div class="page-box">
+            <div class="tcontent" c="1" style="min-height: 386px;">
+                <h3>第{$list.tnum}章：{$list.title}</h3>
+                {$list.content}
+            </div>
+        </div>
+    </div>
+    <div style="position:fixed;border:none;bottom:50px;left:37%;Z-index:999;font-size:25px;color:#fff"><a href="{:url('novelcontent/index1',['nid'=>$list.nid,'tnum'=>$list.tnum,'nn'=>$nn,'au'=>$au])}" style="color:#ff6700">上一章&nbsp;&nbsp;&nbsp;&nbsp;</a><a href="{:url('noveldir/index',['nid'=>$list.nid,'id'=>$list.nid,'nn'=>$nn,'au'=>$au])}" style="color:#ff6700">&nbsp;&nbsp;&nbsp;&nbsp;目录&nbsp;&nbsp;&nbsp;&nbsp;</a><a href="{:url('novelcontent/index2',['nid'=>$list.nid,'tnum'=>$list.tnum,'nn'=>$nn,'au'=>$au])}" style="color:#ff6700">&nbsp;&nbsp;&nbsp;&nbsp;下一章</a></div>
+</div>
+
+{/block}

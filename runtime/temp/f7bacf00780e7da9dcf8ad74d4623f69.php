@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:66:"D:\wamp\www\tp5\public/../application/admin\view\author\index.html";i:1498138222;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:66:"D:\wamp\www\tp5\public/../application/admin\view\author\index.html";i:1498910058;}*/ ?>
 <!DOCTYPE html>
 <html lang="cn">
 <head>
@@ -32,7 +32,7 @@
                 <tr>
                     <td><?php echo $v['id']; ?></td>
                     <td><?php echo $v['penname']; ?></td>
-                    <td><img src="<?php echo $v['icon']; ?>" alt=""></td>
+                    <td><img src="<?php echo $v['icon']; ?>" width="30px" height="30px" alt=""></td>
                     <td><?php echo $v['tel']; ?></td>
                     <td class="col-md-4">
                         <button data-id="<?php echo $v['id']; ?>" class="btn btn-default btn-xs show-btn" data-toggle="modal" data-target="#myModal">查看信息</button>
@@ -55,7 +55,7 @@
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title" id="myModalLabel">
-                    作者<img src="" alt="" id="myimg">[<u></u>]的详细信息
+                    作者<img src="" alt="" id="myimg" width="30px" height="30px" >[<u></u>]的详细信息
                 </h4>
             </div>
             <table class="table table-hover bg-info">

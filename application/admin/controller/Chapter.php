@@ -60,11 +60,11 @@ class Chapter extends Controller
     public function read1($id,$p)
     {
         $list = db('chapter')->where('id', $id)->update(['price'=>$p]);
-        if ($list > 0) {
+//        if ($list > 0) {
             $info['status'] = true;
-        } else {
-            $info['status'] = false;
-        }
+//        } else {
+//            $info['status'] = false;
+//        }
         return json($info);
     }
 

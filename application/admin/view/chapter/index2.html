@@ -28,24 +28,26 @@
                     <th>上次更新时间</th>
                     <th>操作</th>
                 </tr>
-                {volist name="arr" id="v"}
+                {volist name="arr" id="v" key='k'}
                 <tr>
                     <td>{$v['id']}</td>
                     <td>{$v['tnum']}</td>
                     <td>
                         {$v['title']}
                     </td>
-                    <td class='price' data-price="{$v['price']}" priceid="{$v['id']}">
-                        <span>{$v['price']}</span>
+                    <td class='price' data-price="{$v['price']}" priceid="{$v['id']}" k="{$k}">
+                        <span class="{$k}">{$v['price']}</span>
                         <div id="price" style="display:none;width:50px"><input type="number" value="{$v['price']}" name="price" id="ppp" style="width:60px"></div>
                     </td>
+                    <td class="{$v.id}">
                         {switch name="v.check"}
-                        {case value="0"}<td class="checkover"><button class="btn btn-check btn-default btn-xs" checkid="{$v.id}">未审核</button></td>{/case}
-                        {case value="1"}<td>审核未通过</td>{/case}
-                        {case value="2"}<td>审核通过</td>{/case}
+                        {case value="0"}<button class="btn btn-check btn-default btn-xs" checkid="{$v.id}">未审核</button>{/case}
+                        {case value="1"}审核未通过{/case}
+                        {case value="2"}审核通过{/case}
                         {/switch}
+                    </td>
                     <td>
-                        {$v['uptime']}
+                        {$v.uptime | date='Y-m-d H:i:s',###}
                     </td>
                     <td class="col-md-4">
                         <button data-id="{$v['id']}" class="btn btn-default btn-xs show-btn" data-toggle="modal" data-target="#myModal">查看章节内容</button>
@@ -110,7 +112,7 @@
             showAjax(ac_id); //AJAX查询
         })
         $('.btn-check').click(function () {
-            var ac_id = $(this).attr('checkid');
+            ac_id = $(this).attr('checkid');
             var r = confirm('审核是否通过');
             if (r == true){
                 cc = 2;
@@ -123,7 +125,9 @@
                 dateType: 'json',
                 success:function (data){
                     if (data.status){
-                        $('.checkover').html(data.mes);
+//                        m = $(this).attr('checkid');
+//                        console.log(ac_id);
+                        $('.'+ac_id).html(data.mes);
                     }
                 },
                 error: function () {
@@ -134,13 +138,13 @@
         })
         $('.price').click(function(){
              id = $(this).attr('priceid');
-            var price = $(this).attr('data-price');
-            $('.price span').html('');
-            a = document.getElementById('price');
-            a.style.display = 'block';
+            k = $(this).attr('k');
+            $('.'+k).html('');
+            $('.'+k + '+ div').css('display','block');
         })
         $('.price input').blur(function(){
-            var p = document.getElementById('ppp').value;
+            console.log($(this).val());
+            var p = $(this).val();
             var p =parseFloat(p).toFixed(2);
 //            var id = $(this).attr('priceid');
             $.ajax({
@@ -149,8 +153,8 @@
                 dateType: 'json',
                 success:function (data){
                     if (data.status){
-                        $('.price span').html(p);
-                        a.style.display = 'none';
+                        $('.'+k).html(p);
+                        $('.'+k + '+ div').css('display','none');
                     }
 
                 },

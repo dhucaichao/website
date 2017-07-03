@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title>{$title}</title>
+    <!--加载CSS-->
+    {load href="/static/admin/css/bootstrap.min.css"}
+    {css href="/static/admin/reset.css"}
+    {css href="/static/admin/css/toastr.min.css"}
+</head>
+<body>
+<div>
+    <div class="col-md-12 bg-primary p20">
+        <h1>{$title}</h1>
+        <hr>
+    </div>
+    <div class="clearfix"></div>
+
+    <div class="row mt50">
+        <div class="col-md-12">
+            <table class="table table-hover bg-info">
+                <tr>
+                    <th>ID</th>
+                    <th>评论人</th>
+                    <th>评论书籍</th>
+                    <th>评论内容</th>
+                    <th>评论时间</th>
+                    <th>操作</th>
+                </tr>
+                {volist name="list" id="v"}
+                <tr>
+                    <td>{$v['id']}</td>
+                    <td>{$v['nickname']}</td>
+                    <td>
+                        {$v.name}
+                    </td>
+                    <td>
+                        {$v.content}
+                    </td>
+                    <td>
+                        {$v.time | date='Y-m-d H:i:s', ###}
+                    </td>
+                    <td class="col-md-4">
+                        <a href="{:url('comment/read',['id'=>$v['id']])}" class="btn btn-primary btn-xs">查看评论回复</a>
+                        <button data-id="{$v['id']}" class="btn btn-danger btn-xs del-btn">删除</button>
+                    </td>
+                </tr>
+                {/volist}
+            </table>
+            {$list->render()}
+        </div>
+    </div>
+</div>
+
+
+
+
+<!--加载JS-->
+{js href="/static/admin/js/jquery.min.js"}
+{js href="/static/admin/js/bootstrap.min.js"}
+{js href="/static/admin/js/toastr.min.js"}
+
+{block name="myjs"}
+<script>
+    $(function () {
+        // 触发用户删除
+        $('.del-btn').click(function () {
+            var ac_id = $(this).attr('data-id');
+            if (confirm('您确定要 [ 删 除 ] 该评论么?')) {
+                var obj = $(this).parents('tr');
+                delAjax(ac_id,obj);// 执行删除操作
+            }
+        });
+    });
+
+
+    // 设置弹框参数
+    toastr.options = {
+        closeButton: true,//是否显示关闭按钮
+        progressBar: false,//实现显示计时条
+        timeOut: "1000",//自动关闭时间
+        positionClass: "toast-bottom-right",//提示位置
+        // toast-top-full-width 顶端，宽度铺满整个屏幕
+        // toast-top-right  顶端右边
+    };
+
+
+    // 执行AJAX删除的操作
+    function delAjax(id, obj) {
+        // console.log(id);
+        $.ajax({
+            type: 'get',
+            url: '/admin/comment/delete/id/' + id,
+            dateType: 'json',
+            success: function (data) {
+                if (data.status) {
+                    toastr.success(data.info);
+                    obj.remove();
+                } else {
+                    toastr.error(data.info,'评论删除失败');
+                }
+            },
+            error: function () {
+                // AJAX执行失败
+                alert('ajax操作失败');
+            }
+        });
+    }
+</script>
+{/block}
+</body>
+</html>

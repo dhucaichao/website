@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:65:"D:\wamp\www\tp5\public/../application/admin\view\novel\index.html";i:1498207720;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:65:"D:\wamp\www\tp5\public/../application/admin\view\novel\index.html";i:1498911866;}*/ ?>
 <!DOCTYPE html>
 <html lang="cn">
 <head>
@@ -38,6 +38,7 @@
         <tr>
             <th width="100" style="text-align:left; padding-left:20px;"> ID号 </th>
             <th> 作者 </th>
+            <th> 封面 </th>
             <th> 书籍名 </th>
             <th> 是否完结 </th>
             <th> 更新时间 </th>
@@ -47,9 +48,10 @@
         <tr>
             <td width="100" style="text-align: left; padding-left: 20px;"><?php echo $v['id']; ?></td>
             <td><?php echo $v['aid']; ?></td>
+            <th><img src="<?php echo $v['face']; ?>" width="30px" height="30px" alt=""></th>
             <td><?php echo $v['name']; ?></td>
             <td><?php echo $v['isover']; ?></td>
-            <td><?php echo $v['uptime']; ?></td>
+            <td><?php echo date('Y-m-d H:i:s',$v['uptime'] ); ?></td>
             <td class="col-md-4">
                 <button data-id="<?php echo $v['id']; ?>" class="btn btn-info btn-default show-btn" data-toggle="modal" data-target="#myModal">查看信息</button>
                 <a href="<?php echo url('novel/edit',['id'=>$v['id']]); ?>" class="btn btn-success btn-default">编辑</a>
@@ -166,7 +168,7 @@
                 $('.modal-body .cid').html('分类:' + (data.cid));
 
                 $('.modal-body .up').html('是否上架:' + (data.up == 1 ? '上架' : '下架'));
-                $('.modal-body .towords').html('总字数:' + (data.towords));
+                $('.modal-body .towords').html('总字数:' + (data.twords));
                 $('.modal-body .Tcollect').html('收藏量:' + (data.Tcollect));
 
                 $('.modal-body .grade').html('评分:' + (data.grade));

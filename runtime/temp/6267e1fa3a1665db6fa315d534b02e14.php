@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:64:"D:\wamp\www\tp5\public/../application/admin\view\user\index.html";i:1498137739;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:64:"D:\wamp\www\tp5\public/../application/admin\view\user\index.html";i:1498973757;}*/ ?>
 <!DOCTYPE html>
 <html lang="cn">
 <head>
@@ -32,7 +32,7 @@
                 <tr>
                     <td><?php echo $v['id']; ?></td>
                     <td><?php echo $v['nickname']; ?></td>
-                    <td><img src="<?php echo $v['icon']; ?> "  alt=""></td>
+                    <td><img src="<?php echo $v['icon']; ?>" width="30px" height="30px" alt=""></td>
                     <td><?php echo $v['tel']; ?></td>
                     <td class="col-md-4">
                         <button data-id="<?php echo $v['id']; ?>" class="btn btn-default btn-xs show-btn" data-toggle="modal" data-target="#myModal">查看信息</button>
@@ -42,6 +42,7 @@
                 </tr>
                 <?php endforeach; endif; else: echo "" ;endif; ?>
             </table>
+            <?php echo $list->render(); ?>
         </div>
     </div>
 </div>
@@ -54,7 +55,7 @@
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title" id="myModalLabel">
-                    用户 <img src="" alt="" id="myimg">[<u></u>]的详细信息
+                    用户 <img src="" alt="" id="myimg" width="30px" height="30px">[<u></u>]的详细信息
                 </h4>
             </div>
             <table class="table table-hover bg-info">
@@ -144,7 +145,7 @@
     };
 
     // 执行AJAX 查询单条数据
-    function showAjax(id){
+       function showAjax(id){
         $.ajax({
             type: 'get',
             url: '/admin/user/read/id/' + id,
@@ -177,7 +178,7 @@
     function delAjax(id, obj) {
         // console.log(id);
         $.ajax({
-            type: 'delete',
+            type: 'get',
             url: '/admin/user/delete/id/' + id,
             dateType: 'json',
             success: function (data) {

@@ -9,19 +9,21 @@
     <meta name="keywords" content="霜之哀伤文学，小说，小说网,言情小说,青春小说,玄幻小说,武侠小说,都市小说,历史小说,网络小说,小说下载，原创网络文学,畅销图书,精品图书,传统出版,电子书，原创文学" />
      <meta name="description" content="霜之哀伤文学提供免费小说,热门小说,精品小说,好看小说,小说连载,小说排行榜,小说在线阅读,小说下载,尽请浏览霜之哀伤文学各种玄幻小说,都市小说,言情小说,穿越小说,青春小说,武侠小说,历史小说,军事小说,科幻小说,灵异小说,游戏小说,竞技小说,同人小说,2016全新登场,手机下载阅读,电子书,效果更佳" />
     <link rel="shortcut icon" href="/static/index/images/9dfedc665fe4d4a759d61106128d1cec.jpg" type="image/x-icon">
-
     <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
     <!--<link rel="stylesheet" type="text/css" href="css/style-c4460f1fb4.css">-->
     <!--<link rel="stylesheet" type="text/css" href="iconfont/iconfont.css">-->
     <!--{css href="/static/admin/css/bootstrap.min.css"}-->
-
     {css href="/static/index/images/9dfedc665fe4d4a759d61106128d1cec.jpg"}
     {css href="/static/index/css/style-c4460f1fb4.css"}
     {css href="/static/index/iconfont/iconfont.css"}
+    {block name='plcss'}{/block}
 </head>
 <body class="topline">
+{block name='content'}
+
     <div class="header-con-fixed"></div>
     <div class="header-con">
         <div class="logo">
@@ -31,8 +33,8 @@
         <div class="widthfix center">
         <div class="header ">
             <ul class="pc-nav clearfix">
-                <li class="zt"><a class="active" href="/">首页</a></li>
-                <li class="tl"><a href="./bibliotheca.php?page=1">书库</a></li>
+                <li class="zt"><a class="active" href="{:url('index/index')}">首页</a></li>
+                <li class="tl"><a href="{:url('novellist/index')}">书库</a></li>
                 <li class="gx"><a href="./rankinglist.php">排行榜</a></li>
                 <li class="gx"><a href="./apotheosize.php">个人中心</a></li>
 
@@ -53,16 +55,13 @@
 
                 </div>
 
-
                 {eq name="logined" value="1"}
                 <div class="u-lgn" id="login-link" lmk="login-btn" lmv="登录按钮" urltrue="true" lmurl="#" onclick="aa()" style="display:block;width:100px">
-
                     <span class="glyphicon glyphicon-user iconfont">&#xe65a;</span>
                     <span>登录</span>
                 </div>
 
                 <!---------------------登录---------------->
-
                 <div id="login" class="ui-widget" style="position: fixed;height: 420px;width: 800px;top: 51px;left: 219.5px;z-index: 101;display: none; background-color: #fff;">
                     <div class="logininput">
                         <h1 class="logo">
@@ -137,13 +136,11 @@
                             <a href="{:url('index/sign')}">注册账号</a><i>|</i>
                             <a href="http://t.shuqi.com/?shuqi_h5=108#!/ct/forgetpassword">忘记密码?</a>
                         </div>
-
                     </div>
                 </div>
 
 
                 <!-----------------------登录-------------->
-
                 <div id="loginedTemp" style="display:block">
                     <div class="u-nickname" id="nickname-link">
                         <a class="ellipse">{$name}</a>
@@ -155,7 +152,6 @@
                     </div>
                 </div>
                 {/eq}
-
 
                 <span class="secah-box glyphicon glyphicon-search iconfont" id="search_box_btn">&#xe620;
                 </span>
@@ -210,6 +206,8 @@
 
     <div class="pcbox">
         <div class="channel clearfix">
+
+            <!--男频排行榜-->
             <div class="channelbox" id="manbd">
                 <div class="chatitle">
                     <h2>男频榜单</h2>
@@ -217,7 +215,7 @@
                 <ul class="chalistbox" lmk="indexnpbd" lmv="男频榜单">
                     {volist name='list1' id='v' key='k'}
                     <li class="clearfix" lmk="indexnpbd-sj" lmv="书籍" urltrue="true" lmurl="#">
-                        <a href="./cover.php?bid=12503">
+                        <a href="{:url('noveldetails/ndindex',['id'=>$v.n])}">
                             <em class="chan">{$k}.</em>
                             <img src="{$v.face}" alt="">
                             <h3>{$v.k}</h3>
@@ -234,236 +232,101 @@
                     <a href="#">更多&gt;</a>
                 </div>
             </div>
+            <!--男频排行榜-->
+
+            <!--女频排行榜-->
             <div class="channelbox" id="wombd">
                 <div class="chatitle">
                     <h2>女频榜单</h2>
                 </div>
                 <ul class="chalistbox" lmk="indexgpbd" lmv="女频榜单">
-
-                    <li class="clearfix" lmk="indexgpbd-sj" lmv="书籍" urltrue="true" lmurl="#">
-                        <a href="./cover.php?bid=12243">
-                            <em class="chan">1.</em>
-                            <img src="http://img-tailor.11222.cn/ognv/cover/raw/2016041517135485.jpg" alt="">
-                            <h3>婚战</h3>
+                    {volist name='list2' id='v' key='k'}
+                    <li class="clearfix" lmk="indexnpbd-sj" lmv="书籍" urltrue="true" lmurl="#">
+                        <a href="{:url('noveldetails/ndindex',['id'=>$v.n])}">
+                            <em class="chan">{$k}.</em>
+                            <img src="{$v.face}" alt="">
+                            <h3>{$v.k}</h3>
                             <p>
-                                紫衣/
-                                现代言情
+                                {$v.penname}/
+                                {$v.name}
                             </p>
                         </a>
                     </li>
-
-                    <li class="clearfix" lmk="indexgpbd-sj" lmv="书籍" urltrue="true" lmurl="#">
-                        <a href="./cover.php?bid=13575">
-                            <em class="chan">2.</em>
-                            <img src="http://img-tailor.11222.cn/ognv/cover/raw/1479908172519990.jpg" alt="">
-                            <h3>花娘游戏</h3>
-                            <p>
-                                苏三/
-                                古代言情
-                            </p>
-                        </a>
-                    </li>
-
-                    <li class="clearfix" lmk="indexgpbd-sj" lmv="书籍" urltrue="true" lmurl="#">
-                        <a href="./cover.php?bid=12442">
-                            <em class="chan">3.</em>
-                            <img src="http://img-tailor.11222.cn/ognv/cover/raw/2016062215061524.jpg" alt="">
-                            <h3>御极</h3>
-                            <p>
-                                阿幂/
-                                古代言情
-                            </p>
-                        </a>
-                    </li>
-
-                    <li class="clearfix" lmk="indexgpbd-sj" lmv="书籍" urltrue="true" lmurl="#">
-                        <a href="./cover.php?bid=13854">
-                            <em class="chan">4.</em>
-                            <img src="http://img-tailor.11222.cn/ognv/cover/raw/1483012253168764.jpg" alt="">
-                            <h3>遇见你的旧时光</h3>
-                            <p>
-                                落清/
-                                现代言情
-                            </p>
-                        </a>
-                    </li>
-
-                    <li class="clearfix" lmk="indexgpbd-sj" lmv="书籍" urltrue="true" lmurl="#">
-                        <a href="./cover.php?bid=13939">
-                            <em class="chan">5.</em>
-                            <img src="http://img-tailor.11222.cn/ognv/cover/raw/1483509558322466.jpg" alt="">
-                            <h3>十家锅灶九不同</h3>
-                            <p>
-                                宁余心/
-                                现代言情
-                            </p>
-                        </a>
-                    </li>
-
+                    {/volist}
                 </ul>
                 <div class="chamove hide">
                     <a href="#">更多&gt;</a>
                 </div>
             </div>
+            <!--女频排行榜-->
+
+            <!--分类排行榜-->
             <div class="channelbox" id="typebd">
                 <div class="chatitle">
                     <h2>分类推荐榜</h2>
                 </div>
                 <ul class="chalistbox" lmk="indexflbd" lmv="分类推荐榜">
 
-                    <li class="clearfix" lmk="indexflbd-sj" lmv="书籍" urltrue="true" lmurl="#">
-                        <a href="./cover.php?bid=12343">
-                            <em class="chan">1.</em>
-                            <img src="http://img-tailor.11222.cn/ognv/cover/raw/2016060314532995.jpg" alt="">
-                            <h3>鬼墓之门</h3>
+                    {volist name='list3' id='v' key='k'}
+                    <li class="clearfix" lmk="indexnpbd-sj" lmv="书籍" urltrue="true" lmurl="#">
+                        <a href="{:url('noveldetails/ndindex',['id'=>$v.n])}">
+                            <em class="chan">{$k}.</em>
+                            <img src="{$v.face}" alt="">
+                            <h3>{$v.k}</h3>
                             <p>
-                                九福/
-                                悬疑
+                                {$v.penname}/
+                                {$v.name}
                             </p>
                         </a>
                     </li>
-
-                    <li class="clearfix" lmk="indexflbd-sj" lmv="书籍" urltrue="true" lmurl="#">
-                        <a href="./cover.php?bid=12183">
-                            <em class="chan">2.</em>
-                            <img src="http://img-tailor.11222.cn/ognv/cover/raw/2016051210271064.jpg" alt="">
-                            <h3>民国御邪记</h3>
-                            <p>
-                                萧鸣易/
-                                悬疑
-                            </p>
-                        </a>
-                    </li>
-
-                    <li class="clearfix" lmk="indexflbd-sj" lmv="书籍" urltrue="true" lmurl="#">
-                        <a href="./cover.php?bid=12213">
-                            <em class="chan">3.</em>
-                            <img src="http://img-tailor.11222.cn/ognv/cover/raw/2016061610595041.jpg" alt="">
-                            <h3>黄泉手札</h3>
-                            <p>
-                                轩辕唐唐/
-                                悬疑
-                            </p>
-                        </a>
-                    </li>
-
-                    <li class="clearfix" lmk="indexflbd-sj" lmv="书籍" urltrue="true" lmurl="#">
-                        <a href="./cover.php?bid=12279">
-                            <em class="chan">4.</em>
-                            <img src="http://img-tailor.11222.cn/ognv/cover/raw/2016050811360766.jpg" alt="">
-                            <h3>特囧狂龙</h3>
-                            <p>
-                                墨雨/
-                                都市
-                            </p>
-                        </a>
-                    </li>
-
-                    <li class="clearfix" lmk="indexflbd-sj" lmv="书籍" urltrue="true" lmurl="#">
-                        <a href="./cover.php?bid=12215">
-                            <em class="chan">5.</em>
-                            <img src="http://img-tailor.11222.cn/ognv/cover/raw/2016030817543153.jpg" alt="">
-                            <h3>焚天记</h3>
-                            <p>
-                                悠然独醉/
-                                玄幻
-                            </p>
-                        </a>
-                    </li>
+                    {/volist}
 
                 </ul>
                 <div class="chamove hide">
                     <a href="#">更多&gt;</a>
                 </div>
             </div>
+            <!--分类排行榜-->
+
+            <!--推荐排行榜-->
             <div class="channelbox wbox" id="zuibd">
                 <div class="chatitle">
                     <h2>强力推荐榜</h2>
                 </div>
                 <ul class="chalastbox" lmk="indexqlbd" lmv="强力推荐榜">
-
-                    <li class="clearfix" lmk="indexqlbd-sj" lmv="书籍" urltrue="true" lmurl="#">
-                        <a href="./cover.php?bid=15592">
-                            <em class="chan">1.</em>
-                            <h3 class="lasth3">可曾情深不寿</h3>
+                    {volist name='list4' id='v' key='k'}
+                    <li class="clearfix" lmurl="#" style="padding: 8px 0;height: 32px;line-height: 32px;width:184px;height:48px">
+                        <a href="{:url('noveldetails/ndindex',['id'=>$v.n])}">
+                            <em style="font-size: 14px;margin-top: 2px;float: left;" class="chan">{$k}.</em>
+                            <h3 style="float: left;height: 32px;line-height: 32px;" class="lasth3">{$v.k}</h3>
                         </a>
                     </li>
-
-                    <li class="clearfix" lmk="indexqlbd-sj" lmv="书籍" urltrue="true" lmurl="#">
-                        <a href="./cover.php?bid=14607">
-                            <em class="chan">2.</em>
-                            <h3 class="lasth3">深情缓爱，向暖花...</h3>
-                        </a>
-                    </li>
-
-                    <li class="clearfix" lmk="indexqlbd-sj" lmv="书籍" urltrue="true" lmurl="#">
-                        <a href="./cover.php?bid=15368">
-                            <em class="chan">3.</em>
-                            <h3 class="lasth3">却道海棠依旧</h3>
-                        </a>
-                    </li>
-
-                    <li class="clearfix" lmk="indexqlbd-sj" lmv="书籍" urltrue="true" lmurl="#">
-                        <a href="./cover.php?bid=12375">
-                            <em class="chan">4.</em>
-                            <h3 class="lasth3">我的君子</h3>
-                        </a>
-                    </li>
-
-                    <li class="clearfix" lmk="indexqlbd-sj" lmv="书籍" urltrue="true" lmurl="#">
-                        <a href="./cover.php?bid=14935">
-                            <em class="chan">5.</em>
-                            <h3 class="lasth3">幸为奉旸侯</h3>
-                        </a>
-                    </li>
-
-                    <li class="clearfix" lmk="indexqlbd-sj" lmv="书籍" urltrue="true" lmurl="#">
-                        <a href="./cover.php?bid=14670">
-                            <em class="chan">6.</em>
-                            <h3 class="lasth3">锦玉满棠</h3>
-                        </a>
-                    </li>
-
-                    <li class="clearfix" lmk="indexqlbd-sj" lmv="书籍" urltrue="true" lmurl="#">
-                        <a href="./cover.php?bid=15616">
-                            <em class="chan">7.</em>
-                            <h3 class="lasth3">一朵小姐压海棠</h3>
-                        </a>
-                    </li>
-
-                    <li class="clearfix" lmk="indexqlbd-sj" lmv="书籍" urltrue="true" lmurl="#">
-                        <a href="./cover.php?bid=12800">
-                            <em class="chan">8.</em>
-                            <h3 class="lasth3">飞枝记</h3>
-                        </a>
-                    </li>
-
-                    <li class="clearfix" lmk="indexqlbd-sj" lmv="书籍" urltrue="true" lmurl="#">
-                        <a href="./cover.php?bid=15063">
-                            <em class="chan">9.</em>
-                            <h3 class="lasth3">暖色仙人掌</h3>
-                        </a>
-                    </li>
-
-                    <li class="clearfix" lmk="indexqlbd-sj" lmv="书籍" urltrue="true" lmurl="#">
-                        <a href="./cover.php?bid=13851">
-                            <em class="chan">10.</em>
-                            <h3 class="lasth3">琉璃似锦</h3>
-                        </a>
-                    </li>
-
+                    {/volist}
                 </ul>
                 <div class="chamove hide">
                     <a href="#">更多&gt;</a>
                 </div>
             </div>
+            <!--推荐排行榜-->
         </div>
     </div>
     <!--排行榜-->
-
-
-
-
+    <h2 style="font-size:25px;color:#ff6700"><i>神回复:</i></h2>
+    <div style="width:80%;font-size:15px;margin:10px auto">
+        {volist name='$txapi' id='v'}
+        <p>
+            {$v.content}
+        </p>
+        <hr>
+        {/volist}
+    </div>
+<h2 style="font-size:25px;color:#ff6700"><i>友情链接:</i></h2>
+<div style="width:80%;font-size:25px;margin:10px auto">
+    {volist name='link' id='v'}
+    <a href="{$v.url}" target="_blank">{$v.name}</a>
+    {/volist}
+</div>
+    {/block}
     <div class="footer">
         <div class="footbox">
             <div class="footbox-info clearfix">
@@ -472,9 +335,7 @@
                 </div>
                 <div class="right">广州霜之哀伤文学信息技术有限公司&nbsp;&nbsp;&nbsp;&nbsp;版权所有</div>
 
-
             </div>
-
 
             <!-- <p class="footer-p">广州阿里巴巴文学信息技术有限公司&nbsp;&nbsp;&nbsp;&nbsp;版权所有</p> -->
             <div class="footbox-info footbox-p clearfix">
@@ -486,17 +347,14 @@
                 </div>
             </div>
 
-
         </div>
     </div>
-
 
     <script>
         function aa() {
             var login = document.getElementById('login');
             login.style.display = 'block';
         }
-
         function refreshVerify() {
             var ts = Date.parse(new Date())/1000;
             $('#verify_img').attr("src", "/captcha?id="+ts);
@@ -505,7 +363,6 @@
 
 
     {js href="/static/admin/js/bootstrap.min.js"}
-
     <script type="text/javascript" src="/static/index/js/jq-c0eb42550f.1.11.min.js"></script>
     <script type="text/javascript" src="/static/index/js/jquery-546c1da987.lazyload.min.js"></script>
     <script type="text/javascript" src="/static/index/js/jquery-ui-019252536e.js"></script>
@@ -517,7 +374,6 @@
     <!--<script type="text/javascript" src="/static/index/js/login-0a1f55f637.js"></script>-->
     <script type="text/javascript" src="/static/index/js/jquery-f2528ce963.page.js"></script>
     <script type="text/javascript" src="/static/index/js/index-ae8c6f6dd0.js"></script>    <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1259530409'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1259530409' type='text/javascript'%3E%3C/script%3E"));</script>
-
     <script>
         //            messageAlert("warning", "请输入手机号！");
         $(function () {
@@ -581,7 +437,7 @@
         })
 
     </script>
-
+    {block name='replyjs'}{/block}
 </body>
 
 </html>

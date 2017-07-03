@@ -1,4 +1,3 @@
-
 <div class="leftnav">
     <div class="leftnav-title">
         <strong><span class="icon-list"></span>菜单列表</strong>
@@ -7,12 +6,10 @@
     <ul style="display:none">
         <li><a href="{:url('user/index')}" target="right">用户管理</a></li>
         <li><a href="{:url('user/create')}" target="right">用户添加</a></li>
-
     </ul>
     <!-- 用户管理模块结束 -->
 
     <!-- 作者管理功能模块 -->
-
     <h2> 作者管理 </h2>
     <ul>
         <li><a href="{:url('author/index')}" target="right">已注册作者列表</a></li>
@@ -23,12 +20,10 @@
     <!-- 书籍管理功能模块 -->
     <h2> 书籍管理 </h2>
     <ul>
-
         <li><a href="{:url('novel/index')}" target="right">书籍列表</a></li>
         <li><a href="{:url('novel/create')}" target="right">添加书籍</a></li>
     </ul>
     <!-- 书籍管理功能模块结束 -->
-
 
 
 
@@ -53,13 +48,16 @@
     <!-- 分类管理结束 -->
 
 
-    <h2> 菜单管理 </h2>
+    <h2> 评论管理 </h2>
     <ul>
-        <li><a href="{:url('menu/index')}" target="right">菜单列表</a></li>
-        <li><a href="{:url('menu/add')}" target="right">添加导菜单</a></li>
+        <li><a href="{:url('comment/index')}" target="right">评论列表</a></li>
     </ul>
 
-
+    <h2> 友情链接管理 </h2>
+    <ul>
+        <li><a href="{:url('link/index')}" target="right">链接列表</a></li>
+        <li><a href="{:url('link/create')}" target="right">添加链接</a></li>
+    </ul>
     <!--  <script>
      // 展开效果
      $(function(){
@@ -75,7 +73,6 @@
      })
      </script> -->
 
-
     <script type="text/javascript">
         $(function(){
             $(".leftnav h3").click(function(){
@@ -87,7 +84,6 @@
                 $(".leftnav ul li a").removeClass("on");
                 $(this).addClass("on");
             })
-
             // $(".leftnav .manage").click(function(){
             //     $(this).next().slideToggle(200);
             //     $(this).toggleClass("on");
@@ -97,7 +93,6 @@
             //       $(".leftnav .manage li a").removeClass("on");
             //       $(this).addClass("on");
             // })
-
         });
     </script>
 

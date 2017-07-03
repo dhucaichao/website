@@ -1,0 +1,51 @@
+{extend name='index/default'}
+
+{block name='content'}
+<div class="logo">
+    <h1><img src="/static/index/picture/logo.png" width='360px' height='60px'></h1>
+</div>
+<div class="header" style="margin-left:10%">
+    <ul class="pc-nav clearfix">
+        <li class="zt"><a class="active" href="{:url('index/index')}">首页</a></li>
+        <li class="tl"><a href="{:url('novellist/index')}">书库</a></li>
+        <li class="gx"><a href="./rankinglist.php">排行榜</a></li>
+        <li class="gx"><a href="./apotheosize.php">个人中心</a></li>
+
+        <li class="gx"><a href="./copyright.php">评论专区</a></li>
+
+        <li class="gx"><a href="./dimensions.php">充值中心</a></li>
+
+        <li class="gx"><a href="./authorwelfare.php">免费小说</a></li>
+        <li class="zs"><a href="./bookshelf.php">书架</a></li>
+        <li class="zs"><a onClick="PV('作者专区');" href="http://yc.aliwx.com.cn/#/login" target="_blank">作者专区</a></li>
+    </ul>
+</div>
+
+<div class="contetline">
+    <div class="content">
+        <div class="cover-nav">
+            <p>&gt; <a class="booktitle" href="{:url('noveldetails/ndindex',['id'=>$nid])}">{$nn}</a> &gt; <span>所有章节</span></p>
+        </div>
+        <div class="bookMeta">
+            <h3 class="chatit">{$nn}</h3>
+            <p class="chaauto">{$au}</p>
+        </div>
+        <dl class="zjlistdl">
+            <dt><a class="descsort" id="js_sort" href="javascript:;"></a></dt>
+        </dl>
+        <ul class="chapterul clearfix" id="chapterlists">
+        {volist name='list' id='v' key='k'}
+            {lt name="k" value="2"}
+            <li><a target="_blank" href="{:url('novelcontent/index',['tnum'=>$v.tnum,'nid'=>$nid,'nn'=>$nn,'au'=>$au,'id'=>$nid])}">第{$v.tnum}章：{$v.title}</a></li>
+            {/lt}
+        {/volist}
+            {volist name='list' id='v' key='k'}
+            {gt name="k" value="1"}
+            <li class="vipjump"><a target="_blank" href="{:url('novelcontent/index',['tnum'=>$v.tnum,'nid'=>$nid,'nn'=>$nn,'au'=>$au,'id'=>$nid])}">第{$v.tnum}章：{$v.title}</a><i class="chapter-vip"></i></li>
+            {/gt}
+            {/volist}
+        </ul>
+    </div>
+</div>
+
+{/block}

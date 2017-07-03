@@ -1,0 +1,117 @@
+{extend name='index/default'}
+
+{block name='content'}
+
+<div class="logo">
+    <h1><img src="/static/index/picture/logo.png" width='360px' height='60px'></h1>
+</div>
+<div class="header" style="margin-left:10%">
+    <ul class="pc-nav clearfix">
+        <li class="zt"><a class="active" href="{:url('index/index')}">首页</a></li>
+        <li class="tl"><a href="{:url('novellist/index')}">书库</a></li>
+        <li class="gx"><a href="./rankinglist.php">排行榜</a></li>
+        <li class="gx"><a href="./apotheosize.php">个人中心</a></li>
+
+        <li class="gx"><a href="./copyright.php">评论专区</a></li>
+
+        <li class="gx"><a href="./dimensions.php">充值中心</a></li>
+
+        <li class="gx"><a href="./authorwelfare.php">免费小说</a></li>
+        <li class="zs"><a href="./bookshelf.php">书架</a></li>
+        <li class="zs"><a onClick="PV('作者专区');" href="http://yc.aliwx.com.cn/#/login" target="_blank">作者专区</a></li>
+    </ul>
+</div>
+
+<div class="ranktype">
+    <div class="dlbox">
+        <dl class="typebox" lmk="audiences" lmv="作品受众">
+            <dt>作品受众</dt>
+            <dd>
+                <a href="{:url('novellist/index')}" lmv="全部" urltrue="true" lmurl="#" class="active">全部</a>
+                <a href="{:url('novellist/nindex',['type'=>1])}" lmv="男频" urltrue="true" lmurl="#">男频</a>
+                <a href="{:url('novellist/nindex',['type'=>2])}" urltrue="true" lmurl="#">女频</a>
+            </dd>
+        </dl>
+        <dl class="typebox" lmk="typeClass" lmv="作品类型">
+            <dt>作品类型</dt>
+            <dd>
+                <div class="typediv fr">
+                    {volist name='list1' id='v'}
+                    <a class="ranka " href="{:url('novellist/kindex',['id'=>$v.id])}" lmk="typeClass-type" lmv="玄幻" urltrue="true" lmurl="#">{$v.name}</a>
+                    {/volist}
+                </div>
+                <div class="typediv fr">
+                    {volist name='list2' id='v'}
+                    <a class="ranka " href="{:url('novellist/kindex',['id'=>$v.id])}" lmk="typeClass-type" lmv="玄幻" urltrue="true" lmurl="#">{$v.name}</a>
+                    {/volist}
+                </div>
+                <div class="typediv fr">
+                    {volist name='list' id='v'}
+                    <a class="ranka " href="{:url('novellist/kindex',['id'=>$v.id])}" lmk="typeClass-type" lmv="玄幻" urltrue="true" lmurl="#">{$v.name}</a>
+                    {/volist}
+                </div>
+
+
+                <a class="active" href="{:url('novellist/index')}" lmk="typeClass-type" lmv="全部" urltrue="true" lmurl="#">全部</a>
+            </dd>
+        </dl>
+        <dl class="typebox" lmk="numofwords" lmv="作品字数">
+            <dt>作品字数</dt>
+            <dd>
+                <a class="active" href="{:url('novellist/index')}" lmk="numofwords-type" lmv="全部" urltrue="true" lmurl="#">全部</a>
+
+                <a class=" " href="{:url('novellist/tindex',['num1'=>0,'num2'=>300000])}" lmk="numofwords-type" lmv="30万以下" urltrue="true" lmurl="#">30万以下</a>
+
+                <a class=" " href="{:url('novellist/tindex',['num1'=>300000,'num2'=>500000])}" lmk="numofwords-type" lmv="30万-50万" urltrue="true" lmurl="#">30万-50万</a>
+
+                <a class=" " href="{:url('novellist/tindex',['num1'=>500000,'num2'=>1000000])}" lmk="numofwords-type" lmv="50万-100万" urltrue="true" lmurl="#">50万-100万</a>
+
+                <a class=" " href="{:url('novellist/tindex',['num1'=>1000000,'num2'=>2000000])}" lmk="numofwords-type" lmv="100万-200万" urltrue="true" lmurl="#">100万-200万</a>
+
+                <a class=" " href="{:url('novellist/tindex',['num1'=>2000000,'num2'=>100000000000])}" lmk="numofwords-type" lmv="200万以上" urltrue="true" lmurl="#">200万以上</a>
+            </dd>
+        </dl>
+        <dl class="typebox" lmk="bookstate" lmv="更新时间">
+            <dt>作品状态</dt>
+            <dd>
+                <a class="active" href="{:url('novellist/index')}" lmk="bookstate-type" lmv="全部" urltrue="true" lmurl="#">全部</a>
+                <a href="{:url('novellist/mindex',['m'=>1])}" lmk="bookstate-type" lmv="连载" urltrue="true" lmurl="#">连载</a>
+                <a href="{:url('novellist/mindex',['m'=>2])}" lmk="bookstate-type" lmv="完结" urltrue="true" lmurl="#">完结</a>
+            </dd>
+        </dl>
+    </div>
+</div>
+
+
+<div class="content">
+
+    <div class="ranktypebox" id="shukubox" lmk="booklist" lmv="搜索书籍列表">
+        <ul class="rankboxul clearfix">
+
+            {volist name='list4' id='v'}
+            <li>
+                <a href="{:url('noveldetails/ndindex',['id'=>$v.n])}" lmk="booklist-1" lmv="第1本书" urltrue="true" lmurl="#"><img  width="120" height="160" src="{$v.face}">
+                    <h3>{$v.k}</h3>
+                    <p class="rzz">作者：{$v.penname}</p>
+                    <p>{$v.name}/
+                        {switch name="v.isover"}
+                        {case value="1"}连载{/case}
+                        {case value="2"}完结{/case}
+                        {/switch}
+                        /{$v.twords}字</p>
+                    <p>收藏量：{$v.Tcollect}</p>
+                    <p>更新时间：{$v.uptime | date('Y-m-d H:i:s') ###}</p>
+                </a>
+            </li>
+            {/volist}
+
+        </ul>
+    </div>
+    {$list4->render()}
+</div>
+{/block}
+
+{block name='replyjs'}
+
+
+{/block}
