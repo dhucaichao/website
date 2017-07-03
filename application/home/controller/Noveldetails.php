@@ -12,11 +12,22 @@ class noveldetails extends Controller
 {
     public function ndindex($id)
     {
+        if(!empty(Session::get('home.name'))){
+            $cc = Session::get('home.id');
+            $a = Db::table('collection')->where('nid',$id)->where('uid',$cc)->find();
+            if ($a!=null){
+                $b = 1;
+            } else {
+                $b = 2;
+            }
+        } else {
+            $b = 2;
+        }
         $list = Db::query('select *,n.name k,n.id n,penname from novel n,category c,author a where n.cid=c.id and n.aid=a.id and n.id = '.$id );
 //        $list1 = Db::query('select *,c.id from `user` u,`comment` c where c.uid = u.id and c.nid ='.$id.' order by `time` desc');
         $list1 = Db::table('user')->alias('u')->join('comment c','c.uid=u.id')->where('c.nid',$id)->order('time desc')->field('*,c.id')->paginate(4);
         $list2 = Db::query('select *,did,r.content from `user` u,`reply` r where r.uid = u.id and r.nid ='.$id.' order by `time` desc');
-        return view('noveldetails/index',['list'=>$list[0],'list1'=>$list1,'list2'=>$list2]);
+        return view('noveldetails/index',['list'=>$list[0],'list1'=>$list1,'list2'=>$list2,'b'=>$b]);
     }
 
     public function add($nid)
@@ -68,7 +79,7 @@ class noveldetails extends Controller
             $ticketa = Db::table('assets')->where('aid',$aid)->field('ticket')->find();
             $ccc = $ticketa['ticket'];
             if($a<=0){
-                $this->error('月票不足,请先充值','index/index');
+                $this->error('月票不足,请先购买','index/index');
             } else {
                 $a--;
                 $b++;

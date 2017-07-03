@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:65:"D:\wamp\www\tp5\public/../application/admin\view\index\index.html";i:1498121735;s:64:"D:\wamp\www\tp5\public/../application/admin\view\public\top.html";i:1499066421;s:65:"D:\wamp\www\tp5\public/../application/admin\view\public\left.html";i:1499090306;s:65:"D:\wamp\www\tp5\public/../application/admin\view\public\foot.html";i:1499089983;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:65:"D:\wamp\www\tp5\public/../application/admin\view\index\index.html";i:1498121735;s:64:"D:\wamp\www\tp5\public/../application/admin\view\public\top.html";i:1499066421;s:65:"D:\wamp\www\tp5\public/../application/admin\view\public\left.html";i:1499117343;s:65:"D:\wamp\www\tp5\public/../application/admin\view\public\foot.html";i:1499089983;}*/ ?>
 
 <!DOCTYPE html>
 <html lang="zh-cn">
@@ -71,7 +71,10 @@
         <li><a href="<?php echo url('chapter/index'); ?>" target="right">章节列表</a></li>
     </ul>
     <!-- 分类管理结束 -->
-
+    <h2> 手机归属地管理 </h2>
+    <ul>
+        <li><a href="<?php echo url('admin/phone/index'); ?>" target="right"> 手机归属地 </a></li>
+    </ul>
 
     <h2> 评论管理 </h2>
     <ul>

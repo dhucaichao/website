@@ -1,0 +1,147 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:68:"D:\wamp\www\tp5\public/../application/home\view\bookshlef\index.html";i:1499115611;}*/ ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> 我的书架 </title>
+    <link rel="stylesheet" type="text/css" href="/static/user/css/bookshelf.css">
+</head>
+<body>
+<div class="total">
+    <div class="head">
+        <h2><img src="/static/user/images/detail.jpg" width="50" height="50"><b>&nbsp;个人中心</b></h2>
+        <ul>
+            <li><a href="<?php echo url('personal/index'); ?>" style="color:white"> 我的首页 </a></li>
+            <li><a href="<?php echo url('bookshlef/index'); ?>" style="color:white"> 我的书架 </a> </li>
+            <li><a href="" style="color:white"> 消息中心 </a></li>
+            <!--<li><a href="" style="color:white"> 游戏 </a></li>-->
+        </ul>
+
+        <h5>首页&nbsp;</h5>
+        <h5>书友:</h5><h5><?php echo $name; ?></h5>
+    </div>
+    <div class="substance">
+        <div class="subleft">
+            <ul class="submit1">
+                <li> <a href="<?php echo url('personal/index'); ?>" > 首页 </a> </li>
+                <li> <a href="" > 账务中心 </a> </li>
+                <li> <a href="<?php echo url('personal/ticket'); ?>" > 我的票夹 </a></li>
+                <li> <a href="<?php echo url('personal/review'); ?>" > 我的书评 </a></li>
+                <li> <a href="<?php echo url('personal/safe'); ?>" > 安全中心 </a></li>
+                <li> <a href="<?php echo url('bookshlef/index'); ?>" > 我的书架 </a></li>
+            </ul>
+        </div>
+
+        <div class="qdp-content" data-l1="3">
+            <!--<form id="shelfSearchForm" class="shelf-search qdp-border" action=" ">-->
+            <!--<input type="text" name="kw" class="shelf-search-input" placeholder="输入作品名或作家名">-->
+            <!--<input type="submit" id="shelfSearch" class="clip" data-eid="qd_M192">-->
+            <!--<label for="shelfSearch" class="shelf-search-submit ui-button" data-eid="qd_M192">搜书架</label>-->
+            <!--</form>-->
+
+            <div class="qdp-border table-x shelf-default shelf-table" data-l2="3">
+                <div class="table-msg" data-l3="2">
+                    <h2 class="shelf-title" id="shelfTitle" data-gid="-100">默认分组</h2>共<strong class="dark ml5 mr5" id="elMoTotal">0</strong><span id="shelfAmount">本书籍</span>
+                </div>
+
+                <div class="table-size" data-l3="2">
+                    <!--<table style="width: 800px;height: 320px;">-->
+                    <!--<tr>-->
+                    <!--<th scope="col">书名/最近更新章节</th>-->
+                    <!--<th scope="col" width="70">更新时间</th>-->
+                    <!--<th scope="col" width="90">作者</th>-->
+                    <!--<th scope="col" width="60">阅读进度</th>-->
+                    <!--<th scope="col" width="20">操作</th>-->
+                    <!--</tr>-->
+                    <!--<?php foreach($list as $k): ?>-->
+                    <!--<tr>-->
+
+                    <!--<td>-->
+                    <!--<a href="" book-id="<?php echo $k['id']; ?>">-->
+                    <!--<span><?php echo $k['nid']; ?></span>-->
+                    <!--<span>/</span>-->
+                    <!--<span>第<?php echo $k['tnum']; ?>章:</span>-->
+                    <!--<span><?php echo $k['title']; ?></span>-->
+                    <!--</a>-->
+                    <!--</td>-->
+                    <!--<td><?php echo $k['time']; ?></td>-->
+                    <!--<td><?php echo $k['penname']; ?></td>-->
+                    <!--<td>第<?php echo $k['tnum']; ?>章</td>-->
+                    <!--<td><a href="">删除</a></td>-->
+                    <!--</tr>-->
+                    <!--<?php endforeach; ?>-->
+                    <!--</table>-->
+
+                    <table id="shelfTable" class="ui-table table-checkbox" data-count="1">
+                        <thead>
+                        <tr>
+                            <th scope="col"><input type="checkbox" id="chkBookNameAll" name="bookname" value="all"><label class="ui-checkbox" for="chkBookNameAll"></label></th>
+                            <th scope="col">书名/最近更新章节</th>
+                            <th scope="col" width="70">更新时间</th>
+                            <th scope="col" width="90">作者</th>
+                            <th scope="col" width="60">操作</th>
+
+                        </tr>
+                        <?php foreach($list as $k): ?>
+                        <tr>
+                            <td scope="col"></td>
+                            <td>
+                                <a href="" book-id="<?php echo $k['id']; ?>">
+                                    <span><?php echo $k['nid']; ?></span>
+                                    <span>/</span>
+                                    <span>第<?php echo $k['tnum']; ?>章:</span>
+                                    <span><?php echo $k['title']; ?></span>
+                                </a>
+                            </td>
+                            <td><?php echo $k['time']; ?></td>
+                            <td><?php echo $k['penname']; ?></td>
+                            <td><a href="<?php echo url('bookshlef/delbook',['id'=>$k['id']]); ?>">删除</a></td>
+
+                        </tr>
+                        <?php endforeach; ?>
+                        </thead>
+                    </table>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="footer">
+    <div class="contain">
+        <div class="containOne clearfix">
+            <div class="oneLeft">
+                <a href="#" title="">关于我们</a>
+                <span>|</span>
+                <a href="#" title="">联系我们</a>
+                <span>|</span>
+                <a href="#" title="">投稿声明</a>
+                <span>|</span>
+                <a href="#" title="">版权声明</a>
+            </div>
+            <div class="oneRight">
+                霜之哀伤文学信息技术有限公司&nbsp;&nbsp;&nbsp;版权所有
+            </div>
+        </div>
+        <div class="containTwo clearfix">
+            <div class="twoLeft">
+                为保证更好的浏览效果，请使用IE9以上或其他主流浏览器访问
+            </div>
+            <div class="twoRight">
+                <a href="#" title="">粤ICP备13078413号-6</a>
+                <span>增值电信业务许可证网络文化经营许可证</span>
+                <span>粤B2-20130742</span>
+                <span>粤网文[2014]0424-124号</span>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+</body>
+</html>

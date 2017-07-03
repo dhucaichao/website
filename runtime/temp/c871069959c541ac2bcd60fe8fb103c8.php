@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:66:"D:\wamp\www\tp5\public/../application/home\view\index\default.html";i:1499091565;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:66:"D:\wamp\www\tp5\public/../application/home\view\index\default.html";i:1499112562;}*/ ?>
 ﻿
 <!DOCTYPE html>
 <html>
@@ -37,14 +37,14 @@
                 <li class="zt"><a class="active" href="<?php echo url('index/index'); ?>">首页</a></li>
                 <li class="tl"><a href="<?php echo url('novellist/index'); ?>">书库</a></li>
                 <li class="gx"><a href="./rankinglist.php">排行榜</a></li>
-                <li class="gx"><a href="./apotheosize.php">个人中心</a></li>
+                <li class="gx"><a href="<?php echo url('personal/index'); ?>">个人中心</a></li>
 
                 <li class="gx"><a href="./copyright.php">评论专区</a></li>
 
                 <li class="gx"><a href="./dimensions.php">充值中心</a></li>
         
                 <li class="gx"><a href="./authorwelfare.php">免费小说</a></li>
-                <li class="zs"><a href="./bookshelf.php">书架</a></li>
+                <li class="zs"><a href="<?php echo url('bookshlef/index'); ?>">书架</a></li>
                 <li class="zs"><a onClick="PV('作者专区');" href="http://yc.aliwx.com.cn/#/login" target="_blank">作者专区</a></li>
             </ul>
 
