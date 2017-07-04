@@ -25929,3 +25929,4029 @@
 [ sql ] [ SQL ] SHOW COLUMNS FROM `author` [ RunTime:0.078005s ]
 [ sql ] [ SQL ] SELECT * FROM `author` WHERE  `penname` = 'hhy' LIMIT 1 [ RunTime:0.077004s ]
 [ error ] [8]未定义变量: txapi[D:\wamp\www\tp5\runtime\temp\b5fddd23a70e898e312b748aa6dbebac.php:100]
+---------------------------------------------------------------
+[ 2017-07-04T06:35:06+08:00 ] 127.0.0.1 127.0.0.1 GET /home/index/index.html
+[ info ] tp5.com/home/index/index.html [运行时间：1.185068s][吞吐率：0.84req/s] [内存消耗：2,602.73kb] [文件加载：49]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15d075264632a6-0ca042e4979913-5c6a3a7a-fa000-15d07526464375; PHPSESSID=ee8ur2ihiu03m62nor3rqtu762; CNZZDATA1259530409=940001465-1499063884-http%253A%252F%252Ftp5.com%252F%7C1499118042',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Index->index[ D:\wamp\www\tp5\application\home\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\wamp\www\tp5\public/../application/home\view\index\default.html [ array (
+  0 => 'logined',
+  1 => 'name',
+  2 => 'list',
+  3 => 'list1',
+  4 => 'list2',
+  5 => 'list3',
+  6 => 'list4',
+  7 => 'txapi',
+  8 => 'link',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.111006s ] mysql:dbname=icefire;host=47.94.158.22;charset=utf8
+[ sql ] [ SQL ] select *,n.name k,n.id n,penname from novel n,category c,author a where c.pid=1 and n.cid=c.id and n.aid=a.id order by Tticket desc limit 0,5 [ RunTime:0.079005s ]
+[ sql ] [ SQL ] select *,n.name k,n.id n,penname from novel n,category c,author a where c.pid=2 and n.cid=c.id and n.aid=a.id order by Tticket desc limit 0,5 [ RunTime:0.076004s ]
+[ sql ] [ SQL ] select *,n.name k,n.id n,penname from novel n,category c,author a where n.cid=c.id and n.aid=a.id order by Tticket desc limit 0,5 [ RunTime:0.077004s ]
+[ sql ] [ SQL ] select *,n.name k,n.id n,penname from novel n,category c,author a where n.cid=c.id and n.aid=a.id order by Tcollect desc limit 0,10 [ RunTime:0.076005s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner` [ RunTime:0.075004s ]
+[ sql ] [ SQL ] SELECT * FROM `banner` [ RunTime:0.074004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `link` [ RunTime:0.075004s ]
+[ sql ] [ SQL ] SELECT * FROM `link` [ RunTime:0.079005s ]
+---------------------------------------------------------------
+[ 2017-07-04T06:35:07+08:00 ] 127.0.0.1 127.0.0.1 GET /home/index/index.html
+[ info ] tp5.com/home/index/index.html [运行时间：0.951055s][吞吐率：1.05req/s] [内存消耗：2,602.54kb] [文件加载：49]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15d075264632a6-0ca042e4979913-5c6a3a7a-fa000-15d07526464375; PHPSESSID=ee8ur2ihiu03m62nor3rqtu762; CNZZDATA1259530409=940001465-1499063884-http%253A%252F%252Ftp5.com%252F%7C1499118042',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Index->index[ D:\wamp\www\tp5\application\home\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\wamp\www\tp5\public/../application/home\view\index\default.html [ array (
+  0 => 'logined',
+  1 => 'name',
+  2 => 'list',
+  3 => 'list1',
+  4 => 'list2',
+  5 => 'list3',
+  6 => 'list4',
+  7 => 'txapi',
+  8 => 'link',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.109006s ] mysql:dbname=icefire;host=47.94.158.22;charset=utf8
+[ sql ] [ SQL ] select *,n.name k,n.id n,penname from novel n,category c,author a where c.pid=1 and n.cid=c.id and n.aid=a.id order by Tticket desc limit 0,5 [ RunTime:0.082005s ]
+[ sql ] [ SQL ] select *,n.name k,n.id n,penname from novel n,category c,author a where c.pid=2 and n.cid=c.id and n.aid=a.id order by Tticket desc limit 0,5 [ RunTime:0.074004s ]
+[ sql ] [ SQL ] select *,n.name k,n.id n,penname from novel n,category c,author a where n.cid=c.id and n.aid=a.id order by Tticket desc limit 0,5 [ RunTime:0.073004s ]
+[ sql ] [ SQL ] select *,n.name k,n.id n,penname from novel n,category c,author a where n.cid=c.id and n.aid=a.id order by Tcollect desc limit 0,10 [ RunTime:0.076005s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner` [ RunTime:0.074004s ]
+[ sql ] [ SQL ] SELECT * FROM `banner` [ RunTime:0.073004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `link` [ RunTime:0.072004s ]
+[ sql ] [ SQL ] SELECT * FROM `link` [ RunTime:0.072004s ]
+---------------------------------------------------------------
+[ 2017-07-04T06:35:08+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] tp5.com/captcha.html [运行时间：0.098005s][吞吐率：10.20req/s] [内存消耗：1,357.95kb] [文件加载：32]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'image/webp,image/*,*/*;q=0.8',
+  'referer' => 'http://tp5.com/home/index/index.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15d075264632a6-0ca042e4979913-5c6a3a7a-fa000-15d07526464375; PHPSESSID=ee8ur2ihiu03m62nor3rqtu762; CNZZDATA1259530409=940001465-1499063884-http%253A%252F%252Ftp5.com%252F%7C1499118042',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ D:\wamp\www\tp5\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-04T06:35:08+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/fzfont.ttf
+[ info ] tp5.com/static/index/fonts/fzfont.ttf [运行时间：0.075004s][吞吐率：13.33req/s] [内存消耗：1,329.99kb] [文件加载：33]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'origin' => 'http://tp5.com',
+  'accept' => '*/*',
+  'referer' => 'http://tp5.com/static/index/css/style-c4460f1fb4.css',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15d075264632a6-0ca042e4979913-5c6a3a7a-fa000-15d07526464375; PHPSESSID=ee8ur2ihiu03m62nor3rqtu762; CNZZDATA1259530409=940001465-1499063884-http%253A%252F%252Ftp5.com%252F%7C1499118042',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-04T06:35:11+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/glyphicons-halflings-regular.woff
+[ info ] tp5.com/static/index/fonts/glyphicons-halflings-regular.woff [运行时间：0.066003s][吞吐率：15.15req/s] [内存消耗：1,330.05kb] [文件加载：33]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'origin' => 'http://tp5.com',
+  'accept' => '*/*',
+  'referer' => 'http://tp5.com/static/index/css/style-c4460f1fb4.css',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15d075264632a6-0ca042e4979913-5c6a3a7a-fa000-15d07526464375; PHPSESSID=ee8ur2ihiu03m62nor3rqtu762; CNZZDATA1259530409=940001465-1499063884-http%253A%252F%252Ftp5.com%252F%7C1499118042',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-04T06:35:11+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/glyphicons-halflings-regular.ttf
+[ info ] tp5.com/static/index/fonts/glyphicons-halflings-regular.ttf [运行时间：0.031002s][吞吐率：32.26req/s] [内存消耗：1,330.05kb] [文件加载：33]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'origin' => 'http://tp5.com',
+  'accept' => '*/*',
+  'referer' => 'http://tp5.com/static/index/css/style-c4460f1fb4.css',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15d075264632a6-0ca042e4979913-5c6a3a7a-fa000-15d07526464375; PHPSESSID=ee8ur2ihiu03m62nor3rqtu762; CNZZDATA1259530409=940001465-1499063884-http%253A%252F%252Ftp5.com%252F%7C1499118042',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-04T06:35:24+08:00 ] 127.0.0.1 127.0.0.1 GET /home/index/loginout.html
+[ info ] tp5.com/home/index/loginout.html [运行时间：0.053003s][吞吐率：18.87req/s] [内存消耗：1,699.96kb] [文件加载：42]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'index',
+    2 => 'loginout',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://tp5.com/home/index/index.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15d075264632a6-0ca042e4979913-5c6a3a7a-fa000-15d07526464375; PHPSESSID=ee8ur2ihiu03m62nor3rqtu762; CNZZDATA1259530409=940001465-1499063884-http%253A%252F%252Ftp5.com%252F%7C1499118042',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Index->loginout[ D:\wamp\www\tp5\application\home\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-04T06:35:25+08:00 ] 127.0.0.1 127.0.0.1 GET /home/index/index.html
+[ info ] tp5.com/home/index/index.html [运行时间：0.828047s][吞吐率：1.21req/s] [内存消耗：2,602.09kb] [文件加载：49]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://tp5.com/home/index/index.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15d075264632a6-0ca042e4979913-5c6a3a7a-fa000-15d07526464375; PHPSESSID=ee8ur2ihiu03m62nor3rqtu762; CNZZDATA1259530409=940001465-1499063884-http%253A%252F%252Ftp5.com%252F%7C1499118042',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Index->index[ D:\wamp\www\tp5\application\home\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\wamp\www\tp5\public/../application/home\view\index\default.html [ array (
+  0 => 'logined',
+  1 => 'list',
+  2 => 'list1',
+  3 => 'list2',
+  4 => 'list3',
+  5 => 'list4',
+  6 => 'txapi',
+  7 => 'link',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.097005s ] mysql:dbname=icefire;host=47.94.158.22;charset=utf8
+[ sql ] [ SQL ] select *,n.name k,n.id n,penname from novel n,category c,author a where c.pid=1 and n.cid=c.id and n.aid=a.id order by Tticket desc limit 0,5 [ RunTime:0.066004s ]
+[ sql ] [ SQL ] select *,n.name k,n.id n,penname from novel n,category c,author a where c.pid=2 and n.cid=c.id and n.aid=a.id order by Tticket desc limit 0,5 [ RunTime:0.065004s ]
+[ sql ] [ SQL ] select *,n.name k,n.id n,penname from novel n,category c,author a where n.cid=c.id and n.aid=a.id order by Tticket desc limit 0,5 [ RunTime:0.066004s ]
+[ sql ] [ SQL ] select *,n.name k,n.id n,penname from novel n,category c,author a where n.cid=c.id and n.aid=a.id order by Tcollect desc limit 0,10 [ RunTime:0.067003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner` [ RunTime:0.065004s ]
+[ sql ] [ SQL ] SELECT * FROM `banner` [ RunTime:0.065004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `link` [ RunTime:0.066003s ]
+[ sql ] [ SQL ] SELECT * FROM `link` [ RunTime:0.064004s ]
+---------------------------------------------------------------
+[ 2017-07-04T06:35:25+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] tp5.com/captcha.html [运行时间：0.048003s][吞吐率：20.83req/s] [内存消耗：1,357.45kb] [文件加载：32]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'image/webp,image/*,*/*;q=0.8',
+  'referer' => 'http://tp5.com/home/index/index.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15d075264632a6-0ca042e4979913-5c6a3a7a-fa000-15d07526464375; PHPSESSID=ee8ur2ihiu03m62nor3rqtu762; CNZZDATA1259530409=940001465-1499063884-http%253A%252F%252Ftp5.com%252F%7C1499118042',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ D:\wamp\www\tp5\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-04T06:35:25+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/fzfont.ttf
+[ info ] tp5.com/static/index/fonts/fzfont.ttf [运行时间：0.033002s][吞吐率：30.30req/s] [内存消耗：1,329.99kb] [文件加载：33]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'origin' => 'http://tp5.com',
+  'accept' => '*/*',
+  'referer' => 'http://tp5.com/static/index/css/style-c4460f1fb4.css',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15d075264632a6-0ca042e4979913-5c6a3a7a-fa000-15d07526464375; PHPSESSID=ee8ur2ihiu03m62nor3rqtu762; CNZZDATA1259530409=940001465-1499063884-http%253A%252F%252Ftp5.com%252F%7C1499118042',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-04T06:35:28+08:00 ] 127.0.0.1 127.0.0.1 GET /home/noveldetails/ndindex/id/42.html
+[ info ] tp5.com/home/noveldetails/ndindex/id/42.html [运行时间：0.706040s][吞吐率：1.42req/s] [内存消耗：2,646.03kb] [文件加载：52]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'noveldetails',
+    2 => 'ndindex',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://tp5.com/home/index/index.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15d075264632a6-0ca042e4979913-5c6a3a7a-fa000-15d07526464375; PHPSESSID=ee8ur2ihiu03m62nor3rqtu762; CNZZDATA1259530409=940001465-1499063884-http%253A%252F%252Ftp5.com%252F%7C1499118042',
+)
+[ info ] [ PARAM ] array (
+  'id' => '42',
+)
+[ info ] [ RUN ] app\home\controller\noveldetails->ndindex[ D:\wamp\www\tp5\application\home\controller\Noveldetails.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\tp5\public/../application/home\view\noveldetails\index.html [ array (
+  0 => 'list',
+  1 => 'list1',
+  2 => 'list2',
+  3 => 'b',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.118007s ] mysql:dbname=icefire;host=47.94.158.22;charset=utf8
+[ sql ] [ SQL ] select *,n.name k,n.id n,penname from novel n,category c,author a where n.cid=c.id and n.aid=a.id and n.id = 42 [ RunTime:0.075004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.074004s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `user` `u` INNER JOIN `comment` `c` ON `c`.`uid`=`u`.`id` WHERE  `c`.`nid` = '42' LIMIT 1 [ RunTime:0.073004s ]
+[ sql ] [ SQL ] SELECT *,`c`.`id` FROM `user` `u` INNER JOIN `comment` `c` ON `c`.`uid`=`u`.`id` WHERE  `c`.`nid` = '42' ORDER BY time desc LIMIT 0,4 [ RunTime:0.074005s ]
+[ sql ] [ SQL ] select *,did,r.content from `user` u,`reply` r where r.uid = u.id and r.nid =42 order by `time` desc [ RunTime:0.074004s ]
+---------------------------------------------------------------
+[ 2017-07-04T06:35:29+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/fzfont.ttf
+[ info ] tp5.com/static/index/fonts/fzfont.ttf [运行时间：0.044003s][吞吐率：22.73req/s] [内存消耗：1,329.99kb] [文件加载：33]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'origin' => 'http://tp5.com',
+  'accept' => '*/*',
+  'referer' => 'http://tp5.com/static/index/css/style-c4460f1fb4.css',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15d075264632a6-0ca042e4979913-5c6a3a7a-fa000-15d07526464375; PHPSESSID=ee8ur2ihiu03m62nor3rqtu762; CNZZDATA1259530409=940001465-1499063884-http%253A%252F%252Ftp5.com%252F%7C1499118042',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-04T06:35:29+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/glyphicons-halflings-regular.woff
+[ info ] tp5.com/static/index/fonts/glyphicons-halflings-regular.woff [运行时间：0.049002s][吞吐率：20.41req/s] [内存消耗：1,330.05kb] [文件加载：33]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'origin' => 'http://tp5.com',
+  'accept' => '*/*',
+  'referer' => 'http://tp5.com/static/index/css/style-c4460f1fb4.css',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15d075264632a6-0ca042e4979913-5c6a3a7a-fa000-15d07526464375; PHPSESSID=ee8ur2ihiu03m62nor3rqtu762; CNZZDATA1259530409=940001465-1499063884-http%253A%252F%252Ftp5.com%252F%7C1499118042',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-04T06:35:29+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/images/core_bg.png
+[ info ] tp5.com/static/index/images/core_bg.png [运行时间：0.031002s][吞吐率：32.26req/s] [内存消耗：1,329.35kb] [文件加载：33]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'images',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'image/webp,image/*,*/*;q=0.8',
+  'referer' => 'http://tp5.com/static/index/css/core.css',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15d075264632a6-0ca042e4979913-5c6a3a7a-fa000-15d07526464375; PHPSESSID=ee8ur2ihiu03m62nor3rqtu762; CNZZDATA1259530409=940001465-1499063884-http%253A%252F%252Ftp5.com%252F%7C1499118042',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-04T06:35:29+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/glyphicons-halflings-regular.ttf
+[ info ] tp5.com/static/index/fonts/glyphicons-halflings-regular.ttf [运行时间：0.030002s][吞吐率：33.33req/s] [内存消耗：1,330.05kb] [文件加载：33]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'origin' => 'http://tp5.com',
+  'accept' => '*/*',
+  'referer' => 'http://tp5.com/static/index/css/style-c4460f1fb4.css',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15d075264632a6-0ca042e4979913-5c6a3a7a-fa000-15d07526464375; PHPSESSID=ee8ur2ihiu03m62nor3rqtu762; CNZZDATA1259530409=940001465-1499063884-http%253A%252F%252Ftp5.com%252F%7C1499118042',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-04T06:35:31+08:00 ] 127.0.0.1 127.0.0.1 GET /home/novelcontent/index/tnum/1/nn/%E5%93%BC%E5%93%BC%E5%93%88%E5%98%BF1/au/hhy/nid/42.html
+[ info ] tp5.com/home/novelcontent/index/tnum/1/nn/%E5%93%BC%E5%93%BC%E5%93%88%E5%98%BF1/au/hhy/nid/42.html [运行时间：0.417024s][吞吐率：2.40req/s] [内存消耗：2,702.34kb] [文件加载：51]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'novelcontent',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://tp5.com/home/noveldetails/ndindex/id/42.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15d075264632a6-0ca042e4979913-5c6a3a7a-fa000-15d07526464375; PHPSESSID=ee8ur2ihiu03m62nor3rqtu762; CNZZDATA1259530409=940001465-1499063884-http%253A%252F%252Ftp5.com%252F%7C1499118042',
+)
+[ info ] [ PARAM ] array (
+  'tnum' => '1',
+  'nn' => '哼哼哈嘿1',
+  'au' => 'hhy',
+  'nid' => '42',
+)
+[ info ] [ RUN ] app\home\controller\novelcontent->index[ D:\wamp\www\tp5\application\home\controller\Novelcontent.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\tp5\public/../application/home\view\novelcontent\index.html [ array (
+  0 => 'list',
+  1 => 'nn',
+  2 => 'au',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.112007s ] mysql:dbname=icefire;host=47.94.158.22;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `chapter` [ RunTime:0.075004s ]
+[ sql ] [ SQL ] SELECT * FROM `chapter` WHERE  `nid` = '42'  AND `tnum` = 1 LIMIT 1 [ RunTime:0.074004s ]
+---------------------------------------------------------------
+[ 2017-07-04T06:35:35+08:00 ] 127.0.0.1 127.0.0.1 GET /home/noveldir/index/id/42/nn/%E5%93%BC%E5%93%BC%E5%93%88%E5%98%BF1/au/hhy/nid/42.html
+[ info ] tp5.com/home/noveldir/index/id/42/nn/%E5%93%BC%E5%93%BC%E5%93%88%E5%98%BF1/au/hhy/nid/42.html [运行时间：0.372022s][吞吐率：2.69req/s] [内存消耗：2,683.57kb] [文件加载：51]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'noveldir',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://tp5.com/home/noveldetails/ndindex/id/42.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15d075264632a6-0ca042e4979913-5c6a3a7a-fa000-15d07526464375; PHPSESSID=ee8ur2ihiu03m62nor3rqtu762; CNZZDATA1259530409=940001465-1499063884-http%253A%252F%252Ftp5.com%252F%7C1499118042',
+)
+[ info ] [ PARAM ] array (
+  'id' => '42',
+  'nn' => '哼哼哈嘿1',
+  'au' => 'hhy',
+  'nid' => '42',
+)
+[ info ] [ RUN ] app\home\controller\noveldir->index[ D:\wamp\www\tp5\application\home\controller\Noveldir.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\tp5\public/../application/home\view\noveldir\index.html [ array (
+  0 => 'nn',
+  1 => 'au',
+  2 => 'list',
+  3 => 'nid',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.113006s ] mysql:dbname=icefire;host=47.94.158.22;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `chapter` [ RunTime:0.074004s ]
+[ sql ] [ SQL ] SELECT * FROM `chapter` WHERE  `nid` = '42' ORDER BY `tnum` [ RunTime:0.072004s ]
+---------------------------------------------------------------
+[ 2017-07-04T06:35:35+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/fzfont.ttf
+[ info ] tp5.com/static/index/fonts/fzfont.ttf [运行时间：0.053003s][吞吐率：18.87req/s] [内存消耗：1,329.99kb] [文件加载：33]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'origin' => 'http://tp5.com',
+  'accept' => '*/*',
+  'referer' => 'http://tp5.com/static/index/css/style-c4460f1fb4.css',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15d075264632a6-0ca042e4979913-5c6a3a7a-fa000-15d07526464375; PHPSESSID=ee8ur2ihiu03m62nor3rqtu762; CNZZDATA1259530409=940001465-1499063884-http%253A%252F%252Ftp5.com%252F%7C1499118042',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-04T06:35:40+08:00 ] 127.0.0.1 127.0.0.1 GET /home/noveldetails/ndindex/id/42.html
+[ info ] tp5.com/home/noveldetails/ndindex/id/42.html [运行时间：0.524030s][吞吐率：1.91req/s] [内存消耗：2,646.03kb] [文件加载：52]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'noveldetails',
+    2 => 'ndindex',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://tp5.com/home/index/index.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15d075264632a6-0ca042e4979913-5c6a3a7a-fa000-15d07526464375; PHPSESSID=ee8ur2ihiu03m62nor3rqtu762; CNZZDATA1259530409=940001465-1499063884-http%253A%252F%252Ftp5.com%252F%7C1499118042',
+)
+[ info ] [ PARAM ] array (
+  'id' => '42',
+)
+[ info ] [ RUN ] app\home\controller\noveldetails->ndindex[ D:\wamp\www\tp5\application\home\controller\Noveldetails.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\tp5\public/../application/home\view\noveldetails\index.html [ array (
+  0 => 'list',
+  1 => 'list1',
+  2 => 'list2',
+  3 => 'b',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.106006s ] mysql:dbname=icefire;host=47.94.158.22;charset=utf8
+[ sql ] [ SQL ] select *,n.name k,n.id n,penname from novel n,category c,author a where n.cid=c.id and n.aid=a.id and n.id = 42 [ RunTime:0.071004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.071004s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `user` `u` INNER JOIN `comment` `c` ON `c`.`uid`=`u`.`id` WHERE  `c`.`nid` = '42' LIMIT 1 [ RunTime:0.070004s ]
+[ sql ] [ SQL ] SELECT *,`c`.`id` FROM `user` `u` INNER JOIN `comment` `c` ON `c`.`uid`=`u`.`id` WHERE  `c`.`nid` = '42' ORDER BY time desc LIMIT 0,4 [ RunTime:0.071004s ]
+[ sql ] [ SQL ] select *,did,r.content from `user` u,`reply` r where r.uid = u.id and r.nid =42 order by `time` desc [ RunTime:0.071004s ]
+---------------------------------------------------------------
+[ 2017-07-04T06:35:41+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/glyphicons-halflings-regular.woff
+[ info ] tp5.com/static/index/fonts/glyphicons-halflings-regular.woff [运行时间：0.029001s][吞吐率：34.48req/s] [内存消耗：1,330.05kb] [文件加载：33]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'origin' => 'http://tp5.com',
+  'accept' => '*/*',
+  'referer' => 'http://tp5.com/static/index/css/style-c4460f1fb4.css',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15d075264632a6-0ca042e4979913-5c6a3a7a-fa000-15d07526464375; PHPSESSID=ee8ur2ihiu03m62nor3rqtu762; CNZZDATA1259530409=940001465-1499063884-http%253A%252F%252Ftp5.com%252F%7C1499118042',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-04T06:35:41+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/glyphicons-halflings-regular.ttf
+[ info ] tp5.com/static/index/fonts/glyphicons-halflings-regular.ttf [运行时间：0.034002s][吞吐率：29.41req/s] [内存消耗：1,330.05kb] [文件加载：33]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'origin' => 'http://tp5.com',
+  'accept' => '*/*',
+  'referer' => 'http://tp5.com/static/index/css/style-c4460f1fb4.css',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15d075264632a6-0ca042e4979913-5c6a3a7a-fa000-15d07526464375; PHPSESSID=ee8ur2ihiu03m62nor3rqtu762; CNZZDATA1259530409=940001465-1499063884-http%253A%252F%252Ftp5.com%252F%7C1499118042',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-04T06:35:42+08:00 ] 127.0.0.1 127.0.0.1 GET /home/novelcontent/index/tnum/1/nn/%E5%93%BC%E5%93%BC%E5%93%88%E5%98%BF1/au/hhy/nid/42.html
+[ info ] tp5.com/home/novelcontent/index/tnum/1/nn/%E5%93%BC%E5%93%BC%E5%93%88%E5%98%BF1/au/hhy/nid/42.html [运行时间：0.342019s][吞吐率：2.92req/s] [内存消耗：2,508.80kb] [文件加载：49]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'novelcontent',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://tp5.com/home/noveldetails/ndindex/id/42.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15d075264632a6-0ca042e4979913-5c6a3a7a-fa000-15d07526464375; PHPSESSID=ee8ur2ihiu03m62nor3rqtu762; CNZZDATA1259530409=940001465-1499063884-http%253A%252F%252Ftp5.com%252F%7C1499118042',
+)
+[ info ] [ PARAM ] array (
+  'tnum' => '1',
+  'nn' => '哼哼哈嘿1',
+  'au' => 'hhy',
+  'nid' => '42',
+)
+[ info ] [ RUN ] app\home\controller\novelcontent->index[ D:\wamp\www\tp5\application\home\controller\Novelcontent.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\tp5\public/../application/home\view\novelcontent\index.html [ array (
+  0 => 'list',
+  1 => 'nn',
+  2 => 'au',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.112007s ] mysql:dbname=icefire;host=47.94.158.22;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `chapter` [ RunTime:0.074004s ]
+[ sql ] [ SQL ] SELECT * FROM `chapter` WHERE  `nid` = '42'  AND `tnum` = 1 LIMIT 1 [ RunTime:0.078004s ]
+---------------------------------------------------------------
+[ 2017-07-04T06:35:49+08:00 ] 127.0.0.1 127.0.0.1 GET /home/novellist/index.html
+[ info ] tp5.com/home/novellist/index.html [运行时间：0.701040s][吞吐率：1.43req/s] [内存消耗：2,965.41kb] [文件加载：54]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'novellist',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://tp5.com/home/noveldetails/ndindex/id/42.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15d075264632a6-0ca042e4979913-5c6a3a7a-fa000-15d07526464375; PHPSESSID=ee8ur2ihiu03m62nor3rqtu762; CNZZDATA1259530409=940001465-1499063884-http%253A%252F%252Ftp5.com%252F%7C1499118042',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\novellist->index[ D:\wamp\www\tp5\application\home\controller\Novellist.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\tp5\public/../application/home\view\novellist\index.html [ array (
+  0 => 'list1',
+  1 => 'list2',
+  2 => 'list',
+  3 => 'list4',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.096005s ] mysql:dbname=icefire;host=47.94.158.22;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `category` [ RunTime:0.064004s ]
+[ sql ] [ SQL ] SELECT `name`,`id` FROM `category` WHERE  `pid` = 1 [ RunTime:0.063004s ]
+[ sql ] [ SQL ] SELECT `name`,`id` FROM `category` WHERE  `pid` = 2 [ RunTime:0.063003s ]
+[ sql ] [ SQL ] SELECT `name` FROM `category` [ RunTime:0.063004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `novel` [ RunTime:0.065004s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `novel` `n` INNER JOIN `category` `c` ON `n`.`cid`=`c`.`id` INNER JOIN `author` `a` ON `n`.`aid`=`a`.`id` LIMIT 1 [ RunTime:0.063003s ]
+[ sql ] [ SQL ] SELECT *,n.name k,n.id n,`penname` FROM `novel` `n` INNER JOIN `category` `c` ON `n`.`cid`=`c`.`id` INNER JOIN `author` `a` ON `n`.`aid`=`a`.`id` LIMIT 0,9 [ RunTime:0.065003s ]
+---------------------------------------------------------------
+[ 2017-07-04T06:35:51+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/glyphicons-halflings-regular.woff
+[ info ] tp5.com/static/index/fonts/glyphicons-halflings-regular.woff [运行时间：0.027001s][吞吐率：37.04req/s] [内存消耗：1,330.05kb] [文件加载：33]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'origin' => 'http://tp5.com',
+  'accept' => '*/*',
+  'referer' => 'http://tp5.com/static/index/css/style-c4460f1fb4.css',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15d075264632a6-0ca042e4979913-5c6a3a7a-fa000-15d07526464375; PHPSESSID=ee8ur2ihiu03m62nor3rqtu762; CNZZDATA1259530409=940001465-1499063884-http%253A%252F%252Ftp5.com%252F%7C1499118042',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-04T06:35:51+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/glyphicons-halflings-regular.ttf
+[ info ] tp5.com/static/index/fonts/glyphicons-halflings-regular.ttf [运行时间：0.033002s][吞吐率：30.30req/s] [内存消耗：1,330.05kb] [文件加载：33]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'origin' => 'http://tp5.com',
+  'accept' => '*/*',
+  'referer' => 'http://tp5.com/static/index/css/style-c4460f1fb4.css',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15d075264632a6-0ca042e4979913-5c6a3a7a-fa000-15d07526464375; PHPSESSID=ee8ur2ihiu03m62nor3rqtu762; CNZZDATA1259530409=940001465-1499063884-http%253A%252F%252Ftp5.com%252F%7C1499118042',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-04T06:35:54+08:00 ] 127.0.0.1 127.0.0.1 GET /home/index/index.html
+[ info ] tp5.com/home/index/index.html [运行时间：0.915053s][吞吐率：1.09req/s] [内存消耗：2,602.94kb] [文件加载：49]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://tp5.com/home/novellist/index.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15d075264632a6-0ca042e4979913-5c6a3a7a-fa000-15d07526464375; PHPSESSID=ee8ur2ihiu03m62nor3rqtu762; CNZZDATA1259530409=940001465-1499063884-http%253A%252F%252Ftp5.com%252F%7C1499118042',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Index->index[ D:\wamp\www\tp5\application\home\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\wamp\www\tp5\public/../application/home\view\index\default.html [ array (
+  0 => 'logined',
+  1 => 'list',
+  2 => 'list1',
+  3 => 'list2',
+  4 => 'list3',
+  5 => 'list4',
+  6 => 'txapi',
+  7 => 'link',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.109006s ] mysql:dbname=icefire;host=47.94.158.22;charset=utf8
+[ sql ] [ SQL ] select *,n.name k,n.id n,penname from novel n,category c,author a where c.pid=1 and n.cid=c.id and n.aid=a.id order by Tticket desc limit 0,5 [ RunTime:0.074004s ]
+[ sql ] [ SQL ] select *,n.name k,n.id n,penname from novel n,category c,author a where c.pid=2 and n.cid=c.id and n.aid=a.id order by Tticket desc limit 0,5 [ RunTime:0.074005s ]
+[ sql ] [ SQL ] select *,n.name k,n.id n,penname from novel n,category c,author a where n.cid=c.id and n.aid=a.id order by Tticket desc limit 0,5 [ RunTime:0.073004s ]
+[ sql ] [ SQL ] select *,n.name k,n.id n,penname from novel n,category c,author a where n.cid=c.id and n.aid=a.id order by Tcollect desc limit 0,10 [ RunTime:0.074004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner` [ RunTime:0.073004s ]
+[ sql ] [ SQL ] SELECT * FROM `banner` [ RunTime:0.073004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `link` [ RunTime:0.074004s ]
+[ sql ] [ SQL ] SELECT * FROM `link` [ RunTime:0.073005s ]
+---------------------------------------------------------------
+[ 2017-07-04T06:35:54+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] tp5.com/captcha.html [运行时间：0.038002s][吞吐率：26.31req/s] [内存消耗：1,357.45kb] [文件加载：32]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'image/webp,image/*,*/*;q=0.8',
+  'referer' => 'http://tp5.com/home/index/index.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15d075264632a6-0ca042e4979913-5c6a3a7a-fa000-15d07526464375; PHPSESSID=ee8ur2ihiu03m62nor3rqtu762; CNZZDATA1259530409=940001465-1499063884-http%253A%252F%252Ftp5.com%252F%7C1499118042',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ D:\wamp\www\tp5\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-04T06:35:54+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/fzfont.ttf
+[ info ] tp5.com/static/index/fonts/fzfont.ttf [运行时间：0.028001s][吞吐率：35.71req/s] [内存消耗：1,329.99kb] [文件加载：33]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'origin' => 'http://tp5.com',
+  'accept' => '*/*',
+  'referer' => 'http://tp5.com/static/index/css/style-c4460f1fb4.css',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15d075264632a6-0ca042e4979913-5c6a3a7a-fa000-15d07526464375; PHPSESSID=ee8ur2ihiu03m62nor3rqtu762; CNZZDATA1259530409=940001465-1499063884-http%253A%252F%252Ftp5.com%252F%7C1499118042',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-04T06:35:55+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/glyphicons-halflings-regular.woff
+[ info ] tp5.com/static/index/fonts/glyphicons-halflings-regular.woff [运行时间：0.044003s][吞吐率：22.73req/s] [内存消耗：1,330.05kb] [文件加载：33]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'origin' => 'http://tp5.com',
+  'accept' => '*/*',
+  'referer' => 'http://tp5.com/static/index/css/style-c4460f1fb4.css',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15d075264632a6-0ca042e4979913-5c6a3a7a-fa000-15d07526464375; PHPSESSID=ee8ur2ihiu03m62nor3rqtu762; CNZZDATA1259530409=940001465-1499063884-http%253A%252F%252Ftp5.com%252F%7C1499118042',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-04T06:35:55+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/glyphicons-halflings-regular.ttf
+[ info ] tp5.com/static/index/fonts/glyphicons-halflings-regular.ttf [运行时间：0.030001s][吞吐率：33.33req/s] [内存消耗：1,330.05kb] [文件加载：33]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'origin' => 'http://tp5.com',
+  'accept' => '*/*',
+  'referer' => 'http://tp5.com/static/index/css/style-c4460f1fb4.css',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15d075264632a6-0ca042e4979913-5c6a3a7a-fa000-15d07526464375; PHPSESSID=ee8ur2ihiu03m62nor3rqtu762; CNZZDATA1259530409=940001465-1499063884-http%253A%252F%252Ftp5.com%252F%7C1499118042',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-04T06:35:58+08:00 ] 127.0.0.1 127.0.0.1 GET /home/noveldetails/ndindex/id/20.html
+[ info ] tp5.com/home/noveldetails/ndindex/id/20.html [运行时间：0.596035s][吞吐率：1.68req/s] [内存消耗：2,646.55kb] [文件加载：52]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'noveldetails',
+    2 => 'ndindex',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://tp5.com/home/index/index.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15d075264632a6-0ca042e4979913-5c6a3a7a-fa000-15d07526464375; PHPSESSID=ee8ur2ihiu03m62nor3rqtu762; CNZZDATA1259530409=940001465-1499063884-http%253A%252F%252Ftp5.com%252F%7C1499118042',
+)
+[ info ] [ PARAM ] array (
+  'id' => '20',
+)
+[ info ] [ RUN ] app\home\controller\noveldetails->ndindex[ D:\wamp\www\tp5\application\home\controller\Noveldetails.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\tp5\public/../application/home\view\noveldetails\index.html [ array (
+  0 => 'list',
+  1 => 'list1',
+  2 => 'list2',
+  3 => 'b',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.118007s ] mysql:dbname=icefire;host=47.94.158.22;charset=utf8
+[ sql ] [ SQL ] select *,n.name k,n.id n,penname from novel n,category c,author a where n.cid=c.id and n.aid=a.id and n.id = 20 [ RunTime:0.081004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.080004s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `user` `u` INNER JOIN `comment` `c` ON `c`.`uid`=`u`.`id` WHERE  `c`.`nid` = '20' LIMIT 1 [ RunTime:0.078005s ]
+[ sql ] [ SQL ] SELECT *,`c`.`id` FROM `user` `u` INNER JOIN `comment` `c` ON `c`.`uid`=`u`.`id` WHERE  `c`.`nid` = '20' ORDER BY time desc LIMIT 0,4 [ RunTime:0.080004s ]
+[ sql ] [ SQL ] select *,did,r.content from `user` u,`reply` r where r.uid = u.id and r.nid =20 order by `time` desc [ RunTime:0.079005s ]
+---------------------------------------------------------------
+[ 2017-07-04T06:35:58+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/fzfont.ttf
+[ info ] tp5.com/static/index/fonts/fzfont.ttf [运行时间：0.031002s][吞吐率：32.26req/s] [内存消耗：1,329.99kb] [文件加载：33]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'origin' => 'http://tp5.com',
+  'accept' => '*/*',
+  'referer' => 'http://tp5.com/static/index/css/style-c4460f1fb4.css',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15d075264632a6-0ca042e4979913-5c6a3a7a-fa000-15d07526464375; PHPSESSID=ee8ur2ihiu03m62nor3rqtu762; CNZZDATA1259530409=940001465-1499063884-http%253A%252F%252Ftp5.com%252F%7C1499118042',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-04T06:35:58+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/glyphicons-halflings-regular.woff
+[ info ] tp5.com/static/index/fonts/glyphicons-halflings-regular.woff [运行时间：0.027001s][吞吐率：37.04req/s] [内存消耗：1,330.05kb] [文件加载：33]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'origin' => 'http://tp5.com',
+  'accept' => '*/*',
+  'referer' => 'http://tp5.com/static/index/css/style-c4460f1fb4.css',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15d075264632a6-0ca042e4979913-5c6a3a7a-fa000-15d07526464375; PHPSESSID=ee8ur2ihiu03m62nor3rqtu762; CNZZDATA1259530409=940001465-1499063884-http%253A%252F%252Ftp5.com%252F%7C1499118042',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-04T06:35:58+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/images/core_bg.png
+[ info ] tp5.com/static/index/images/core_bg.png [运行时间：0.036002s][吞吐率：27.78req/s] [内存消耗：1,329.35kb] [文件加载：33]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'images',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'image/webp,image/*,*/*;q=0.8',
+  'referer' => 'http://tp5.com/static/index/css/core.css',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15d075264632a6-0ca042e4979913-5c6a3a7a-fa000-15d07526464375; PHPSESSID=ee8ur2ihiu03m62nor3rqtu762; CNZZDATA1259530409=940001465-1499063884-http%253A%252F%252Ftp5.com%252F%7C1499118042',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-04T06:35:58+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/glyphicons-halflings-regular.ttf
+[ info ] tp5.com/static/index/fonts/glyphicons-halflings-regular.ttf [运行时间：0.041002s][吞吐率：24.39req/s] [内存消耗：1,330.05kb] [文件加载：33]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'origin' => 'http://tp5.com',
+  'accept' => '*/*',
+  'referer' => 'http://tp5.com/static/index/css/style-c4460f1fb4.css',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15d075264632a6-0ca042e4979913-5c6a3a7a-fa000-15d07526464375; PHPSESSID=ee8ur2ihiu03m62nor3rqtu762; CNZZDATA1259530409=940001465-1499063884-http%253A%252F%252Ftp5.com%252F%7C1499118042',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-04T06:36:00+08:00 ] 127.0.0.1 127.0.0.1 GET /home/noveldir/index/id/20/nn/%E9%98%BF%E6%96%AF%E8%BE%BE%E6%89%80%E5%A4%9A1/au/hhy/nid/20.html
+[ info ] tp5.com/home/noveldir/index/id/20/nn/%E9%98%BF%E6%96%AF%E8%BE%BE%E6%89%80%E5%A4%9A1/au/hhy/nid/20.html [运行时间：0.317018s][吞吐率：3.15req/s] [内存消耗：2,562.66kb] [文件加载：49]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'noveldir',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://tp5.com/home/noveldetails/ndindex/id/20.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15d075264632a6-0ca042e4979913-5c6a3a7a-fa000-15d07526464375; PHPSESSID=ee8ur2ihiu03m62nor3rqtu762; CNZZDATA1259530409=940001465-1499063884-http%253A%252F%252Ftp5.com%252F%7C1499118042',
+)
+[ info ] [ PARAM ] array (
+  'id' => '20',
+  'nn' => '阿斯达所多1',
+  'au' => 'hhy',
+  'nid' => '20',
+)
+[ info ] [ RUN ] app\home\controller\noveldir->index[ D:\wamp\www\tp5\application\home\controller\Noveldir.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\tp5\public/../application/home\view\noveldir\index.html [ array (
+  0 => 'nn',
+  1 => 'au',
+  2 => 'list',
+  3 => 'nid',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.094006s ] mysql:dbname=icefire;host=47.94.158.22;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `chapter` [ RunTime:0.064003s ]
+[ sql ] [ SQL ] SELECT * FROM `chapter` WHERE  `nid` = '20' ORDER BY `tnum` [ RunTime:0.097005s ]
+---------------------------------------------------------------
+[ 2017-07-04T06:36:01+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/fzfont.ttf
+[ info ] tp5.com/static/index/fonts/fzfont.ttf [运行时间：0.044003s][吞吐率：22.73req/s] [内存消耗：1,329.99kb] [文件加载：33]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'origin' => 'http://tp5.com',
+  'accept' => '*/*',
+  'referer' => 'http://tp5.com/static/index/css/style-c4460f1fb4.css',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15d075264632a6-0ca042e4979913-5c6a3a7a-fa000-15d07526464375; PHPSESSID=ee8ur2ihiu03m62nor3rqtu762; CNZZDATA1259530409=940001465-1499063884-http%253A%252F%252Ftp5.com%252F%7C1499118042',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-04T06:36:02+08:00 ] 127.0.0.1 127.0.0.1 GET /home/novelcontent/index/tnum/2/nid/20/nn/%E9%98%BF%E6%96%AF%E8%BE%BE%E6%89%80%E5%A4%9A1/au/hhy/id/20.html
+[ info ] tp5.com/home/novelcontent/index/tnum/2/nid/20/nn/%E9%98%BF%E6%96%AF%E8%BE%BE%E6%89%80%E5%A4%9A1/au/hhy/id/20.html [运行时间：0.108006s][吞吐率：9.26req/s] [内存消耗：1,683.95kb] [文件加载：42]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'novelcontent',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://tp5.com/home/noveldir/index/id/20/nn/%E9%98%BF%E6%96%AF%E8%BE%BE%E6%89%80%E5%A4%9A1/au/hhy/nid/20.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15d075264632a6-0ca042e4979913-5c6a3a7a-fa000-15d07526464375; PHPSESSID=ee8ur2ihiu03m62nor3rqtu762; CNZZDATA1259530409=940001465-1499063884-http%253A%252F%252Ftp5.com%252F%7C1499118042',
+)
+[ info ] [ PARAM ] array (
+  'tnum' => '2',
+  'nid' => '20',
+  'nn' => '阿斯达所多1',
+  'au' => 'hhy',
+  'id' => '20',
+)
+[ info ] [ RUN ] app\home\controller\novelcontent->index[ D:\wamp\www\tp5\application\home\controller\Novelcontent.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\wamp\www\tp5\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-04T06:36:09+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/index.html
+[ info ] tp5.com/writer/index/index.html [运行时间：0.558031s][吞吐率：1.79req/s] [内存消耗：1,843.26kb] [文件加载：42]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://tp5.com/home/noveldir/index/id/20/nn/%E9%98%BF%E6%96%AF%E8%BE%BE%E6%89%80%E5%A4%9A1/au/hhy/nid/20.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15d075264632a6-0ca042e4979913-5c6a3a7a-fa000-15d07526464375; PHPSESSID=ee8ur2ihiu03m62nor3rqtu762; CNZZDATA1259530409=940001465-1499063884-http%253A%252F%252Ftp5.com%252F%7C1499118042',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\writer\controller\Index->index[ D:\wamp\www\tp5\application\writer\controller\Index.php ]
+[ info ] [ VIEW ] D:\wamp\www\tp5\public/../application/writer\view\index\writer-login.html [ array (
+  0 => 'error',
+  1 => 'txapi',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-04T06:36:10+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] tp5.com/captcha.html [运行时间：0.157008s][吞吐率：6.37req/s] [内存消耗：1,357.45kb] [文件加载：32]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'image/webp,image/*,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer/index/index.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15d075264632a6-0ca042e4979913-5c6a3a7a-fa000-15d07526464375; PHPSESSID=ee8ur2ihiu03m62nor3rqtu762; CNZZDATA1259530409=940001465-1499063884-http%253A%252F%252Ftp5.com%252F%7C1499118042',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ D:\wamp\www\tp5\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-04T06:36:26+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha?id=1499121386
+[ info ] tp5.com/captcha?id=1499121386 [运行时间：0.067004s][吞吐率：14.92req/s] [内存消耗：1,357.41kb] [文件加载：32]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'image/webp,image/*,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer/index/index.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15d075264632a6-0ca042e4979913-5c6a3a7a-fa000-15d07526464375; PHPSESSID=ee8ur2ihiu03m62nor3rqtu762; CNZZDATA1259530409=940001465-1499063884-http%253A%252F%252Ftp5.com%252F%7C1499118042',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ D:\wamp\www\tp5\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-04T06:36:28+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha?id=1499121388
+[ info ] tp5.com/captcha?id=1499121388 [运行时间：0.044003s][吞吐率：22.73req/s] [内存消耗：1,357.41kb] [文件加载：32]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'image/webp,image/*,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer/index/index.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15d075264632a6-0ca042e4979913-5c6a3a7a-fa000-15d07526464375; PHPSESSID=ee8ur2ihiu03m62nor3rqtu762; CNZZDATA1259530409=940001465-1499063884-http%253A%252F%252Ftp5.com%252F%7C1499118042',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ D:\wamp\www\tp5\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-04T06:36:29+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha?id=1499121389
+[ info ] tp5.com/captcha?id=1499121389 [运行时间：0.050003s][吞吐率：20.00req/s] [内存消耗：1,357.41kb] [文件加载：32]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'image/webp,image/*,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer/index/index.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15d075264632a6-0ca042e4979913-5c6a3a7a-fa000-15d07526464375; PHPSESSID=ee8ur2ihiu03m62nor3rqtu762; CNZZDATA1259530409=940001465-1499063884-http%253A%252F%252Ftp5.com%252F%7C1499118042',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ D:\wamp\www\tp5\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-04T06:36:31+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha?id=1499121391
+[ info ] tp5.com/captcha?id=1499121391 [运行时间：0.050003s][吞吐率：20.00req/s] [内存消耗：1,357.41kb] [文件加载：32]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'image/webp,image/*,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer/index/index.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15d075264632a6-0ca042e4979913-5c6a3a7a-fa000-15d07526464375; PHPSESSID=ee8ur2ihiu03m62nor3rqtu762; CNZZDATA1259530409=940001465-1499063884-http%253A%252F%252Ftp5.com%252F%7C1499118042',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ D:\wamp\www\tp5\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-04T06:36:36+08:00 ] 127.0.0.1 127.0.0.1 POST /writer/index/writerlogin.html
+[ info ] tp5.com/writer/index/writerlogin.html [运行时间：0.358020s][吞吐率：2.79req/s] [内存消耗：2,707.46kb] [文件加载：53]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'writerlogin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'content-length' => '30',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://tp5.com',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15d075264632a6-0ca042e4979913-5c6a3a7a-fa000-15d07526464375; PHPSESSID=ee8ur2ihiu03m62nor3rqtu762; CNZZDATA1259530409=940001465-1499063884-http%253A%252F%252Ftp5.com%252F%7C1499118042',
+)
+[ info ] [ PARAM ] array (
+  'penname' => 'hhy',
+  'pwd' => '123456',
+  'yzm' => 'n3u',
+)
+[ info ] [ RUN ] app\writer\controller\Index->writerlogin[ D:\wamp\www\tp5\application\writer\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\tp5\public/../application/writer\view\index\writer-login.html [ array (
+  0 => 'error',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.106006s ] mysql:dbname=icefire;host=47.94.158.22;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `author` [ RunTime:0.072004s ]
+[ sql ] [ SQL ] SELECT * FROM `author` WHERE  `penname` = 'hhy' LIMIT 1 [ RunTime:0.071004s ]
+[ error ] [8]未定义变量: txapi[D:\wamp\www\tp5\runtime\temp\b5fddd23a70e898e312b748aa6dbebac.php:100]
+---------------------------------------------------------------
+[ 2017-07-04T06:38:10+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] tp5.com/captcha.html [运行时间：0.038002s][吞吐率：26.31req/s] [内存消耗：1,357.45kb] [文件加载：32]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'image/webp,image/*,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer/index/index.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15d075264632a6-0ca042e4979913-5c6a3a7a-fa000-15d07526464375; PHPSESSID=ee8ur2ihiu03m62nor3rqtu762; CNZZDATA1259530409=940001465-1499063884-http%253A%252F%252Ftp5.com%252F%7C1499118042',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ D:\wamp\www\tp5\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-04T06:38:16+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/index.html
+[ info ] tp5.com/writer/index/index.html [运行时间：0.398022s][吞吐率：2.51req/s] [内存消耗：1,843.38kb] [文件加载：42]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://tp5.com/home/noveldir/index/id/20/nn/%E9%98%BF%E6%96%AF%E8%BE%BE%E6%89%80%E5%A4%9A1/au/hhy/nid/20.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15d075264632a6-0ca042e4979913-5c6a3a7a-fa000-15d07526464375; PHPSESSID=ee8ur2ihiu03m62nor3rqtu762; CNZZDATA1259530409=940001465-1499063884-http%253A%252F%252Ftp5.com%252F%7C1499118042',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\writer\controller\Index->index[ D:\wamp\www\tp5\application\writer\controller\Index.php ]
+[ info ] [ VIEW ] D:\wamp\www\tp5\public/../application/writer\view\index\writer-login.html [ array (
+  0 => 'error',
+  1 => 'txapi',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-04T06:38:16+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] tp5.com/captcha.html [运行时间：0.235013s][吞吐率：4.26req/s] [内存消耗：1,357.45kb] [文件加载：32]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'image/webp,image/*,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer/index/index.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15d075264632a6-0ca042e4979913-5c6a3a7a-fa000-15d07526464375; PHPSESSID=ee8ur2ihiu03m62nor3rqtu762; CNZZDATA1259530409=940001465-1499063884-http%253A%252F%252Ftp5.com%252F%7C1499118042',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ D:\wamp\www\tp5\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-04T06:38:25+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/index.html
+[ info ] tp5.com/writer/index/index.html [运行时间：0.754043s][吞吐率：1.33req/s] [内存消耗：1,843.26kb] [文件加载：42]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://tp5.com/home/noveldir/index/id/20/nn/%E9%98%BF%E6%96%AF%E8%BE%BE%E6%89%80%E5%A4%9A1/au/hhy/nid/20.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15d075264632a6-0ca042e4979913-5c6a3a7a-fa000-15d07526464375; PHPSESSID=ee8ur2ihiu03m62nor3rqtu762; CNZZDATA1259530409=940001465-1499063884-http%253A%252F%252Ftp5.com%252F%7C1499118042',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\writer\controller\Index->index[ D:\wamp\www\tp5\application\writer\controller\Index.php ]
+[ info ] [ VIEW ] D:\wamp\www\tp5\public/../application/writer\view\index\writer-login.html [ array (
+  0 => 'error',
+  1 => 'txapi',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-04T06:38:25+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] tp5.com/captcha.html [运行时间：0.200011s][吞吐率：5.00req/s] [内存消耗：1,357.45kb] [文件加载：32]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'image/webp,image/*,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer/index/index.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15d075264632a6-0ca042e4979913-5c6a3a7a-fa000-15d07526464375; PHPSESSID=ee8ur2ihiu03m62nor3rqtu762; CNZZDATA1259530409=940001465-1499063884-http%253A%252F%252Ftp5.com%252F%7C1499118042',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ D:\wamp\www\tp5\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-04T06:38:40+08:00 ] 127.0.0.1 127.0.0.1 POST /writer/index/writerlogin.html
+[ info ] tp5.com/writer/index/writerlogin.html [运行时间：0.397023s][吞吐率：2.52req/s] [内存消耗：2,707.45kb] [文件加载：53]
+[ info ] [ LANG ] D:\wamp\www\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'writerlogin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'content-length' => '28',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://tp5.com',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15d075264632a6-0ca042e4979913-5c6a3a7a-fa000-15d07526464375; PHPSESSID=ee8ur2ihiu03m62nor3rqtu762; CNZZDATA1259530409=940001465-1499063884-http%253A%252F%252Ftp5.com%252F%7C1499118042',
+)
+[ info ] [ PARAM ] array (
+  'penname' => 'hhy',
+  'pwd' => '123456',
+  'yzm' => 'r',
+)
+[ info ] [ RUN ] app\writer\controller\Index->writerlogin[ D:\wamp\www\tp5\application\writer\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\tp5\public/../application/writer\view\index\writer-login.html [ array (
+  0 => 'error',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.164010s ] mysql:dbname=icefire;host=47.94.158.22;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `author` [ RunTime:0.077004s ]
+[ sql ] [ SQL ] SELECT * FROM `author` WHERE  `penname` = 'hhy' LIMIT 1 [ RunTime:0.076005s ]
+[ error ] [8]未定义变量: txapi[D:\wamp\www\tp5\runtime\temp\b5fddd23a70e898e312b748aa6dbebac.php:100]
+---------------------------------------------------------------
+[ 2017-07-04T06:42:03+08:00 ] 127.0.0.1 127.0.0.1 GET /writer
+[ info ] tp5.com/writer [运行时间：0.340798s][吞吐率：2.93req/s] [内存消耗：2,069.62kb] [文件加载：44]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\writer\controller\Index->index[ E:\wamp\www\newicefire\tp5\application\writer\controller\Index.php ]
+[ info ] [ VIEW ] E:\wamp\www\newicefire\tp5\public/../application/writer\view\index\writer-login.html [ array (
+  0 => 'error',
+  1 => 'txapi',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-04T06:42:04+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] tp5.com/captcha.html [运行时间：0.323552s][吞吐率：3.09req/s] [内存消耗：1,383.82kb] [文件加载：32]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'accept' => 'image/webp,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'referer' => 'http://tp5.com/writer',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ E:\wamp\www\newicefire\tp5\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-04T06:42:04+08:00 ] 127.0.0.1 127.0.0.1 GET /writer
+[ info ] tp5.com/writer [运行时间：0.218587s][吞吐率：4.57req/s] [内存消耗：1,901.00kb] [文件加载：42]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://tp5.com/writer',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=ncrcen5bg6a5vbhkoiojvj4737',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\writer\controller\Index->index[ E:\wamp\www\newicefire\tp5\application\writer\controller\Index.php ]
+[ info ] [ VIEW ] E:\wamp\www\newicefire\tp5\public/../application/writer\view\index\writer-login.html [ array (
+  0 => 'error',
+  1 => 'txapi',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-04T06:42:05+08:00 ] 127.0.0.1 127.0.0.1 GET /writer
+[ info ] tp5.com/writer [运行时间：0.223245s][吞吐率：4.48req/s] [内存消耗：1,900.86kb] [文件加载：42]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://tp5.com/writer',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=ncrcen5bg6a5vbhkoiojvj4737',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\writer\controller\Index->index[ E:\wamp\www\newicefire\tp5\application\writer\controller\Index.php ]
+[ info ] [ VIEW ] E:\wamp\www\newicefire\tp5\public/../application/writer\view\index\writer-login.html [ array (
+  0 => 'error',
+  1 => 'txapi',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-04T06:42:14+08:00 ] 127.0.0.1 127.0.0.1 GET /writer
+[ info ] tp5.com/writer [运行时间：0.194098s][吞吐率：5.15req/s] [内存消耗：1,901.77kb] [文件加载：42]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15cfe06d749147-0e3fc223426ddc-36624308-144000-15cfe06d74a917; CNZZDATA1259530409=1164133474-1498907757-%7C1499065197; pgv_pvi=4007741440',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\writer\controller\Index->index[ E:\wamp\www\newicefire\tp5\application\writer\controller\Index.php ]
+[ info ] [ VIEW ] E:\wamp\www\newicefire\tp5\public/../application/writer\view\index\writer-login.html [ array (
+  0 => 'error',
+  1 => 'txapi',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-04T06:42:14+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] tp5.com/captcha.html [运行时间：0.017878s][吞吐率：55.93req/s] [内存消耗：1,384.60kb] [文件加载：32]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15cfe06d749147-0e3fc223426ddc-36624308-144000-15cfe06d74a917; CNZZDATA1259530409=1164133474-1498907757-%7C1499065197; pgv_pvi=4007741440',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ E:\wamp\www\newicefire\tp5\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-04T06:42:25+08:00 ] 127.0.0.1 127.0.0.1 POST /writer/index/writerlogin.html
+[ info ] tp5.com/writer/index/writerlogin.html [运行时间：0.328607s][吞吐率：3.04req/s] [内存消耗：2,871.84kb] [文件加载：54]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'writerlogin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'content-length' => '31',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://tp5.com',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15cfe06d749147-0e3fc223426ddc-36624308-144000-15cfe06d74a917; CNZZDATA1259530409=1164133474-1498907757-%7C1499065197; pgv_pvi=4007741440; PHPSESSID=photsrrr8jts6b0sf1rasoton2',
+)
+[ info ] [ PARAM ] array (
+  'penname' => 'hhy123456',
+  'pwd' => '123',
+  'yzm' => 'F',
+)
+[ info ] [ RUN ] app\writer\controller\Index->writerlogin[ E:\wamp\www\newicefire\tp5\application\writer\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] E:\wamp\www\newicefire\tp5\public/../application/writer\view\index\writer-login.html [ array (
+  0 => 'error',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.112729s ] mysql:dbname=icefire;host=47.94.158.22;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `author` [ RunTime:0.073345s ]
+[ sql ] [ SQL ] SELECT * FROM `author` WHERE  `penname` = 'hhy123456' LIMIT 1 [ RunTime:0.066577s ]
+[ error ] [8]未定义变量: txapi[E:\wamp\www\newicefire\tp5\runtime\temp\062dd3064989dd921ff7795680ad0469.php:100]
+---------------------------------------------------------------
+[ 2017-07-04T06:42:36+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/writerregiste.html
+[ info ] tp5.com/writer/index/writerregiste.html [运行时间：0.051065s][吞吐率：19.58req/s] [内存消耗：2,066.40kb] [文件加载：44]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'writerregiste',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15cfe06d749147-0e3fc223426ddc-36624308-144000-15cfe06d74a917; CNZZDATA1259530409=1164133474-1498907757-%7C1499065197; pgv_pvi=4007741440; PHPSESSID=photsrrr8jts6b0sf1rasoton2',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\writer\controller\Index->writerregiste[ E:\wamp\www\newicefire\tp5\application\writer\controller\Index.php ]
+[ info ] [ VIEW ] E:\wamp\www\newicefire\tp5\public/../application/writer\view\index\writer-registe.html [ array (
+  0 => 'error',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-04T06:42:36+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] tp5.com/captcha.html [运行时间：0.025206s][吞吐率：39.67req/s] [内存消耗：1,384.70kb] [文件加载：32]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer/index/writerregiste.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15cfe06d749147-0e3fc223426ddc-36624308-144000-15cfe06d74a917; CNZZDATA1259530409=1164133474-1498907757-%7C1499065197; pgv_pvi=4007741440; PHPSESSID=photsrrr8jts6b0sf1rasoton2',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ E:\wamp\www\newicefire\tp5\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-04T06:43:40+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/writerregiste.html
+[ info ] tp5.com/writer/index/writerregiste.html [运行时间：0.026413s][吞吐率：37.86req/s] [内存消耗：1,901.81kb] [文件加载：42]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'writerregiste',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15cfe06d749147-0e3fc223426ddc-36624308-144000-15cfe06d74a917; CNZZDATA1259530409=1164133474-1498907757-%7C1499065197; pgv_pvi=4007741440; PHPSESSID=photsrrr8jts6b0sf1rasoton2',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\writer\controller\Index->writerregiste[ E:\wamp\www\newicefire\tp5\application\writer\controller\Index.php ]
+[ info ] [ VIEW ] E:\wamp\www\newicefire\tp5\public/../application/writer\view\index\writer-registe.html [ array (
+  0 => 'error',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-04T06:43:40+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] tp5.com/captcha.html [运行时间：0.025786s][吞吐率：38.78req/s] [内存消耗：1,384.70kb] [文件加载：32]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer/index/writerregiste.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15cfe06d749147-0e3fc223426ddc-36624308-144000-15cfe06d74a917; CNZZDATA1259530409=1164133474-1498907757-%7C1499065197; pgv_pvi=4007741440; PHPSESSID=photsrrr8jts6b0sf1rasoton2',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ E:\wamp\www\newicefire\tp5\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-04T06:43:42+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha?id=1499121822
+[ info ] tp5.com/captcha?id=1499121822 [运行时间：0.020261s][吞吐率：49.36req/s] [内存消耗：1,384.66kb] [文件加载：32]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer/index/writerregiste.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15cfe06d749147-0e3fc223426ddc-36624308-144000-15cfe06d74a917; CNZZDATA1259530409=1164133474-1498907757-%7C1499065197; pgv_pvi=4007741440; PHPSESSID=photsrrr8jts6b0sf1rasoton2',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ E:\wamp\www\newicefire\tp5\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-04T06:43:44+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha?id=1499121824
+[ info ] tp5.com/captcha?id=1499121824 [运行时间：0.019822s][吞吐率：50.45req/s] [内存消耗：1,384.66kb] [文件加载：32]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer/index/writerregiste.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15cfe06d749147-0e3fc223426ddc-36624308-144000-15cfe06d74a917; CNZZDATA1259530409=1164133474-1498907757-%7C1499065197; pgv_pvi=4007741440; PHPSESSID=photsrrr8jts6b0sf1rasoton2',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ E:\wamp\www\newicefire\tp5\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-04T06:44:03+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/writerregiste.html
+[ info ] tp5.com/writer/index/writerregiste.html [运行时间：0.027374s][吞吐率：36.53req/s] [内存消耗：1,901.81kb] [文件加载：42]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'writerregiste',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15cfe06d749147-0e3fc223426ddc-36624308-144000-15cfe06d74a917; CNZZDATA1259530409=1164133474-1498907757-%7C1499065197; pgv_pvi=4007741440; PHPSESSID=photsrrr8jts6b0sf1rasoton2',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\writer\controller\Index->writerregiste[ E:\wamp\www\newicefire\tp5\application\writer\controller\Index.php ]
+[ info ] [ VIEW ] E:\wamp\www\newicefire\tp5\public/../application/writer\view\index\writer-registe.html [ array (
+  0 => 'error',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-04T06:44:03+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] tp5.com/captcha.html [运行时间：0.022710s][吞吐率：44.03req/s] [内存消耗：1,384.48kb] [文件加载：32]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer/index/writerregiste.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15cfe06d749147-0e3fc223426ddc-36624308-144000-15cfe06d74a917; CNZZDATA1259530409=1164133474-1498907757-%7C1499065197; pgv_pvi=4007741440; PHPSESSID=photsrrr8jts6b0sf1rasoton2',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ E:\wamp\www\newicefire\tp5\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-04T06:44:16+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/writerregiste.html
+[ info ] tp5.com/writer/index/writerregiste.html [运行时间：0.031206s][吞吐率：32.04req/s] [内存消耗：1,901.81kb] [文件加载：42]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'writerregiste',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15cfe06d749147-0e3fc223426ddc-36624308-144000-15cfe06d74a917; CNZZDATA1259530409=1164133474-1498907757-%7C1499065197; pgv_pvi=4007741440; PHPSESSID=photsrrr8jts6b0sf1rasoton2',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\writer\controller\Index->writerregiste[ E:\wamp\www\newicefire\tp5\application\writer\controller\Index.php ]
+[ info ] [ VIEW ] E:\wamp\www\newicefire\tp5\public/../application/writer\view\index\writer-registe.html [ array (
+  0 => 'error',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-04T06:44:16+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] tp5.com/captcha.html [运行时间：0.021387s][吞吐率：46.76req/s] [内存消耗：1,384.44kb] [文件加载：32]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer/index/writerregiste.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15cfe06d749147-0e3fc223426ddc-36624308-144000-15cfe06d74a917; CNZZDATA1259530409=1164133474-1498907757-%7C1499065197; pgv_pvi=4007741440; PHPSESSID=photsrrr8jts6b0sf1rasoton2',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ E:\wamp\www\newicefire\tp5\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-04T06:44:17+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha?id=1499121857
+[ info ] tp5.com/captcha?id=1499121857 [运行时间：0.019570s][吞吐率：51.10req/s] [内存消耗：1,384.43kb] [文件加载：32]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer/index/writerregiste.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15cfe06d749147-0e3fc223426ddc-36624308-144000-15cfe06d74a917; CNZZDATA1259530409=1164133474-1498907757-%7C1499065197; pgv_pvi=4007741440; PHPSESSID=photsrrr8jts6b0sf1rasoton2',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ E:\wamp\www\newicefire\tp5\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-04T06:44:18+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha?id=1499121858
+[ info ] tp5.com/captcha?id=1499121858 [运行时间：0.019582s][吞吐率：51.07req/s] [内存消耗：1,384.38kb] [文件加载：32]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer/index/writerregiste.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15cfe06d749147-0e3fc223426ddc-36624308-144000-15cfe06d74a917; CNZZDATA1259530409=1164133474-1498907757-%7C1499065197; pgv_pvi=4007741440; PHPSESSID=photsrrr8jts6b0sf1rasoton2',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ E:\wamp\www\newicefire\tp5\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-04T06:44:39+08:00 ] 127.0.0.1 127.0.0.1 POST /writer/index/submitregiste.html
+[ info ] tp5.com/writer/index/submitregiste.html [运行时间：0.669380s][吞吐率：1.49req/s] [内存消耗：2,979.95kb] [文件加载：52]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'submitregiste',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'content-length' => '45',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://tp5.com',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer/index/writerregiste.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15cfe06d749147-0e3fc223426ddc-36624308-144000-15cfe06d74a917; CNZZDATA1259530409=1164133474-1498907757-%7C1499065197; pgv_pvi=4007741440; PHPSESSID=photsrrr8jts6b0sf1rasoton2',
+)
+[ info ] [ PARAM ] array (
+  'penname' => 'hhy12345678',
+  'yzm' => 'P',
+  'pwd' => '123',
+  'checkbox' => 'on',
+)
+[ info ] [ RUN ] app\writer\controller\Index->submitregiste[ E:\wamp\www\newicefire\tp5\application\writer\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\wamp\www\newicefire\tp5\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.097226s ] mysql:dbname=icefire;host=47.94.158.22;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `author` [ RunTime:0.065847s ]
+[ sql ] [ SQL ] SELECT `id` FROM `author` WHERE  `penname` = 'hhy12345678' LIMIT 1 [ RunTime:0.065211s ]
+[ sql ] [ SQL ] INSERT INTO `author` (`penname` , `pwd`) VALUES ('hhy12345678' , '123') [ RunTime:0.064626s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `authorinfo` [ RunTime:0.065849s ]
+[ sql ] [ SQL ] INSERT INTO `authorinfo` (`aid` , `wname`) VALUES (30 , 'hhy12345678') [ RunTime:0.081145s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `assets` [ RunTime:0.065624s ]
+[ sql ] [ SQL ] INSERT INTO `assets` (`aid`) VALUES (30) [ RunTime:0.064938s ]
+---------------------------------------------------------------
+[ 2017-07-04T06:44:42+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/index.html
+[ info ] tp5.com/writer/index/index.html [运行时间：0.233090s][吞吐率：4.29req/s] [内存消耗：1,902.24kb] [文件加载：42]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer/index/submitregiste.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15cfe06d749147-0e3fc223426ddc-36624308-144000-15cfe06d74a917; CNZZDATA1259530409=1164133474-1498907757-%7C1499065197; pgv_pvi=4007741440; PHPSESSID=photsrrr8jts6b0sf1rasoton2',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\writer\controller\Index->index[ E:\wamp\www\newicefire\tp5\application\writer\controller\Index.php ]
+[ info ] [ VIEW ] E:\wamp\www\newicefire\tp5\public/../application/writer\view\index\writer-login.html [ array (
+  0 => 'error',
+  1 => 'txapi',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-04T06:44:43+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] tp5.com/captcha.html [运行时间：0.025101s][吞吐率：39.84req/s] [内存消耗：1,384.37kb] [文件加载：32]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15cfe06d749147-0e3fc223426ddc-36624308-144000-15cfe06d74a917; CNZZDATA1259530409=1164133474-1498907757-%7C1499065197; pgv_pvi=4007741440; PHPSESSID=photsrrr8jts6b0sf1rasoton2',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ E:\wamp\www\newicefire\tp5\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-04T06:53:04+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/index.html
+[ info ] tp5.com/writer/index/index.html [运行时间：0.046950s][吞吐率：21.30req/s] [内存消耗：2,071.77kb] [文件加载：44]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer/index/submitregiste.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15cfe06d749147-0e3fc223426ddc-36624308-144000-15cfe06d74a917; CNZZDATA1259530409=1164133474-1498907757-%7C1499065197; pgv_pvi=4007741440; PHPSESSID=photsrrr8jts6b0sf1rasoton2',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\writer\controller\Index->index[ E:\wamp\www\newicefire\tp5\application\writer\controller\Index.php ]
+[ info ] [ VIEW ] E:\wamp\www\newicefire\tp5\public/../application/writer\view\index\writer-login.html [ array (
+  0 => 'error',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-04T06:53:04+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] tp5.com/captcha.html [运行时间：0.020098s][吞吐率：49.76req/s] [内存消耗：1,384.42kb] [文件加载：32]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15cfe06d749147-0e3fc223426ddc-36624308-144000-15cfe06d74a917; CNZZDATA1259530409=1164133474-1498907757-%7C1499065197; pgv_pvi=4007741440; PHPSESSID=photsrrr8jts6b0sf1rasoton2',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ E:\wamp\www\newicefire\tp5\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-04T06:53:13+08:00 ] 127.0.0.1 127.0.0.1 POST /writer/index/writerlogin.html
+[ info ] tp5.com/writer/index/writerlogin.html [运行时间：0.319252s][吞吐率：3.13req/s] [内存消耗：2,812.03kb] [文件加载：50]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'writerlogin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'content-length' => '31',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://tp5.com',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15cfe06d749147-0e3fc223426ddc-36624308-144000-15cfe06d74a917; CNZZDATA1259530409=1164133474-1498907757-%7C1499065197; pgv_pvi=4007741440; PHPSESSID=photsrrr8jts6b0sf1rasoton2',
+)
+[ info ] [ PARAM ] array (
+  'penname' => 'hhy123456',
+  'pwd' => '123',
+  'yzm' => 'j',
+)
+[ info ] [ RUN ] app\writer\controller\Index->writerlogin[ E:\wamp\www\newicefire\tp5\application\writer\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] E:\wamp\www\newicefire\tp5\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.110823s ] mysql:dbname=icefire;host=47.94.158.22;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `author` [ RunTime:0.073870s ]
+[ sql ] [ SQL ] SELECT * FROM `author` WHERE  `penname` = 'hhy123456' LIMIT 1 [ RunTime:0.074056s ]
+---------------------------------------------------------------
+[ 2017-07-04T06:53:17+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/writerinfo.html
+[ info ] tp5.com/writer/index/writerinfo.html [运行时间：0.541856s][吞吐率：1.85req/s] [内存消耗：2,949.20kb] [文件加载：51]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'writerinfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer/index/writerlogin.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15cfe06d749147-0e3fc223426ddc-36624308-144000-15cfe06d74a917; CNZZDATA1259530409=1164133474-1498907757-%7C1499065197; pgv_pvi=4007741440; PHPSESSID=photsrrr8jts6b0sf1rasoton2',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\writer\controller\Index->writerinfo[ E:\wamp\www\newicefire\tp5\application\writer\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\wamp\www\newicefire\tp5\public/../application/writer\view\index\writer-info.html [ array (
+  0 => 'penname',
+  1 => 'wname',
+  2 => 'idnumber',
+  3 => 'name',
+  4 => 'tel',
+  5 => 'inclination',
+  6 => 'qq',
+  7 => 'sex',
+  8 => 'email',
+  9 => 'icon',
+  10 => 'status',
+  11 => 'level',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.107362s ] mysql:dbname=icefire;host=47.94.158.22;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `author` [ RunTime:0.071945s ]
+[ sql ] [ SQL ] SELECT `id` FROM `author` WHERE  `penname` = 'hhy123456' LIMIT 1 [ RunTime:0.071523s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `authorinfo` [ RunTime:0.071555s ]
+[ sql ] [ SQL ] SELECT * FROM `authorinfo` WHERE  `aid` = 28 LIMIT 1 [ RunTime:0.071555s ]
+---------------------------------------------------------------
+[ 2017-07-04T06:53:17+08:00 ] 127.0.0.1 127.0.0.1 GET /uploads/20170703/e22d6adff80373d4aad18ec7e05ddc14.jpg
+[ info ] tp5.com/uploads/20170703/e22d6adff80373d4aad18ec7e05ddc14.jpg [运行时间：0.023678s][吞吐率：42.23req/s] [内存消耗：1,359.87kb] [文件加载：33]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'uploads',
+    1 => '20170703',
+    2 => 'e22d6adff80373d4aad18ec7e05ddc14.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer/index/writerinfo.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15cfe06d749147-0e3fc223426ddc-36624308-144000-15cfe06d74a917; CNZZDATA1259530409=1164133474-1498907757-%7C1499065197; pgv_pvi=4007741440; PHPSESSID=photsrrr8jts6b0sf1rasoton2',
+  'if-none-match' => '"1451-55369b7a10a22"',
+  'if-modified-since' => 'Mon, 03 Jul 2017 13:26:41 GMT',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-04T06:53:22+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/writerpersonal.html
+[ info ] tp5.com/writer/index/writerpersonal.html [运行时间：0.214438s][吞吐率：4.66req/s] [内存消耗：1,868.37kb] [文件加载：43]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'writerpersonal',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer/index/writerinfo.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15cfe06d749147-0e3fc223426ddc-36624308-144000-15cfe06d74a917; CNZZDATA1259530409=1164133474-1498907757-%7C1499065197; pgv_pvi=4007741440; PHPSESSID=photsrrr8jts6b0sf1rasoton2',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\writer\controller\Index->writerpersonal[ E:\wamp\www\newicefire\tp5\application\writer\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: title[E:\wamp\www\newicefire\tp5\application\writer\controller\Index.php:58]
+---------------------------------------------------------------
+[ 2017-07-04T06:53:57+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/writerpersonal.html
+[ info ] tp5.com/writer/index/writerpersonal.html [运行时间：0.214368s][吞吐率：4.66req/s] [内存消耗：1,851.38kb] [文件加载：40]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'writerpersonal',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer/index/writerinfo.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15cfe06d749147-0e3fc223426ddc-36624308-144000-15cfe06d74a917; CNZZDATA1259530409=1164133474-1498907757-%7C1499065197; pgv_pvi=4007741440; PHPSESSID=photsrrr8jts6b0sf1rasoton2',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\writer\controller\Index->writerpersonal[ E:\wamp\www\newicefire\tp5\application\writer\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-04T06:54:45+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/writerinfo.html
+[ info ] tp5.com/writer/index/writerinfo.html [运行时间：0.407862s][吞吐率：2.45req/s] [内存消耗：2,763.65kb] [文件加载：49]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'writerinfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer/index/writerlogin.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15cfe06d749147-0e3fc223426ddc-36624308-144000-15cfe06d74a917; CNZZDATA1259530409=1164133474-1498907757-%7C1499065197; pgv_pvi=4007741440; PHPSESSID=photsrrr8jts6b0sf1rasoton2',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\writer\controller\Index->writerinfo[ E:\wamp\www\newicefire\tp5\application\writer\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\wamp\www\newicefire\tp5\public/../application/writer\view\index\writer-info.html [ array (
+  0 => 'penname',
+  1 => 'wname',
+  2 => 'idnumber',
+  3 => 'name',
+  4 => 'tel',
+  5 => 'inclination',
+  6 => 'qq',
+  7 => 'sex',
+  8 => 'email',
+  9 => 'icon',
+  10 => 'status',
+  11 => 'level',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.099261s ] mysql:dbname=icefire;host=47.94.158.22;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `author` [ RunTime:0.066130s ]
+[ sql ] [ SQL ] SELECT `id` FROM `author` WHERE  `penname` = 'hhy123456' LIMIT 1 [ RunTime:0.065747s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `authorinfo` [ RunTime:0.066511s ]
+[ sql ] [ SQL ] SELECT * FROM `authorinfo` WHERE  `aid` = 28 LIMIT 1 [ RunTime:0.065963s ]
+---------------------------------------------------------------
+[ 2017-07-04T06:54:45+08:00 ] 127.0.0.1 127.0.0.1 GET /uploads/20170703/e22d6adff80373d4aad18ec7e05ddc14.jpg
+[ info ] tp5.com/uploads/20170703/e22d6adff80373d4aad18ec7e05ddc14.jpg [运行时间：0.020954s][吞吐率：47.72req/s] [内存消耗：1,359.21kb] [文件加载：33]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'uploads',
+    1 => '20170703',
+    2 => 'e22d6adff80373d4aad18ec7e05ddc14.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer/index/writerinfo.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15cfe06d749147-0e3fc223426ddc-36624308-144000-15cfe06d74a917; CNZZDATA1259530409=1164133474-1498907757-%7C1499065197; pgv_pvi=4007741440; PHPSESSID=photsrrr8jts6b0sf1rasoton2',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-04T06:54:47+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/writerpersonal.html
+[ info ] tp5.com/writer/index/writerpersonal.html [运行时间：0.776186s][吞吐率：1.29req/s] [内存消耗：2,944.37kb] [文件加载：51]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'writerpersonal',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer/index/writerinfo.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15cfe06d749147-0e3fc223426ddc-36624308-144000-15cfe06d74a917; CNZZDATA1259530409=1164133474-1498907757-%7C1499065197; pgv_pvi=4007741440; PHPSESSID=photsrrr8jts6b0sf1rasoton2',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\writer\controller\Index->writerpersonal[ E:\wamp\www\newicefire\tp5\application\writer\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\wamp\www\newicefire\tp5\public/../application/writer\view\index\writer-index.html [ array (
+  0 => 'penname',
+  1 => 'list1',
+  2 => 'list2',
+  3 => 'txapi',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.111044s ] mysql:dbname=icefire;host=47.94.158.22;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `author` [ RunTime:0.074902s ]
+[ sql ] [ SQL ] SELECT `id` FROM `author` WHERE  `penname` = 'hhy123456' LIMIT 1 [ RunTime:0.072767s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `novel` [ RunTime:0.076827s ]
+[ sql ] [ SQL ] SELECT * FROM `novel` WHERE  `aid` = 28  AND `isover` = 1 [ RunTime:0.074554s ]
+[ sql ] [ SQL ] SELECT * FROM `novel` WHERE  `aid` = 28  AND `isover` = 2 [ RunTime:0.073611s ]
+---------------------------------------------------------------
+[ 2017-07-04T06:54:53+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/writerfound.html
+[ info ] tp5.com/writer/index/writerfound.html [运行时间：0.083370s][吞吐率：11.99req/s] [内存消耗：2,119.55kb] [文件加载：44]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'writerfound',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer/index/writerpersonal.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15cfe06d749147-0e3fc223426ddc-36624308-144000-15cfe06d74a917; CNZZDATA1259530409=1164133474-1498907757-%7C1499065197; pgv_pvi=4007741440; PHPSESSID=photsrrr8jts6b0sf1rasoton2',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\writer\controller\Index->writerfound[ E:\wamp\www\newicefire\tp5\application\writer\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] E:\wamp\www\newicefire\tp5\public/../application/writer\view\index\writer-found.html [ array (
+  0 => 'penname',
+  1 => 'error',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-04T06:54:55+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/writerpersonal.html
+[ info ] tp5.com/writer/index/writerpersonal.html [运行时间：0.730475s][吞吐率：1.37req/s] [内存消耗：2,769.44kb] [文件加载：49]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'writerpersonal',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer/index/writerfound.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15cfe06d749147-0e3fc223426ddc-36624308-144000-15cfe06d74a917; CNZZDATA1259530409=1164133474-1498907757-%7C1499065197; pgv_pvi=4007741440; PHPSESSID=photsrrr8jts6b0sf1rasoton2',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\writer\controller\Index->writerpersonal[ E:\wamp\www\newicefire\tp5\application\writer\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\wamp\www\newicefire\tp5\public/../application/writer\view\index\writer-index.html [ array (
+  0 => 'penname',
+  1 => 'list1',
+  2 => 'list2',
+  3 => 'txapi',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.111837s ] mysql:dbname=icefire;host=47.94.158.22;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `author` [ RunTime:0.075193s ]
+[ sql ] [ SQL ] SELECT `id` FROM `author` WHERE  `penname` = 'hhy123456' LIMIT 1 [ RunTime:0.074029s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `novel` [ RunTime:0.074502s ]
+[ sql ] [ SQL ] SELECT * FROM `novel` WHERE  `aid` = 28  AND `isover` = 1 [ RunTime:0.074470s ]
+[ sql ] [ SQL ] SELECT * FROM `novel` WHERE  `aid` = 28  AND `isover` = 2 [ RunTime:0.075159s ]
+---------------------------------------------------------------
+[ 2017-07-04T06:54:57+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/writerinfo.html
+[ info ] tp5.com/writer/index/writerinfo.html [运行时间：0.463130s][吞吐率：2.16req/s] [内存消耗：2,763.65kb] [文件加载：49]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'writerinfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer/index/writerpersonal.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15cfe06d749147-0e3fc223426ddc-36624308-144000-15cfe06d74a917; CNZZDATA1259530409=1164133474-1498907757-%7C1499065197; pgv_pvi=4007741440; PHPSESSID=photsrrr8jts6b0sf1rasoton2',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\writer\controller\Index->writerinfo[ E:\wamp\www\newicefire\tp5\application\writer\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\wamp\www\newicefire\tp5\public/../application/writer\view\index\writer-info.html [ array (
+  0 => 'penname',
+  1 => 'wname',
+  2 => 'idnumber',
+  3 => 'name',
+  4 => 'tel',
+  5 => 'inclination',
+  6 => 'qq',
+  7 => 'sex',
+  8 => 'email',
+  9 => 'icon',
+  10 => 'status',
+  11 => 'level',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.109661s ] mysql:dbname=icefire;host=47.94.158.22;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `author` [ RunTime:0.073497s ]
+[ sql ] [ SQL ] SELECT `id` FROM `author` WHERE  `penname` = 'hhy123456' LIMIT 1 [ RunTime:0.073095s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `authorinfo` [ RunTime:0.073458s ]
+[ sql ] [ SQL ] SELECT * FROM `authorinfo` WHERE  `aid` = 28 LIMIT 1 [ RunTime:0.073810s ]
+---------------------------------------------------------------
+[ 2017-07-04T06:54:57+08:00 ] 127.0.0.1 127.0.0.1 GET /uploads/20170703/e22d6adff80373d4aad18ec7e05ddc14.jpg
+[ info ] tp5.com/uploads/20170703/e22d6adff80373d4aad18ec7e05ddc14.jpg [运行时间：0.019447s][吞吐率：51.42req/s] [内存消耗：1,359.21kb] [文件加载：33]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'uploads',
+    1 => '20170703',
+    2 => 'e22d6adff80373d4aad18ec7e05ddc14.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer/index/writerinfo.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15cfe06d749147-0e3fc223426ddc-36624308-144000-15cfe06d74a917; CNZZDATA1259530409=1164133474-1498907757-%7C1499065197; pgv_pvi=4007741440; PHPSESSID=photsrrr8jts6b0sf1rasoton2',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-04T06:54:58+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/writerdata.html
+[ info ] tp5.com/writer/index/writerdata.html [运行时间：0.607918s][吞吐率：1.64req/s] [内存消耗：2,949.68kb] [文件加载：51]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'writerdata',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer/index/writerinfo.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15cfe06d749147-0e3fc223426ddc-36624308-144000-15cfe06d74a917; CNZZDATA1259530409=1164133474-1498907757-%7C1499065197; pgv_pvi=4007741440; PHPSESSID=photsrrr8jts6b0sf1rasoton2',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\writer\controller\Index->writerdata[ E:\wamp\www\newicefire\tp5\application\writer\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\wamp\www\newicefire\tp5\public/../application/writer\view\index\writer-data.html [ array (
+  0 => 'penname',
+  1 => 'list',
+  2 => 'num',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.113091s ] mysql:dbname=icefire;host=47.94.158.22;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `author` [ RunTime:0.075665s ]
+[ sql ] [ SQL ] SELECT `id` FROM `author` WHERE  `penname` = 'hhy123456' LIMIT 1 [ RunTime:0.075253s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `novel` [ RunTime:0.075798s ]
+[ sql ] [ SQL ] SELECT *,`a`.`penname`,`c`.`name`,n.name nname FROM `novel` `n`,`author` `a`,`category` `c` WHERE  (  n.aid=a.id )  AND (  n.cid=c.id )  AND `aid` = 28 [ RunTime:0.077368s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `novel` WHERE  `aid` = 28 LIMIT 1 [ RunTime:0.075550s ]
+---------------------------------------------------------------
+[ 2017-07-04T06:54:58+08:00 ] 127.0.0.1 127.0.0.1 GET /uploads/20170704/d2409353f332f515a104e15b89809023.jpg
+[ info ] tp5.com/uploads/20170704/d2409353f332f515a104e15b89809023.jpg [运行时间：0.037687s][吞吐率：26.53req/s] [内存消耗：1,359.87kb] [文件加载：33]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'uploads',
+    1 => '20170704',
+    2 => 'd2409353f332f515a104e15b89809023.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer/index/writerdata.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15cfe06d749147-0e3fc223426ddc-36624308-144000-15cfe06d74a917; CNZZDATA1259530409=1164133474-1498907757-%7C1499065197; pgv_pvi=4007741440; PHPSESSID=photsrrr8jts6b0sf1rasoton2',
+  'if-none-match' => '"150d-5536d8c449668"',
+  'if-modified-since' => 'Mon, 03 Jul 2017 18:00:53 GMT',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-04T06:55:00+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/writernwes.html
+[ info ] tp5.com/writer/index/writernwes.html [运行时间：0.518308s][吞吐率：1.93req/s] [内存消耗：2,936.09kb] [文件加载：51]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'writernwes',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer/index/writerdata.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15cfe06d749147-0e3fc223426ddc-36624308-144000-15cfe06d74a917; CNZZDATA1259530409=1164133474-1498907757-%7C1499065197; pgv_pvi=4007741440; PHPSESSID=photsrrr8jts6b0sf1rasoton2',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\writer\controller\Index->writernwes[ E:\wamp\www\newicefire\tp5\application\writer\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\wamp\www\newicefire\tp5\public/../application/writer\view\index\writer-news.html [ array (
+  0 => 'penname',
+  1 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.114103s ] mysql:dbname=icefire;host=47.94.158.22;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `author` [ RunTime:0.076095s ]
+[ sql ] [ SQL ] SELECT `id` FROM `author` WHERE  `penname` = 'hhy123456' LIMIT 1 [ RunTime:0.075805s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `comment` [ RunTime:0.076053s ]
+[ sql ] [ SQL ] SELECT `c`.`id`,`c`.`time`,`c`.`content`,`u`.`nickname`,`n`.`name` FROM `comment` `c`,`user` `u`,`novel` `n`,`author` `a` WHERE  `a`.`penname` = 'hhy123456'  AND (  a.id=n.aid )  AND (  c.uid=u.id )  AND (  c.nid=n.id ) [ RunTime:0.076086s ]
+---------------------------------------------------------------
+[ 2017-07-04T06:55:02+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/writercheckout.html
+[ info ] tp5.com/writer/index/writercheckout.html [运行时间：0.783103s][吞吐率：1.28req/s] [内存消耗：2,979.45kb] [文件加载：51]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'writercheckout',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer/index/writernwes.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15cfe06d749147-0e3fc223426ddc-36624308-144000-15cfe06d74a917; CNZZDATA1259530409=1164133474-1498907757-%7C1499065197; pgv_pvi=4007741440; PHPSESSID=photsrrr8jts6b0sf1rasoton2',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\writer\controller\Index->writercheckout[ E:\wamp\www\newicefire\tp5\application\writer\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\wamp\www\newicefire\tp5\public/../application/writer\view\index\writer-checkout.html [ array (
+  0 => 'penname',
+  1 => 'list',
+  2 => 'all',
+  3 => 'aid',
+  4 => 'sum',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.125720s ] mysql:dbname=icefire;host=47.94.158.22;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `author` [ RunTime:0.076075s ]
+[ sql ] [ SQL ] SELECT `id` FROM `author` WHERE  `penname` = 'hhy123456' LIMIT 1 [ RunTime:0.075751s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `novel` [ RunTime:0.076589s ]
+[ sql ] [ SQL ] SELECT * FROM `novel` WHERE  `aid` = 28 [ RunTime:0.075712s ]
+[ sql ] [ SQL ] SELECT SUM(Tticket) AS tp_sum FROM `novel` WHERE  `aid` = 28 LIMIT 1 [ RunTime:0.075518s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `assets` [ RunTime:0.075302s ]
+[ sql ] [ SQL ] SELECT * FROM `assets` WHERE  `aid` = 28 LIMIT 1 [ RunTime:0.075382s ]
+---------------------------------------------------------------
+[ 2017-07-04T06:55:03+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/writerpersonal.html
+[ info ] tp5.com/writer/index/writerpersonal.html [运行时间：0.723551s][吞吐率：1.38req/s] [内存消耗：2,769.34kb] [文件加载：49]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'writerpersonal',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer/index/writercheckout.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15cfe06d749147-0e3fc223426ddc-36624308-144000-15cfe06d74a917; CNZZDATA1259530409=1164133474-1498907757-%7C1499065197; pgv_pvi=4007741440; PHPSESSID=photsrrr8jts6b0sf1rasoton2',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\writer\controller\Index->writerpersonal[ E:\wamp\www\newicefire\tp5\application\writer\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\wamp\www\newicefire\tp5\public/../application/writer\view\index\writer-index.html [ array (
+  0 => 'penname',
+  1 => 'list1',
+  2 => 'list2',
+  3 => 'txapi',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.110871s ] mysql:dbname=icefire;host=47.94.158.22;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `author` [ RunTime:0.077331s ]
+[ sql ] [ SQL ] SELECT `id` FROM `author` WHERE  `penname` = 'hhy123456' LIMIT 1 [ RunTime:0.073558s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `novel` [ RunTime:0.073530s ]
+[ sql ] [ SQL ] SELECT * FROM `novel` WHERE  `aid` = 28  AND `isover` = 1 [ RunTime:0.073890s ]
+[ sql ] [ SQL ] SELECT * FROM `novel` WHERE  `aid` = 28  AND `isover` = 2 [ RunTime:0.073986s ]
+---------------------------------------------------------------
+[ 2017-07-04T06:55:26+08:00 ] 127.0.0.1 127.0.0.1 GET /writer
+[ info ] tp5.com/writer [运行时间：0.023401s][吞吐率：42.73req/s] [内存消耗：1,900.92kb] [文件加载：42]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15cfe06d749147-0e3fc223426ddc-36624308-144000-15cfe06d74a917; CNZZDATA1259530409=1164133474-1498907757-%7C1499065197; pgv_pvi=4007741440',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\writer\controller\Index->index[ E:\wamp\www\newicefire\tp5\application\writer\controller\Index.php ]
+[ info ] [ VIEW ] E:\wamp\www\newicefire\tp5\public/../application/writer\view\index\writer-login.html [ array (
+  0 => 'error',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-04T06:55:26+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] tp5.com/captcha.html [运行时间：0.018135s][吞吐率：55.14req/s] [内存消耗：1,384.38kb] [文件加载：32]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15cfe06d749147-0e3fc223426ddc-36624308-144000-15cfe06d74a917; CNZZDATA1259530409=1164133474-1498907757-%7C1499065197; pgv_pvi=4007741440',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ E:\wamp\www\newicefire\tp5\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-04T06:55:35+08:00 ] 127.0.0.1 127.0.0.1 POST /writer/index/writerlogin.html
+[ info ] tp5.com/writer/index/writerlogin.html [运行时间：0.291981s][吞吐率：3.42req/s] [内存消耗：2,810.68kb] [文件加载：50]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'writerlogin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'content-length' => '32',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://tp5.com',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15cfe06d749147-0e3fc223426ddc-36624308-144000-15cfe06d74a917; CNZZDATA1259530409=1164133474-1498907757-%7C1499065197; pgv_pvi=4007741440; PHPSESSID=5m385flsvmme7bi31m3j8jdb33',
+)
+[ info ] [ PARAM ] array (
+  'penname' => 'hhy1234567',
+  'pwd' => '123',
+  'yzm' => 'E',
+)
+[ info ] [ RUN ] app\writer\controller\Index->writerlogin[ E:\wamp\www\newicefire\tp5\application\writer\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] E:\wamp\www\newicefire\tp5\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.108025s ] mysql:dbname=icefire;host=47.94.158.22;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `author` [ RunTime:0.070757s ]
+[ sql ] [ SQL ] SELECT * FROM `author` WHERE  `penname` = 'hhy1234567' LIMIT 1 [ RunTime:0.071379s ]
+---------------------------------------------------------------
+[ 2017-07-04T06:55:39+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/writerinfo.html
+[ info ] tp5.com/writer/index/writerinfo.html [运行时间：0.431344s][吞吐率：2.32req/s] [内存消耗：2,763.66kb] [文件加载：49]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'writerinfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer/index/writerlogin.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15cfe06d749147-0e3fc223426ddc-36624308-144000-15cfe06d74a917; CNZZDATA1259530409=1164133474-1498907757-%7C1499065197; pgv_pvi=4007741440; PHPSESSID=5m385flsvmme7bi31m3j8jdb33',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\writer\controller\Index->writerinfo[ E:\wamp\www\newicefire\tp5\application\writer\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\wamp\www\newicefire\tp5\public/../application/writer\view\index\writer-info.html [ array (
+  0 => 'penname',
+  1 => 'wname',
+  2 => 'idnumber',
+  3 => 'name',
+  4 => 'tel',
+  5 => 'inclination',
+  6 => 'qq',
+  7 => 'sex',
+  8 => 'email',
+  9 => 'icon',
+  10 => 'status',
+  11 => 'level',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.097857s ] mysql:dbname=icefire;host=47.94.158.22;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `author` [ RunTime:0.064908s ]
+[ sql ] [ SQL ] SELECT `id` FROM `author` WHERE  `penname` = 'hhy1234567' LIMIT 1 [ RunTime:0.064836s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `authorinfo` [ RunTime:0.065532s ]
+[ sql ] [ SQL ] SELECT * FROM `authorinfo` WHERE  `aid` = 29 LIMIT 1 [ RunTime:0.065768s ]
+---------------------------------------------------------------
+[ 2017-07-04T06:55:39+08:00 ] 127.0.0.1 127.0.0.1 GET /uploads/20170704/a9ac0cb318e048676d7aa0bad64dc033.jpg
+[ info ] tp5.com/uploads/20170704/a9ac0cb318e048676d7aa0bad64dc033.jpg [运行时间：0.020143s][吞吐率：49.64req/s] [内存消耗：1,359.87kb] [文件加载：33]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'uploads',
+    1 => '20170704',
+    2 => 'a9ac0cb318e048676d7aa0bad64dc033.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer/index/writerinfo.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15cfe06d749147-0e3fc223426ddc-36624308-144000-15cfe06d74a917; CNZZDATA1259530409=1164133474-1498907757-%7C1499065197; pgv_pvi=4007741440; PHPSESSID=5m385flsvmme7bi31m3j8jdb33',
+  'if-none-match' => '"1451-5536eaa371376"',
+  'if-modified-since' => 'Mon, 03 Jul 2017 19:20:50 GMT',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-04T06:55:42+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/writerdata.html
+[ info ] tp5.com/writer/index/writerdata.html [运行时间：0.538835s][吞吐率：1.86req/s] [内存消耗：2,764.40kb] [文件加载：49]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'writerdata',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer/index/writerinfo.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15cfe06d749147-0e3fc223426ddc-36624308-144000-15cfe06d74a917; CNZZDATA1259530409=1164133474-1498907757-%7C1499065197; pgv_pvi=4007741440; PHPSESSID=5m385flsvmme7bi31m3j8jdb33',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\writer\controller\Index->writerdata[ E:\wamp\www\newicefire\tp5\application\writer\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\wamp\www\newicefire\tp5\public/../application/writer\view\index\writer-data.html [ array (
+  0 => 'penname',
+  1 => 'list',
+  2 => 'num',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.112491s ] mysql:dbname=icefire;host=47.94.158.22;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `author` [ RunTime:0.075250s ]
+[ sql ] [ SQL ] SELECT `id` FROM `author` WHERE  `penname` = 'hhy1234567' LIMIT 1 [ RunTime:0.073834s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `novel` [ RunTime:0.074197s ]
+[ sql ] [ SQL ] SELECT *,`a`.`penname`,`c`.`name`,n.name nname FROM `novel` `n`,`author` `a`,`category` `c` WHERE  (  n.aid=a.id )  AND (  n.cid=c.id )  AND `aid` = 29 [ RunTime:0.079121s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `novel` WHERE  `aid` = 29 LIMIT 1 [ RunTime:0.074246s ]
+---------------------------------------------------------------
+[ 2017-07-04T06:55:42+08:00 ] 127.0.0.1 127.0.0.1 GET /uploads/20170704/7579ccf0e1210dba4a8bd855a73b33d2.jpg
+[ info ] tp5.com/uploads/20170704/7579ccf0e1210dba4a8bd855a73b33d2.jpg [运行时间：0.025655s][吞吐率：38.98req/s] [内存消耗：1,359.87kb] [文件加载：33]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'uploads',
+    1 => '20170704',
+    2 => '7579ccf0e1210dba4a8bd855a73b33d2.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer/index/writerdata.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15cfe06d749147-0e3fc223426ddc-36624308-144000-15cfe06d74a917; CNZZDATA1259530409=1164133474-1498907757-%7C1499065197; pgv_pvi=4007741440; PHPSESSID=5m385flsvmme7bi31m3j8jdb33',
+  'if-none-match' => '"150d-5536eac25ac0b"',
+  'if-modified-since' => 'Mon, 03 Jul 2017 19:21:23 GMT',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-04T06:55:44+08:00 ] 127.0.0.1 127.0.0.1 GET /writer/index/writerpersonal.html
+[ info ] tp5.com/writer/index/writerpersonal.html [运行时间：0.734511s][吞吐率：1.36req/s] [内存消耗：2,769.20kb] [文件加载：49]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => 'index',
+    2 => 'writerpersonal',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer/index/writerdata.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15cfe06d749147-0e3fc223426ddc-36624308-144000-15cfe06d74a917; CNZZDATA1259530409=1164133474-1498907757-%7C1499065197; pgv_pvi=4007741440; PHPSESSID=5m385flsvmme7bi31m3j8jdb33',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\writer\controller\Index->writerpersonal[ E:\wamp\www\newicefire\tp5\application\writer\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\wamp\www\newicefire\tp5\public/../application/writer\view\index\writer-index.html [ array (
+  0 => 'penname',
+  1 => 'list1',
+  2 => 'list2',
+  3 => 'txapi',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.113314s ] mysql:dbname=icefire;host=47.94.158.22;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `author` [ RunTime:0.074839s ]
+[ sql ] [ SQL ] SELECT `id` FROM `author` WHERE  `penname` = 'hhy1234567' LIMIT 1 [ RunTime:0.074993s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `novel` [ RunTime:0.075986s ]
+[ sql ] [ SQL ] SELECT * FROM `novel` WHERE  `aid` = 29  AND `isover` = 1 [ RunTime:0.075364s ]
+[ sql ] [ SQL ] SELECT * FROM `novel` WHERE  `aid` = 29  AND `isover` = 2 [ RunTime:0.075408s ]
+---------------------------------------------------------------
+[ 2017-07-04T06:57:24+08:00 ] 127.0.0.1 127.0.0.1 GET /home/index
+[ info ] tp5.com/home/index [运行时间：1.092898s][吞吐率：0.91req/s] [内存消耗：2,934.89kb] [文件加载：51]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'index',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15cfe06d749147-0e3fc223426ddc-36624308-144000-15cfe06d74a917; CNZZDATA1259530409=1164133474-1498907757-%7C1499065197; pgv_pvi=4007741440; PHPSESSID=5m385flsvmme7bi31m3j8jdb33',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Index->index[ E:\wamp\www\newicefire\tp5\application\home\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] E:\wamp\www\newicefire\tp5\public/../application/home\view\index\default.html [ array (
+  0 => 'logined',
+  1 => 'list',
+  2 => 'list1',
+  3 => 'list2',
+  4 => 'list3',
+  5 => 'list4',
+  6 => 'txapi',
+  7 => 'link',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.107911s ] mysql:dbname=icefire;host=47.94.158.22;charset=utf8
+[ sql ] [ SQL ] select *,n.name k,n.id n,penname from novel n,category c,author a where c.pid=1 and n.cid=c.id and n.aid=a.id order by Tticket desc limit 0,5 [ RunTime:0.074408s ]
+[ sql ] [ SQL ] select *,n.name k,n.id n,penname from novel n,category c,author a where c.pid=2 and n.cid=c.id and n.aid=a.id order by Tticket desc limit 0,5 [ RunTime:0.073233s ]
+[ sql ] [ SQL ] select *,n.name k,n.id n,penname from novel n,category c,author a where n.cid=c.id and n.aid=a.id order by Tticket desc limit 0,5 [ RunTime:0.073595s ]
+[ sql ] [ SQL ] select *,n.name k,n.id n,penname from novel n,category c,author a where n.cid=c.id and n.aid=a.id order by Tcollect desc limit 0,10 [ RunTime:0.074188s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner` [ RunTime:0.071427s ]
+[ sql ] [ SQL ] SELECT * FROM `banner` [ RunTime:0.071838s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `link` [ RunTime:0.071708s ]
+[ sql ] [ SQL ] SELECT * FROM `link` [ RunTime:0.071113s ]
+---------------------------------------------------------------
+[ 2017-07-04T06:57:24+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] tp5.com/captcha.html [运行时间：0.024086s][吞吐率：41.52req/s] [内存消耗：1,384.91kb] [文件加载：32]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://tp5.com/home/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15cfe06d749147-0e3fc223426ddc-36624308-144000-15cfe06d74a917; CNZZDATA1259530409=1164133474-1498907757-%7C1499065197; pgv_pvi=4007741440; PHPSESSID=5m385flsvmme7bi31m3j8jdb33',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ E:\wamp\www\newicefire\tp5\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-04T06:57:24+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/fzfont.ttf
+[ info ] tp5.com/static/index/fonts/fzfont.ttf [运行时间：0.027985s][吞吐率：35.73req/s] [内存消耗：1,359.05kb] [文件加载：33]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'origin' => 'http://tp5.com',
+  'accept' => '*/*',
+  'referer' => 'http://tp5.com/static/index/css/style-c4460f1fb4.css',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15cfe06d749147-0e3fc223426ddc-36624308-144000-15cfe06d74a917; CNZZDATA1259530409=1164133474-1498907757-%7C1499065197; pgv_pvi=4007741440; PHPSESSID=5m385flsvmme7bi31m3j8jdb33',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-04T06:57:40+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha?id=1499122660
+[ info ] tp5.com/captcha?id=1499122660 [运行时间：0.020800s][吞吐率：48.08req/s] [内存消耗：1,384.84kb] [文件加载：32]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://tp5.com/home/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15cfe06d749147-0e3fc223426ddc-36624308-144000-15cfe06d74a917; pgv_pvi=4007741440; PHPSESSID=5m385flsvmme7bi31m3j8jdb33; CNZZDATA1259530409=1164133474-1498907757-%7C1499118042',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ E:\wamp\www\newicefire\tp5\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-04T06:57:41+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha?id=1499122661
+[ info ] tp5.com/captcha?id=1499122661 [运行时间：0.018705s][吞吐率：53.46req/s] [内存消耗：1,384.85kb] [文件加载：32]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://tp5.com/home/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15cfe06d749147-0e3fc223426ddc-36624308-144000-15cfe06d74a917; pgv_pvi=4007741440; PHPSESSID=5m385flsvmme7bi31m3j8jdb33; CNZZDATA1259530409=1164133474-1498907757-%7C1499118042',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ E:\wamp\www\newicefire\tp5\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-04T06:57:42+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha?id=1499122662
+[ info ] tp5.com/captcha?id=1499122662 [运行时间：0.018327s][吞吐率：54.56req/s] [内存消耗：1,384.84kb] [文件加载：32]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://tp5.com/home/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15cfe06d749147-0e3fc223426ddc-36624308-144000-15cfe06d74a917; pgv_pvi=4007741440; PHPSESSID=5m385flsvmme7bi31m3j8jdb33; CNZZDATA1259530409=1164133474-1498907757-%7C1499118042',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ E:\wamp\www\newicefire\tp5\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-04T07:02:08+08:00 ] 127.0.0.1 127.0.0.1 GET /writer
+[ info ] tp5.com/writer [运行时间：0.025451s][吞吐率：39.29req/s] [内存消耗：1,901.06kb] [文件加载：42]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'writer',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15cfe06d749147-0e3fc223426ddc-36624308-144000-15cfe06d74a917; pgv_pvi=4007741440; PHPSESSID=5m385flsvmme7bi31m3j8jdb33; CNZZDATA1259530409=1164133474-1498907757-%7C1499118042',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\writer\controller\Index->index[ E:\wamp\www\newicefire\tp5\application\writer\controller\Index.php ]
+[ info ] [ VIEW ] E:\wamp\www\newicefire\tp5\public/../application/writer\view\index\writer-login.html [ array (
+  0 => 'error',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-04T07:02:08+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] tp5.com/captcha.html [运行时间：0.021995s][吞吐率：45.46req/s] [内存消耗：1,384.85kb] [文件加载：32]
+[ info ] [ LANG ] E:\wamp\www\newicefire\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://tp5.com/writer',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=15cfe06d749147-0e3fc223426ddc-36624308-144000-15cfe06d74a917; pgv_pvi=4007741440; PHPSESSID=5m385flsvmme7bi31m3j8jdb33; CNZZDATA1259530409=1164133474-1498907757-%7C1499118042',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ E:\wamp\www\newicefire\tp5\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File

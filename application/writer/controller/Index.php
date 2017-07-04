@@ -29,6 +29,15 @@ class Index extends Controller
     //登录页面
     public function index()
     {
+
+
+        $error = '';
+        return view('index/writer-login',['error'=>$error]);
+    }
+    
+    //跳转作者主页
+    public function writerpersonal()
+    {
         header("Content-Type: text/html; charset=utf-8");
         $num = 20; //返回数量
         $url = 'http://api.tianapi.com/txapi/pitlishi/?key=545519d7d9cdbf358b88380fb8af00af&num='.$num.'&rand';     //API接口
@@ -44,18 +53,10 @@ class Index extends Controller
 //        return dump($json);
         if($json['code'] == 200){
             $txapi=$json['newslist'];
+//            return dump($txapi);
         }else{
             echo "返回错误，状态消息：".$json['msg'];
         }
-
-        $error = '';
-        return view('index/writer-login',['error'=>$error,'txapi'=>$txapi]);
-    }
-    
-    //跳转作者主页
-    public function writerpersonal()
-    {
-
 
 
         $penname = Session::get('author.penname');
@@ -74,7 +75,8 @@ class Index extends Controller
         return view('index/writer-index',[
             'penname'=>$penname,
             'list1'=>$list1,
-            'list2'=>$list2
+            'list2'=>$list2,
+            'txapi'=>$txapi
 
         ]);
     }

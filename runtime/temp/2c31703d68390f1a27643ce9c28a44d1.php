@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:67:"D:\wamp\www\tp5\public/../application/home\view\noveldir\index.html";i:1499116381;s:66:"D:\wamp\www\tp5\public/../application/home\view\index\default.html";i:1499112562;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:67:"D:\wamp\www\tp5\public/../application/home\view\noveldir\index.html";i:1499116982;s:66:"D:\wamp\www\tp5\public/../application/home\view\index\default.html";i:1499116982;}*/ ?>
 ﻿
 <!DOCTYPE html>
 <html>
@@ -40,7 +40,7 @@
 
         <li class="gx"><a href="./authorwelfare.php">免费小说</a></li>
         <li class="zs"><a href="<?php echo url('bookshlef/index'); ?>">书架</a></li>
-        <li class="zs"><a onClick="PV('作者专区');" href="http://yc.aliwx.com.cn/#/login" target="_blank">作者专区</a></li>
+        <li class="zs"><a onClick="PV('作者专区');" href="<?php echo url('writer/index/index'); ?>" target="_blank">作者专区</a></li>
     </ul>
 </div>
 

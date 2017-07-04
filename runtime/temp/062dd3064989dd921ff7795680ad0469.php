@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:84:"E:\wamp\www\newicefire\tp5\public/../application/writer\view\index\writer-login.html";i:1499122241;}*/ ?>
 <!DOCTYPE html>
 <!-- saved from url=(0040)http://yc.aliwx.com.cn/#/login?_k=nkws9l -->
 <html>
@@ -53,13 +54,13 @@
                                     src="/static/writer/images/937de774e92e6aeed03ec7ce475149f9.png"></div>
                             <div class="loginright fr"
                                  style="opacity: 1; visibility: visible; transform: translateX(0px);">
-                                <div class="entrance"><a href="{:url('home/index/index')}" target="_blank">PC站入口&gt;&gt;</a>
+                                <div class="entrance"><a href="<?php echo url('home/index/index'); ?>" target="_blank">PC站入口&gt;&gt;</a>
                                 </div>
                                 <div class="logininput"><h1 class="logo"><img
                                         src="">
                                 </h1>
 
-                                    <form action="{:url('index/writerlogin')}" method="post">
+                                    <form action="<?php echo url('index/writerlogin'); ?>" method="post">
                                         <div class="loginname"><input type="text" required class="userInput"
                                                                       placeholder="请输入用户名" name="penname">
                                         </div>
@@ -72,7 +73,7 @@
                                             <!--验证码-->
                                             <div class="loginverify">
                                                 <input placeholder="请输入验证码" type="text" name="yzm" required>
-                                                <div><img id="verify_img" src="{:captcha_src()}" alt="验证码" onclick="refreshVerify()">
+                                                <div><img id="verify_img" src="<?php echo captcha_src(); ?>" alt="验证码" onclick="refreshVerify()">
                                                     <a href="javascript:refreshVerify()">点击刷新</a></div>
                                             </div>
 
@@ -88,9 +89,9 @@
 
                                     </form>
 
-                                    <div><spqn class="error">{$error}</spqn></div>
+                                    <div><spqn class="error"><?php echo $error; ?></spqn></div>
                                     <div class="register">
-                                        <a href="{:url('Index/writerregiste')}">注册账号</a>
+                                        <a href="<?php echo url('Index/writerregiste'); ?>">注册账号</a>
                                     </div>
                                 </div>
                             </div>
